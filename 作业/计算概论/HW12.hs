@@ -24,7 +24,7 @@ instance Foldable Maybe where
 
 foldMaybe :: (Monoid a) => Maybe a -> a
 foldMaybe Nothing = mempty
-foddMaybe (Just x) = x
+foldMaybe (Just x) = x
 
 instance Traversable Maybe where
   traverse :: Applicative f => (a -> f b) -> Maybe a -> f (Maybe b)

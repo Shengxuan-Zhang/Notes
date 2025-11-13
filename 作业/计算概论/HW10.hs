@@ -64,7 +64,7 @@ instance Monad Expr where
     (Val n) >>= f = (Val n)
     (Var n) >>= f = f n
 
--- Demo of >>=:
+-- Demo of >>= :
 expr1 = Add (Var "x") (Add (Val 3) (Var "y"))
 func v = case v of
                 "x" -> Add (Val 1) (Val 2)

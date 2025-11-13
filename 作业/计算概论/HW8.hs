@@ -1,6 +1,6 @@
--- module HW8 where
+module HW8 where
 
-module Main where
+-- module Main where
 
 import Data.List
 -- Ch.10
@@ -86,29 +86,12 @@ solutions ns target = sort $ if null sols then approx else sols
         minVal = foldr min maximal
 
 values :: [ Int ] -> [ (Expr, Int) ]
-values ns = [ ( expr, val) | seq <- choices ns, ( expr , val ) <- results seq [Add,Sub,Mul,Div,Pow] ]
+values ns = [ ( expr, val) | seq <- choices ns, ( expr , val ) <- results seq ]
 
-nxtl :: Op -> [ Op ]
-nxtl x | x == Add || x == Sub = [Mul,Div,Pow]
-       | x == Mul || x == Div = [Add,Sub,Pow]
-       | x == Pow = [Add,Sub,Mul,Div,Pow]
-
-nxtr :: Op -> [ Op ]
-nxtr x | x == Add = [Add,Sub,Mul,Div,Pow]
-       | x == Sub = [Add,Mul,Div,Pow]
-       | x == Mul = [Add,Sub,Mul,Div,Pow]
-       | x == Div = [Add,Sub,Mul,Pow]
-       | x == Pow = [Add,Sub,Mul,Div,Pow]
-
-results :: [ Int ] -> [ Op ] -> [ (Expr, Int) ]
-results [] _ = []
-results [n] _ = [(Val n,n) | n > 0]
-results ns ops = [ (App op lExpr rExpr, apply op lVal rVal) | op <- ops , (ls,rs) <- split ns, (lExpr,lVal) <- results ls (nxtl op) , (rExpr,rVal) <- results rs (nxtr op) , valid op lVal rVal]
-
--- results :: [ Int ] -> [ (Expr, Int) ]
--- results [] = []
--- results [n] = [(Val n,n) | n > 0]
--- results ns = [ (App op lExpr rExpr, apply op lVal rVal) | (ls,rs) <- split ns, (lExpr,lVal) <- results ls, (rExpr,rVal) <- results rs, op <- [Add,Sub,Mul,Div,Pow], valid op lVal rVal]
+results :: [ Int ] -> [ (Expr, Int) ]
+results [] = []
+results [n] = [(Val n,n) | n > 0]
+results ns = [ (App op lExpr rExpr, apply op lVal rVal) | (ls,rs) <- split ns, (lExpr,lVal) <- results ls, (rExpr,rVal) <- results rs, op <- [Add,Sub,Mul,Div,Pow], valid op lVal rVal]
 
 weight :: Expr -> (Int,Int)
 weight (Val n) = (1,0)

@@ -26,7 +26,8 @@ safetail3 (_:xs) = xs
 
 -- Problem #2: Luhn algorithm
 luhn :: Int -> Int -> Int -> Int -> Bool
-luhn a b c d = ( sum $ map (`mod` 9) [a, b*2, c, d*2] ) `mod` 10 == 0
+luhn a b c d = ( f a + b + f c + d ) `mod` 10 == 0
+                  where f x = if ( 2 * x > 9 ) then 2 * x - 9 else 2 * x
 -- End Problem #2
 
 -- **=========[ Ch.06 ]=========**
@@ -75,7 +76,7 @@ rotate n xs = drop n xs ++ take n xs
 
 -- Problem #2: Pythagorean triples
 pyths :: Int -> [(Int, Int, Int)]
-pyths n = [ (x, y, z) | x <- [1..n], y <- [x..n], z <- [y..n], x^2 + y^2 == z^2 ]
+pyths n = [ (x, y, z) | x <- [1..n], y <- [1..n], z <- [y..n], x^2 + y^2 == z^2 ]
 -- End Problem #2
 
 -- Problem #3: perfect integers
@@ -86,7 +87,7 @@ perfects n = [ x | x <- [ 1..n ], sum (factors x) == x]
 -- End Problem #3
 -- Problem #4: scalar product
 scalarProduct :: Num a => [a] -> [a] -> a
-scalarProduct = (sum . ) . zipWith (*) 
+scalarProduct xs ys = sum [x * y | (x, y) <- zip xs ys]
 -- End Problem #4
 
 
