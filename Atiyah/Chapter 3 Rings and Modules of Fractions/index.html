@@ -1,0 +1,1497 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Shengxuan-Zhang.github.io/Notes/Atiyah/Chapter%203%20Rings%20and%20Modules%20of%20Fractions/">
+      
+      
+        <link rel="prev" href="../Chapter%202%20Modules/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 3 Rings and Modules of Fractions - Math Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#31" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math Notes" class="md-header__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 3 Rings and Modules of Fractions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to MkDocs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Chapter%201%20Rings%20and%20Ideals/" class="md-tabs__link">
+          
+  
+  
+  Atiyah
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math Notes" class="md-nav__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome to MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atiyah
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atiyah
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%201%20Rings%20and%20Ideals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 Rings and Ideals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings and Modules of Fractions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings and Modules of Fractions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.14
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#315" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.15
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#316" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.16
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#317" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.17
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#318" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.18
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#319" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.19
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#320" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.20
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.21
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.22
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#323" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.23
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#324" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#325" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.25
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#326" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.26
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#327" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.27
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#328" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.28
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#329" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.29
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#330" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.30
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.14
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#315" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.15
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#316" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.16
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#317" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.17
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#318" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.18
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#319" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.19
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#320" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.20
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.21
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.22
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#323" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.23
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#324" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#325" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.25
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#326" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.26
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#327" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.27
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#328" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.28
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#329" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.29
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#330" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.30
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Chapter 3 Rings and Modules of Fractions</h1>
+
+<h3 id="31">3.1</h3>
+<p>Let <span class="arithmatex">\(S\)</span> be a multiplicatively closed subset of a ring <span class="arithmatex">\(A\)</span>, and let <span class="arithmatex">\(M\)</span> be a finitely generated <span class="arithmatex">\(A\)</span>-module. Prove that <span class="arithmatex">\(S^{-1}M = 0\)</span> if and only if there exists <span class="arithmatex">\(s \in S\)</span> such that <span class="arithmatex">\(sM = 0\)</span>.<br />
+Proof: Suppose <span class="arithmatex">\(M=(m_{1},\cdots,m_{n})\)</span> is finitely generated, then <span class="arithmatex">\(S^{-1}M=0\)</span> implies <span class="arithmatex">\(\forall1\leqslant i\leqslant n, \frac{m_{i}}{1}=0\in S^{-1}M\)</span> so there exists <span class="arithmatex">\(s_{i}\in S\)</span> such that <span class="arithmatex">\(s_{i}m_{i}=0\)</span>. Let <span class="arithmatex">\(s=s_{1}\cdots s_{n}\)</span>, then <span class="arithmatex">\(s\in S\)</span> and <span class="arithmatex">\(sm_{i}=0\forall 1\leqslant i\leqslant  n\)</span>, hence <span class="arithmatex">\(sM=0\)</span>.<br />
+The converse is trivial.</p>
+<h3 id="32">3.2</h3>
+<p>Let <span class="arithmatex">\(\mathfrak{a}\)</span> be an ideal of a ring <span class="arithmatex">\(A\)</span>, and let <span class="arithmatex">\(S = 1 + \mathfrak{a}\)</span>. Show that <span class="arithmatex">\(S^{-1}\mathfrak{a}\)</span> is contained in the Jacobson radical of <span class="arithmatex">\(S^{-1}A\)</span>.<br />
+Use this result and Nakayama's lemma to give a proof of (2.5) which does not depend on determinants.<br />
+Proof: Clearly <span class="arithmatex">\(S\)</span> is multiplicative. For any <span class="arithmatex">\(\frac{a}{s }\in S^{-1}\mathfrak{a}\)</span> and <span class="arithmatex">\(\frac{t}{s^{\prime}}\in S^{-1}A\)</span>, <span class="arithmatex">\(ss^{\prime}+ta\in S+\mathfrak{a}\subset S\)</span> so <span class="arithmatex">\(1+\frac{t}{s^{\prime}} \frac{a}{s}\)</span> has an inverse <span class="arithmatex">\(\frac{ss^{\prime}}{ss^{\prime}+ta}\in S^{-1}A\)</span>. Hence <span class="arithmatex">\(S^{-1}\mathfrak{a}\subset \mathfrak{R}(S^{-1}A)\)</span>.<br />
+If <span class="arithmatex">\(M\)</span> is a finitely generated <span class="arithmatex">\(A-\)</span>module and <span class="arithmatex">\(\mathfrak{a}\subset A\)</span> satisfy <span class="arithmatex">\(\mathfrak{a}M=M\)</span>, then <span class="arithmatex">\(S^{-1}M=(S^{-1}\mathfrak{a})(S^{-1}M)\)</span> where <span class="arithmatex">\(S^{-1}\mathfrak{a}\subset \mathfrak{R}(S^{-1}A)\)</span>. By Nakayama's lemma <span class="arithmatex">\(S^{-1}M=0\)</span>, so by Exercise3.1 <span class="arithmatex">\(sM=0\)</span> for some <span class="arithmatex">\(s \in S\)</span>. By definition <span class="arithmatex">\(s\equiv 1\pmod {\mathfrak{a}}\)</span>.</p>
+<h3 id="33">3.3</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring, let <span class="arithmatex">\(S\)</span> and <span class="arithmatex">\(T\)</span> be two multiplicatively closed subsets of <span class="arithmatex">\(A\)</span>, and let <span class="arithmatex">\(U\)</span> be the image of <span class="arithmatex">\(T\)</span> in <span class="arithmatex">\(S^{-1}A\)</span>. Show that the rings <span class="arithmatex">\((ST)^{-1}A\)</span> and <span class="arithmatex">\(U^{-1}(S^{-1}A)\)</span> are isomorphic.<br />
+Proof: For any ring homomorphism <span class="arithmatex">\(\varphi:A\to B\)</span> that maps elements of <span class="arithmatex">\(ST\)</span> to units, by the universal property there is a unique <span class="arithmatex">\(\tilde{\varphi}:S^{-1}A\to B\)</span> such that <span class="arithmatex">\(\tilde{\varphi}\iota_{1}=\varphi\)</span>. Then <span class="arithmatex">\(\tilde{\varphi}\)</span> maps elements of <span class="arithmatex">\(U=\iota_{1}(T)\)</span> to units in <span class="arithmatex">\(B\)</span>, so there is a unique <span class="arithmatex">\(\overline{\varphi}:U^{-1}(S^{-1}A)\to B\)</span> such that <span class="arithmatex">\(\bar{\varphi}\iota_{2}=\tilde{\varphi}\)</span>, which implies <span class="arithmatex">\(\bar{\varphi}(\iota_{2}\iota_{1})=\varphi\)</span>. If <span class="arithmatex">\(\phi:U^{-1}(S^{-1}A)\to B\)</span> also satisfy <span class="arithmatex">\(\phi(\iota_{2}\iota_{1})=\varphi\)</span>, then by uniqueness <span class="arithmatex">\(\phi\iota_{2}=\tilde{\varphi i}\)</span> and <span class="arithmatex">\(\phi=\bar{\varphi}\)</span>. Therefore <span class="arithmatex">\((ST)^{-1}A\cong U^{-1}(S^{-1}A)\)</span>.</p>
+<h3 id="34">3.4</h3>
+<p>Let <span class="arithmatex">\(f : A \to B\)</span> be a homomorphism of rings and let <span class="arithmatex">\(S\)</span> be a multiplicatively closed subset of <span class="arithmatex">\(A\)</span>. Let <span class="arithmatex">\(T = f(S)\)</span>. Show that <span class="arithmatex">\(S^{-1}B\)</span> and <span class="arithmatex">\(T^{-1}B\)</span> are isomorphic as <span class="arithmatex">\(S^{-1}A\)</span>-modules.<br />
+Proof: Consider <span class="arithmatex">\(\tilde{f}:S^{-1}B\to T^{-1}B\)</span> be the homomorphism induced by <span class="arithmatex">\(f\times 1_{B}:S\times B\to T\times B,(s,b)\mapsto(f(s),b)\)</span>. We can verify that <span class="arithmatex">\(f\times 1_{B}\)</span> keeps the equivalence relation, so <span class="arithmatex">\(\tilde{f}(b /s)=b /f(s)\)</span> is a well-defined homomorphism of rings. For <span class="arithmatex">\(a /s^{\prime}\in S^{-1}A\)</span>, <span class="arithmatex">\(\tilde{f}\left( \frac{a}{s^{\prime}} \frac{b}{s} \right)=\tilde{f}\left( \frac{f(a)b}{s^{\prime}s} \right)=\frac{f(a)}{f(s^{\prime})} \frac{b}{f(s)}=\frac{a}{s^{\prime}}\cdot \frac{b}{f(s)}\)</span>, so <span class="arithmatex">\(\tilde{f}\)</span> is a <span class="arithmatex">\(S^{-1}A-\)</span>module homomorphism.<br />
+If <span class="arithmatex">\(b /s\in n\mathrm{Ker}\tilde{f}\)</span> then <span class="arithmatex">\(tb=0\)</span> for some <span class="arithmatex">\(t\in T\)</span>. Take <span class="arithmatex">\(s^{\prime}\in f^{-1}(t)\)</span> then <span class="arithmatex">\(s^{\prime}b=tb=0\)</span> so <span class="arithmatex">\(\frac{b}{s}=0\)</span>. Clearly <span class="arithmatex">\(\tilde{f}\)</span> is surjective, so <span class="arithmatex">\(\tilde{f}\)</span> Is an isomorphism <span class="arithmatex">\(S^{-1}B\cong T^{-1}B\)</span>.</p>
+<h3 id="35">3.5</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring. Suppose that, for each prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span>, the local ring <span class="arithmatex">\(A_{\mathfrak{p}}\)</span> has no nilpotent element <span class="arithmatex">\(\ne 0\)</span>. Show that <span class="arithmatex">\(A\)</span> has no nilpotent element <span class="arithmatex">\(\ne 0\)</span>. If each <span class="arithmatex">\(A_{\mathfrak{p}}\)</span> is an integral domain, is <span class="arithmatex">\(A\)</span> necessarily an integral domain?<br />
+Proof: If <span class="arithmatex">\(a^{n}=0\)</span> for <span class="arithmatex">\(a\in A\)</span> then <span class="arithmatex">\(\left( \frac{a}{1} \right)^{n}=0\)</span> in <span class="arithmatex">\(A_{\mathfrak{p}}\)</span> so <span class="arithmatex">\(\frac{a}{1}=0\in A_{\mathfrak{p}}\)</span> and <span class="arithmatex">\(ab=0\)</span> for some <span class="arithmatex">\(b\not\in \mathfrak{p}\)</span>. If <span class="arithmatex">\(a\neq 0\)</span>, take a maximal ideal <span class="arithmatex">\(\mathfrak{m}\supset Ann(a)\)</span> then <span class="arithmatex">\(\mathfrak{m}\)</span> is prime, and there are no <span class="arithmatex">\(b\not\in \mathfrak{m}\)</span> such that <span class="arithmatex">\(ab=0\)</span>, a contradiction. (Or note that <span class="arithmatex">\(\mathfrak{N}(A_{\mathfrak{p}})=\mathfrak{N}(A)_{\mathfrak{p}}\)</span> and recall that the property <span class="arithmatex">\(A=0\)</span> is local.)<br />
+However, even if each <span class="arithmatex">\(A_{\mathfrak{p}}\)</span> is an integral domain, consider <span class="arithmatex">\(A=\mathbb{Z}_{6}\)</span> then <span class="arithmatex">\(A\)</span> is not an integral domain but <span class="arithmatex">\(A_{(2)},A_{(3)}\)</span> are both integral domains. Or consider <span class="arithmatex">\(A=\mathbb{R}^{2}\)</span>, then <span class="arithmatex">\(\mathfrak{p}=\mathbb{R}\times 0,0\times \mathbb{R}\)</span>, so <span class="arithmatex">\(A_{\mathfrak{p}}\cong \mathbb{R}\)</span> is an integral domain, but <span class="arithmatex">\(A\)</span> is not an integral domain.</p>
+<h3 id="36">3.6</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring <span class="arithmatex">\(\ne 0\)</span> and let <span class="arithmatex">\(\Sigma\)</span> be the set of all multiplicatively closed subsets <span class="arithmatex">\(S\)</span> of <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(0 \notin S\)</span>. Show that <span class="arithmatex">\(\Sigma\)</span> has maximal elements, and that <span class="arithmatex">\(S \in \Sigma\)</span> is maximal if and only if <span class="arithmatex">\(A - S\)</span> is a minimal prime ideal of <span class="arithmatex">\(A\)</span>.<br />
+See Exercise1.8.</p>
+<h3 id="37">3.7</h3>
+<p>A multiplicatively closed subset <span class="arithmatex">\(S\)</span> of a ring <span class="arithmatex">\(A\)</span> is said to be <strong>saturated</strong> if<br />
+$$<br />
+xy \in S \Leftrightarrow x \in S \text{ and } y \in S.<br />
+$$<br />
+Prove that<br />
+i) <span class="arithmatex">\(S\)</span> is saturated <span class="arithmatex">\(\Leftrightarrow A - S\)</span> is a union of prime ideals.<br />
+ii) If <span class="arithmatex">\(S\)</span> is any multiplicatively closed subset of <span class="arithmatex">\(A\)</span>, there is a unique smallest saturated multiplicatively closed subset <span class="arithmatex">\(\bar{S}\)</span> containing <span class="arithmatex">\(S\)</span>, and that <span class="arithmatex">\(\bar{S}\)</span> is the complement in <span class="arithmatex">\(A\)</span> of the union of the prime ideals which do not meet <span class="arithmatex">\(S\)</span>. (<span class="arithmatex">\(\bar{S}\)</span> is called the <strong>saturation</strong> of <span class="arithmatex">\(S\)</span>.)<br />
+If <span class="arithmatex">\(S = 1 + \mathfrak{a}\)</span>, where <span class="arithmatex">\(\mathfrak{a}\)</span> is an ideal of <span class="arithmatex">\(A\)</span>, find <span class="arithmatex">\(\bar{S}\)</span>.<br />
+Proof: (i) Assume <span class="arithmatex">\(A-S=\bigcup_{i\in I}\mathfrak{p}_{i}\)</span>, if <span class="arithmatex">\(xy\in S\)</span> and <span class="arithmatex">\(x,y\not\in S\)</span>, suppose <span class="arithmatex">\(x\in \mathfrak{p}_{i}\)</span>, then <span class="arithmatex">\(xy\in \mathfrak{p}_{i}\subset A- S\)</span>, a contradiction.<br />
+If <span class="arithmatex">\(S\)</span> is saturated, we show that <span class="arithmatex">\(A-S=\bigcup_{\mathfrak{p}\cap S=\emptyset}\mathfrak{p}\)</span>, or equivalently <span class="arithmatex">\(S^{-1}(A-S)=\bigcup_{\mathfrak{q}}\mathfrak{q}=\{ a\in S^{-1}A:a\text{ nonunit} \}\)</span>: Clearly <span class="arithmatex">\(S^{-1}S\)</span> consists of units. If <span class="arithmatex">\(\frac{a}{s}\in S^{-1}(A-S)\)</span> has an inverse <span class="arithmatex">\(\frac{b}{t}\)</span>, then <span class="arithmatex">\(s^{\prime}(ab-st)=0\)</span> for some <span class="arithmatex">\(s^{\prime}\in S\)</span>, so <span class="arithmatex">\(s^{\prime}ab=s^{\prime}st\in S\)</span> which implies <span class="arithmatex">\(a\in S\)</span>, a contradiction. Hence <span class="arithmatex">\(S^{-1}(A-S)=\{ a\in S^{-1}A:a\text{ nonunit} \}=\bigcup_{\mathfrak{q}}\mathfrak{q}\)</span> and <span class="arithmatex">\(S^{-1}S=\{ a\in S^{-1}A:a\text{ unit} \}\)</span>. Therefore <span class="arithmatex">\(A-S=\left( \bigcup_{\mathfrak{q}}\mathfrak{q} \right)^{c}=\bigcup_{\mathfrak{p}\cap S=\emptyset}\mathfrak{p}\)</span>.<br />
+(ii) By (i) <span class="arithmatex">\(\overline{S}=A-\left( \bigcup_{\mathfrak{p}\cap S=\emptyset}\mathfrak{p} \right)\)</span> is saturated. If <span class="arithmatex">\(T\supset S\)</span> is saturated, <span class="arithmatex">\(T=A-\left( \bigcup_{\mathfrak{p}\cap T=\emptyset}\mathfrak{p} \right)\supset \overline{S}\)</span>. Hence <span class="arithmatex">\(\overline{S}\)</span> is minimal.<br />
+If <span class="arithmatex">\(S=1+\mathfrak{a}\)</span>, then <span class="arithmatex">\(\overline{S}=A-\bigcup_{\mathfrak{m}\supset \mathfrak{a}}\mathfrak{m}\)</span>.</p>
+<h3 id="38">3.8</h3>
+<p>Let <span class="arithmatex">\(S, T\)</span> be multiplicatively closed subsets of <span class="arithmatex">\(A\)</span>, such that <span class="arithmatex">\(S \subseteq T\)</span>. Let <span class="arithmatex">\(\phi : S^{-1}A \to T^{-1}A\)</span> be the homomorphism which maps each <span class="arithmatex">\(a/s \in S^{-1}A\)</span> to <span class="arithmatex">\(a/s\)</span> considered as an element of <span class="arithmatex">\(T^{-1}A\)</span>. Show that the following statements are equivalent:<br />
+i) <span class="arithmatex">\(\phi\)</span> is bijective.<br />
+ii) For each <span class="arithmatex">\(t \in T\)</span>, <span class="arithmatex">\(t/1\)</span> is a unit in <span class="arithmatex">\(S^{-1}A\)</span>.<br />
+iii) For each <span class="arithmatex">\(t \in T\)</span> there exists <span class="arithmatex">\(x \in A\)</span> such that <span class="arithmatex">\(xt \in S\)</span>.<br />
+iv) <span class="arithmatex">\(T\)</span> is contained in the saturation of <span class="arithmatex">\(S\)</span> (Exercise 7).<br />
+v) Every prime ideal which meets <span class="arithmatex">\(T\)</span> also meets <span class="arithmatex">\(S\)</span>.<br />
+Proof: (ii)=&gt;(i) if for each <span class="arithmatex">\(t\in T\)</span>, <span class="arithmatex">\(t /1\)</span> is a unit in <span class="arithmatex">\(S^{-1}A\)</span>, then <span class="arithmatex">\(\iota_{1} 1_{A}\)</span> maps <span class="arithmatex">\(t\)</span> to units of <span class="arithmatex">\(S^{-1}A\)</span>, so it induces a unique homomorphism <span class="arithmatex">\(\psi:T^{-1}A\to S^{-1}A\)</span> such that <span class="arithmatex">\(\psi\iota_{2}=\iota_{1}1_{A}\)</span>. By uniqueness <span class="arithmatex">\(\psi\phi=1_{S^{-1}A}\)</span> and <span class="arithmatex">\(\phi\psi= 1_{T^{-1}A}\)</span>, so <span class="arithmatex">\(\phi\)</span> is bijective.<br />
+(iii)=&gt;(ii) For each <span class="arithmatex">\(t\in T\)</span>, take <span class="arithmatex">\(x\in A\)</span> such that <span class="arithmatex">\(xt\in S\)</span>, then <span class="arithmatex">\(t /1\)</span> has an inverse <span class="arithmatex">\(x /xt\in S^{-1}A\)</span>, so it is a unit.<br />
+(iv)=&gt;(iii) Let <span class="arithmatex">\(S^{\prime}=\{ a\in A: \exists x\in A,ax\in S \}\)</span>, we show that <span class="arithmatex">\(\overline{S}\subset S^{\prime}\)</span>, which implies (iii). If <span class="arithmatex">\(a\in S\)</span>, then <span class="arithmatex">\(a^{2}\in S\)</span> so <span class="arithmatex">\(a\in S^{\prime}\)</span>. If <span class="arithmatex">\(a,b\in S^{\prime}\)</span>, suppose <span class="arithmatex">\(ax,by\in S\)</span>, then <span class="arithmatex">\((ab)(xy)=(ax)(by)\in S\)</span> so <span class="arithmatex">\(ab\in S^{\prime}\)</span> and <span class="arithmatex">\(S^{\prime}\)</span> is multiplicative. If <span class="arithmatex">\(ab\in S^{\prime}\)</span>, suppose <span class="arithmatex">\(abx\in S\)</span>, then <span class="arithmatex">\(a(bx)=b(ax)\in S\)</span> implies <span class="arithmatex">\(a,b\in S^{\prime}\)</span>, so <span class="arithmatex">\(S^{\prime}\)</span> is saturated. Hence <span class="arithmatex">\(\overline{S}\subset S^{\prime}\)</span> so <span class="arithmatex">\(T\subset S^{\prime}\)</span>. (Obviously <span class="arithmatex">\(\overline{S}=S^{\prime}\)</span>).<br />
+(v)=&gt;(iv) by definition, <span class="arithmatex">\(T\subset \overline{T}=A-\bigcup_{\mathfrak{p}\cap T=\emptyset}\mathfrak{p}\subset \overline{S}=A-\bigcup_{\mathfrak{p}\cap S=\emptyset}\mathfrak{p}\)</span>.<br />
+(i)=&gt;(v) If <span class="arithmatex">\(\mathfrak{p}\cap T\neq \emptyset\)</span> but <span class="arithmatex">\(\mathfrak{p}\cap S=\emptyset\)</span>, then <span class="arithmatex">\(S^{-1}\mathfrak{p}\subset S^{-1}A\)</span> is prime, so <span class="arithmatex">\(\phi(S^{-1}\mathfrak{p})\)</span> is prime. However, take <span class="arithmatex">\(t\in \mathfrak{p}\cap T\)</span>, then <span class="arithmatex">\(\frac{t}{1}\in \phi(S^{-1}\mathfrak{p})\)</span> but <span class="arithmatex">\(\frac{t}{1}\)</span> is a unit in <span class="arithmatex">\(T^{-1}A\)</span>, a contradiction. </p>
+<h3 id="39">3.9</h3>
+<p>The set <span class="arithmatex">\(S_0\)</span> of all non-zero-divisors in <span class="arithmatex">\(A\)</span> is a saturated multiplicatively closed subset of <span class="arithmatex">\(A\)</span>. Hence the set <span class="arithmatex">\(D\)</span> of zero-divisors in <span class="arithmatex">\(A\)</span> is a union of prime ideals (see Chapter 1, Exercise 14). Show that every minimal prime ideal of <span class="arithmatex">\(A\)</span> is contained in <span class="arithmatex">\(D\)</span>. <br />
+The ring <span class="arithmatex">\(S_0^{-1}A\)</span> is called the <strong>total ring of fractions</strong> of <span class="arithmatex">\(A\)</span>. Prove that<br />
+i) <span class="arithmatex">\(S_0\)</span> is the largest multiplicatively closed subset of <span class="arithmatex">\(A\)</span> for which the homomorphism <span class="arithmatex">\(A \to S_0^{-1}A\)</span> is injective.<br />
+ii) Every element in <span class="arithmatex">\(S_0^{-1}A\)</span> is either a zero-divisor or a unit.<br />
+iii) Every ring in which every non-unit is a zero-divisor is equal to its total ring of fractions (i.e., <span class="arithmatex">\(A \to S_0^{-1}A\)</span> is bijective).<br />
+Proof: Note that <span class="arithmatex">\(S_{0}\)</span> is contained in every maximal multiplicative set <span class="arithmatex">\(S\)</span>, otherwise <span class="arithmatex">\(S_{0}S\)</span> is strictly larger, so <span class="arithmatex">\(D\)</span> contains every minimal prime ideal.<br />
+(i) For any <span class="arithmatex">\(a\in \mathrm{Ker}\iota\)</span> where <span class="arithmatex">\(\iota:A\to S^{-1}A\)</span>, <span class="arithmatex">\(sa=0\)</span> for some <span class="arithmatex">\(s \in S\)</span>, so <span class="arithmatex">\(\mathrm{Ker}\iota=0\iff S\subset S_{0}\)</span>.<br />
+(ii) For any <span class="arithmatex">\(a /s \in S_{0}^{-1}A\)</span>, if <span class="arithmatex">\(a\in S_{0}\)</span> then <span class="arithmatex">\(a /s\)</span> has inverse <span class="arithmatex">\(s /a\)</span> so it is a unit. Otherwise <span class="arithmatex">\(a\in A-S_{0}=D\)</span> is a zero divisor, take <span class="arithmatex">\(ab=0\in A\)</span>, then <span class="arithmatex">\(a /s\cdot b /1=0\in S_{0}^{-1}A\)</span> so <span class="arithmatex">\(a /s\)</span> is a zero divisor.<br />
+(iii) Consider <span class="arithmatex">\(\iota:A\to S_{0}^{-1}A,a\mapsto a /1\)</span>, then by (i) <span class="arithmatex">\(\iota\)</span> is injective, and if <span class="arithmatex">\(a /s \in S_{0}^{-1}A\)</span>, then <span class="arithmatex">\(s \in S_{0}\)</span> is a non zero-divisor, so <span class="arithmatex">\(s\)</span> is a unit, and <span class="arithmatex">\(a /s=\iota(as^{-1})\)</span>. Therefore <span class="arithmatex">\(\iota\)</span> is bijective and <span class="arithmatex">\(A\cong S_{0}^{-1}A\)</span>.</p>
+<h3 id="310">3.10</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring.<br />
+i) If <span class="arithmatex">\(A\)</span> is absolutely flat (Chapter 2, Exercise 27) and <span class="arithmatex">\(S\)</span> is any multiplicatively closed subset of <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(S^{-1}A\)</span> is absolutely flat.<br />
+ii) <span class="arithmatex">\(A\)</span> is absolutely flat iff <span class="arithmatex">\(A_{\mathfrak{m}}\)</span> is a field for each maximal ideal <span class="arithmatex">\(\mathfrak{m}\)</span>.<br />
+Proof: (i) If <span class="arithmatex">\(M\)</span> is a <span class="arithmatex">\(S^{-1}A-\)</span>module, then <span class="arithmatex">\(M\)</span> is flat as a <span class="arithmatex">\(A-\)</span>module, denoted as <span class="arithmatex">\(M|_{A}\)</span>. Consider <span class="arithmatex">\(S^{-1}M|_{A}\)</span>, then <span class="arithmatex">\(\psi:M\to S^{-1}M|_{A},m\mapsto m /1\)</span> is a well-defined <span class="arithmatex">\(S^{-1}A-\)</span>isomorphism: for <span class="arithmatex">\(m /s \in  S^{-1}M\)</span>, <span class="arithmatex">\(\frac{1}{s}m\)</span> is well-defined, so <span class="arithmatex">\(\psi\left( \frac{1}{s}m \right)=m /s\)</span> and <span class="arithmatex">\(\psi\)</span> is surjective; if <span class="arithmatex">\(\psi(m)=0\)</span> then <span class="arithmatex">\(sm=0\)</span> for some <span class="arithmatex">\(s \in S\)</span>, so <span class="arithmatex">\(m=\frac{1}{s}sm=0\)</span> and <span class="arithmatex">\(\psi\)</span> is injective; clearly <span class="arithmatex">\(\psi\)</span> is a homomorphism of groups, and <span class="arithmatex">\(\psi\left( \frac{a}{s}m \right)=\frac{a}{s} \frac{m}{1}=\frac{a}{s}\psi(m)\)</span> so <span class="arithmatex">\(\psi\)</span> is an <span class="arithmatex">\(S^{-1}A-\)</span>module homomorphism.<br />
+If <span class="arithmatex">\(\phi:N^{\prime}\to N\)</span> is injective, we show that <span class="arithmatex">\(\phi \otimes 1_{M}:N^{\prime}\otimes_{S^{-1}A}M\to N\otimes_{S^{-1}A}M\)</span> is injective: note that <span class="arithmatex">\(N^{\prime}\otimes_{S^{-1}A}M=S^{-1}N^{\prime}|_{A}\otimes_{S^{-1}A}S^{-1}M|_{A}=S^{-1}(N^{\prime}|_{A}\otimes_{A}M|_{A})\)</span> by the previous part, and <span class="arithmatex">\(N^{\prime}|_{A}\otimes_{A}M|_{A}\to N|_{A}\otimes_{A}M|_{A}\)</span> is injective since <span class="arithmatex">\(A\)</span> is absolutely flat. Since localization keeps exactness, <span class="arithmatex">\(S^{-1}(N^{\prime}|_{A}\otimes_{A}M|_{A})\to S^{-1}(N|_{A}\otimes_{A}M|_{A})\)</span> is also injective.<br />
+(ii) The only if part is shown in (i). For (ii), use Theorem3.10 and the fact that all module of a field are free, hence flat.</p>
+<h3 id="311">3.11</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring. Prove that the following are equivalent:<br />
+i) <span class="arithmatex">\(A/\mathfrak{N}\)</span> is absolutely flat (<span class="arithmatex">\(\mathfrak{N}\)</span> being the nilradical of <span class="arithmatex">\(A\)</span>).<br />
+ii) Every prime ideal of <span class="arithmatex">\(A\)</span> is maximal.<br />
+iii) <span class="arithmatex">\(\operatorname{Spec}(A)\)</span> is a <span class="arithmatex">\(T_1\)</span>-space (i.e., every subset consisting of a single point is closed).<br />
+iv) <span class="arithmatex">\(\operatorname{Spec}(A)\)</span> is Hausdorff.<br />
+If these conditions are satisfied, show that <span class="arithmatex">\(\operatorname{Spec}(A)\)</span> is compact and totally disconnected (i.e. the only connected subsets of <span class="arithmatex">\(\operatorname{Spec}(A)\)</span> are those consisting of a single point).<br />
+Proof: (iv)=&gt;(iii) is trivial. (iii)=&gt;(ii): If <span class="arithmatex">\(\mathfrak{p}\)</span> is a non-maximal prime ideal, take a maximal ideal <span class="arithmatex">\(\mathfrak{m}\)</span> containing <span class="arithmatex">\(\mathfrak{p}\)</span>, then for any <span class="arithmatex">\(\mathfrak{p}\in V(I)\)</span> where <span class="arithmatex">\(I\subset A\)</span>, <span class="arithmatex">\(I\subset \mathfrak{p}\subset \mathfrak{m}\)</span> so <span class="arithmatex">\(\mathfrak{m}\in V(I)\)</span>. Hence <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is not T1, a contradiction.<br />
+(ii)&lt;=&gt;(i) We show that <span class="arithmatex">\((A /\mathfrak{N})_{\mathfrak{m}}\)</span> is a field for every maximal ideal <span class="arithmatex">\(\mathfrak{m}\subset A /\mathfrak{N}\)</span>, then by Exercise3.10 <span class="arithmatex">\(A /\mathfrak{N}\)</span> is absolutely flat. If <span class="arithmatex">\((A /\mathfrak{N})_{\mathfrak{m}}\)</span> has a non-zero prime ideal <span class="arithmatex">\(\mathfrak{p}\subset(A /\mathfrak{N})_{\mathfrak{m}}\)</span>, then <span class="arithmatex">\(\mathfrak{p}\)</span> corresponds to a prime ideal <span class="arithmatex">\(\mathfrak{q}\subsetneq \mathfrak{m}\)</span> such that <span class="arithmatex">\(\mathfrak{N}\subsetneq \mathfrak{q}\)</span>. Hence <span class="arithmatex">\(\mathfrak{q}\)</span> is a non-maximal prime ideal, a contradiction. The converse is analogous.<br />
+(i)=&gt;(iv) By Exercise2.27, <span class="arithmatex">\(A /\mathfrak{N}\)</span> is absolutely flat implies every principle ideal is idempotent. For any <span class="arithmatex">\(x\neq y\in \mathrm{Spec}(A)\)</span>, by (i)=&gt;(ii) they are both maximal ideals, so <span class="arithmatex">\(\mathfrak{p}_{x}+\mathfrak{p}_{y}=(1)\)</span>. Take <span class="arithmatex">\(a\in \mathfrak{p}_{x}\)</span> and <span class="arithmatex">\(b\in \mathfrak{p}_{y}\)</span> such that <span class="arithmatex">\((a)+(b)=1\)</span>, and idempotent elements <span class="arithmatex">\(e\in(a),g\in(b)\)</span> that generate <span class="arithmatex">\((a),(b)\)</span>. Let <span class="arithmatex">\(f=(1-e)g\)</span>, then <span class="arithmatex">\(x\in X_{f}\)</span> and <span class="arithmatex">\(y\in X_{e}\)</span>, while <span class="arithmatex">\((f)+(e)=1\)</span> since <span class="arithmatex">\(g=f+eg\in(f,e)\)</span>. Hence we obtain disjoint open neighborhoods <span class="arithmatex">\(X_{f},X_{e}\)</span>, and <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is indeed Hausdorff.</p>
+<h3 id="312">3.12</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be an integral domain and <span class="arithmatex">\(M\)</span> an <span class="arithmatex">\(A\)</span>-module. An element <span class="arithmatex">\(x \in M\)</span> is a <strong>torsion element</strong> of <span class="arithmatex">\(M\)</span> if <span class="arithmatex">\(\operatorname{Ann}(x) \ne 0\)</span>, that is if <span class="arithmatex">\(x\)</span> is killed by some non-zero element of <span class="arithmatex">\(A\)</span>. Show that the torsion elements of <span class="arithmatex">\(M\)</span> form a submodule of <span class="arithmatex">\(M\)</span>. This submodule is called the <strong>torsion submodule</strong> of <span class="arithmatex">\(M\)</span> and is denoted by <span class="arithmatex">\(T(M)\)</span>. If <span class="arithmatex">\(T(M) = 0\)</span>, the module <span class="arithmatex">\(M\)</span> is said to be <strong>torsion-free</strong>. Show that<br />
+i) If <span class="arithmatex">\(M\)</span> is any <span class="arithmatex">\(A\)</span>-module, then <span class="arithmatex">\(M/T(M)\)</span> is torsion-free.<br />
+ii) If <span class="arithmatex">\(f : M \to N\)</span> is a module homomorphism, then <span class="arithmatex">\(f(T(M)) \subseteq T(N)\)</span>.<br />
+iii) If <span class="arithmatex">\(0 \to M' \to M \to M''\)</span> is an exact sequence, then the sequence <span class="arithmatex">\(0 \to T(M') \to T(M) \to T(M'')\)</span> is exact.<br />
+iv) If <span class="arithmatex">\(M\)</span> is any <span class="arithmatex">\(A\)</span>-module, then <span class="arithmatex">\(T(M)\)</span> is the kernel of the mapping <span class="arithmatex">\(\iota:x \mapsto 1 \otimes x\)</span> of <span class="arithmatex">\(M\)</span> into <span class="arithmatex">\(K \otimes_A M\)</span>, where <span class="arithmatex">\(K\)</span> is the field of fractions of <span class="arithmatex">\(A\)</span>.<br />
+Proof: If <span class="arithmatex">\(x,y\in T(M)\)</span>, suppose <span class="arithmatex">\(ax=by=0\)</span> where <span class="arithmatex">\(a,b\neq 0\)</span>, then <span class="arithmatex">\(ab\neq 0\)</span> and <span class="arithmatex">\(ab(x-y)=0\)</span> so <span class="arithmatex">\(x-y\in T(M)\)</span> and it is a subgroup. If <span class="arithmatex">\(x\in T(M)\)</span> and <span class="arithmatex">\(a\in A\)</span>, suppose <span class="arithmatex">\(bx=0\)</span> for <span class="arithmatex">\(b\neq 0\)</span>, then <span class="arithmatex">\(b(ax)=a(bx)=0\)</span> so <span class="arithmatex">\(ax\in T(M)\)</span>. Hence <span class="arithmatex">\(T(M)\)</span> is a sub-module.<br />
+(i) If <span class="arithmatex">\(m+T(M)\in M /T(M)\)</span> is a torsion element, take <span class="arithmatex">\(a\in A\)</span> such that <span class="arithmatex">\(a\neq 0\)</span> and <span class="arithmatex">\(a(m+T(M))=0\)</span>, then <span class="arithmatex">\(am\in T(M)\)</span> implies <span class="arithmatex">\(b(am)=0\)</span> for some <span class="arithmatex">\(b\neq 0\)</span>. Hence <span class="arithmatex">\(abm=0\)</span> so <span class="arithmatex">\(m\in T(M)\)</span>, and therefore <span class="arithmatex">\(M /T(M)\)</span> is torsion free.<br />
+(ii) If <span class="arithmatex">\(m\in M\)</span> is a torsion element, suppose <span class="arithmatex">\(am=0\)</span> for <span class="arithmatex">\(a\neq 0\)</span>, then <span class="arithmatex">\(a(f(m))=f(am)=0\)</span> so <span class="arithmatex">\(f(m)\in T(N)\)</span>. Hence <span class="arithmatex">\(f(T(M))\subset T(N)\)</span>.<br />
+(iii) Suppose <span class="arithmatex">\(f:M^{\prime}\to M\)</span> is injective and <span class="arithmatex">\(g:M\to M^{\prime\prime}\)</span> satisfy <span class="arithmatex">\(\mathrm{Ker}g=\mathrm{Im}f\)</span>. Then <span class="arithmatex">\(f|_{T(M^{\prime})}\)</span> is clearly injective, and <span class="arithmatex">\(\mathrm{Im}f|_{T(M)}\subset \mathrm{Ker} g|_{T(M)}\)</span>. If <span class="arithmatex">\(g(m)=0\)</span> for some <span class="arithmatex">\(m\in T(M)\)</span>, then <span class="arithmatex">\(m\in \mathrm{Ker}g=\mathrm{Im}f\)</span> so take <span class="arithmatex">\(f(m^{\prime})=m\)</span> where <span class="arithmatex">\(m^{\prime}\in M^{\prime}\)</span>. Suppose <span class="arithmatex">\(am=0\)</span> for some <span class="arithmatex">\(a\neq 0\)</span>, then <span class="arithmatex">\(f(am^{\prime})=am=0\)</span> implies <span class="arithmatex">\(am^{\prime}=0\)</span>, so <span class="arithmatex">\(m^{\prime}\in T(M^{\prime})\)</span> and <span class="arithmatex">\(m\in \mathrm{Im}f|_{M^{\prime}}\)</span>. Therefore <span class="arithmatex">\(\mathrm{Im}f|_{T(M)}=\mathrm{Ker}g|_{T(M)}\)</span> and <span class="arithmatex">\(T\)</span> is left exact.<br />
+(iv) If <span class="arithmatex">\(m\in T(M)\)</span> take <span class="arithmatex">\(am=0\)</span> for <span class="arithmatex">\(a\neq 0\)</span>, then <span class="arithmatex">\(1\otimes m=\frac{1}{a}\otimes am=0\)</span> so <span class="arithmatex">\(m\in \mathrm{Ker}\iota\)</span>.<br />
+Recall Theorem3.5 gives an isomorphism <span class="arithmatex">\(K\otimes_{A}M\cong S^{-1}M\)</span> where <span class="arithmatex">\(S=A\backslash\{ 0 \}\)</span>, by <span class="arithmatex">\(a /s\otimes m\mapsto am /s\)</span>, then it induces <span class="arithmatex">\(\tilde{\iota}:x\mapsto x /1\)</span>. Hence it is clear that <span class="arithmatex">\(m\in \mathrm{Ker}\iota\implies m\in T(M)\)</span>.</p>
+<h3 id="313">3.13</h3>
+<p>Let <span class="arithmatex">\(S\)</span> be a multiplicatively closed subset of an integral domain <span class="arithmatex">\(A\)</span>. In the notation of Exercise 12, show that <span class="arithmatex">\(T(S^{-1}M) = S^{-1}(TM)\)</span>. Deduce that the following are equivalent:<br />
+i) <span class="arithmatex">\(M\)</span> is torsion-free.<br />
+ii) <span class="arithmatex">\(M_{\mathfrak{p}}\)</span> is torsion-free for all prime ideals <span class="arithmatex">\(\mathfrak{p}\)</span>.<br />
+iii) <span class="arithmatex">\(M_{\mathfrak{m}}\)</span> is torsion-free for all maximal ideals <span class="arithmatex">\(\mathfrak{m}\)</span>.<br />
+Proof: If <span class="arithmatex">\(m /s \in T(S^{-1}M)\)</span>, then <span class="arithmatex">\(am /s=0\)</span> for some <span class="arithmatex">\(a\neq 0\)</span>, which implies <span class="arithmatex">\(s^{\prime}am=0\)</span> for some <span class="arithmatex">\(s^{\prime}\in S\)</span>. Since <span class="arithmatex">\(s^{\prime}\in S\)</span> which doesn't contain <span class="arithmatex">\(0\)</span>, <span class="arithmatex">\((s^{\prime}a)m=0\)</span> implies <span class="arithmatex">\(m\in T(M)\)</span>. Consider <span class="arithmatex">\(\varphi:T(S^{-1}M)\to S^{-1}(TM),m /s\mapsto m /s\)</span> then <span class="arithmatex">\(\varphi\)</span> is well-defined, and clearly surjective. Verify that <span class="arithmatex">\(\varphi\)</span> is a <span class="arithmatex">\(S^{-1}A-\)</span>module homomorphism. If <span class="arithmatex">\(m /s \in \mathrm{Ker}\varphi\)</span> then <span class="arithmatex">\(s^{\prime}m=0\)</span> for some <span class="arithmatex">\(s^{\prime}\in S\)</span>, so <span class="arithmatex">\(m /s=s^{\prime}m /s^{\prime}s=0\)</span>, hence <span class="arithmatex">\(\varphi\)</span> is an isomorphism <span class="arithmatex">\(T(S^{-1}M)\cong S^{-1}(TM)\)</span>.<br />
+(i)(ii)(iii) are equivalent using <span class="arithmatex">\(T(M_{\mathfrak{p}})=(T(M))_{\mathfrak{p}}\)</span> and the fact that <span class="arithmatex">\(M=0\)</span> is local.</p>
+<h3 id="314">3.14</h3>
+<p>Let <span class="arithmatex">\(M\)</span> be an <span class="arithmatex">\(A\)</span>-module and <span class="arithmatex">\(\mathfrak{a}\)</span> an ideal of <span class="arithmatex">\(A\)</span>. Suppose that <span class="arithmatex">\(M_{\mathfrak{m}} = 0\)</span> for all maximal ideals <span class="arithmatex">\(\mathfrak{m} \supseteq \mathfrak{a}\)</span>. Prove that <span class="arithmatex">\(M = \mathfrak{a}M\)</span>.<br />
+Pass to the <span class="arithmatex">\(A/\mathfrak{a}\)</span>-module <span class="arithmatex">\(M/\mathfrak{a}M\)</span> and use (3.8).<br />
+Proof: For any maximal ideal <span class="arithmatex">\(\mathfrak{m}\supset \mathfrak{a}\)</span>, <span class="arithmatex">\(M_{\mathfrak{m}}=0\)</span> implies <span class="arithmatex">\(A_{\mathfrak{m}}\otimes_{A}M /\mathfrak{a}M\cong(M /\mathfrak{a}M)_{\mathfrak{m}}=M_{\mathfrak{m}} /\mathfrak{a}M_{\mathfrak{m}}=0\)</span> as <span class="arithmatex">\(A_{\mathfrak{m}}-\)</span>modules (hence also as <span class="arithmatex">\(A /\mathfrak{a}-\)</span>modules). Note that <span class="arithmatex">\((M /\mathfrak{a}M)_{\mathfrak{m} /\mathfrak{a}}\cong(A /\mathfrak{a})_{\mathfrak{m} /a}\otimes_{A /\mathfrak{a}} (M /\mathfrak{a}M)\)</span> as <span class="arithmatex">\(A /\mathfrak{a}-\)</span>modules, and <span class="arithmatex">\((A /\mathfrak{a})_{\mathfrak{m} /\mathfrak{a}}\cong (A /\mathfrak{a})_{\mathfrak{m}}\)</span> as <span class="arithmatex">\(A_{\mathfrak{m}}-\)</span>modules by Exercise3.4. So we only need to show that <span class="arithmatex">\((A /\mathfrak{a})_{\mathfrak{m}}\otimes_{A /\mathfrak{a}}(M /\mathfrak{a}M)\cong A_{\mathfrak{m}}\otimes_{A}(M /\mathfrak{a}M)\)</span> as <span class="arithmatex">\(A /\mathfrak{a}-\)</span>modules, then <span class="arithmatex">\((M /\mathfrak{a}M)_{\mathfrak{m} /\mathfrak{a}}=0\)</span> for every localization of the <span class="arithmatex">\(A /\mathfrak{a}-\)</span>module <span class="arithmatex">\(M /\mathfrak{a}M\)</span>, so <span class="arithmatex">\(M /\mathfrak{a}M=0\)</span> and <span class="arithmatex">\(M=\mathfrak{a}M\)</span>.<br />
+Consider <span class="arithmatex">\(f:(A /\mathfrak{a})_{\mathfrak{m}}\times(M /\mathfrak{a}M)\to A_{\mathfrak{m}}\otimes_{A}(M /\mathfrak{a}M),(\bar{a} /s,m+\mathfrak{a}M)\mapsto 1 /s\otimes(am+\mathfrak{a}M)\)</span>, then if <span class="arithmatex">\(a+\mathfrak{a}=b+\mathfrak{a}\)</span>, we have <span class="arithmatex">\(am+\mathfrak{a}M=bm+\mathfrak{a}M\)</span> so <span class="arithmatex">\(f\)</span> is well-defined. Clearly <span class="arithmatex">\(f\)</span> is <span class="arithmatex">\(A /\mathfrak{a}-\)</span>bilinear, so it induces a <span class="arithmatex">\(A /\mathfrak{a}-\)</span>module homomorphism <span class="arithmatex">\(\alpha:(A /\mathfrak{a})_{\mathfrak{m}}\otimes_{A /\mathfrak{a}}(M /\mathfrak{a}M)\to A_{\mathfrak{m}}\otimes_{A}(M /\mathfrak{a}M)\)</span> such that <span class="arithmatex">\(\alpha(\bar{a} /s⊗ \bar{m})= 1 /s\otimes(am+\mathfrak{a}M)\)</span>. Likewise we take a <span class="arithmatex">\(A-\)</span>module homomorphism <span class="arithmatex">\(\beta:A_{\mathfrak{m}}\otimes_{A}(M /\mathfrak{a}M)\to(A /\mathfrak{a})_{\mathfrak{m}}\otimes_{A /\mathfrak{a}}(M /\mathfrak{a}M)\)</span> such that <span class="arithmatex">\(\beta\left( \frac{a}{s}⊗ \bar{m} \right)=1 /s \otimes (am+\mathfrak{a}M)\)</span>, and verify that <span class="arithmatex">\(\alpha\beta=1,\beta\alpha=1\)</span>. Hence <span class="arithmatex">\((A /\mathfrak{a})_{\mathfrak{m}}\otimes_{A /\mathfrak{a}}(M /\mathfrak{a}M)\cong A_{\mathfrak{m}}\otimes_{A}(M /\mathfrak{a}M)\)</span> as <span class="arithmatex">\(A /\mathfrak{a}-\)</span>modules.</p>
+<h3 id="315">3.15</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring, and let <span class="arithmatex">\(F\)</span> be the <span class="arithmatex">\(A\)</span>-module <span class="arithmatex">\(A^n\)</span>. Show that every set of <span class="arithmatex">\(n\)</span> generators of <span class="arithmatex">\(F\)</span> is a basis of <span class="arithmatex">\(F\)</span>.<br />
+Deduce that every set of generators of <span class="arithmatex">\(F\)</span> has at least <span class="arithmatex">\(n\)</span> elements.<br />
+Proof: Suppose <span class="arithmatex">\(x_{1},\cdots,x_{n}\)</span> generates <span class="arithmatex">\(F=A^{n}\)</span>, and consider <span class="arithmatex">\(\phi:F\to F,\phi(e_{i})=x_{i}\)</span>, then <span class="arithmatex">\(\phi\)</span> is surjective. <span class="arithmatex">\(F\)</span> is free so it is a projective module, hence the exact sequence <span class="arithmatex">\(0\to \mathrm{Ker}\phi\to F\to F\to 0\)</span> splits, and there exists <span class="arithmatex">\(h:F\to F\)</span> such that <span class="arithmatex">\(1_{F}=\phi h\)</span>. Hence the matrices <span class="arithmatex">\(M,N\)</span> of <span class="arithmatex">\(\phi ,h\)</span> under the standard basis satisfy <span class="arithmatex">\(MN=I\)</span>, so <span class="arithmatex">\(\det M\cdot \det N=1\)</span> and <span class="arithmatex">\(\det M\)</span> is a unit. Thus <span class="arithmatex">\(M\)</span> is invertible in <span class="arithmatex">\(A^{n\times n}\)</span>, <span class="arithmatex">\(\phi\)</span> is an isomorphism and <span class="arithmatex">\(x_{1},\cdots,x_{n}\)</span> for a basis of <span class="arithmatex">\(F\)</span>.<br />
+If a set of generators of <span class="arithmatex">\(F\)</span> has less then <span class="arithmatex">\(n\)</span> elements, add some zeros, then they form a basis of <span class="arithmatex">\(F\)</span>, a contradiction.</p>
+<p>Another proof: Likewise take <span class="arithmatex">\(\phi:F\to F\)</span>. View <span class="arithmatex">\(F\)</span> as an <span class="arithmatex">\(A[x]-\)</span>module by defining <span class="arithmatex">\(f\cdot v=f(\phi)v\)</span>, then <span class="arithmatex">\(F=A^{n}\)</span> is a finitely generated <span class="arithmatex">\(A[x]-\)</span>module, and <span class="arithmatex">\(\phi\)</span> is surjective implies <span class="arithmatex">\(\mathfrak{a}=(x)\)</span> satisfy <span class="arithmatex">\(\mathfrak{a}F=F\)</span>. By Hamilton-Cayley applied to <span class="arithmatex">\(1_{F}\)</span>, there exists <span class="arithmatex">\(r\in A[x]\)</span> such that <span class="arithmatex">\(rF=0\)</span> and <span class="arithmatex">\(r\equiv 1\pmod{\mathfrak{a}}\)</span>. Let <span class="arithmatex">\(r=1-xf\)</span>, then <span class="arithmatex">\(\phi\)</span> has an inverse <span class="arithmatex">\(f(\phi)\)</span>, so <span class="arithmatex">\(\phi\)</span> is an isomorphism.<br />
+The proof from hint: Take <span class="arithmatex">\(\phi:F\to F\)</span>. By (3.9) we may assume that <span class="arithmatex">\(A\)</span> is a local ring. Let <span class="arithmatex">\(N\)</span> be the kernel of <span class="arithmatex">\(\phi\)</span> and let <span class="arithmatex">\(k = A/\mathfrak{m}\)</span> be the residue field of <span class="arithmatex">\(A\)</span>. Since <span class="arithmatex">\(F\)</span> is a flat <span class="arithmatex">\(A\)</span>-module, the exact sequence <span class="arithmatex">\(0 \to N \to F \to F \to 0\)</span> gives an exact sequence <span class="arithmatex">\(0 \longrightarrow k \otimes N \longrightarrow k \otimes F \xrightarrow{1 \otimes \phi} k \otimes F \longrightarrow 0\)</span>. Now <span class="arithmatex">\(k \otimes F = k^n\)</span> is an <span class="arithmatex">\(n\)</span>-dimensional vector space over <span class="arithmatex">\(k\)</span>; <span class="arithmatex">\(1 \otimes \phi\)</span> is surjective, hence bijective, hence <span class="arithmatex">\(k \otimes N = 0\)</span>. Also <span class="arithmatex">\(N\)</span> is finitely generated, by Chapter 2, Exercise 12, hence <span class="arithmatex">\(N = 0\)</span> by Nakayama's lemma. Hence <span class="arithmatex">\(\phi\)</span> is an isomorphism.</p>
+<h3 id="316">3.16</h3>
+<p>Let <span class="arithmatex">\(B\)</span> be a flat <span class="arithmatex">\(A\)</span>-algebra. Then the following conditions are equivalent:<br />
+i) <span class="arithmatex">\(\mathfrak{a}^{ec} = \mathfrak{a}\)</span> for all ideals <span class="arithmatex">\(\mathfrak{a}\)</span> of <span class="arithmatex">\(A\)</span>.<br />
+ii) <span class="arithmatex">\(\operatorname{Spec}(B) \to \operatorname{Spec}(A)\)</span> is surjective.<br />
+iii) For every maximal ideal <span class="arithmatex">\(\mathfrak{m}\)</span> of <span class="arithmatex">\(A\)</span> we have <span class="arithmatex">\(\mathfrak{m}^e \ne (1)\)</span>.<br />
+iv) If <span class="arithmatex">\(M\)</span> is any non-zero <span class="arithmatex">\(A\)</span>-module, then <span class="arithmatex">\(M_B \ne 0\)</span>.<br />
+v) For every <span class="arithmatex">\(A\)</span>-module <span class="arithmatex">\(M\)</span>, the mapping <span class="arithmatex">\(x \mapsto 1 \otimes x\)</span> of <span class="arithmatex">\(M\)</span> into <span class="arithmatex">\(M_B\)</span> is injective.<br />
+<span class="arithmatex">\(B\)</span> is said to be <strong>faithfully flat</strong> over <span class="arithmatex">\(A\)</span>.<br />
+Proof: (i)=&gt;(ii) For any <span class="arithmatex">\(\mathfrak{p}\in \mathrm{Spec}(A)\)</span>, <span class="arithmatex">\(\mathfrak{p}^{ec}=\mathfrak{p}\)</span> so by Theorem3.16 it is the contraction of a prime ideal in <span class="arithmatex">\(\mathrm{Spec}(B)\)</span>.<br />
+(ii)=&gt;(iii) is trivial, since <span class="arithmatex">\(\mathfrak{m}=\mathfrak{q}^{c}\)</span> implies <span class="arithmatex">\(\mathfrak{m}^{e}=\mathfrak{q}^{ce}\subset \mathfrak{q}\subsetneq(1)\)</span>.<br />
+(iii)=&gt;(iv) Take any nonzero <span class="arithmatex">\(x\in M\)</span>, and consider <span class="arithmatex">\(\mathfrak{a}=\{ a\in A:ax=0 \}\)</span>, then <span class="arithmatex">\(\mathfrak{a}\to A\to M\)</span> is exact where <span class="arithmatex">\(f:A\to M,a\mapsto ax\)</span> and <span class="arithmatex">\(\iota :\mathfrak{a}\to A,a\mapsto a\)</span>. Since <span class="arithmatex">\(B\)</span> is flat, <span class="arithmatex">\(B\otimes_{A}\mathfrak{a}\to B\otimes_{A}A\to M_B\)</span> is exact, so we only need to show <span class="arithmatex">\(1_{B} \otimes\iota\)</span> is not surjective. Note that <span class="arithmatex">\(b\otimes a=ab\otimes 1\)</span>, so the image is contained in <span class="arithmatex">\(\{ b\otimes 1:b\in \mathfrak{a}^{e} \}\)</span> which does not contain <span class="arithmatex">\(1\otimes 1\)</span> since <span class="arithmatex">\(1\not\in \mathfrak{a}^{e}\)</span>. Hence <span class="arithmatex">\(\mathrm{Ker}(1\otimes f)\neq B\otimes_{A}A\)</span> so <span class="arithmatex">\(M_{B}\neq 0\)</span>.<br />
+(iv)=&gt;(v) If <span class="arithmatex">\(\iota:M\to M_{B},x\mapsto 1\otimes x\)</span> has kernel <span class="arithmatex">\(M^{\prime}\)</span>, then <span class="arithmatex">\(0\to M^{\prime}\to M\to M_{B}\)</span> is exact, so <span class="arithmatex">\(0\to M^{\prime}_{B}\to M_{B}\to B\otimes_{A}M_{B}\)</span> is exact. Note that <span class="arithmatex">\(1_{B}\otimes\iota:M_{B}\to B\otimes_{A}M_{B}\)</span> is injective since <span class="arithmatex">\(1_{B}\otimes\iota(b\otimes x)= b\otimes 1\otimes x\)</span> has a left inverse <span class="arithmatex">\(g:B\otimes_{A}M_{B}\to M_{B}\)</span> induced by <span class="arithmatex">\(g(b\otimes b^{\prime}\otimes x)=bb^{\prime}\otimes x\)</span>. Hence <span class="arithmatex">\(M^{\prime}_{B}=0\)</span> so <span class="arithmatex">\(M^{\prime}=0\)</span> and <span class="arithmatex">\(\iota\)</span> is injective.<br />
+(v)=&gt;(i) For any ideal <span class="arithmatex">\(\mathfrak{a}\subset A\)</span>, let <span class="arithmatex">\(M=A /\mathfrak{a}\)</span>, then <span class="arithmatex">\(\phi:M\to M_{B}\)</span> is injective, while <span class="arithmatex">\(\mathfrak{a}^{ec} /\mathfrak{a}\subset \mathrm{Ker}\phi\)</span>, hence <span class="arithmatex">\(\mathfrak{a}^{ec}=\mathfrak{a}\)</span>. </p>
+<h3 id="317">3.17</h3>
+<p>Let <span class="arithmatex">\(A \xrightarrow{f} B \xrightarrow{g} C\)</span> be ring homomorphisms. If <span class="arithmatex">\(g \circ f\)</span> is flat and <span class="arithmatex">\(g\)</span> is faithfully flat, then <span class="arithmatex">\(f\)</span> is flat.<br />
+<img alt="TikZ Diagram" src="../../assets/tikz_images/ada6886b83efd85aacb7a081f9b06d36.svg" /><br />
+Proof: For any <span class="arithmatex">\(\phi:N\to M\)</span> be an monomorphism of <span class="arithmatex">\(A-\)</span>modules, then <span class="arithmatex">\(\iota_{N}:N_{B}\to(N_{B})_{C}\)</span> and <span class="arithmatex">\(\iota_{m}:M_{B}\to(M_{B})_{C}\)</span> are injective since <span class="arithmatex">\(g\)</span> is faithfully flat. Note that <span class="arithmatex">\(M_{C}=C\otimes_{A}M\cong C\otimes_{B}B\otimes_{A}M=(M_{B})_{C}\)</span>, so from <span class="arithmatex">\(g∘ f\)</span> is flat we obtain <span class="arithmatex">\(1_{C}\otimes\phi:(N_{B})_{C}\to(M_{B})_{C}\)</span> is injective. Note that the diagram is commutative, i.e., <span class="arithmatex">\(\iota_{M}\circ(1_{B}\otimes\phi)=(1_{C}\otimes\phi)\circ\iota_{N}\)</span>, so <span class="arithmatex">\(1_{B}\otimes\phi\)</span> is also injective. Therefore <span class="arithmatex">\(f\)</span> is flat.</p>
+<h3 id="318">3.18</h3>
+<p>Let <span class="arithmatex">\(f : A \to B\)</span> be a flat homomorphism of rings, let <span class="arithmatex">\(\mathfrak{q}\)</span> be a prime ideal of <span class="arithmatex">\(B\)</span> and let <span class="arithmatex">\(\mathfrak{p} = \mathfrak{q}^c\)</span>. Then <span class="arithmatex">\(f^* : \operatorname{Spec}(B_{\mathfrak{q}}) \to \operatorname{Spec}(A_{\mathfrak{p}})\)</span> is surjective.<br />
+Proof: By Exercise3.16 this is equivalent to <span class="arithmatex">\(\tilde{f}:A_{\mathfrak{p}}\to B_{\mathfrak{q}}\)</span> gives a faithfully flat <span class="arithmatex">\(A_{\mathfrak{p}}-\)</span>algebra <span class="arithmatex">\(B_{\mathfrak{q}}\)</span>. Let <span class="arithmatex">\(S=A-\mathfrak{p}\)</span>, and <span class="arithmatex">\(\tilde{f}:A_{\mathfrak{p}}\to B_{\mathfrak{q}},a /s\mapsto f(a) /f(s)\)</span>. Consider the <span class="arithmatex">\(A-\)</span>algebra <span class="arithmatex">\(B_{\mathfrak{p}}=S^{-1}B\)</span>, and by Exercise3.3, <span class="arithmatex">\(B_{\mathfrak{q}}=U^{-1}(S^{-1}B)=U^{-1}B_{\mathfrak{p}}\)</span> where <span class="arithmatex">\(U=\{ t /1: t\in B-\mathfrak{q} \}\)</span>. Hence <span class="arithmatex">\(\tilde{f}\)</span> factors through the homomorphism <span class="arithmatex">\(A_{\mathfrak{p}}\to B_{\mathfrak{p}}\to B_{\mathfrak{q}}\)</span>. We know that <span class="arithmatex">\(B_{\mathfrak{q}}\)</span> is a flat <span class="arithmatex">\(B_{\mathfrak{p}}-\)</span>module, and <span class="arithmatex">\(B_{\mathfrak{p}}\)</span> is a flat <span class="arithmatex">\(A_{\mathfrak{p}}-\)</span>module, so by Exercise2.8 <span class="arithmatex">\(B_{\mathfrak{q}}\)</span> is a flat <span class="arithmatex">\(A_{\mathfrak{p}}-\)</span>module. <br />
+Now we verify condition (iii) of Exercise3.16: If <span class="arithmatex">\(\mathfrak{m}=\mathfrak{p}A_{\mathfrak{p}}\)</span> is the unique maximal ideal of <span class="arithmatex">\(A_{\mathfrak{p}}\)</span>, then <span class="arithmatex">\(f(a /s)=f(a) /f(s)\in \mathfrak{q}B_{\mathfrak{q}}\)</span> for any <span class="arithmatex">\(a /s \in \mathfrak{p}A_{\mathfrak{p}}\)</span>, so <span class="arithmatex">\(1\not\in \mathfrak{m}^{e}\)</span>. <span class="arithmatex">\(B_{\mathfrak{q}}\)</span> is faithfully flat, so <span class="arithmatex">\(f^{*}\)</span> is surjective.</p>
+<h3 id="319">3.19</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring, <span class="arithmatex">\(M\)</span> an <span class="arithmatex">\(A\)</span>-module. The <strong>support</strong> of <span class="arithmatex">\(M\)</span> is defined to be the set <span class="arithmatex">\(\operatorname{Supp}(M)\)</span> of prime ideals <span class="arithmatex">\(\mathfrak{p}\)</span> of <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(M_{\mathfrak{p}} \ne 0\)</span>. Prove the following results:<br />
+i) <span class="arithmatex">\(M \ne 0 \Leftrightarrow \operatorname{Supp}(M) \ne \varnothing\)</span>.<br />
+ii) <span class="arithmatex">\(V(\mathfrak{a}) = \operatorname{Supp}(A/\mathfrak{a})\)</span>.<br />
+iii) If <span class="arithmatex">\(0 \to M' \to M \to M'' \to 0\)</span> is an exact sequence, then <span class="arithmatex">\(\operatorname{Supp}(M) = \operatorname{Supp}(M') \cup \operatorname{Supp}(M'')\)</span>.<br />
+iv) If <span class="arithmatex">\(M = \sum M_i\)</span>, then <span class="arithmatex">\(\operatorname{Supp}(M) = \bigcup \operatorname{Supp}(M_i)\)</span>.<br />
+v) If <span class="arithmatex">\(M\)</span> is finitely generated, then <span class="arithmatex">\(\operatorname{Supp}(M) = V(\operatorname{Ann}(M))\)</span> (and is therefore a closed subset of <span class="arithmatex">\(\operatorname{Spec}(A)\)</span>).<br />
+vi) If <span class="arithmatex">\(M, N\)</span> are finitely generated, then <span class="arithmatex">\(\operatorname{Supp}(M \otimes_A N) = \operatorname{Supp}(M) \cap \operatorname{Supp}(N)\)</span>.<br />
+vii) If <span class="arithmatex">\(M\)</span> is finitely generated and <span class="arithmatex">\(\mathfrak{a}\)</span> is an ideal of <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(\operatorname{Supp}(M/\mathfrak{a}M) = V(\mathfrak{a} + \operatorname{Ann}(M))\)</span>.<br />
+viii) If <span class="arithmatex">\(f : A \to B\)</span> is a ring homomorphism and <span class="arithmatex">\(M\)</span> is a finitely generated <span class="arithmatex">\(A\)</span>-module, then <span class="arithmatex">\(\operatorname{Supp}(B \otimes_A M) = f^{*-1}(\operatorname{Supp}(M))\)</span>.<br />
+Proof: (i) Since <span class="arithmatex">\(M=0\)</span> is a local property.<br />
+(ii) <span class="arithmatex">\(\mathfrak{p}\in V(\mathfrak{a})\iff \mathfrak{a}\subset\mathfrak{p}\)</span>, while <span class="arithmatex">\(\mathfrak{p}\in \mathrm{Supp}(A /\mathfrak{a})\iff(A /\mathfrak{a})_{\mathfrak{p}}\neq 0\iff S⊂ A-\mathfrak{a}\)</span>. Hence they are equivalent.<br />
+(iii) Since localization keeps exactness, <span class="arithmatex">\(M^{\prime}_{\mathfrak{p}}\neq 0\)</span> or <span class="arithmatex">\(M^{\prime\prime}_{\mathfrak{p}}\neq0\)</span> implies <span class="arithmatex">\(M_{\mathfrak{p}}\neq 0\)</span> and vice versa, so <span class="arithmatex">\(\mathrm{Supp}(M)=\mathrm{Supp}(M^{\prime})\cup \mathrm{Supp}(M^{\prime\prime})\)</span>.<br />
+(iv) Trivial since localization factors through direct sums. <br />
+(<span class="arithmatex">\(S^{-1}(\oplus A_{i})=S^{-1}A\otimes_{A}\oplus A_{i}=\oplus(S^{-1}A\otimes_{A}A_{i})=\oplus S^{-1}A_{i}\)</span>)<br />
+(v) Suppose <span class="arithmatex">\(M=\langle x_{1},\cdots,x_{n} \rangle\)</span> is finitely generated. If <span class="arithmatex">\(M_{\mathfrak{p}}=0\)</span> for some <span class="arithmatex">\(\mathfrak{p}\subset A\)</span>, then <span class="arithmatex">\(x_{i} /1=0\)</span> implies there exists <span class="arithmatex">\(s_{i}\in S=A-\mathfrak{p}\)</span> such that <span class="arithmatex">\(s_{i}x_{i}=0\)</span>. Let <span class="arithmatex">\(s=s_{1}\cdots s_{n}\)</span>, then <span class="arithmatex">\(sx_{i}=0\)</span> so <span class="arithmatex">\(s\in \mathrm{Ann}(M)\backslash \mathfrak{p}\)</span>, so <span class="arithmatex">\(\mathfrak{p}\not\in V(\mathrm{Ann}(M))\)</span>.<br />
+If <span class="arithmatex">\(\mathfrak{p}\not\in V(\mathrm{Ann}(M))\)</span>, then there exists <span class="arithmatex">\(s \in \mathrm{Ann}(M)\cap S\)</span> where <span class="arithmatex">\(S=A-\mathfrak{p}\)</span>. Hence <span class="arithmatex">\(M_{\mathfrak{p}}=0\)</span> so <span class="arithmatex">\(\mathfrak{p}\not\in \mathrm{Supp}(M)\)</span>.<br />
+(vi) By Exercise2.3, <span class="arithmatex">\(M_{\mathfrak{p}}\otimes_{A_{\mathfrak{p}}}N_{\mathfrak{p}}=0\)</span> iff <span class="arithmatex">\(M_{\mathfrak{p}}=0\)</span> or <span class="arithmatex">\(N_{\mathfrak{p}}=0\)</span>. Recall that <span class="arithmatex">\((M\otimes_{A}N)_{\mathfrak{p}}\cong M_{\mathfrak{p}}\otimes_{A_{\mathfrak{p}}}N_{\mathfrak{p}}\)</span>, so <span class="arithmatex">\(\mathrm{Supp}(M\otimes_{A}N)=\mathrm{Supp}(M)\cap \mathrm{Supp}(N)\)</span>.<br />
+(vii) Note that <span class="arithmatex">\(M /\mathfrak{a}M\cong (A /\mathfrak{a})\otimes_{A}M\)</span>, so <br />
+$$<br />
+\mathrm{Supp}(M /\mathfrak{a}M)\cong\mathrm{Supp}(A /\mathfrak{a})\cap \mathrm{Supp}(M)=V(\mathfrak{a})\cap V(\mathrm{Ann}(M))=V(\mathfrak{a}+\mathrm{Ann}(M)).<br />
+$$<br />
+(viii) Observe that if <span class="arithmatex">\(\mathfrak{q}\)</span> is prime in <span class="arithmatex">\(B\)</span> and <span class="arithmatex">\(\mathfrak{p}=\mathfrak{q}^{c}\)</span>, then<br />
+$$<br />
+(B\otimes <em>{A}M)</em>{\mathfrak{q}}\cong B_{\mathfrak{q}}\otimes <em>{B}(B\otimes </em>{A}M)\cong B_{\mathfrak{q}}\otimes <em>{A}M\cong B</em>{\mathfrak{q}}\otimes <em>{A</em>{\mathfrak{p}}}A_{\mathfrak{p}}\otimes <em>{A}M\cong B</em>{\mathfrak{q}}\otimes <em>{A</em>{p}} M_{\mathfrak{p}}.<br />
+$$<br />
+where <span class="arithmatex">\(A_{\mathfrak{p}}\)</span> is a local ring. Hence <span class="arithmatex">\(M_{\mathfrak{p}}=0\)</span> implies <span class="arithmatex">\((B\otimes_{A}M)_{\mathfrak{q}}=0\)</span> so <span class="arithmatex">\(\mathrm{Supp}(B\otimes_{A}M)\subset f^{*-1}(\mathrm{Supp}(M))\)</span>.<br />
+If <span class="arithmatex">\((B\otimes_{A}M)_{\mathfrak{q}}=0\)</span>, then <span class="arithmatex">\(B_{\mathfrak{q}}\otimes_{A_{\mathfrak{p}}}M_{\mathfrak{p}}=0\)</span>. Suppose <span class="arithmatex">\(M=\langle x_{1},\cdots,x_{n} \rangle\)</span> is finitely generated, then <span class="arithmatex">\(1 /1\otimes x_{i} /1=0\)</span> in <span class="arithmatex">\(B_{\mathfrak{q}}\otimes_{A_{\mathfrak{p}}}M_{\mathfrak{p}}\)</span> so there exists <span class="arithmatex">\(N_{i}\subset B_{\mathfrak{q}}\)</span> finitely generated, such that <span class="arithmatex">\(1 /1\otimes x_{i} /1=0\)</span> in <span class="arithmatex">\(N_{i}\otimes_{A_{\mathfrak{p}}}M_{\mathfrak{p}}\)</span>. Let <span class="arithmatex">\(N=\sum_{i=1}^{n}{N_{i}}\)</span> then <span class="arithmatex">\(N\)</span> is also finitely generated, and <span class="arithmatex">\(1 /1\otimes m /1=0\forall m\in M\)</span> in <span class="arithmatex">\(N\otimes_{A_{\mathfrak{p}}}M_{\mathfrak{p}}\)</span>. Therefore <span class="arithmatex">\(N\otimes_{A_{\mathfrak{p}}}M_{\mathfrak{p}}=0\)</span> where <span class="arithmatex">\(A_{\mathfrak{p}}\)</span> is local and <span class="arithmatex">\(N,M_{\mathfrak{p}}\)</span> are finitely generated. By Exercise2.3 <span class="arithmatex">\(N=0\)</span> or <span class="arithmatex">\(M_{\mathfrak{p}}=0\)</span>. Since <span class="arithmatex">\(1 /1\in N\)</span> is non-zero, <span class="arithmatex">\(M_{\mathfrak{p}}=0\)</span>. Therefore <span class="arithmatex">\(\mathrm{Supp}(B\otimes_{A}M)=f^{*-1}(\mathrm{Supp}(M))\)</span>.</p>
+<h3 id="320">3.20</h3>
+<p>Let <span class="arithmatex">\(f : A \to B\)</span> be a ring homomorphism, <span class="arithmatex">\(f^* : \operatorname{Spec}(B) \to \operatorname{Spec}(A)\)</span> the associated mapping. Show that<br />
+i) Every prime ideal of <span class="arithmatex">\(A\)</span> is a contracted ideal <span class="arithmatex">\(\iff f^*\)</span> is surjective.<br />
+ii) Every prime ideal of <span class="arithmatex">\(B\)</span> is an extended ideal <span class="arithmatex">\(\implies f^*\)</span> is injective.<br />
+Is the converse of ii) true?<br />
+Proof: (i) Since <span class="arithmatex">\(\mathrm{Im}f^{*}\)</span> consists of all contracted prime ideals.<br />
+(ii) If every prime of <span class="arithmatex">\(B\)</span> is extended, suppose <span class="arithmatex">\(\mathfrak{q},\mathfrak{q}^{\prime}\in \mathrm{Spec}(B)\)</span> satisfy <span class="arithmatex">\(\mathfrak{q}^{c}=\mathfrak{q}^{\prime c}\)</span>, Take <span class="arithmatex">\(\mathfrak{p}^{e}=\mathfrak{q}\)</span> and <span class="arithmatex">\(\mathfrak{p}^{\prime e}=\mathfrak{q}^{\prime}\)</span>, then <span class="arithmatex">\(\mathfrak{q}=\mathfrak{p}^{e}=\mathfrak{p}^{ece}=(\mathfrak{q}^{c})^{e}=(\mathfrak{q}^{\prime c})^{e}=\mathfrak{q}^{\prime}\)</span>. Hence <span class="arithmatex">\(f^{*}\)</span> is injective.<br />
+The converse is not true: (from MSE) Consider <span class="arithmatex">\(A[y]=A[x] /(x^{2})\)</span>, and <span class="arithmatex">\(\pi:A[y]\to A\)</span> with kernel <span class="arithmatex">\((y)\)</span>. Then <span class="arithmatex">\(y^{2}=0\)</span> implies every prime ideal of <span class="arithmatex">\(A[y]\)</span> contains <span class="arithmatex">\(y\)</span>, so if we consider the embedding <span class="arithmatex">\(\iota:A\to A[y]\)</span>, <span class="arithmatex">\(\iota ^{*}\)</span> is bijective. However, for any prime <span class="arithmatex">\(\mathfrak{p}\subset A\)</span>, <span class="arithmatex">\(\mathfrak{p}^{e}=\mathfrak{p}A+\mathfrak{p}y\)</span> is not prime, so no prime of <span class="arithmatex">\(B\)</span> is extended.</p>
+<h3 id="321">3.21</h3>
+<p>i) Let <span class="arithmatex">\(A\)</span> be a ring, <span class="arithmatex">\(S\)</span> a multiplicatively closed subset of <span class="arithmatex">\(A\)</span>, and <span class="arithmatex">\(\phi : A \to S^{-1}A\)</span> the canonical homomorphism. Show that <span class="arithmatex">\(\phi^* : \operatorname{Spec}(S^{-1}A) \to \operatorname{Spec}(A)\)</span> is a homeomorphism of <span class="arithmatex">\(\operatorname{Spec}(S^{-1}A)\)</span> onto its image in <span class="arithmatex">\(X = \operatorname{Spec}(A)\)</span>. Let this image be denoted by <span class="arithmatex">\(S^{-1}X\)</span>.<br />
+In particular, if <span class="arithmatex">\(f \in A\)</span>, the image of <span class="arithmatex">\(\operatorname{Spec}(A_f)\)</span> in <span class="arithmatex">\(X\)</span> is the basic open set <span class="arithmatex">\(X_f\)</span> (Chapter 1, Exercise 17).<br />
+ii) Let <span class="arithmatex">\(f : A \to B\)</span> be a ring homomorphism. Let <span class="arithmatex">\(X = \operatorname{Spec}(A)\)</span> and <span class="arithmatex">\(Y = \operatorname{Spec}(B)\)</span>, and let <span class="arithmatex">\(f^* : Y \to X\)</span> be the mapping associated with <span class="arithmatex">\(f\)</span>. Identifying <span class="arithmatex">\(\operatorname{Spec}(S^{-1}A)\)</span> with its canonical image <span class="arithmatex">\(S^{-1}X\)</span> in <span class="arithmatex">\(X\)</span>, and <span class="arithmatex">\(\operatorname{Spec}(S^{-1}B)\)</span> (<span class="arithmatex">\(= \operatorname{Spec}(f(S)^{-1}B)\)</span>) with its canonical image <span class="arithmatex">\(S^{-1}Y\)</span> in <span class="arithmatex">\(Y\)</span>, show that <span class="arithmatex">\(S^{-1}f^* : \operatorname{Spec}(S^{-1}B) \to \operatorname{Spec}(S^{-1}A)\)</span> is the restriction of <span class="arithmatex">\(f^*\)</span> to <span class="arithmatex">\(S^{-1}Y\)</span>, and that <span class="arithmatex">\(S^{-1}Y = {f^*}^{-1}(S^{-1}X)\)</span>.<br />
+iii) Let <span class="arithmatex">\(\mathfrak{a}\)</span> be an ideal of <span class="arithmatex">\(A\)</span> and let <span class="arithmatex">\(\mathfrak{b} = \mathfrak{a}^e\)</span> be its extension in <span class="arithmatex">\(B\)</span>. Let <span class="arithmatex">\(\bar{f} : A/\mathfrak{a} \to B/\mathfrak{b}\)</span> be the homomorphism induced by <span class="arithmatex">\(f\)</span>. If <span class="arithmatex">\(\operatorname{Spec}(A/\mathfrak{a})\)</span> is identified with its canonical image <span class="arithmatex">\(V(\mathfrak{a})\)</span> in <span class="arithmatex">\(X\)</span>, and <span class="arithmatex">\(\operatorname{Spec}(B/\mathfrak{b})\)</span> with its image <span class="arithmatex">\(V(\mathfrak{b})\)</span> in <span class="arithmatex">\(Y\)</span>, show that <span class="arithmatex">\(\bar{f}^*\)</span> is the restriction of <span class="arithmatex">\(f^*\)</span> to <span class="arithmatex">\(V(\mathfrak{b})\)</span>.<br />
+iv) Let <span class="arithmatex">\(\mathfrak{p}\)</span> be a prime ideal of <span class="arithmatex">\(A\)</span>. Take <span class="arithmatex">\(S = A - \mathfrak{p}\)</span> in ii) and then reduce mod <span class="arithmatex">\(S^{-1}\mathfrak{p}\)</span> as in iii). Deduce that the subspace <span class="arithmatex">\({f^*}^{-1}(\mathfrak{p})\)</span> of <span class="arithmatex">\(Y\)</span> is naturally homeomorphic to <span class="arithmatex">\(\operatorname{Spec}(B_{\mathfrak{p}}/\mathfrak{p} B_{\mathfrak{p}}) = \operatorname{Spec}(k(\mathfrak{p}) \otimes_A B)\)</span>, where <span class="arithmatex">\(k(\mathfrak{p})\)</span> is the residue field of the local ring <span class="arithmatex">\(A_{\mathfrak{p}}\)</span>.<br />
+<span class="arithmatex">\(\operatorname{Spec}(k(\mathfrak{p}) \otimes_A B)\)</span> is called the <strong>fiber</strong> of <span class="arithmatex">\(f^*\)</span> over <span class="arithmatex">\(\mathfrak{p}\)</span>.<br />
+Proof: (i) Clearly <span class="arithmatex">\(\phi ^{*}\)</span> is bijective from <span class="arithmatex">\(\mathrm{Spec}(S^{-1}A)\)</span> to <span class="arithmatex">\(S^{-1}X=\{ \mathfrak{p}\in X:\mathfrak{p}\cap S=\emptyset \}\)</span>. If <span class="arithmatex">\(\mathfrak{p}\cap S=\emptyset\)</span>, then by Theorem3.11 <span class="arithmatex">\(\mathfrak{p}^{ec}=\bigcup_{s \in S}(\mathfrak{p}:s)=\mathfrak{p}\)</span>, so <span class="arithmatex">\(\phi ^{*}(V(\mathfrak{a}))=V(\mathfrak{a}^{c})\)</span>, and <span class="arithmatex">\(\phi ^{*-1}(V(\mathfrak{b}))=V(\mathfrak{b}^{e})\)</span>.</p>
+<h3 id="322">3.22</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring and <span class="arithmatex">\(\mathfrak{p}\)</span> a prime ideal of <span class="arithmatex">\(A\)</span>. Then the canonical image of <span class="arithmatex">\(\operatorname{Spec}(A_{\mathfrak{p}})\)</span> in <span class="arithmatex">\(\operatorname{Spec}(A)\)</span> is equal to the intersection of all the open neighborhoods of <span class="arithmatex">\(\mathfrak{p}\)</span> in <span class="arithmatex">\(\operatorname{Spec}(A)\)</span>.</p>
+<h3 id="323">3.23</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring, let <span class="arithmatex">\(X = \operatorname{Spec}(A)\)</span> and let <span class="arithmatex">\(U\)</span> be a basic open set in <span class="arithmatex">\(X\)</span> (i.e., <span class="arithmatex">\(U = X_f\)</span> for some <span class="arithmatex">\(f \in A\)</span>: Chapter 1, Exercise 17).<br />
+i) If <span class="arithmatex">\(U = X_f\)</span>, show that the ring <span class="arithmatex">\(A(U) = A_f\)</span> depends only on <span class="arithmatex">\(U\)</span> and not on <span class="arithmatex">\(f\)</span>.<br />
+ii) Let <span class="arithmatex">\(U' = X_g\)</span> be another basic open set such that <span class="arithmatex">\(U' \subseteq U\)</span>. Show that there is an equation of the form <span class="arithmatex">\(g^n = uf\)</span> for some integer <span class="arithmatex">\(n &gt; 0\)</span> and some <span class="arithmatex">\(u \in A\)</span>, and use this to define a homomorphism <span class="arithmatex">\(\rho : A(U) \to A(U')\)</span> (i.e., <span class="arithmatex">\(A_f \to A_g\)</span>) by mapping <span class="arithmatex">\(a/f^m\)</span> to <span class="arithmatex">\(au^m/g^{mn}\)</span>. Show that <span class="arithmatex">\(\rho\)</span> depends only on <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(U'\)</span>. This homomorphism is called the <strong>restriction homomorphism</strong>.<br />
+iii) If <span class="arithmatex">\(U = U'\)</span>, then <span class="arithmatex">\(\rho\)</span> is the identity map.<br />
+iv) If <span class="arithmatex">\(U \supseteq U' \supseteq U''\)</span> are basic open sets in <span class="arithmatex">\(X\)</span>, show that the diagram<br />
+$$<br />
+\begin{array}{ccc}<br />
+A(U) &amp; \longrightarrow &amp; A(U'') \<br />
+&amp; \searrow \quad \nearrow &amp; \<br />
+&amp; A(U') &amp;<br />
+\end{array}<br />
+$$<br />
+(in which the arrows are restriction homomorphisms) is commutative.<br />
+v) Let <span class="arithmatex">\(x \ (= \mathfrak{p})\)</span> be a point of <span class="arithmatex">\(X\)</span>. Show that<br />
+$$<br />
+\varinjlim_{U \ni x} A(U) \cong A_{\mathfrak{p}}.<br />
+$$<br />
+The assignment of the ring <span class="arithmatex">\(A(U)\)</span> to each basic open set <span class="arithmatex">\(U\)</span> of <span class="arithmatex">\(X\)</span>, and the restriction homomorphisms <span class="arithmatex">\(\rho\)</span>, satisfying the conditions iii) and iv) above, constitutes a <strong>presheaf of rings</strong> on the basis of open sets <span class="arithmatex">\((X_f)_{f \in A}\)</span>. v) says that the <strong>stalk</strong> of this presheaf at <span class="arithmatex">\(x \in X\)</span> is the corresponding local ring <span class="arithmatex">\(A_{\mathfrak{p}}\)</span>.</p>
+<h3 id="324">3.24</h3>
+<p>Show that the presheaf of Exercise 23 has the following property. Let <span class="arithmatex">\((U_i)_{i \in I}\)</span> be a covering of <span class="arithmatex">\(X\)</span> by basic open sets. For each <span class="arithmatex">\(i \in I\)</span> let <span class="arithmatex">\(s_i \in A(U_i)\)</span> be such that, for each pair of indices <span class="arithmatex">\(i, j\)</span>, the images of <span class="arithmatex">\(s_i\)</span> and <span class="arithmatex">\(s_j\)</span> in <span class="arithmatex">\(A(U_i \cap U_j)\)</span> are equal. Then there exists a unique <span class="arithmatex">\(s \in A\)</span> <span class="arithmatex">\((= A(X))\)</span> whose image in <span class="arithmatex">\(A(U_i)\)</span> is <span class="arithmatex">\(s_i\)</span>, for all <span class="arithmatex">\(i \in I\)</span>. (This essentially implies that the presheaf is a sheaf.)</p>
+<h3 id="325">3.25</h3>
+<p>Let <span class="arithmatex">\(f : A \to B\)</span>, <span class="arithmatex">\(g : A \to C\)</span> be ring homomorphisms and let <span class="arithmatex">\(h : A \to B \otimes_A C\)</span> be defined by <span class="arithmatex">\(h(x) = f(x) \otimes g(x)\)</span>. Let <span class="arithmatex">\(X, Y, Z, T\)</span> be the prime spectra of <span class="arithmatex">\(A, B, C, B \otimes_A C\)</span> respectively. Then <span class="arithmatex">\(h^*(T) = f^* Y \cap g^*(Z)\)</span>.[Let <span class="arithmatex">\(\mathfrak{p} \in X\)</span>, and let <span class="arithmatex">\(k = k(\mathfrak{p})\)</span> be the residue field at <span class="arithmatex">\(\mathfrak{p}\)</span>. By Exercise 21, the fiber <span class="arithmatex">\(h^{*-1}(\mathfrak{p})\)</span> is the spectrum of <span class="arithmatex">\((B \otimes_A C) \otimes_A k \cong (B \otimes_A k) \otimes_k (C \otimes_A k)\)</span>. Hence <span class="arithmatex">\(\mathfrak{p} \in h^*(T) \Leftrightarrow (B \otimes_A k) \otimes_k (C \otimes_A k) \ne 0 \Leftrightarrow B \otimes_A k \ne 0\)</span> and <span class="arithmatex">\(C \otimes_A k \ne 0 \Leftrightarrow \mathfrak{p} \in f^*(Y) \cap g^*(Z)\)</span>.]</p>
+<h3 id="326">3.26</h3>
+<p>Let <span class="arithmatex">\((B_{\alpha}, g_{\alpha\beta})\)</span> be a direct system of rings and <span class="arithmatex">\(B\)</span> the direct limit. For each <span class="arithmatex">\(\alpha\)</span>, let <span class="arithmatex">\(f_{\alpha} : A \to B_{\alpha}\)</span> be a ring homomorphism such that <span class="arithmatex">\(g_{\alpha\beta} \circ f_{\alpha} = f_{\beta}\)</span> whenever <span class="arithmatex">\(\alpha \le \beta\)</span> (i.e. the <span class="arithmatex">\(B_{\alpha}\)</span> form a direct system of <span class="arithmatex">\(A\)</span>-algebras). The <span class="arithmatex">\(f_{\alpha}\)</span> induce <span class="arithmatex">\(f : A \to B\)</span>. Show that<br />
+$$<br />
+f^<em>(\operatorname{Spec}(B)) = \bigcap_{\alpha} f_{\alpha}^</em>(\operatorname{Spec}(B_{\alpha})).<br />
+$$[Let <span class="arithmatex">\(\mathfrak{p} \in \operatorname{Spec}(A)\)</span>. Then <span class="arithmatex">\(f^{*-1}(\mathfrak{p})\)</span> is the spectrum of<br />
+$$<br />
+B \otimes_A k(\mathfrak{p}) \cong \varinjlim (B_{\alpha} \otimes_A k(\mathfrak{p}))<br />
+$$<br />
+(since tensor products commute with direct limits: Chapter 2, Exercise 20). By Exercise 21 of Chapter 2 it follows that <span class="arithmatex">\(f^{*-1}(\mathfrak{p}) = \varnothing\)</span> if and only if <span class="arithmatex">\(B_{\alpha} \otimes_A k(\mathfrak{p}) = 0\)</span> for some <span class="arithmatex">\(\alpha\)</span>, i.e., if and only if <span class="arithmatex">\(f_{\alpha}^{*-1}(\mathfrak{p}) = \varnothing\)</span>.]</p>
+<h3 id="327">3.27</h3>
+<p>i) Let <span class="arithmatex">\(f_{\alpha} : A \to B_{\alpha}\)</span> be any family of <span class="arithmatex">\(A\)</span>-algebras and let <span class="arithmatex">\(f : A \to B\)</span> be their tensor product over <span class="arithmatex">\(A\)</span> (Chapter 2, Exercise 23). Then<br />
+$$<br />
+f^<em>(\operatorname{Spec}(B)) = \bigcap_{\alpha} f_{\alpha}^</em>(\operatorname{Spec}(B_{\alpha})).<br />
+$$<br />
+[Use Exercises 25 and 26.]<br />
+ii) Let <span class="arithmatex">\(f_{\alpha} : A \to B_{\alpha}\)</span> be any finite family of <span class="arithmatex">\(A\)</span>-algebras and let <span class="arithmatex">\(B = \prod_{\alpha} B_{\alpha}\)</span>. Define <span class="arithmatex">\(f : A \to B\)</span> by <span class="arithmatex">\(f(x) = (f_{\alpha}(x))\)</span>. Then <span class="arithmatex">\(f^*(\operatorname{Spec}(B)) = \bigcup_{\alpha} f_{\alpha}^*(\operatorname{Spec}(B_{\alpha}))\)</span>.<br />
+iii) Hence the subsets of <span class="arithmatex">\(X = \operatorname{Spec}(A)\)</span> of the form <span class="arithmatex">\(f^*(\operatorname{Spec}(B))\)</span>, where <span class="arithmatex">\(f : A \to B\)</span> is a ring homomorphism, satisfy the axioms for closed sets in a topological space. The associated topology is the <em>constructible topology</em> on <span class="arithmatex">\(X\)</span>. It is finer than the Zariski topology (i.e., there are more open sets, or equivalently more closed sets).<br />
+iv) Let <span class="arithmatex">\(X_C\)</span> denote the set <span class="arithmatex">\(X\)</span> endowed with the constructible topology. Show that <span class="arithmatex">\(X_C\)</span> is quasi-compact.</p>
+<h3 id="328">3.28</h3>
+<p>(Continuation of Exercise 27.)<br />
+i) For each <span class="arithmatex">\(g \in A\)</span>, the set <span class="arithmatex">\(X_g\)</span> (Chapter 1, Exercise 17) is both open and closed in the constructible topology.<br />
+ii) Let <span class="arithmatex">\(C'\)</span> denote the smallest topology on <span class="arithmatex">\(X\)</span> for which the sets <span class="arithmatex">\(X_g\)</span> are both open and closed, and let <span class="arithmatex">\(X_{C'}\)</span> denote the set <span class="arithmatex">\(X\)</span> endowed with this topology. Show that <span class="arithmatex">\(X_{C'}\)</span> is Hausdorff.<br />
+iii) Deduce that the identity mapping <span class="arithmatex">\(X_C \to X_{C'}\)</span> is a homeomorphism. Hence a subset <span class="arithmatex">\(E\)</span> of <span class="arithmatex">\(X\)</span> is of the form <span class="arithmatex">\(f^*(\operatorname{Spec}(B))\)</span> for some <span class="arithmatex">\(f : A \to B\)</span> if and only if it is closed in the topology <span class="arithmatex">\(C'\)</span>.<br />
+iv) The topological space <span class="arithmatex">\(X_C\)</span> is compact, Hausdorff and totally disconnected.</p>
+<h3 id="329">3.29</h3>
+<p>Let <span class="arithmatex">\(f : A \to B\)</span> be a ring homomorphism. Show that <span class="arithmatex">\(f^* : \operatorname{Spec}(B) \to \operatorname{Spec}(A)\)</span> is a continuous <em>closed</em> mapping (i.e., maps closed sets to closed sets) for the constructible topology.</p>
+<h3 id="330">3.30</h3>
+<p>Show that the Zariski topology and the constructible topology on <span class="arithmatex">\(\operatorname{Spec}(A)\)</span> are the same if and only if <span class="arithmatex">\(A/\mathfrak{N}\)</span> is absolutely flat (where <span class="arithmatex">\(\mathfrak{N}\)</span> is the nilradical of <span class="arithmatex">\(A\)</span>). [Use Exercise 11.]</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
