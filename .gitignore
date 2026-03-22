@@ -2,3 +2,8 @@
 site/
 venv/
 tikz_renderer.py
+*.swo
+*.swp
+*~
+*.un~
+
