@@ -6,14 +6,12 @@ Consider $f:\mathbb{Z}_{m}\times \mathbb{Z}_{n}\to \mathbb{Z}_{m} /n\mathbb{Z}_{
 Let $A$ be a ring, $\mathfrak{a}$ an ideal, $M$ an $A$-module. Show that $(A/\mathfrak{a}) \otimes_A M$ is isomorphic to $M/\mathfrak{a}M$.
 Proof: The sequence $0\to \mathfrak{a}\to A\to A /\mathfrak{a}\to 0$ is exact. By right exactness of $-\otimes_{A}M$, $\mathfrak{a}\otimes_{A}M\stackrel{f}{\to} A\otimes_{A}M\to A /\mathfrak{a}\otimes_{A}M\to 0$ is exact. Hence $A /\mathfrak{a}\otimes_{A}M\cong(A\otimes_{A}M) /\mathrm{Im}f$. Since $\varphi:A\otimes_{A}M\cong M,a\otimes m\mapsto am$ is an isomorphism, and $\varphi f(\mathfrak{a}\otimes_{A}M)=\mathfrak{a}M$, we obtain
 $$
-(A /\mathfrak{a})\otimes _{A}M\cong (A \otimes _{A}M) /\mathrm{Im}f\cong M /\mathfrak{a}M.
+(A /\mathfrak{a})\otimes_{A}M\cong (A \otimes_{A}M) /\mathrm{Im}f\cong M /\mathfrak{a}M.
 $$
 ### 2.3
 Let $A$ be a local ring, $M$ and $N$ finitely generated $A$-modules. Prove that if $M \otimes N = 0$, then $M = 0$ or $N = 0$.
 Proof: Let $\mathfrak{m}$ be the unique maximal ideal, and $k=A /\mathfrak{m}$ be a field. Let $M_{k}=k\otimes_{A}M\cong M /\mathfrak{m}M$ by Exercise2.2, then
-$$
-0=(M\otimes _{A}N)_{k}\cong (k\otimes _{A}k)\otimes _{A}M\otimes _{A}N\cong M_{k}\otimes _{k}N_{k}.
-$$
+$0=(M\otimes_{A}N)_{k}\cong(k \otimes_{A} k)\otimes_{A}M\otimes_{A}N\cong M_{k}\otimes_{k}N_{k}.$
 (Clearly $k\otimes_{A}k\cong k$ by $x\otimes y\mapsto xy$ and $x\mapsto x\otimes 1$).
 Since $M_{k},N_{k}$ are both vector spaces over $k$, they are both free, and either $M_{k}=0$ or $N_{k}=0$.
 Suppose $M_{k}=0$ then $M=\mathfrak{m}M$ where $\mathfrak{m}=\mathfrak{R}$ is the Jacobson radical (since $A$ is local). $M$ is finitely generated so by Nakayama's lemma $M=0$.
@@ -25,7 +23,9 @@ Let $A[x]$ be the ring of polynomials in one indeterminate over a ring $A$. Prov
 Proof: $A[x]$ is a free $A-$module so it is flat.
 ### 2.6
 For any $A$-module, let $M[x]$ denote the set of all polynomials in $x$ with coefficients in $M$, that is to say expressions of the form
-$$m_0 + m_1x + \cdots + m_rx^r \quad (m_i \in M).$$
+$$
+m_0 + m_1x + \cdots + m_rx^r \quad (m_i \in M).
+$$
 Defining the product of an element of $A[x]$ and an element of $M[x]$ in the obvious way, show that $M[x]$ is an $A[x]$-module.
 Show that $M[x] \cong A[x] \otimes_A M$.
 Proof: Define the $A[x]-$module structure as $\sum_{i=0}^{n}{a_{i}x^{i}}\cdot \sum_{j=0}^{p}{m_{j}x^{j}}=\sum_{i=0}^{n+p}{m^{\prime}_{i}x^{i}}$ where $m_{i}^{\prime}=\sum_{j+k=i}^{}{a_{j}\cdot m_{k}}$.
@@ -129,7 +129,7 @@ Therefore $f$ is well-defined, and clearly $f$ is $A-$module bilinear since $\nu
 For any $m\otimes n\in M\otimes N$, suppose $(m,n)=(\mu_{i}\times 1)(m_{i},n)$, then 
 $$
 \begin{align}
-\psi\varphi(m\otimes n) & =\psi f(m,n)=\psi f(\mu_{i}\times 1)(m_{i},n) \\
+\psi\varphi(m\otimes n) & =\psi f(m,n)=\psi f(\mu_{i}\times 1)(m_{i},n) \newline
  & =\psi\nu_{i}\iota_{i}(m,n)=(\mu_{i}\otimes  1_{N})\iota_{i}(m_{i},n)=m\otimes n,
 \end{align}
 $$
@@ -200,8 +200,8 @@ ii) Every principal ideal is idempotent.
 iii) Every finitely generated ideal is a direct summand of $A$.[i) $\Rightarrow$ ii). Let $x \in A$. Then $A/(x)$ is a flat $A$-module, hence in the diagram
 $$
 \begin{CD}
-(x) \otimes A @>\beta>> (x) \otimes A/(x) \\
-@VVV @VV{\alpha}V \\
+(x) \otimes A @>\beta>> (x) \otimes A/(x) \newline
+@VVV @VV{\alpha}V \newline
 A @>>> A/(x)
 \end{CD}
 $$

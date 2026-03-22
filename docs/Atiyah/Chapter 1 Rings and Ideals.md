@@ -50,10 +50,10 @@ $$
 (iv) If $x\not\in \mathfrak{m}$, then $\bar{x}$ is a unit in the field $A[[x]] /\mathfrak{m}$, so $xf=1+g$ for some $f\in A[[x]],g\in \mathfrak{m}$. Comparing the constant terms we obtain a contradiction, since $g$ is a nonunit implies $g(0)$ is a nonunit. Hence $x\in \mathfrak{m}$ and $(\mathfrak{m}^{c},x)=\mathfrak{m}$.
 If $\mathfrak{n}\subset A$ is maximal, then $A[[x]] /(\mathfrak{n},x)\cong A /\mathfrak{n}$ is a field, so $(\mathfrak{n},x)$ is maximal. Hence take a maximal ideal $\mathfrak{n}$ containing $\mathfrak{m}^{c}$, then $\mathfrak{m}\subset(\mathfrak{n},x)$ implies $m=(\mathfrak{n},x)$ and $\mathfrak{n}=\mathfrak{m}^{c}$. Therefore there is a bijection
 $$
-\begin{align*}
-\{ \text{maximal ideals of }A \}&\to \{ \text{maximal ideals of }A[[x]] \}\\
+\begin{align}
+\{ \text{maximal ideals of }A \}&\to \{ \text{maximal ideals of }A[[x]] \} \newline
 \mathfrak{n}&\mapsto \mathfrak{n}+(x).
-\end{align*}
+\end{align}
 $$
 (v) If $P\subset A$ is a prime ideal, then $P+(x)$ is a prime ideal of $A[[x]]$ whose contraction is $P$.
 ### 1.6
@@ -222,19 +222,17 @@ Conversely, starting from a Boolean ring $A$, define an ordering on $A$ as follo
 Proof: (i) Suppose $L$ is a Boolean lattice. 
 It is easy to verify that $a+b=(a\wedge b^{\prime})\vee(a^{\prime}\wedge b)$ has complement $(a^{\prime}\wedge b^{\prime})\vee(a\wedge b)$, and $a\vee b$ has complement $a^{\prime}\wedge b^{\prime}$.
 Since $\vee$ and $\wedge$ are commutative, so are $+$ and $\times$. Note that
-$$
 \begin{align}
-(a+b)+c & =((a+b)\wedge c^{\prime})\vee((a+b)^{\prime}\wedge c) \\
- & = (((a\wedge b^{\prime})\vee(a^{\prime}\wedge b))\wedge c^{\prime})\vee(((a^{\prime}\wedge b^{\prime})\vee(a\wedge b))\wedge c) \\
+(a+b)+c & =((a+b)\wedge c^{\prime})\vee((a+b)^{\prime}\wedge c) \newline
+ & = (((a\wedge b^{\prime})\vee(a^{\prime}\wedge b))\wedge c^{\prime})\vee(((a^{\prime}\wedge b^{\prime})\vee(a\wedge b))\wedge c) \newline
   & =(a\wedge b^{\prime}\wedge c^{\prime})\vee(a^{\prime}\wedge b\wedge c^{\prime})\vee(a^{\prime}\wedge b^{\prime}\wedge c)\vee(a\wedge b\wedge c).
 \end{align}
-$$
 Hence addition is associative. Clearly multiplication is associative.
 Clearly $0,1$ are the zero and identity of $L$. The additive inverse of $a$ is $a^{\prime}$, so $(L,+)$ is an Abelian group.
 If $a,b,c\in L$, then
 $$
 \begin{align}
-ac+bc & =((a\wedge c)\wedge(b\wedge c)^{\prime})\vee((a\wedge c)^{\prime}\wedge(b\wedge c)) \\
+ac+bc & =((a\wedge c)\wedge(b\wedge c)^{\prime})\vee((a\wedge c)^{\prime}\wedge(b\wedge c)) \newline
  & =(a\wedge b^{\prime}\wedge c)\vee(a^{\prime}\wedge b\wedge c) =(a+b)\wedge c=(a+b)c.
 \end{align}
 $$
@@ -245,7 +243,7 @@ The least element is $0$, the greatest is $1$, and if $a\in A$, it has a unique 
 If $a,b,c\in A$, then
 $$
 \begin{align}
-(a\vee c)\wedge(b\vee c) & =(ac+a+c)(bc+b+c)=3abc+ab+2bc+2ac+c\\
+(a\vee c)\wedge(b\vee c) & =(ac+a+c)(bc+b+c)=3abc+ab+2bc+2ac+c\newline
  & =ab+c+abc =(a\wedge b)\vee c
 \end{align}
 $$
@@ -257,8 +255,8 @@ So $\wedge,\vee$ distribute over each other. Hence $A$ is a Boolean ring $R(L)$.
 (iii) Now we show $A^{\prime}=R(L(A))$ is equal to $A$: Clearly $\cdot_{A^{\prime}}=\wedge_{L(A)}=\cdot_{A}$, $0_{A^{\prime}}=0_{A},1_{A^{\prime}}=1_{A}$, and
 $$
 \begin{align}
-a+_{A^{\prime}}b & =(a\wedge_{L}b^{\prime})\vee_{L}(a^{\prime}\wedge_{L}b)=a(1-b)+(1-a)b+a(1-a)b(1-b) \\
- & =a-ab+b-ab+0=a+_{A}b.
+a+_{A^{\prime}}b & =(a\wedge b^{\prime})\vee(a^{\prime}\wedge b)=a(1-b)+(1-a)b+a(1-a)b(1-b) \newline
+&=a-ab+b-ab+0=a+b.
 \end{align}
 $$
 Hence $A=A^{\prime}$. Analogously we have $L^{\prime}=L(R(L))=L$.
