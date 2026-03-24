@@ -35,12 +35,12 @@ For $c\neq 0$, suppose $cdc=c$, then $a(ba-cd)c=abac-acdc=ac-ac=0$ so $ba=cd$. H
 ### 3.1.8
 Let $R$ be the set of all $2\times 2$ matrices over the complex field $\mathbb{C}$ of the form
 $$
-\begin{pmatrix} z & w \\ -\bar{w} & \bar{z} \end{pmatrix},
+\begin{pmatrix} z & w \newline -\bar{w} & \bar{z} \end{pmatrix},
 $$
 where $\bar{z},\bar{w}$ are the complex conjugates of $z$ and $w$ respectively (that is, $c=a+b\sqrt{-1}\Leftrightarrow\bar{c}=a-b\sqrt{-1}$). Then $R$ is a division ring that is isomorphic to the division ring $K$ of real quaternions. 
 Proof: There is an isomorphism $\varphi:K\to R$,
 $$
-1\mapsto\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix},i\mapsto \begin{pmatrix} \sqrt{-1} & 0 \\ 0 & -\sqrt{-1} \end{pmatrix}, j\mapsto\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix},k\mapsto \begin{pmatrix} 0 & \sqrt{-1} \\ \sqrt{-1} & 0 \end{pmatrix}.
+1\mapsto\begin{pmatrix} 1 & 0 \newline 0 & 1 \end{pmatrix},i\mapsto \begin{pmatrix} \sqrt{-1} & 0 \newline 0 & -\sqrt{-1} \end{pmatrix}, j\mapsto\begin{pmatrix} 0 & 1 \newline -1 & 0 \end{pmatrix},k\mapsto \begin{pmatrix} 0 & \sqrt{-1} \newline \sqrt{-1} & 0 \end{pmatrix}.
 $$
 ### 3.1.9
 (a) The subset $G=\{1,-1,i,-i,j,-j,k,-k\}$ of the division ring $K$ of real quaternions forms a group under multiplication.
@@ -65,7 +65,7 @@ $$
 (a+b)^{n+m}=\sum_{k\leqslant n}^{}{\binom{n+m}{k}a^{k}b^{n+m-k}}+\sum_{k>n}^{}{\binom{n+m}{k}a^{k}b^{n+m-k}}=0.
 $$
 Since $b^{n+m-k}=0\forall k\leqslant n$ and $a^{k}=0\forall k>n$.
-If $R$ is not commutative, e.g. $R=\mathbb{R}^{2\times 2}$, consider $A=\begin{pmatrix}0 & 0\\1 & 0\end{pmatrix}$ and $B=\begin{pmatrix}0 & 1\\0 & 0\end{pmatrix}$, then $A^{2}=B^{2}=0$ so $A,B$ are nilpotent, but $A+B\in \mathrm{GL}(2,\mathbb{R})$ so $A+B$ is not nilpotent.
+If $R$ is not commutative, e.g. $R=\mathbb{R}^{2\times 2}$, consider $A=\begin{pmatrix}0 & 0\newline1 & 0\end{pmatrix}$ and $B=\begin{pmatrix}0 & 1\newline0 & 0\end{pmatrix}$, then $A^{2}=B^{2}=0$ so $A,B$ are nilpotent, but $A+B\in \mathrm{GL}(2,\mathbb{R})$ so $A+B$ is not nilpotent.
 ### 3.1.13
 In a ring $R$ the following conditions are equivalent.
 (a) $R$ has no nonzero nilpotent elements (see Exercise 12).
@@ -127,29 +127,29 @@ Proof: By definition $I\subset[R: I]$.
 If $a,b\in [R:I]$ then $\forall x\in R$, $xa,xb\in I\implies x(a-b)=xa-xb\in I$ so $a-b\in I$.
 If $a\in[R:I],r\in R$ then $\forall x\in R,x(ra)=(xr)a\in I$ and $xa\in I\implies x(ar)=(xa)r\in I$. Hence $ra,ar\in I$ so $[R: I]$ is an ideal in $R$.
 ### 3.2.6
-(a) The center of the ring $S$ of all $2 \times 2$ matrices over a field $F$ consists of all matrices of the form $\begin{pmatrix} a & 0 \\ 0 & a \end{pmatrix}$.
+(a) The center of the ring $S$ of all $2 \times 2$ matrices over a field $F$ consists of all matrices of the form $\begin{pmatrix} a & 0 \newline 0 & a \end{pmatrix}$.
 (b) The center of $S$ is not an ideal in $S$.
 (c) What is the center of the ring of all $n \times n$ matrices over a division ring?
-Proof: (a) If $A=\begin{pmatrix}a & b\\c & d\end{pmatrix}$ is in the center of $S=F^{2\times 2}$, 
+Proof: (a) If $A=\begin{pmatrix}a & b\newlinec & d\end{pmatrix}$ is in the center of $S=F^{2\times 2}$, 
 $$
 \begin{align}
 \begin{pmatrix}
-a & 0\\c & 0
+a & 0\newlinec & 0
 \end{pmatrix}=A\cdot \begin{pmatrix}
-1 & 0\\0 & 0
+1 & 0\newline0 & 0
 \end{pmatrix}=\begin{pmatrix}
-1 & 0\\0 & 0
+1 & 0\newline0 & 0
 \end{pmatrix}\cdot A=\begin{pmatrix}
-a & b\\0 & 0
-\end{pmatrix} & \implies b=c=0. \\
+a & b\newline0 & 0
+\end{pmatrix} & \implies b=c=0. \newline
 \begin{pmatrix}
-0 & a\\0 & 0
+0 & a\newline0 & 0
 \end{pmatrix}=A\begin{pmatrix}
-0 & 1\\0 & 0
+0 & 1\newline0 & 0
 \end{pmatrix}=\begin{pmatrix}
-0 & 1\\ 0 & 0
+0 & 1\newline 0 & 0
 \end{pmatrix}A=\begin{pmatrix}
-0 & d\\0 & 0
+0 & d\newline0 & 0
 \end{pmatrix} & \implies a=d.
 \end{align}
 $$
@@ -326,7 +326,7 @@ Let $R$ be the subring $\{a + b\sqrt{10} \mid a,b \in \mathbb{Z}\}$ of the field
 Proof: (a) If $u=a+b\sqrt{ 10 }$ and $v=c+d\sqrt{ 10 }$ then
 $$
 \begin{align}
-N(uv) & =N(ac+10bd+(ad+bc)\sqrt{ 10 })=(ac+10bd)^{2}-10(ad+bc)^{2} \\
+N(uv) & =N(ac+10bd+(ad+bc)\sqrt{ 10 })=(ac+10bd)^{2}-10(ad+bc)^{2} \newline
  & =a^{2}c^{2}+100b^{2}d^{2}-10a^{2}d^{2}-10b^{2}c^{2}=(a^{2}-10b^{2})(c^{2}-10d^{2}).
 \end{align}
 $$
@@ -407,11 +407,11 @@ Proof: Given a set of elements $X$ in $R$, consider the ideal $I=(X)$. $R$ is a 
 (Euclidean algorithm). Let $R$ be a Euclidean domain with associated function $\varphi : R - \{0\} \to \mathbb{N}$. If $a,b \in R$ and $b \neq 0$, here is a method for finding the greatest common divisor of $a$ and $b$. By repeated use of Definition 3.8(ii) we have:
 $$
 \begin{align}
-a = q_0b + r_1, \quad  & \text{with} \quad r_1 = 0 \quad \text{or} \quad \varphi(r_1) < \varphi(b); \\
- b = q_1r_1 + r_2, \quad  & \text{with} \quad r_2 = 0 \quad \text{or} \quad \varphi(r_2) < \varphi(r_1); \\
- r_1 = q_2r_2 + r_3, \quad  & \text{with} \quad r_3 = 0 \quad \text{or} \quad \varphi(r_3) < \varphi(r_2); \\
- \vdots \\
- r_k = q_{k+1}r_{k+1} + r_{k+2}, \quad  & \text{with} \quad r_{k+2} = 0 \quad \text{or} \quad \varphi(r_{k+2}) < \varphi(r_{k+1});  \\
+a = q_0b + r_1, \quad  & \text{with} \quad r_1 = 0 \quad \text{or} \quad \varphi(r_1) < \varphi(b); \newline
+ b = q_1r_1 + r_2, \quad  & \text{with} \quad r_2 = 0 \quad \text{or} \quad \varphi(r_2) < \varphi(r_1); \newline
+ r_1 = q_2r_2 + r_3, \quad  & \text{with} \quad r_3 = 0 \quad \text{or} \quad \varphi(r_3) < \varphi(r_2); \newline
+ \vdots \newline
+ r_k = q_{k+1}r_{k+1} + r_{k+2}, \quad  & \text{with} \quad r_{k+2} = 0 \quad \text{or} \quad \varphi(r_{k+2}) < \varphi(r_{k+1});  \newline
 \vdots 
 \end{align}
 $$
@@ -522,7 +522,7 @@ $$
 Then $\varphi$ is bijective, and $\varphi(f+g)=\varphi(f)+\varphi(g)$. If $f=\sum_{}^{}{A^{(i)}x^{i}}$ and $g=\sum_{}^{}{B^{(i)}x^{i}}$, then $fg=\sum_{}^{}{C^{(i)}x^{i}}$ where $C^{(i)}=\sum_{j+k=i}^{}{A^{(j)}B^{(k)}}$, so
 $$
 \begin{align}
-\varphi(fg)_{i,j} & =\sum_{k}^{}{C^{(k)}_{i,j}x^{k}}=\sum_{k}^{}{\sum_{u+v=k}^{}{(A^{(u)}B^{(v)})_{i,j}}x^{k}}=\sum_{k}^{}{\sum_{u+v=k}^{}{\sum_{t}^{}{A^{(u)}_{i,t}B^{(v)}_{t,j}}}x^{k}}  \\
+\varphi(fg)_{i,j} & =\sum_{k}^{}{C^{(k)}_{i,j}x^{k}}=\sum_{k}^{}{\sum_{u+v=k}^{}{(A^{(u)}B^{(v)})_{i,j}}x^{k}}=\sum_{k}^{}{\sum_{u+v=k}^{}{\sum_{t}^{}{A^{(u)}_{i,t}B^{(v)}_{t,j}}}x^{k}}  \newline
  & =\sum_{t}^{}{( \sum_{u}^{}{A^{(u)}_{i,t}x^{u}} )(\sum_{v}^{}{B_{t,j}^{(v)}x^{v}})}=\sum_{t}^{}{\varphi(f)_{i,t}\varphi(g)_{t,j}}=(\varphi(f)\varphi(g))_{i,j}.
 \end{align}
 $$
@@ -539,7 +539,7 @@ The identity element in $\mathbb{N}^S$ is the zero function.
 (c) If $R$ is a ring with identity let $R[S]$ be the set of all functions $f: \mathbb{N}^S \rightarrow R$ such that $f(\varphi) \neq 0$ for at most a finite number of $\varphi \in \mathbb{N}^S$. Then $R[S]$ is a ring with identity, where addition and multiplication are defined as follows:
 $$
 \begin{align}
-(f + g)(\varphi)  & = f(\varphi) + g(\varphi) \; (f, g \in R[S]; \varphi \in \mathbb{N}^S);\\
+(f + g)(\varphi)  & = f(\varphi) + g(\varphi) \; (f, g \in R[S]; \varphi \in \mathbb{N}^S);\newline
 (fg)(\varphi)  & = \sum f(\theta)g(\zeta) \; (f, g \in R[S]; \theta, \zeta, \varphi \in \mathbb{N}^S),
 \end{align}
 $$
@@ -572,9 +572,9 @@ $$
 (b) Take matrices $A,C$ that does not commute, e.g. 
 $$
 C=\begin{pmatrix}
-1 & 0\\0 & 0
+1 & 0\newline0 & 0
 \end{pmatrix},A=\begin{pmatrix}
-0 & 1\\0 & 0
+0 & 1\newline0 & 0
 \end{pmatrix}
 $$
 then $(C+A)(C-A)\neq C^{2}-A^{2}$.

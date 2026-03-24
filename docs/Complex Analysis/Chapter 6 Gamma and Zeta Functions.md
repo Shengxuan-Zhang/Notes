@@ -8,8 +8,8 @@ For $s\neq 0,-1,\cdots$.
 **Proof**: By the product formula for $1 /\Gamma$:
 $$
 \begin{align}
-\frac{1}{\Gamma(s)} & =se^{\gamma s}\prod_{n=1}^{\infty}{\left( 1+\frac{s}{n} \right)e^{-s/n}} =\lim_{ n \to \infty } se^{\sum_{k=1}^{n}{s/k-s\log(1+n)}}\prod_{k=1}^{n}{\left( 1+\frac{s}{k} \right)e^{-s/k}} \\
- & =\lim_{ n \to \infty } s \exp \left( \sum_{k=1}^{n}{\log\left( 1+\frac{s}{k} \right)-s\log(1+n)} \right) \\
+\frac{1}{\Gamma(s)} & =se^{\gamma s}\prod_{n=1}^{\infty}{\left( 1+\frac{s}{n} \right)e^{-s/n}} =\lim_{ n \to \infty } se^{\sum_{k=1}^{n}{s/k-s\log(1+n)}}\prod_{k=1}^{n}{\left( 1+\frac{s}{k} \right)e^{-s/k}} \newline
+ & =\lim_{ n \to \infty } s \exp \left( \sum_{k=1}^{n}{\log\left( 1+\frac{s}{k} \right)-s\log(1+n)} \right) \newline
   & =\lim_{ n \to \infty } \frac{s(s+1)\cdots(s+n)}{(n+1)^{s}n!}.
 \end{align}
 $$
@@ -26,7 +26,7 @@ For $a,b>0$. Using the product formula for $\sin \pi s$, give another proof of $
 Proof: Apply Exercise6.1 to $s=1,a+1,b+1,a+b+1$, we obtain
 $$
 \begin{align}
-\frac{\Gamma(a+1)\Gamma(b+1)}{\Gamma(a+b+1)\Gamma(1)} & =\lim_{ n \to \infty } \frac{n^{a+1}n^{b+1}(n!)^{2}}{n^{a+b+1}n^{1}(n!)^{2}} \prod_{k=0}^{n}{\frac{(a+b+1+k)(1+k)}{(a+1+k)(b+1+k)}} \\
+\frac{\Gamma(a+1)\Gamma(b+1)}{\Gamma(a+b+1)\Gamma(1)} & =\lim_{ n \to \infty } \frac{n^{a+1}n^{b+1}(n!)^{2}}{n^{a+b+1}n^{1}(n!)^{2}} \prod_{k=0}^{n}{\frac{(a+b+1+k)(1+k)}{(a+1+k)(b+1+k)}} \newline
  & =\lim_{ n \to \infty } \prod_{k=1}^{n+1}{\frac{k(a+b+k)}{(a+k)(b+k)}}.
 \end{align}
 $$
@@ -58,7 +58,7 @@ $$
 Now by Exercise6.1,
 $$
 \begin{align}
-\frac{\Gamma(s)\Gamma(s+1 /2)2^{2s}}{\Gamma(2s)} & =\lim_{ n \to \infty } 2^{2s}\frac{n^{s}n!}{s\cdots(s+n)} \frac{n^{s+1/2}n!}{\left( s+\frac{1}{2} \right)\cdots\left( s+\frac{1}{2}+n \right)} \frac{(2s)\cdots(2s+2n+1)}{(2n+1)^{2s}(2n+1)!} \\
+\frac{\Gamma(s)\Gamma(s+1 /2)2^{2s}}{\Gamma(2s)} & =\lim_{ n \to \infty } 2^{2s}\frac{n^{s}n!}{s\cdots(s+n)} \frac{n^{s+1/2}n!}{\left( s+\frac{1}{2} \right)\cdots\left( s+\frac{1}{2}+n \right)} \frac{(2s)\cdots(2s+2n+1)}{(2n+1)^{2s}(2n+1)!} \newline
  & =\lim_{ n \to \infty }  \frac{2^{2n+2}(n!)^{2}\sqrt{ n }}{(2n+1)!}=2\sqrt{ \pi }.
 \end{align}
 $$
@@ -118,9 +118,9 @@ $$
 Hence
 $$
 \begin{align}
-B(\alpha,\beta)\Gamma(\alpha+\beta) & =\int_{0}^{\infty} e^{-t}t^{\alpha+\beta-1}\int_{0}^{\infty} (1+u)^{-\alpha-\beta}u ^{\beta-1} \, \mathrm{d}u  \, \mathrm{d}t  \\
- (t=(1+u)v)& =\int_{0}^{\infty} u ^{\beta-1} \int_{0}^{\infty} e^{-(1+u)v} v^{\alpha+\beta-1}\, \mathrm{d}v \, \mathrm{d}u  \\
-  & =\int_{0}^{\infty} e^{-v}v^{\alpha-1} \int_{0}^{\infty} e^{-uv}(uv)^{\beta-1} \, \mathrm{d}(uv) \, \mathrm{d}v  \\
+B(\alpha,\beta)\Gamma(\alpha+\beta) & =\int_{0}^{\infty} e^{-t}t^{\alpha+\beta-1}\int_{0}^{\infty} (1+u)^{-\alpha-\beta}u ^{\beta-1} \, \mathrm{d}u  \, \mathrm{d}t  \newline
+ (t=(1+u)v)& =\int_{0}^{\infty} u ^{\beta-1} \int_{0}^{\infty} e^{-(1+u)v} v^{\alpha+\beta-1}\, \mathrm{d}v \, \mathrm{d}u  \newline
+  & =\int_{0}^{\infty} e^{-v}v^{\alpha-1} \int_{0}^{\infty} e^{-uv}(uv)^{\beta-1} \, \mathrm{d}(uv) \, \mathrm{d}v  \newline
    & =\Gamma(\alpha)\Gamma(\beta).
 \end{align}
 $$
@@ -137,10 +137,10 @@ $$
 Proof: Note that
 $$
 \begin{align}
-\int_{-1}^{1} e^{ixt}(1-t^{2})^{\nu -1/2} \, \mathrm{d}t & = \int_{-1}^{1} \sum_{m=0}^{\infty}{\frac{(ixt)^{m}}{m!}(1-t^{2})^{\nu-1/2}} \, \mathrm{d}t=\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{(2m)!}\int_{-1}^{1} t^{2m}(1-t^{2})^{\nu-1/2} \, \mathrm{d}t }  \\
- & =\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{(2m)!}\int_{0}^{1} u ^{m-1/2}(1-u)^{\nu-1/2}\,\mathrm{d}u} \\
-  & =\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{(2m)!}B(m+1 /2,\nu+1 /2)} \\
-   & =\Gamma(\nu+1 /2)\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}\Gamma(m+1 /2)}{(2m)!\Gamma(\nu+m+1)}} \\
+\int_{-1}^{1} e^{ixt}(1-t^{2})^{\nu -1/2} \, \mathrm{d}t & = \int_{-1}^{1} \sum_{m=0}^{\infty}{\frac{(ixt)^{m}}{m!}(1-t^{2})^{\nu-1/2}} \, \mathrm{d}t=\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{(2m)!}\int_{-1}^{1} t^{2m}(1-t^{2})^{\nu-1/2} \, \mathrm{d}t }  \newline
+ & =\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{(2m)!}\int_{0}^{1} u ^{m-1/2}(1-u)^{\nu-1/2}\,\mathrm{d}u} \newline
+  & =\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{(2m)!}B(m+1 /2,\nu+1 /2)} \newline
+   & =\Gamma(\nu+1 /2)\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}\Gamma(m+1 /2)}{(2m)!\Gamma(\nu+m+1)}} \newline
     & =\Gamma(\nu+1 /2)\sqrt{ \pi }\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{2^{2m}m!\Gamma(\nu+m+1)}}.
 \end{align}
 $$
@@ -161,7 +161,7 @@ $$
 Then
 $$
 \begin{align}
- & \int_{0}^{1} t^{\beta-1}(1-t)^{\gamma-\beta-1}(1-zt)^{-\alpha} \, \mathrm{d}t= \int_{0}^{1} t^{\beta-1}(1-t)^{\gamma-\beta-1}\sum_{n=0}^{\infty}{(-zt)^{n}\binom{-\alpha}{n}} \, \mathrm{d}t  \\
+ & \int_{0}^{1} t^{\beta-1}(1-t)^{\gamma-\beta-1}(1-zt)^{-\alpha} \, \mathrm{d}t= \int_{0}^{1} t^{\beta-1}(1-t)^{\gamma-\beta-1}\sum_{n=0}^{\infty}{(-zt)^{n}\binom{-\alpha}{n}} \, \mathrm{d}t  \newline
  = & \sum_{n=0}^{\infty}{(-z)^{n}\binom{-\alpha}{n}B(n+\beta,\gamma-\beta)}=\sum_{n=0}^{\infty}{(-z)^{n}\binom{-\alpha}{n} \Gamma(n+\beta)\Gamma(\gamma-\beta) /\Gamma(n+\gamma)}.
 \end{align}
 $$
@@ -281,7 +281,7 @@ $$
 Proof: Note that
 $$
 \begin{align}
-\int_{0}^{\infty} \frac{x^{s-1}}{e^{x}-1} \, \mathrm{d}x & =\int_{0}^{\infty} x^{s-1}\sum_{n=1}^{\infty}{e^{-nx}} \, \mathrm{d}x  = \sum_{n=1}^{\infty}{n^{-s}\int_{0}^{\infty} (nx)^{s-1}e^{-nx} \, \mathrm{d}nx } \\
+\int_{0}^{\infty} \frac{x^{s-1}}{e^{x}-1} \, \mathrm{d}x & =\int_{0}^{\infty} x^{s-1}\sum_{n=1}^{\infty}{e^{-nx}} \, \mathrm{d}x  = \sum_{n=1}^{\infty}{n^{-s}\int_{0}^{\infty} (nx)^{s-1}e^{-nx} \, \mathrm{d}nx } \newline
  & =\sum_{n=1}^{\infty}{n^{-s}\Gamma(s)}=\zeta(s)\Gamma(s).
 \end{align}
 $$

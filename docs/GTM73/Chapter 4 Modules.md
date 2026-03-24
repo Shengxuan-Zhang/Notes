@@ -3,6 +3,7 @@
 ### 4.1.1
 If $A$ is an abelian group and $n > 0$ an integer such that $na = 0$ for all $a \in A$, then $A$ is a unitary $\mathbb{Z}_n$-module, with the action of $\mathbb{Z}_n$ on $A$ given by $\bar{k}a = ka$, where $k \in \mathbb{Z}$ and $k \mapsto \bar{k} \in \mathbb{Z}_n$ under the canonical projection $\mathbb{Z} \to \mathbb{Z}_n$.
 Trivial.
+
 ### 4.1.2
 Let $f: A \to B$ be an $R$-module homomorphism.
 (a) $f$ is a monomorphism if and only if for every pair of $R$-module homomorphisms $g,h: D \to A$ such that $fg = fh$, we have $g = h$.
@@ -88,30 +89,30 @@ Proof: Reflection is trivial.
 If $A\stackrel{\alpha}{\to}B\stackrel{g}{\to}B^{\prime}$ and $A\stackrel{f}{\to}A^{\prime}\stackrel{\beta}{\to}B^{\prime}$ are commutative and $f,g$ are isomorphisms, then $g\alpha=\beta f$ implies $\alpha f^{-1}=g^{-1}\beta$.
 $$
 \begin{CD}
-A @>>\alpha>B\\
-@VfVV @VgVV\\
+A @>>\alpha>B\newline
+@VfVV @VgVV\newline
 A^{\prime} @>>\beta> B^{\prime}
 \end{CD}\implies
 \begin{CD}
-A @>>\alpha>B\\
-@AAf^{-1}A @Ag^{-1}AA\\
+A @>>\alpha>B\newline
+@AAf^{-1}A @Ag^{-1}AA\newline
 A^{\prime} @>>\beta> B^{\prime}
 \end{CD}
 $$
 Hence the relation is symmetric.
 $$
 \begin{CD}
-A @>>\alpha>B\\
-@VfVV @VgVV\\
-A^{\prime} @>>\beta> B^{\prime}\\
-@VhVV @VkVV \\
-A^{\prime\prime} @>>\Gamma>B^{\prime\prime}\\
+A @>>\alpha>B\newline
+@VfVV @VgVV\newline
+A^{\prime} @>>\beta> B^{\prime}\newline
+@VhVV @VkVV \newline
+A^{\prime\prime} @>>\Gamma>B^{\prime\prime}\newline
 \end{CD}
 \implies
 \begin{CD}
-A @>>\alpha>B\\
-@VVh\circ f V @Vk\circ gVV\\
-A^{\prime\prime} @>>\gamma> B^{\prime\prime}\\
+A @>>\alpha>B\newline
+@VVh\circ f V @Vk\circ gVV\newline
+A^{\prime\prime} @>>\gamma> B^{\prime\prime}\newline
 \end{CD}
 $$
 So the relation is transitive.
@@ -356,8 +357,8 @@ Proof: Consider $\varphi:(_{R}R)^{*}\to R_{R},f\mapsto f(1_{R})$. Then $\varphi(
 For any homomorphism $f : A \to B$ of left $R$-modules the diagram
 $$
 \begin{CD}
-A @>\theta_A>> A^{**}\\
-@VfVV @VVf^{*}V\\
+A @>\theta_A>> A^{**}\newline
+@VfVV @VVf^{*}V\newline
 B @>>\theta_B> B^{**}
 \end{CD}
 $$
@@ -365,7 +366,7 @@ is commutative, where $\theta_A,\theta_B$ are as in Theorem 4.12 and $f^*$ is th
 Proof: For any $a\in A$ and $g\in B^{*}$,
 $$
 \begin{align}
-(f^{*}\theta_{A})(a)(g) & =(f^{*}\theta_{a})(g)=(\theta_{a}\bar{f})(g)=\theta_{a}(gf)=g(f(a)) \\
+(f^{*}\theta_{A})(a)(g) & =(f^{*}\theta_{a})(g)=(\theta_{a}\bar{f})(g)=\theta_{a}(gf)=g(f(a)) \newline
  (\theta_{B}f)(a)(g) & =(\theta_{f(a)})(g)=g(f(a)).
 \end{align}
 $$
@@ -402,7 +403,7 @@ If $R = \mathbb{Z}$, then condition (iii) of Definition 5.1 is superfluous (that
 Proof: Note that 
 $$
 \begin{align}
-(a(n+1),b)-(a,(n+1)b)  = & ((an,b)-(a,nb))+((a(n+1),b)-(an,b)-(a,b)) \\
+(a(n+1),b)-(a,(n+1)b)  = & ((an,b)-(a,nb))+((a(n+1),b)-(an,b)-(a,b)) \newline
  & -((a,(n+1)b)-(a,nb)-(a,b)).
 \end{align}
 $$
