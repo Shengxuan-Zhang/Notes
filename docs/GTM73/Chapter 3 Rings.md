@@ -130,11 +130,11 @@ If $a\in[R:I],r\in R$ then $\forall x\in R,x(ra)=(xr)a\in I$ and $xa\in I\implie
 (a) The center of the ring $S$ of all $2 \times 2$ matrices over a field $F$ consists of all matrices of the form $\begin{pmatrix} a & 0 \newline 0 & a \end{pmatrix}$.
 (b) The center of $S$ is not an ideal in $S$.
 (c) What is the center of the ring of all $n \times n$ matrices over a division ring?
-Proof: (a) If $A=\begin{pmatrix}a & b\newlinec & d\end{pmatrix}$ is in the center of $S=F^{2\times 2}$, 
+Proof: (a) If $A=\begin{pmatrix}a & b\newline c & d\end{pmatrix}$ is in the center of $S=F^{2\times 2}$, 
 $$
 \begin{align}
 \begin{pmatrix}
-a & 0\newlinec & 0
+a & 0\newline c & 0
 \end{pmatrix}=A\cdot \begin{pmatrix}
 1 & 0\newline0 & 0
 \end{pmatrix}=\begin{pmatrix}
@@ -191,7 +191,7 @@ Proof: (a) Every ideal is a subgroup of $\mathbb{Z}$, which is cyclic. Clearly $
 (b) Suppose $\varphi:R\to S$ is an epimorphism and $R$ is a principal ideal ring.
 For any ideal $J$ in $S$, $\varphi ^{-1}(J)$ is an ideal in $R$, so $\varphi ^{-1}(J)=(r)$ for some $r\in R$. $(r)=\left\{  nr+ar+br+\sum_{}^{}{s_{i}rt_{i}}  \right\}$, so 
 $$
-J=\varphi((r))=\left\{  n\varphi(r)+\varphi(a)\varphi(r)+\varphi(r)\varphi(b)+\sum_{}^{}{\varphi(s_{i})\varphi(r)\varphi(t_{i})}  \right\}=(\varphi(r)),
+J=\varphi((r))=\{  n\varphi(r)+\varphi(a)\varphi(r)+\varphi(r)\varphi(b)+\sum_{}^{}{\varphi(s_{i})\varphi(r)\varphi(t_{i})}  \}=(\varphi(r)),
 $$
 since $\varphi$ is surjective.
 (c) $\pi:\mathbb{Z}\to \mathbb{Z}_{m},n\mapsto \bar{n}$ is an epimorphism of rings.
