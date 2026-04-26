@@ -1,0 +1,1683 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Shengxuan-Zhang.github.io/Notes/Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/">
+      
+      
+        <link rel="prev" href="../../Atiyah/Chapter%204%20Primary%20Decomposition/">
+      
+      
+        <link rel="next" href="../../GTM73/Chapter%203%20Rings/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 6 Gamma and Zeta Functions - Math Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercises" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math Notes" class="md-header__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 6 Gamma and Zeta Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Atiyah/Chapter%201%20Rings%20and%20Ideals/" class="md-tabs__link">
+          
+  
+  
+  Atiyah
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Complex Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../GTM73/Chapter%203%20Rings/" class="md-tabs__link">
+          
+  
+  
+  GTM73
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math Notes" class="md-nav__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atiyah
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atiyah
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atiyah/Chapter%201%20Rings%20and%20Ideals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 Rings and Ideals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atiyah/Chapter%202%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atiyah/Chapter%203%20Rings%20and%20Modules%20of%20Fractions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings and Modules of Fractions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atiyah/Chapter%204%20Primary%20Decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Primary Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complex Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Complex Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Gamma and Zeta Functions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Gamma and Zeta Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise68" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise69" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise610" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise611" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise612" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise613" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise614" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise615" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.15
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise616" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.16
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise617" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.17
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem6.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GTM73
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GTM73
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%203%20Rings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%204%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise68" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise69" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise610" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise611" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise612" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise613" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise614" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise615" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.15
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise616" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.16
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise617" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise6.17
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem6.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Chapter 6 Gamma and Zeta Functions</h1>
+
+<h2 id="exercises">Exercises</h2>
+<h3 id="exercise61">Exercise6.1</h3>
+<p>Prove that<br />
+$$<br />
+\Gamma(s)=\lim_{ n \to \infty } \frac{n^{s}n!}{s(s+1)\cdots(s+n)}.<br />
+$$<br />
+For <span class="arithmatex">\(s\neq 0,-1,\cdots\)</span>.<br />
+<strong>Proof</strong>: By the product formula for <span class="arithmatex">\(1 /\Gamma\)</span>:<br />
+$$<br />
+\begin{align}<br />
+\frac{1}{\Gamma(s)} &amp; =se^{\gamma s}\prod_{n=1}^{\infty}{\left( 1+\frac{s}{n} \right)e^{-s/n}} =\lim_{ n \to \infty } se^{\sum_{k=1}^{n}{s/k-s\log(1+n)}}\prod_{k=1}^{n}{\left( 1+\frac{s}{k} \right)e^{-s/k}} \newline<br />
+ &amp; =\lim_{ n \to \infty } s \exp \left( \sum_{k=1}^{n}{\log\left( 1+\frac{s}{k} \right)-s\log(1+n)} \right) \newline<br />
+  &amp; =\lim_{ n \to \infty } \frac{s(s+1)\cdots(s+n)}{(n+1)^{s}n!}.<br />
+\end{align}<br />
+$$<br />
+Therefore<br />
+$$<br />
+\Gamma(s)=\lim_{ n \to \infty } \frac{n^{s}n!}{s(s+1)\cdots(s+n)}.<br />
+$$</p>
+<h3 id="exercise62">Exercise6.2</h3>
+<p>Prove that<br />
+$$<br />
+\prod_{n=1}^{\infty}{\frac{n(a+b+n)}{(a+n)(b+n)}}=\frac{\Gamma(a+1)\Gamma(b+1)}{\Gamma(a+b+1)}.<br />
+$$<br />
+For <span class="arithmatex">\(a,b&gt;0\)</span>. Using the product formula for <span class="arithmatex">\(\sin \pi s\)</span>, give another proof of <span class="arithmatex">\(\Gamma(s)\Gamma(1-s)=\pi /\sin\pi s\)</span>.<br />
+Proof: Apply Exercise6.1 to <span class="arithmatex">\(s=1,a+1,b+1,a+b+1\)</span>, we obtain<br />
+$$<br />
+\begin{align}<br />
+\frac{\Gamma(a+1)\Gamma(b+1)}{\Gamma(a+b+1)\Gamma(1)} &amp; =\lim_{ n \to \infty } \frac{n^{a+1}n^{b+1}(n!)^{2}}{n^{a+b+1}n^{1}(n!)^{2}} \prod_{k=0}^{n}{\frac{(a+b+1+k)(1+k)}{(a+1+k)(b+1+k)}} \newline<br />
+ &amp; =\lim_{ n \to \infty } \prod_{k=1}^{n+1}{\frac{k(a+b+k)}{(a+k)(b+k)}}.<br />
+\end{align}<br />
+$$<br />
+Recall the product formula of <span class="arithmatex">\(\sin \pi s\)</span>:<br />
+$$<br />
+\sin\pi s=\pi s\prod_{n=1}^{\infty}{\left( 1-\frac{s^{2}}{n^{2}} \right)}.<br />
+$$<br />
+Then for <span class="arithmatex">\(0&lt;s&lt;1\)</span>, let <span class="arithmatex">\(a=s\)</span> and <span class="arithmatex">\(b=1-s\)</span>, we obtain<br />
+$$<br />
+s(1-s)\Gamma(s)\Gamma(1-s)=\frac{\Gamma(s+1)\Gamma(2-s)}{\Gamma(2)}=\prod_{n=1}^{\infty}{\frac{n(n+1)}{(s+n)(1-s+n)}}.<br />
+$$<br />
+Hence<br />
+$$<br />
+\Gamma(s)\Gamma(1-s)= \frac{1}{s}\prod_{n=1}^{\infty}{\frac{n^{2}}{n^{2}-s^{2}}}=\frac{\pi}{\sin\pi s} \forall 0&lt;s&lt;1.<br />
+$$</p>
+<h3 id="exercise63">Exercise6.3</h3>
+<p>Show that Wallis's product formula can be written as<br />
+$$<br />
+\sqrt{\frac{\pi}{2}} = \lim_{n \to \infty} \frac{2^{2n} (n!)^2}{(2n + 1)!} (2n + 1)^{1/2}.<br />
+$$<br />
+As a result, prove the following identity:<br />
+$$<br />
+\Gamma(s)\Gamma(s + 1/2) = \sqrt{\pi} 2^{1-2s} \Gamma(2s).<br />
+$$<br />
+Proof: Recall<br />
+$$<br />
+\sqrt{ \frac{\pi}{2} }=\lim_{ n \to \infty } \frac{(2n)!!}{(2n-1)!!\sqrt{ 2n-1 }}=\lim_{ n \to \infty } \frac{2^{2n}(n!)^{2}}{(2n)!\sqrt{ 2n-1 }}=\lim_{ n \to \infty } \frac{2^{2n}(n!)^{2}}{(2n+1)!}\sqrt{ 2n+1 }.<br />
+$$<br />
+Now by Exercise6.1,<br />
+$$<br />
+\begin{align}<br />
+\frac{\Gamma(s)\Gamma(s+1 /2)2^{2s}}{\Gamma(2s)} &amp; =\lim_{ n \to \infty } 2^{2s}\frac{n^{s}n!}{s\cdots(s+n)} \frac{n^{s+1/2}n!}{\left( s+\frac{1}{2} \right)\cdots\left( s+\frac{1}{2}+n \right)} \frac{(2s)\cdots(2s+2n+1)}{(2n+1)^{2s}(2n+1)!} \newline<br />
+ &amp; =\lim_{ n \to \infty }  \frac{2^{2n+2}(n!)^{2}\sqrt{ n }}{(2n+1)!}=2\sqrt{ \pi }.<br />
+\end{align}<br />
+$$</p>
+<h3 id="exercise64">Exercise6.4</h3>
+<p>Prove that if we take<br />
+$$<br />
+f(z) = \frac{1}{(1 - z)^\alpha}, \quad \text{for } |z| &lt; 1<br />
+$$<br />
+(defined in terms of the principal branch of the logarithm), where <span class="arithmatex">\(\alpha\)</span> is a fixed complex number, then<br />
+$$<br />
+f(z) = \sum_{n=0}^{\infty} a_n(\alpha)z^n\text{ where }<br />
+a_n(\alpha) \sim \frac{1}{\Gamma(\alpha)} n^{\alpha - 1} \quad \text{as } n \to \infty.<br />
+$$<br />
+Proof: Recall that<br />
+$$<br />
+a_{n}(\alpha)=(-1)^{n}\binom{-\alpha}{n}=\frac{\alpha\cdots(\alpha+n-1)}{n!}.<br />
+$$<br />
+Hence<br />
+$$<br />
+\lim_{ n \to \infty } \frac{\Gamma(\alpha)a_{n}(\alpha)}{n^{\alpha-1}}=\lim_{ n \to \infty } \frac{n}{\alpha+n}=1.<br />
+$$</p>
+<h3 id="exercise65">Exercise6.5</h3>
+<p>Use the fact that <span class="arithmatex">\(\Gamma(s)\Gamma(1 - s) = \pi/\sin \pi s\)</span> to prove that<br />
+$$<br />
+|\Gamma(1/2 + it)| = \sqrt{\frac{2\pi}{e^{\pi t} + e^{-\pi t}}}, \quad \text{whenever } t \in \mathbb{R}.<br />
+$$<br />
+Proof: Let <span class="arithmatex">\(s=\frac{1}{2}+it\)</span>, then<br />
+$$<br />
+\Gamma(1/2+it)\Gamma(1/2-it)=\frac{\pi}{\sin\pi s}= \frac{2\pi}{(e^{\pi t}+e^{-\pi t})}.<br />
+$$<br />
+Note that<br />
+$$<br />
+\Gamma(s)=se^{\gamma s}\prod_{n=1}^{\infty}{\left( 1+\frac{s}{n} \right)}e^{-s/n}\implies \Gamma(\bar{s})=\overline{\Gamma(s)}.<br />
+$$<br />
+Hence <span class="arithmatex">\(\lvert \Gamma(1 /2+it )\rvert=\sqrt{ 2\pi /(e^{\pi t}+e^{-\pi t}) }\)</span>.</p>
+<h3 id="exercise66">Exercise6.6</h3>
+<p>Show that<br />
+$$<br />
+1 + \frac{1}{3} + \frac{1}{5} + \cdots + \frac{1}{2n - 1} - \frac{1}{2} \log n \to \frac{\gamma}{2} + \log 2,<br />
+$$<br />
+where <span class="arithmatex">\(\gamma\)</span> is Euler's constant.<br />
+Proof: Let <span class="arithmatex">\(H_{n}=\sum_{k=1}^{n}{\frac{1}{k}}\)</span>, then <span class="arithmatex">\(H_{n}-\log (n+1)\to\gamma\)</span>. Hence<br />
+$$<br />
+\lim_{ n \to \infty } \sum_{k=1}^{n}{\frac{1}{2k-1}}-\frac{1}{2}\log n=\lim_{ n \to \infty } (H_{2n}-\log 2n)-\frac{1}{2}(H_{n}-\log n)+\log 2=\frac{\gamma}{2}+\log 2.<br />
+$$</p>
+<h3 id="exercise67">Exercise6.7</h3>
+<p>The <strong>Beta function</strong> is defined for <span class="arithmatex">\(\mathrm{Re}\alpha&gt;0\)</span> and <span class="arithmatex">\(\mathrm{Re}\beta&gt;0\)</span> by <br />
+$$<br />
+B(\alpha,\beta)=\int_{0}^{1} (1-t)^{\alpha-1}t^{\beta-1} \, \mathrm{d}t. <br />
+$$<br />
+(a) Prove that <span class="arithmatex">\(B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}\)</span>.<br />
+(b) Show that <span class="arithmatex">\(B(\alpha,\beta)=\int_{0}^{\infty} \frac{u^{\alpha-1}}{(1+u)^{\alpha+\beta}} \, \mathrm{d}u\)</span>.<br />
+Proof: (a) Let <span class="arithmatex">\(u=\frac{t}{1-t}\)</span> then <span class="arithmatex">\(t=\frac{u}{1+u}\)</span> so <br />
+$$<br />
+B(\alpha,\beta)=\int_{0}^{1} (1-t)^{\alpha-1}t^{\beta-1} \, \mathrm{d}t =\int_{0}^{\infty} (1+u)^{-\alpha-\beta}u ^{\beta-1} \, \mathrm{d}u.\tag{1}<br />
+$$<br />
+Hence<br />
+$$<br />
+\begin{align}<br />
+B(\alpha,\beta)\Gamma(\alpha+\beta) &amp; =\int_{0}^{\infty} e^{-t}t^{\alpha+\beta-1}\int_{0}^{\infty} (1+u)^{-\alpha-\beta}u ^{\beta-1} \, \mathrm{d}u  \, \mathrm{d}t  \newline<br />
+ (t=(1+u)v)&amp; =\int_{0}^{\infty} u ^{\beta-1} \int_{0}^{\infty} e^{-(1+u)v} v^{\alpha+\beta-1}\, \mathrm{d}v \, \mathrm{d}u  \newline<br />
+  &amp; =\int_{0}^{\infty} e^{-v}v^{\alpha-1} \int_{0}^{\infty} e^{-uv}(uv)^{\beta-1} \, \mathrm{d}(uv) \, \mathrm{d}v  \newline<br />
+   &amp; =\Gamma(\alpha)\Gamma(\beta).<br />
+\end{align}<br />
+$$<br />
+(b) Use <span class="arithmatex">\((1)\)</span> and <span class="arithmatex">\(B(\alpha,\beta)=B(\beta,\alpha)\)</span> (obvious from (a)).</p>
+<h3 id="exercise68">Exercise6.8</h3>
+<p>The Bessel functions arise in the study of spherical symmetries and the Fourier transform. Prove that the following power series identity holds for Bessel functions of real order <span class="arithmatex">\(\nu&gt;-1 /2\)</span>:<br />
+$$<br />
+J_{\nu}(x)=\frac{(x /2)^{\nu}}{\Gamma(\nu+1 /2)\sqrt{ \pi }}\int_{-1}^{1} e^{ixt}(1-t^{2})^{\nu-1 /2} \, \mathrm{d}t=\left( \frac{x}{2} \right)^{\nu}\sum_{m=0}^{\infty}{\frac{(-1)^{m}\left( \frac{x^{2}}{4} \right)^{m}}{m!\Gamma(\nu+m+1)}}<br />
+$$<br />
+whenever <span class="arithmatex">\(x&gt;0\)</span>. In particular, the Bessel function <span class="arithmatex">\(J_{\nu}\)</span> satisfies the ODE<br />
+$$<br />
+\frac{d^{2}J_{\nu}}{dx^{2}}+\frac{1}{x} \frac{dJ_{\nu}}{dx}+\left( 1-\frac{\nu^{2}}{x^{2}} \right)J_{\nu}=0.<br />
+$$<br />
+Proof: Note that<br />
+$$<br />
+\begin{align}<br />
+\int_{-1}^{1} e^{ixt}(1-t^{2})^{\nu -1/2} \, \mathrm{d}t &amp; = \int_{-1}^{1} \sum_{m=0}^{\infty}{\frac{(ixt)^{m}}{m!}(1-t^{2})^{\nu-1/2}} \, \mathrm{d}t=\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{(2m)!}\int_{-1}^{1} t^{2m}(1-t^{2})^{\nu-1/2} \, \mathrm{d}t }  \newline<br />
+ &amp; =\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{(2m)!}\int_{0}^{1} u ^{m-1/2}(1-u)^{\nu-1/2}\,\mathrm{d}u} \newline<br />
+  &amp; =\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{(2m)!}B(m+1 /2,\nu+1 /2)} \newline<br />
+   &amp; =\Gamma(\nu+1 /2)\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}\Gamma(m+1 /2)}{(2m)!\Gamma(\nu+m+1)}} \newline<br />
+    &amp; =\Gamma(\nu+1 /2)\sqrt{ \pi }\sum_{m=0}^{\infty}{\frac{(-1)^{m}x^{2m}}{2^{2m}m!\Gamma(\nu+m+1)}}.<br />
+\end{align}<br />
+$$<br />
+Hence the identity holds for all <span class="arithmatex">\(\nu&gt;1 /2\)</span>.<br />
+Verify the ODE by differentiating the power series.</p>
+<h3 id="exercise69">Exercise6.9</h3>
+<p>The hypergeometric series <span class="arithmatex">\(F(\alpha,\beta,\gamma;z)\)</span> was defined in Exercise16 of Chapter1. Show that<br />
+$$<br />
+F(\alpha,\beta,\gamma;z)=\frac{\Gamma(\gamma)}{\Gamma(\beta)\Gamma(\gamma-\beta)}\int_{0}^{1} t^{\beta-1}(1-t)^{\gamma-\beta-1}(1-zt)^{-\alpha} \, \mathrm{d}t.<br />
+$$<br />
+Here <span class="arithmatex">\(\alpha&gt;0,\beta&gt;0,\gamma&gt;\beta\)</span> and <span class="arithmatex">\(\lvert z \rvert&lt;1\)</span>.<br />
+Show as a result that the hypergeometric function, initially defined by a power series convergent in the unit disc, can be continued analytically to the complex plane slit along the half-line <span class="arithmatex">\([1,\infty)\)</span>.<br />
+Note that <span class="arithmatex">\(\log(1-z)=-zF(1,1,2;z)\)</span>, <span class="arithmatex">\(e^{z}=\lim_{ \beta \to \infty }F(1,\beta,1;z /\beta)\)</span>, <span class="arithmatex">\((1-z)^{-\alpha}=F(\alpha,1,1;z)\)</span>.<br />
+Proof: Recall<br />
+$$<br />
+F(\alpha,\beta,\gamma;z)=1+\sum_{n=1}^{\infty}{\frac{\alpha\cdots(\alpha+n-1)\beta\cdots(\beta+n-1)}{n!\gamma\cdots(\gamma+n-1)}z^{n}}.<br />
+$$<br />
+Then<br />
+$$<br />
+\begin{align}<br />
+ &amp; \int_{0}^{1} t^{\beta-1}(1-t)^{\gamma-\beta-1}(1-zt)^{-\alpha} \, \mathrm{d}t= \int_{0}^{1} t^{\beta-1}(1-t)^{\gamma-\beta-1}\sum_{n=0}^{\infty}{(-zt)^{n}\binom{-\alpha}{n}} \, \mathrm{d}t  \newline<br />
+ = &amp; \sum_{n=0}^{\infty}{(-z)^{n}\binom{-\alpha}{n}B(n+\beta,\gamma-\beta)}=\sum_{n=0}^{\infty}{(-z)^{n}\binom{-\alpha}{n} \Gamma(n+\beta)\Gamma(\gamma-\beta) /\Gamma(n+\gamma)}.<br />
+\end{align}<br />
+$$<br />
+Hence<br />
+$$<br />
+F(\alpha,\beta,\gamma;z)=\frac{\Gamma(\gamma)}{\Gamma(\beta)\Gamma(\gamma-\beta)}\int_{0}^{1} t^{\beta-1}(1-t)^{\gamma-\beta-1}(1-zt)^{-\alpha} \, \mathrm{d}t.<br />
+$$</p>
+<h3 id="exercise610">Exercise6.10</h3>
+<p>An integral of the form<br />
+$$<br />
+F(z)=\int_{0}^{1} f(t)t^{z-1} \, \mathrm{d}t <br />
+$$<br />
+is called a <strong>Mellin transform</strong>, and we shall write <span class="arithmatex">\(\mathcal{M}(f)(z)=F(z)\)</span>, e.g. <span class="arithmatex">\(\mathcal{M}(e^{-t})=\Gamma\)</span>.<br />
+(a) Prove that<br />
+$$<br />
+\mathcal{M}(\cos)(z)=\int_{0}^{\infty} \cos(t)t^{z-1} \, \mathrm{d}t=\Gamma(z)\cos\left( \frac{\pi z}{2} \right) ,\text{ for }0&lt;\mathrm{Re} z&lt;1,<br />
+$$<br />
+and<br />
+$$<br />
+\mathcal{M}(\sin)(z)=\int_{0}^{\infty} \sin(t)t^{z-1} \, \mathrm{d}t=\Gamma(z)\sin\left( \frac{\pi z}{2} \right) ,\text{ for }0&lt;\mathrm{Re}z&lt;1.<br />
+$$<br />
+(b) Show that the second of the above identities is valid in the larger strip <span class="arithmatex">\(-1&lt;\mathrm{Re}z&lt;1\)</span>, and as a consequence, one has<br />
+$$<br />
+\int_{0}^{\infty} \frac{\sin x}{x} \, \mathrm{d}x =\frac{\pi}{2},\text{ and }\int_{0}^{\infty} \frac{\sin x}{x^{3/2}} \, \mathrm{d}x =\sqrt{ 2\pi }.<br />
+$$<br />
+This generalizes the calculation in Exercise2.2.<br />
+Proof: (a) Note that<br />
+$$<br />
+\mathcal{M}(\cos)(z)+i\mathcal{M}(\sin)(z)=\int_{0}^{\infty} e^{it}t^{z-1} \, \mathrm{d}t. <br />
+$$<br />
+Consider <span class="arithmatex">\(f(\omega)=e^{-\omega}\omega ^{z-1}\)</span>, which is well-defined and holomorphic for <span class="arithmatex">\(H=\{ x+iy:x&gt;0,y&lt;0 \}\)</span>. Integrate along the contour <span class="arithmatex">\(\gamma_{1}=[\varepsilon,R]\)</span>, <span class="arithmatex">\(\gamma_{2}=\{ z \in H:\lvert z \rvert=R\}\)</span>, <span class="arithmatex">\(\gamma_{3}:-iR\to -i\varepsilon\)</span>, <span class="arithmatex">\(\gamma_{4}=\{ z\in H:\lvert z \rvert=\varepsilon \}\)</span>. Then<br />
+$$<br />
+\left\lvert  \int_{\gamma_{4}}^{} f \, \mathrm{d}\omega   \right\rvert =\left\lvert  \int_{0}^{\pi/2} e^{-\varepsilon e^{i\theta}}\varepsilon ^{z-1}e^{i\theta(z-1)}\varepsilon e^{i\theta} \, \mathrm{d}\theta   \right\rvert \leqslant \lvert \varepsilon ^{z} \rvert ⋅ \pi e^{\pi}\to 0, \text{ as }\varepsilon\to 0,<br />
+$$<br />
+and<br />
+$$<br />
+\left\lvert  \int_{\gamma_{2}}f \, \mathrm{d}\omega   \right\rvert \leqslant e^{\pi}\lvert R^{z} \rvert \cdot  \int_{0}^{\pi/2} e^{-R\cos\theta}  \, \mathrm{d}\theta \to 0, \text{ as }R\to \infty.<br />
+$$<br />
+Hence<br />
+$$<br />
+\int_{0}^{\infty} e^{it}(-it)^{z-1} \, \mathrm{d}(-it)=\int_{0}^{\infty} e^{-t}t^{z-1} \, \mathrm{d}t=\Gamma(z) .<br />
+$$<br />
+Therefore<br />
+$$<br />
+\mathcal{M}(\cos)(z)+i\mathcal{M}(\sin)(z)=e^{i\pi z/2}\Gamma(z).<br />
+$$<br />
+(b) If <span class="arithmatex">\(-\sigma=\mathrm{Re}z\in [0,1)\)</span>, then<br />
+$$<br />
+\lvert \sin t\cdot t^{z-1} \rvert \leqslant t\cdot t^{-\sigma-1}=t^{-\sigma}.<br />
+$$<br />
+Hence <span class="arithmatex">\(\mathcal{M}(\sin)(z)=\int_{0}^{\infty} \sin t \cdot t^{z-1} \, \mathrm{d}t\)</span> is well-defined, and holomorphic, since the integral converges uniformly. Therefore <span class="arithmatex">\(\mathcal{M}(\sin)(z)\)</span> and <span class="arithmatex">\(\Gamma(z)\sin\left( \frac{\pi z}{2} \right)\)</span> are equal on the strip <span class="arithmatex">\(-1&lt;\mathrm{Re}z&lt;1\)</span>.(<span class="arithmatex">\(\Gamma(z)\sin\left( \frac{\pi z}{2} \right)\)</span> is well-defined at zero since <span class="arithmatex">\(\sin \frac{\pi z}{2}\)</span> has a simple zero at <span class="arithmatex">\(0\)</span>.)</p>
+<h3 id="exercise611">Exercise6.11</h3>
+<p>Let <span class="arithmatex">\(f(z)=e^{az}e^{-e^{z}}\)</span> where <span class="arithmatex">\(a&gt;0\)</span>. Observe that in the strip <span class="arithmatex">\(\{ x+iy:\lvert y \rvert&lt;\pi/2 \}\)</span>, the function <span class="arithmatex">\(f(x+iy)\)</span> is exponentially decreasing as <span class="arithmatex">\(\lvert x \rvert\)</span> tends to infinity. Prove that <span class="arithmatex">\(\hat{f}(\xi)=\Gamma(a-2\pi i\xi)\)</span> for all <span class="arithmatex">\(\xi \in \mathbb{R}\)</span>.<br />
+Proof: Clearly <span class="arithmatex">\(\lvert f(z) \rvert=\exp(ax-e^{x}\cos y)\)</span> so it tends to zero as <span class="arithmatex">\(\lvert x \rvert\to \infty\)</span>, in the strip <span class="arithmatex">\(\lvert y \rvert&lt;\pi /2\)</span>. Let <span class="arithmatex">\(t=e^{x}\)</span>, we obtain<br />
+$$<br />
+\hat{f}(\xi)=\int_{\mathbb{R}}^{} e^{ax}e^{-e^{x}}e^{-2\pi ix\xi} \, \mathrm{d}x =\int_{0}^{\infty} t^{a-1-2\pi i\xi}e^{-t} \, \mathrm{d}t=\Gamma(a-2\pi i\xi) .<br />
+$$</p>
+<h3 id="exercise612">Exercise6.12</h3>
+<p>This exercise gives two simple observations about <span class="arithmatex">\(1 /\Gamma\)</span>:<br />
+(a) Show that <span class="arithmatex">\(1 /\lvert \Gamma(s) \rvert\)</span> is not <span class="arithmatex">\(O(e^{c\lvert s \rvert})\)</span> for any <span class="arithmatex">\(c&gt;0\)</span>;<br />
+(b) Show that there is no entire function <span class="arithmatex">\(F(s)\)</span> with <span class="arithmatex">\(F(s)=O(e^{c\lvert s \rvert})\)</span> that has simple zeros at <span class="arithmatex">\(s=0,-1,-2,\cdots\)</span> and vanishes nowhere else.<br />
+Proof: (a) Consider <span class="arithmatex">\(s=\frac{1}{2}+2n\)</span>, then <span class="arithmatex">\(\Gamma(1-s)\Gamma(s)=\pi /\sin\pi s=\pi\)</span>, so<br />
+$$<br />
+\lvert 1 /\Gamma(-1 /2-2n)  \rvert =\frac{\Gamma(1 /2)}{\pi} \frac{1}{2}\cdots \left( \frac{1}{2} +2n-1\right)\geqslant \frac{1}{\pi} (2n-1)!\sim \frac{1}{\pi}\left( \frac{2n}{e} \right)^{2n}\sqrt{ 4\pi n }.<br />
+$$<br />
+Hence <span class="arithmatex">\(\lvert 1 /\Gamma(s) \rvert&gt;O(e^{c\lvert s \rvert})\)</span> for any <span class="arithmatex">\(c&gt;0\)</span>.<br />
+(b) By Hadamard's factorization theorem, <br />
+$$<br />
+F(s)=se^{As+B}\prod_{n=1}^{\infty}{(1+s /n)e^{-s /n}}=e^{Cs+D} /\Gamma(s)<br />
+$$<br />
+so by (a) it cannot have order <span class="arithmatex">\(O(e^{c\lvert s \rvert})\)</span>.</p>
+<h3 id="exercise613">Exercise6.13</h3>
+<p>Prove that<br />
+$$<br />
+\frac{d^{2}\log\Gamma(s)}{ds^{2}}=\sum_{n=0}^{\infty}{\frac{1}{(s+n)^{2}}}<br />
+$$<br />
+whenever <span class="arithmatex">\(s&gt;0\)</span>. Show that if the LHS is interpreted as <span class="arithmatex">\((\Gamma^{\prime} /\Gamma)^{\prime}\)</span>, then the above formula also holds for all complex numbers <span class="arithmatex">\(s\)</span> with <span class="arithmatex">\(s\neq 0,-1,-2,\cdots\)</span>.<br />
+Proof: For <span class="arithmatex">\(s&gt;0\)</span>,<br />
+$$<br />
+\log\Gamma(s)=-\log se^{\gamma s}\prod_{n=1}^{\infty}{(1+s /n)e^{-s /n}}=-\log s-\gamma s+\sum_{n=1}^{\infty}{\log\left( 1+\frac{s}{n} \right)}-\frac{s}{n}.<br />
+$$<br />
+Since <span class="arithmatex">\(\lvert \log(1+s /n)-s /n \rvert\leqslant \frac{2s^{2}}{n^{2}}\)</span>, the series converges uniformly on compact sets, hence <br />
+$$<br />
+\frac{d^{2}\log\Gamma(s)}{ds^{2}}=\sum_{n=0}^{\infty}{\frac{1}{(s+n)^{2}}}.<br />
+$$</p>
+<p>For arbitrary <span class="arithmatex">\(s \in \mathbb{C}\)</span>, note that <span class="arithmatex">\(\Gamma^{\prime}(s)=\frac{1}{s}+\gamma+\sum_{n=1}^{\infty}{\frac{1}{s+n}-\frac{1}{n}}\)</span> so likewise we have <span class="arithmatex">\((\Gamma^{\prime} /\Gamma)^{\prime}=\sum_{n=0}^{\infty}{\frac{1}{(s+n)^{2}}}\)</span>.</p>
+<h3 id="exercise614">Exercise6.14</h3>
+<p>This exercise gives an asymptotic formula for <span class="arithmatex">\(\log n!\)</span>. A more refined asymptotic formula for <span class="arithmatex">\(\Gamma(s)\)</span> as <span class="arithmatex">\(s\to \infty\)</span> is given in Appendix A.<br />
+(a) Show that<br />
+$$<br />
+\frac{d}{dx}\int_{x}^{x+1} \log\Gamma(t) \, \mathrm{d}t=\log x,\text{ for } x&gt;0,<br />
+$$<br />
+and as a result<br />
+$$<br />
+\int_{x}^{x+1} \log\Gamma(t) \, \mathrm{d}t=x\log x-x+c. <br />
+$$<br />
+(b) Show as a consequence that <span class="arithmatex">\(\log\Gamma(n)\sim n\log n\)</span> as <span class="arithmatex">\(n\to \infty\)</span>. In fact, prove that <span class="arithmatex">\(\log\Gamma(n)\sim n\log n+O(n)\)</span> as <span class="arithmatex">\(n\to \infty\)</span>.<br />
+Proof: (a) is trivial. In fact,<br />
+$$<br />
+c=\int_{0}^{1} \log\Gamma(t) \, \mathrm{d}t=\frac{1}{2}\int_{0}^{1} \log\Gamma(t)+\log\Gamma(1-t) \, \mathrm{d}t=\frac{1}{2}\int_{0}^{1} \log \frac{\pi}{\sin\pi t} \, \mathrm{d}t=\log \sqrt{ 2\pi },<br />
+$$<br />
+where <br />
+$$<br />
+I=\int_{0}^{1} \log \sin\pi t \, \mathrm{d}t=\log 2+\int_{0}^{1} \log \sin \frac{\pi t}{2}\cos \frac{\pi t}{2} \, \mathrm{d}t=\log 2+2I=-\log 2. <br />
+$$<br />
+(b) Note that <span class="arithmatex">\(\Gamma(s)=\int_{0}^{\infty} t^{s-1}e^{-t} \, \mathrm{d}t\)</span> is strictly increasing, so<br />
+$$<br />
+\log\Gamma(t)\leqslant x\log x-x+c=\int_{x}^{x+1} \log\Gamma(t) \, \mathrm{d}t\leqslant \log\Gamma(x+1) .<br />
+$$<br />
+Hence <span class="arithmatex">\(\log\Gamma(n)\leqslant n\log n-n+c\)</span> and <span class="arithmatex">\(\log\Gamma(n)\geqslant (n-1)\log(n-1)-(n-1)+c\)</span>, so <span class="arithmatex">\(\log\Gamma(n)\sim n\log n+O(n)\)</span> as <span class="arithmatex">\(n\to \infty\)</span>.</p>
+<h3 id="exercise615">Exercise6.15</h3>
+<p>Prove that for <span class="arithmatex">\(\mathrm{Re}s&gt;1\)</span>,<br />
+$$<br />
+\zeta(s)=\frac{1}{\Gamma(s)}\int_{0}^{\infty}  \frac{x^{s-1}}{e^{x}-1} \, \mathrm{d}x .<br />
+$$<br />
+Proof: Note that<br />
+$$<br />
+\begin{align}<br />
+\int_{0}^{\infty} \frac{x^{s-1}}{e^{x}-1} \, \mathrm{d}x &amp; =\int_{0}^{\infty} x^{s-1}\sum_{n=1}^{\infty}{e^{-nx}} \, \mathrm{d}x  = \sum_{n=1}^{\infty}{n^{-s}\int_{0}^{\infty} (nx)^{s-1}e^{-nx} \, \mathrm{d}nx } \newline<br />
+ &amp; =\sum_{n=1}^{\infty}{n^{-s}\Gamma(s)}=\zeta(s)\Gamma(s).<br />
+\end{align}<br />
+$$<br />
+Since the series converges absolutely for <span class="arithmatex">\(\mathrm{Re}s&gt;1\)</span>.</p>
+<h3 id="exercise616">Exercise6.16</h3>
+<p>Use the previous exercise to give another proof that <span class="arithmatex">\(\zeta(s)\)</span> is continuable in the complex plane with only singularity a simple pole at <span class="arithmatex">\(s=1\)</span>.<br />
+Proof: Let <br />
+$$<br />
+\zeta(s)=\frac{1}{\Gamma(s)}\int_{0}^{1} \frac{x^{s-1}}{e^{x}-1} \, \mathrm{d}x +\frac{1}{\Gamma(s)}\int_{1}^{\infty} \frac{x^{s-1}}{e^{x}-1}  \, \mathrm{d}x .<br />
+$$<br />
+The second integral defines an entire function.<br />
+Recall the Bernoulli number is defined by <span class="arithmatex">\(\frac{x}{e^{x}-1}=\sum_{m=0}^{\infty}{\frac{B_{m}}{m!}x^{m}}\)</span>, hence<br />
+$$<br />
+\int_{0}^{1} \frac{x^{s-1}}{e^{x}-1} \, \mathrm{d}x =\int_{0}^{1} \sum_{m=0}^{\infty}{}\frac{B_{m}}{m!}x^{m+s-2} \, \mathrm{d}x =\sum_{m=0}^{\infty}{\frac{B_{m}}{m!(m+s-1)}}.<br />
+$$<br />
+Since <span class="arithmatex">\(1/\Gamma\)</span> has simple zeros at <span class="arithmatex">\(s=0,-1,\cdots\)</span>, the first integral defines a meromorphic function with a simple pole at <span class="arithmatex">\(s=1\)</span>.</p>
+<h3 id="exercise617">Exercise6.17</h3>
+<p>Let <span class="arithmatex">\(f\in C_{c}^{\infty}(\mathbb{R})\)</span>, or more generally, let <span class="arithmatex">\(f\in \mathcal{S}\)</span> be in the Schwartz space. Consider<br />
+$$<br />
+I(s)=\frac{1}{\Gamma(s)}\int_{0}^{\infty} f(x)x^{-1+s} \, \mathrm{d}x .<br />
+$$<br />
+(a) Observe that <span class="arithmatex">\(I(s)\)</span> is holomorphic for <span class="arithmatex">\(\mathrm{Re}s&gt;0\)</span>. Prove that <span class="arithmatex">\(I\)</span> has an analytic continuation as an entire function in the complex plane.<br />
+(b) Prove that <span class="arithmatex">\(I(0)=0\)</span>, and more generally<br />
+$$<br />
+I(-n)=(-1)^{n}f^{(n)}(0) \text{ for all }n\geqslant 0.<br />
+$$<br />
+(a) Suppose <span class="arithmatex">\(\mathrm{supp}f\subset[-N,N]\)</span>, and <span class="arithmatex">\(\lvert f \rvert\leqslant M\)</span>, then <span class="arithmatex">\(\sigma=\mathrm{Re}s&gt;0\)</span> implies <span class="arithmatex">\(\lvert I(s) \rvert\leqslant \frac{1}{\lvert \Gamma(s) \rvert}M\int_{0}^{N} x^{-1+\sigma} \, \mathrm{d}x&lt;\infty\)</span>, and the integral converges uniformly. Hence it defines a holomorphic function for <span class="arithmatex">\(\mathrm{Re}s&gt;0\)</span>.<br />
+Consider <br />
+$$<br />
+I_{n}(s)=\frac{(-1)^{n}}{\Gamma(s+n)}\int_{0}^{\infty} f^{(n)}(x)x^{s+n-1} \, \mathrm{d}x ,<br />
+$$<br />
+then likewise <span class="arithmatex">\(I_{n}\)</span> is holomorphic for <span class="arithmatex">\(\mathrm{Re}s&gt;-n\)</span>. Integration by parts imply <span class="arithmatex">\(I_{n}=I_{n+1}\)</span> for all <span class="arithmatex">\(\mathrm{Re}s&gt;-n\)</span>, so analogous to the construction of <span class="arithmatex">\(\Gamma\)</span>, we obtain an entire function <span class="arithmatex">\(I(x)=I_{n}(x)\)</span>.<br />
+(b) By definition,<br />
+$$<br />
+I(-n)=I_{n+1}(-n)=(-1)^{n+1}\int_{0}^{\infty} f^{(n+1)}(x) \, \mathrm{d}x =(-1)^{n}f^{(n)}(0).<br />
+$$</p>
+<h2 id="problems">Problems</h2>
+<h3 id="problem61">Problem6.1</h3>
+<p>This problem provides further estimates for <span class="arithmatex">\(\zeta\)</span> and <span class="arithmatex">\(\zeta^{\prime}\)</span> near <span class="arithmatex">\(\mathrm{Re}s=1\)</span>.<br />
+(a) Use Proposition6.2.5 and its corollary to prove<br />
+$$<br />
+\zeta(s)=\sum_{1\leqslant n&lt;N}^{}{n^{-s}}-\frac{N^{1-s}}{1-s}+\sum_{n\geqslant N}^{}{\delta_{n}(s)}<br />
+$$<br />
+for every integer <span class="arithmatex">\(N\geqslant 2\)</span>, whenever <span class="arithmatex">\(\mathrm{Re}s&gt;0\)</span>.<br />
+(b) Show that <span class="arithmatex">\(\lvert \zeta(1+it) \rvert=O(\log \lvert t \rvert)\)</span>, as <span class="arithmatex">\(\lvert t \rvert\to \infty\)</span>.<br />
+(c) The second conclusion of Proposition6.2.7 can be similarly refined.<br />
+(d) Show that if <span class="arithmatex">\(t\neq 0\)</span> is fixed, then the partial sums of the series <span class="arithmatex">\(\sum_{n=1}^{\infty}{1 /n^{1+it}}\)</span> are bounded, but the series does not converge.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

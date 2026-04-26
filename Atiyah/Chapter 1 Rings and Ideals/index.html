@@ -1,0 +1,1816 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Shengxuan-Zhang.github.io/Notes/Atiyah/Chapter%201%20Rings%20and%20Ideals/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../Chapter%202%20Modules/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 1 Rings and Ideals - Math Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math Notes" class="md-header__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 1 Rings and Ideals
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Atiyah
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/" class="md-tabs__link">
+          
+  
+  
+  Complex Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../GTM73/Chapter%203%20Rings/" class="md-tabs__link">
+          
+  
+  
+  GTM73
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math Notes" class="md-nav__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atiyah
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atiyah
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 Rings and Ideals
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 Rings and Ideals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.20
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.22
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.23
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.26
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#127" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#128" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%203%20Rings%20and%20Modules%20of%20Fractions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings and Modules of Fractions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%204%20Primary%20Decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Primary Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complex Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Complex Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Gamma and Zeta Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GTM73
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GTM73
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%203%20Rings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%204%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.20
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.22
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.23
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.25
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.26
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#127" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.27
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#128" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.28
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Chapter 1 Rings and Ideals</h1>
+
+<h3 id="11">1.1</h3>
+<p>Let <span class="arithmatex">\(x\)</span> be a nilpotent element of a ring <span class="arithmatex">\(A\)</span>. Show that <span class="arithmatex">\(1 + x\)</span> is a unit of <span class="arithmatex">\(A\)</span>. Deduce that the sum of a nilpotent element and a unit is a unit.<br />
+Proof: If <span class="arithmatex">\(x^n=0\)</span> for some <span class="arithmatex">\(n\in \mathbb{N}\)</span>, then <br />
+$$<br />
+(1+x)(1-x+\cdots+(-1)^{n-1}x^{n-1})=1+(-1)^{n-1}x^{n}=1<br />
+$$<br />
+so <span class="arithmatex">\(1+x\)</span> is a unit of <span class="arithmatex">\(A\)</span>.<br />
+If <span class="arithmatex">\(a\)</span> is a unit and <span class="arithmatex">\(x\)</span> is nilpotent, then <span class="arithmatex">\(a^{-1}x\)</span> is nilpotent so <span class="arithmatex">\(1+a^{-1}x\)</span> is a unit, and so is <span class="arithmatex">\(a+x=a(1+a^{-1}x)\)</span>.</p>
+<h3 id="12">1.2</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring and let <span class="arithmatex">\(A[x]\)</span> be the ring of polynomials in an indeterminate <span class="arithmatex">\(x\)</span>, with coefficients in <span class="arithmatex">\(A\)</span>. Let <span class="arithmatex">\(f = a_0 + a_1 x + \cdots + a_n x^n \in A[x]\)</span>. Prove that<br />
+i) <span class="arithmatex">\(f\)</span> is a unit in <span class="arithmatex">\(A[x] \Leftrightarrow a_0\)</span> is a unit in <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(a_1, \dots, a_n\)</span> are nilpotent.<br />
+ii) <span class="arithmatex">\(f\)</span> is nilpotent <span class="arithmatex">\(\Leftrightarrow a_0, a_1, \dots, a_n\)</span> are nilpotent.<br />
+iii) <span class="arithmatex">\(f\)</span> is a zero-divisor <span class="arithmatex">\(\Leftrightarrow\)</span> there exists <span class="arithmatex">\(a \neq 0\)</span> in <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(af = 0\)</span>.<br />
+iv) <span class="arithmatex">\(f\)</span> is said to be <strong>primitive</strong> if <span class="arithmatex">\((a_0, a_1, \dots, a_n) = (1)\)</span>. Prove that if <span class="arithmatex">\(f, g \in A[x]\)</span>, then <span class="arithmatex">\(fg\)</span> is primitive <span class="arithmatex">\(\Leftrightarrow f\)</span> and <span class="arithmatex">\(g\)</span> are primitive.<br />
+Proof: (i) If <span class="arithmatex">\(a_{0}\)</span> is a unit and <span class="arithmatex">\(a_{1},\cdots,a_{n}\)</span> are nilpotent, then <span class="arithmatex">\(a_{i}x^{i}\)</span> are nilpotent in <span class="arithmatex">\(A[x]\)</span> so by Exercise1.1 <span class="arithmatex">\(f=a_{0}+\sum_{i=1}^{n}{a_{i}x^{i}}\)</span> is a unit.<br />
+If <span class="arithmatex">\(f\)</span> is a unit with inverse <span class="arithmatex">\(g=b_{0}+\cdots+b_{m}x^{m}\)</span> where <span class="arithmatex">\(b_{m}\neq 0\)</span>, we prove by induction that <span class="arithmatex">\(a_{n}^{r+1}b_{m-r}=0\forall 0\leqslant r\leqslant m\)</span>. the base <span class="arithmatex">\(a_{n}b_{m}=0\)</span> is trivial, and if it holds for all <span class="arithmatex">\(i&lt;r\)</span> then<br />
+$$<br />
+a_{n}^{r+1}b_{m-r}=-\sum_{i=1}^{r}{a_{n-i}a_{n}^{r}b_{m-r+i}}=0.<br />
+$$<br />
+Hence <span class="arithmatex">\(a_{n}^{m+1}b_{0}=0\)</span> where <span class="arithmatex">\(b_{0}\)</span> is clearly a unit, so <span class="arithmatex">\(a_{n}\)</span> is nilpotent.<br />
+By Exercise1.1, <span class="arithmatex">\(a_{0}+\cdots+a_{n-1}x^{n-1}\)</span>, so by induction <span class="arithmatex">\(a_{1},\cdots,a_{n}\)</span> are nilpotent and <span class="arithmatex">\(a_{0}\)</span> is a unit.<br />
+(Another proof: For any prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span>, consider <span class="arithmatex">\(\bar{f}\in A /\mathfrak{p}[x]\)</span>, then <span class="arithmatex">\(A /\mathfrak{p}\)</span> is an integral domain and <span class="arithmatex">\(\bar{f}\)</span> is a unit implies <span class="arithmatex">\(\bar{a}_{k}=0\forall 1\leqslant k\leqslant n\)</span> and <span class="arithmatex">\(a_{0}\not\in \mathfrak{p}\)</span>. Hence <span class="arithmatex">\(a_{k}\in \mathfrak{N}=\bigcap_{\mathfrak{p}}\mathfrak{p}\)</span> and <span class="arithmatex">\(a_{0}\)</span> is a unit.) <br />
+(ii) If <span class="arithmatex">\(a_{0},\cdots,a_{n}\)</span> are nilpotent, <span class="arithmatex">\(f\)</span> is clearly nilpotent. If <span class="arithmatex">\(f\)</span> is nilpotent, then considering the leading coefficient we obtain <span class="arithmatex">\(a_{n}\)</span> is nilpotent. Hence <span class="arithmatex">\(a_{0}+\cdots+a_{n-1}x^{n-1}\)</span> is nilpotent and by induction <span class="arithmatex">\(a_{0},\cdots,a_{n}\)</span> are nilpotent.<br />
+(iii) If <span class="arithmatex">\(f\)</span> is a zero divisor, take <span class="arithmatex">\(g\in A[x]\)</span> such that <span class="arithmatex">\(fg=0\)</span> and <span class="arithmatex">\(\deg g\)</span> is minimal. <span class="arithmatex">\(fg=0\)</span> implies <span class="arithmatex">\(a_{n}b_{m}=0\)</span> so <span class="arithmatex">\(a_{n}g\)</span> is a polynomial such that <span class="arithmatex">\(f\cdot(a_{n}g)=0\)</span> and <span class="arithmatex">\(\deg a_{m}g&lt;\deg g\)</span>. Hence <span class="arithmatex">\(a_{n}g=0\)</span>, and likewise <span class="arithmatex">\(a_{k}b_{m}=0\)</span> implies <span class="arithmatex">\(a_{k}g=0\)</span>, so <span class="arithmatex">\(a_{k}g=0\forall 0\leqslant k\leqslant n\)</span>. Take <span class="arithmatex">\(a=b_{m}\neq 0\)</span> then <span class="arithmatex">\(af=0\)</span>. The converse is trivial.<br />
+(iv) is Gauss Lemma.</p>
+<h3 id="13">1.3</h3>
+<p>Generalize the results of Exercise 2 to a polynomial ring <span class="arithmatex">\(A[x_1, \dots, x_r]\)</span> in several indeterminates.<br />
+Proof: Since <span class="arithmatex">\(A[x_{1},\cdots,x_{n}]=A[x_{1}]\cdots[x_{n}]\)</span>, <span class="arithmatex">\(f\in A[x_{1},\cdots,x_{n}]\)</span> is nilpotent iff all of its coefficients are nilpotent; <span class="arithmatex">\(f\)</span> is a unit iff <span class="arithmatex">\(f(0)\)</span> is an unit and all other coefficients are nilpotent; <span class="arithmatex">\(f\)</span> is a zero-divisor iff <span class="arithmatex">\(af=0\)</span> for some <span class="arithmatex">\(a\in A\backslash\{ 0 \}\)</span>.</p>
+<h3 id="14">1.4</h3>
+<p>In the ring <span class="arithmatex">\(A[x]\)</span>, the Jacobson radical is equal to the nilradical.<br />
+Proof: If <span class="arithmatex">\(f\in \mathfrak{R}\)</span> is in the Jacobsan radical, <span class="arithmatex">\(1+xf\)</span> is a unit implies all coefficient of <span class="arithmatex">\(f\)</span> are nilpotent (by Exercise1.2), hence <span class="arithmatex">\(f\)</span> is nilpotent. Therefore <span class="arithmatex">\(\mathfrak{R}(A[x])=\mathfrak{N}(A[x])\)</span>.</p>
+<h3 id="15">1.5</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring and let <span class="arithmatex">\(A[[x]]\)</span> be the ring of formal power series <span class="arithmatex">\(f = \sum_{n=0}^{\infty} a_n x^n\)</span> with coefficients in <span class="arithmatex">\(A\)</span>. Show that<br />
+i) <span class="arithmatex">\(f\)</span> is a unit in <span class="arithmatex">\(A[[x]] \Leftrightarrow a_0\)</span> is a unit in <span class="arithmatex">\(A\)</span>.<br />
+ii) If <span class="arithmatex">\(f\)</span> is nilpotent, then <span class="arithmatex">\(a_n\)</span> is nilpotent for all <span class="arithmatex">\(n \geqslant 0\)</span>. Is the converse true? (See Chapter 7, Exercise 2.)<br />
+iii) <span class="arithmatex">\(f\)</span> belongs to the Jacobson radical of <span class="arithmatex">\(A[[x]] \Leftrightarrow a_0\)</span> belongs to the Jacobson radical of <span class="arithmatex">\(A\)</span>.<br />
+iv) The contraction of a maximal ideal <span class="arithmatex">\(\mathfrak{m}\)</span> of <span class="arithmatex">\(A[[x]]\)</span> is a maximal ideal of <span class="arithmatex">\(A\)</span>, and <span class="arithmatex">\(\mathfrak{m}\)</span> is generated by <span class="arithmatex">\(\mathfrak{m}^c\)</span> and <span class="arithmatex">\(x\)</span>.<br />
+v) Every prime ideal of <span class="arithmatex">\(A\)</span> is the contraction of a prime ideal of <span class="arithmatex">\(A[[x]]\)</span>.<br />
+Proof: (i) If <span class="arithmatex">\(fg=1\)</span> for <span class="arithmatex">\(g=\sum_{i\geqslant 0}^{}{b_{i}x^{i}}\)</span> then <span class="arithmatex">\(1=a_{0}b_{0}\)</span> so <span class="arithmatex">\(a_{0}\)</span> is a unit. If <span class="arithmatex">\(a_{0}\)</span> is a unit, define <span class="arithmatex">\(b_{k}\)</span> inductively by <span class="arithmatex">\(b_{0}=a_{0}^{-1}\)</span> and<br />
+$$<br />
+b_{k}=-a_{0}^{-1}(b_{0}a_{k}+\cdots+b_{k-1}a_{1})<br />
+$$<br />
+then <span class="arithmatex">\(g=\sum_{k\geqslant 0}^{}{b_{k}x^{k}}\)</span> is the inverse of <span class="arithmatex">\(f\)</span>.<br />
+(ii) If <span class="arithmatex">\(f^{n}=0\)</span> then <span class="arithmatex">\(a_{0}^{n}=0\)</span> so <span class="arithmatex">\(a_{0}\)</span> and <span class="arithmatex">\(f-a_{0}\)</span> are nilpotent. By induction we can show that <span class="arithmatex">\(a_{n}\)</span> and <span class="arithmatex">\(\sum_{k&gt;n}^{}{a_{k}x^{k}}\)</span> are nilpotent for all <span class="arithmatex">\(n\geqslant 0\)</span>.<br />
+The converse is false: Let <span class="arithmatex">\(A=\mathbb{R}[a_{1},\cdots,a_{n},\cdots] /(a_{1}^{2},\cdots)\)</span> and consider <span class="arithmatex">\(f\in A[[x]]\)</span>, <span class="arithmatex">\(f=\sum_{n\geqslant 1}^{}{a_{n}x^{n}}\)</span> then <span class="arithmatex">\(a_{n}\)</span> are nilpotent since <span class="arithmatex">\(a_{n}^{2}=0\in A\)</span>, but the least term in <span class="arithmatex">\(f^{n}\)</span> is <span class="arithmatex">\(n!a_{1}a_{2}\cdots a_{n}x^{1+\cdots+n}\)</span> which is non-zero, so <span class="arithmatex">\(f\)</span> is not nilpotent.<br />
+(iii) Note that<br />
+$$<br />
+f\in \mathfrak{R}(A[[x]])\iff 1+fg\text{ is a unit }\forall g\iff 1+a_{0}b_{0}\text{ is a unit }\forall b_{0}\iff a_{0}\in \mathfrak{R}(A).<br />
+$$<br />
+(iv) If <span class="arithmatex">\(x\not\in \mathfrak{m}\)</span>, then <span class="arithmatex">\(\bar{x}\)</span> is a unit in the field <span class="arithmatex">\(A[[x]] /\mathfrak{m}\)</span>, so <span class="arithmatex">\(xf=1+g\)</span> for some <span class="arithmatex">\(f\in A[[x]],g\in \mathfrak{m}\)</span>. Comparing the constant terms we obtain a contradiction, since <span class="arithmatex">\(g\)</span> is a nonunit implies <span class="arithmatex">\(g(0)\)</span> is a nonunit. Hence <span class="arithmatex">\(x\in \mathfrak{m}\)</span> and <span class="arithmatex">\((\mathfrak{m}^{c},x)=\mathfrak{m}\)</span>.<br />
+If <span class="arithmatex">\(\mathfrak{n}\subset A\)</span> is maximal, then <span class="arithmatex">\(A[[x]] /(\mathfrak{n},x)\cong A /\mathfrak{n}\)</span> is a field, so <span class="arithmatex">\((\mathfrak{n},x)\)</span> is maximal. Hence take a maximal ideal <span class="arithmatex">\(\mathfrak{n}\)</span> containing <span class="arithmatex">\(\mathfrak{m}^{c}\)</span>, then <span class="arithmatex">\(\mathfrak{m}\subset(\mathfrak{n},x)\)</span> implies <span class="arithmatex">\(m=(\mathfrak{n},x)\)</span> and <span class="arithmatex">\(\mathfrak{n}=\mathfrak{m}^{c}\)</span>. Therefore there is a bijection<br />
+$$<br />
+\begin{align}<br />
+{ \text{maximal ideals of }A }&amp;\to { \text{maximal ideals of }A[[x]] } \newline<br />
+\mathfrak{n}&amp;\mapsto \mathfrak{n}+(x).<br />
+\end{align}<br />
+$$<br />
+(v) If <span class="arithmatex">\(P\subset A\)</span> is a prime ideal, then <span class="arithmatex">\(P+(x)\)</span> is a prime ideal of <span class="arithmatex">\(A[[x]]\)</span> whose contraction is <span class="arithmatex">\(P\)</span>.</p>
+<h3 id="16">1.6</h3>
+<p>A ring <span class="arithmatex">\(A\)</span> is such that every ideal not contained in the nilradical contains a non-zero idempotent (that is, an element <span class="arithmatex">\(e\)</span> such that <span class="arithmatex">\(e^2 = e \neq 0\)</span>). Prove that the nilradical and Jacobson radical of <span class="arithmatex">\(A\)</span> are equal.<br />
+Proof: Otherwise the Jacobson radical is not contained in the nilradical, so there is an idempotent <span class="arithmatex">\(x\in A\)</span> that is in every maximal ideal. <span class="arithmatex">\(x^{2}=x\)</span> implies <span class="arithmatex">\(x(1-x)=0\)</span> so <span class="arithmatex">\(1-x\)</span> is a nonunit. Consider a maximal ideal <span class="arithmatex">\(\mathfrak{m}\)</span> containing <span class="arithmatex">\(1-x\)</span>, then <span class="arithmatex">\(x\in M\)</span> implies <span class="arithmatex">\(1\in M\)</span>, a contradiction.</p>
+<h3 id="17">1.7</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring in which every element <span class="arithmatex">\(x\)</span> satisfies <span class="arithmatex">\(x^n = x\)</span> for some <span class="arithmatex">\(n &gt; 1\)</span> (depending on <span class="arithmatex">\(x\)</span>). Show that every prime ideal in <span class="arithmatex">\(A\)</span> is maximal.<br />
+Proof: If <span class="arithmatex">\(P\)</span> is a prime ideal, then <span class="arithmatex">\(A /P\)</span> is an integral domain such that <span class="arithmatex">\(\forall x\in A\exists n,x^{n}=x\)</span>. Hence for all <span class="arithmatex">\(x\neq 0\)</span>, <span class="arithmatex">\(x\)</span> has an inverse <span class="arithmatex">\(x^{n-2}\)</span> in <span class="arithmatex">\(A /P\)</span>, and <span class="arithmatex">\(A /P\)</span> is a field. Therefore <span class="arithmatex">\(P\)</span> is maximal.</p>
+<h3 id="18">1.8</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring <span class="arithmatex">\(\neq 0\)</span>. Show that the set of prime ideals of <span class="arithmatex">\(A\)</span> has minimal elements with respect to inclusion.<br />
+Proof: Let <span class="arithmatex">\(\mathcal{A}=\{ S\subset A:0\not\in S,S\text{ multiplicative} \}\)</span> then <span class="arithmatex">\(\mathcal{A}\)</span> is nonempty (<span class="arithmatex">\(\{ 1 \}\in \mathcal{A}\)</span>) and every chain <span class="arithmatex">\(\{ S_{\alpha} \}_{\alpha \in I}\)</span> has an upper bound <span class="arithmatex">\(\bigcup_{\alpha \in I}S_{\alpha}\)</span>. Hence by Zorn's lemma <span class="arithmatex">\(\mathcal{A}\)</span> has a maximal element <span class="arithmatex">\(S\)</span>.<br />
+It is well-known that there is a prime ideal <span class="arithmatex">\(P\subset A\)</span> such that <span class="arithmatex">\(P\cap S=\emptyset\)</span> (by Zorn's lemma or ring of quotients). If <span class="arithmatex">\(Q\subsetneq P\)</span> is a smaller prime ideal, then <span class="arithmatex">\(S\subsetneq A\backslash Q\)</span> where <span class="arithmatex">\(A\backslash Q\in \mathcal{A}\)</span>, a contradiction. Hence <span class="arithmatex">\(P\)</span> is minimal.</p>
+<h3 id="19">1.9</h3>
+<p>Let <span class="arithmatex">\(\mathfrak{a}\)</span> be an ideal <span class="arithmatex">\(\neq (1)\)</span> in a ring <span class="arithmatex">\(A\)</span>. Show that <span class="arithmatex">\(\mathfrak{a} = r(\mathfrak{a}) \Leftrightarrow \mathfrak{a}\)</span> is an intersection of prime ideals.<br />
+Proof: We show that <span class="arithmatex">\(r(\mathfrak{a})=\bigcap_{\mathfrak{a}\subset P\text{ prime}}P\)</span>:<br />
+Consider <span class="arithmatex">\(\pi:A\to A /\mathfrak{a}\)</span>, then <span class="arithmatex">\(\pi(r(\mathfrak{a}))=\mathfrak{N}(A /\mathfrak{a})=\bigcap_{P\subset A /\mathfrak{a}\text{ prime}}P=\bigcap_{\mathfrak{a}\subset P\text{ prime}}\pi(P)\)</span>. Hence <span class="arithmatex">\(r(\mathfrak{a})=\pi ^{-1}\left( \bigcap_{\mathfrak{a}\subset P\text{ prime}} P\right)=\bigcap_{\mathfrak{a}\subset P\text{ prime}}P\)</span>.<br />
+The converse is trivial.</p>
+<h3 id="110">1.10</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring, <span class="arithmatex">\(\mathfrak{N}\)</span> its nilradical. Show that the following are equivalent:<br />
+i) <span class="arithmatex">\(A\)</span> has exactly one prime ideal;<br />
+ii) every element of <span class="arithmatex">\(A\)</span> is either a unit or nilpotent;<br />
+iii) <span class="arithmatex">\(A/\mathfrak{N}\)</span> is a field.<br />
+Proof: They are both equivalent to <span class="arithmatex">\(\mathfrak{N}\)</span> is the unique maximal ideal.</p>
+<h3 id="111">1.11</h3>
+<p>A ring <span class="arithmatex">\(A\)</span> is <strong>Boolean</strong> if <span class="arithmatex">\(x^2 = x\)</span> for all <span class="arithmatex">\(x \in A\)</span>. In a Boolean ring <span class="arithmatex">\(A\)</span>, show that<br />
+i) <span class="arithmatex">\(2x = 0\)</span> for all <span class="arithmatex">\(x \in A\)</span>;<br />
+ii) every prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span> is maximal, and <span class="arithmatex">\(A/\mathfrak{p}\)</span> is a field with two elements;<br />
+iii) every finitely generated ideal in <span class="arithmatex">\(A\)</span> is principal.<br />
+Proof: (i) <span class="arithmatex">\(\forall x,y\in A,x+y=(x+y)^{2}=x^{2}+y^{2}+xy+yx\)</span>. Let <span class="arithmatex">\(y=1_{A}\)</span> then <span class="arithmatex">\(2x=0\forall x\in A\)</span>.<br />
+(ii) Analogous to Exercise1.7 <span class="arithmatex">\(\mathfrak{p}\)</span> is maximal and <span class="arithmatex">\(A /\mathfrak{p}=\{ 0,1 \}\)</span> since <span class="arithmatex">\(x^{2}=x\implies x=1\)</span> in the field <span class="arithmatex">\(A /\mathfrak{p}\)</span>.<br />
+(iii) Note that <span class="arithmatex">\((a,b)=(a+b-ab)\)</span> since <span class="arithmatex">\((a+b-ab)a=a\)</span> and <span class="arithmatex">\(a+b-ab\in(a,b)\)</span>. Hence by induction every finitely generated ideal is principal.</p>
+<h3 id="112">1.12</h3>
+<p>A local ring contains no idempotent <span class="arithmatex">\(\neq 0, 1\)</span>.<br />
+Proof: If <span class="arithmatex">\(x\neq 0,1\)</span> is idempotent, then <span class="arithmatex">\(x(1-x)=0\)</span> so <span class="arithmatex">\(x,1-x\)</span> are nonunits, belong to the unique maximal ideal <span class="arithmatex">\(M\)</span>. Hence <span class="arithmatex">\(1=x+(1-x)\in M\)</span>, a contradiction.</p>
+<h3 id="113">1.13</h3>
+<p><strong>Construction of an algebraic closure of a field</strong> (E. Artin).<br />
+Let <span class="arithmatex">\(K\)</span> be a field and let <span class="arithmatex">\(\Sigma\)</span> be the set of all irreducible monic polynomials <span class="arithmatex">\(f\)</span> in one indeterminate with coefficients in <span class="arithmatex">\(K\)</span>. Let <span class="arithmatex">\(A\)</span> be the polynomial ring over <span class="arithmatex">\(K\)</span> generated by indeterminates <span class="arithmatex">\(x_f\)</span>, one for each <span class="arithmatex">\(f \in \Sigma\)</span>. Let <span class="arithmatex">\(\mathfrak{a}\)</span> be the ideal of <span class="arithmatex">\(A\)</span> generated by the polynomials <span class="arithmatex">\(f(x_f)\)</span> for all <span class="arithmatex">\(f \in \Sigma\)</span>. Show that <span class="arithmatex">\(\mathfrak{a} \neq (1)\)</span>.<br />
+Let <span class="arithmatex">\(\mathfrak{m}\)</span> be a maximal ideal of <span class="arithmatex">\(A\)</span> containing <span class="arithmatex">\(\mathfrak{a}\)</span>, and let <span class="arithmatex">\(K_1 = A/\mathfrak{m}\)</span>. Then <span class="arithmatex">\(K_1\)</span> is an extension field of <span class="arithmatex">\(K\)</span> in which each <span class="arithmatex">\(f \in \Sigma\)</span> has a root. Repeat the construction with <span class="arithmatex">\(K_1\)</span> in place of <span class="arithmatex">\(K\)</span>, obtaining a field <span class="arithmatex">\(K_2\)</span>, and so on. Let <span class="arithmatex">\(L = \bigcup_{n=1}^{\infty} K_n\)</span>. Then <span class="arithmatex">\(L\)</span> is a field in which each <span class="arithmatex">\(f \in \Sigma\)</span> splits completely into linear factors. Let <span class="arithmatex">\(\bar{K}\)</span> be the set of all elements of <span class="arithmatex">\(L\)</span> which are algebraic over <span class="arithmatex">\(K\)</span>. Then <span class="arithmatex">\(\bar{K}\)</span> is an <strong>algebraic closure</strong> of <span class="arithmatex">\(K\)</span>.<br />
+Proof: If <span class="arithmatex">\(1\in \mathfrak{a}\)</span> then <span class="arithmatex">\(1=\sum_{k=1}^{n}{a_{k}f_{k}(x_{k})}\)</span> for some <span class="arithmatex">\(a_{k}\in A\)</span>, <span class="arithmatex">\(f_{k}\in\Sigma\)</span> and <span class="arithmatex">\(x_{k}=x_{f_{k}}\)</span>. Hence there is a finite extension field <span class="arithmatex">\(E\)</span> over <span class="arithmatex">\(K\)</span> such that each <span class="arithmatex">\(f_{k}\)</span> has one root <span class="arithmatex">\(\alpha_{k}\)</span> in <span class="arithmatex">\(E\)</span>. Consider the <span class="arithmatex">\(K-\)</span>algebra homomorphism <span class="arithmatex">\(\psi:A\to E\)</span> induced by <span class="arithmatex">\(x_{k}\mapsto \alpha_{k}\)</span> and mapping other intermediates to <span class="arithmatex">\(0\)</span>. Then <span class="arithmatex">\(1=\psi(1)=\sum_{k=1}^{n}{\psi(a_{k})f_{k}(\alpha_{k})=0}\)</span>, a contradiction.<br />
+Clearly <span class="arithmatex">\(\bar{K}\)</span> is an algebraic extension of <span class="arithmatex">\(K\)</span>. For any polynomial <span class="arithmatex">\(f\in K[x]\)</span>, <span class="arithmatex">\(f\)</span> splits in <span class="arithmatex">\(L\)</span> and every root of <span class="arithmatex">\(f\)</span> is algebraic over <span class="arithmatex">\(K\)</span>, so <span class="arithmatex">\(f\)</span> splits in <span class="arithmatex">\(\bar{K}\)</span>. Hence <span class="arithmatex">\(\bar{K}\)</span> is the algebraic closure of <span class="arithmatex">\(K\)</span>.</p>
+<h3 id="114">1.14</h3>
+<p>In a ring <span class="arithmatex">\(A\)</span>, let <span class="arithmatex">\(\Sigma\)</span> be the set of all ideals in which every element is a zero-divisor. Show that the set <span class="arithmatex">\(\Sigma\)</span> has maximal elements and that every maximal element of <span class="arithmatex">\(\Sigma\)</span> is a prime ideal. Hence the set of zero-divisors in <span class="arithmatex">\(A\)</span> is a union of prime ideals.<br />
+Proof: By Zorn's lemma <span class="arithmatex">\(\Sigma\)</span> has a maximal element. If <span class="arithmatex">\(I\)</span> is maximal in <span class="arithmatex">\(\Sigma\)</span>, suppose <span class="arithmatex">\(xy\in I\)</span> while <span class="arithmatex">\(x,y\not\in I\)</span>. <span class="arithmatex">\(I+(x)\)</span> and <span class="arithmatex">\(I+(y)\)</span> contain elements <span class="arithmatex">\(a,b\)</span> that are not zero divisors. However, <span class="arithmatex">\(xy\in I\)</span> implies <span class="arithmatex">\(ab\in(I+(x))(I+(y))\subset I\)</span>, so <span class="arithmatex">\(ab\)</span> is a zero divisor, a contradiction.</p>
+<hr />
+<p><strong>The prime spectrum of a ring</strong></p>
+<h3 id="115">1.15</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring and let <span class="arithmatex">\(X\)</span> be the set of all prime ideals of <span class="arithmatex">\(A\)</span>. For each subset <span class="arithmatex">\(E\)</span> of <span class="arithmatex">\(A\)</span>, let <span class="arithmatex">\(V(E)\)</span> denote the set of all prime ideals of <span class="arithmatex">\(A\)</span> which contain <span class="arithmatex">\(E\)</span>. Prove that<br />
+i) if <span class="arithmatex">\(\mathfrak{a}\)</span> is the ideal generated by <span class="arithmatex">\(E\)</span>, then <span class="arithmatex">\(V(E) = V(\mathfrak{a}) = V(r(\mathfrak{a}))\)</span>.<br />
+ii) <span class="arithmatex">\(V(0) = X, V(1) = \varnothing\)</span>.<br />
+iii) if <span class="arithmatex">\((E_i)_{i \in I}\)</span> is any family of subsets of <span class="arithmatex">\(A\)</span>, then<br />
+$$ V\left(\bigcup_{i \in I} E_i\right) = \bigcap_{i \in I} V(E_i). $$<br />
+iv) <span class="arithmatex">\(V(\mathfrak{a} \cap \mathfrak{b}) = V(\mathfrak{a}\mathfrak{b}) = V(\mathfrak{a}) \cup V(\mathfrak{b})\)</span> for any ideals <span class="arithmatex">\(\mathfrak{a}, \mathfrak{b}\)</span> of <span class="arithmatex">\(A\)</span>.<br />
+These results show that the sets <span class="arithmatex">\(V(E)\)</span> satisfy the axioms for closed sets in a topological space. The resulting topology is called the <strong>Zariski topology</strong>. The topological space <span class="arithmatex">\(X\)</span> is called the <strong>prime spectrum</strong> of <span class="arithmatex">\(A\)</span>, and is written Spec <span class="arithmatex">\((A)\)</span>.<br />
+Proof: (i) If a prime ideal <span class="arithmatex">\(P\)</span> contains <span class="arithmatex">\(E\)</span>, then <span class="arithmatex">\(P\supset (E)=\mathfrak{a}\)</span>, and <span class="arithmatex">\(\forall a\in r(\mathfrak{a}),a^{n}\in \mathfrak{a}\subset P\)</span> implies <span class="arithmatex">\(a\in P\)</span>, so <span class="arithmatex">\(r(\mathfrak{a})\subset P\)</span>.<br />
+(ii) Trivial. (iii) For any <span class="arithmatex">\(A\in X\)</span>, <br />
+$$<br />
+P\in V(\bigcup_{i\in I}E_{i})\iff \bigcup_{i\in I}E_{i}\subset P\iff E_{i}\subset P\forall i\in I\iff P\in \bigcap_{i\in I}V(E_{i}).<br />
+$$<br />
+(iv) If <span class="arithmatex">\(\mathfrak{ab}\subset P\)</span> then <span class="arithmatex">\(\mathfrak{a}\subset P\)</span> or <span class="arithmatex">\(\mathfrak{b}\subset P\)</span>, so <span class="arithmatex">\(V(\mathfrak{ab})\subset V(\mathfrak{a})\cup V(\mathfrak{b})\)</span>.<br />
+If <span class="arithmatex">\(P\in V(\mathfrak{a})\cup V(\mathfrak{b})\)</span> suppose <span class="arithmatex">\(P\in V(\mathfrak{a})\)</span> then <span class="arithmatex">\(\mathfrak{ab}\subset \mathfrak{a}\subset P\)</span> so <span class="arithmatex">\(P\in V(\mathfrak{ab})\)</span>. Hence <span class="arithmatex">\(V(\mathfrak{a})\cup V(\mathfrak{b})=V(\mathfrak{ab})\)</span>,. <span class="arithmatex">\(\mathfrak{ab}\subset \mathfrak{a}\cap \mathfrak{b}\subset r(\mathfrak{ab})\)</span> so <span class="arithmatex">\(V(\mathfrak{ab})=V(\mathfrak{a}\cap \mathfrak{b})\)</span>.</p>
+<h3 id="116">1.16</h3>
+<p>Draw pictures of <span class="arithmatex">\(\mathrm{Spec}(\mathbb{Z})\)</span>, Spec <span class="arithmatex">\((\mathbb{R})\)</span>, <span class="arithmatex">\(\mathrm{Spec}(\mathbb{C}[x])\)</span>, <span class="arithmatex">\(\mathrm{Spec}(\mathbb{R}[x])\)</span>, <span class="arithmatex">\(\mathrm{Spec}(\mathbb{Z}[x])\)</span>.<br />
+Solution: <span class="arithmatex">\(\mathbb{R}\)</span> is a field so <span class="arithmatex">\(\mathrm{Spec}(\mathbb{R})=\{ 0 \}\)</span> and it is the one-point topology.<br />
+<span class="arithmatex">\(\mathrm{Spec}(\mathbb{Z})=\{ (0) \}\cup \{ (p):p\text{ prime} \}\)</span>. <span class="arithmatex">\(V((n))=\{ (p):p\mid n \}\)</span> so the closed sets are <span class="arithmatex">\(X\)</span> and finite sets of nonzero prime elements.<br />
+Likewise <span class="arithmatex">\(\mathrm{Spec}(\mathbb{C}[x])=\{ (0) \}\cup \{ (x-c):c\in \mathbb{C} \}\)</span> and closed sets are <span class="arithmatex">\(\mathbb{C}[x]\)</span> and finite collections of polynomials <span class="arithmatex">\(x-c\)</span>. The case for <span class="arithmatex">\(\mathrm{Spec}(\mathbb{Z}[x])=\{ (p):p \text{ prime} \}\cup \{ (f):f\text{ irreducible} \}\{ (p,f):p\text{ prime, }f\text{ irreducible in }\mathbb{F}_{p}[x] \}\cup\{ 0 \}\)</span> and <span class="arithmatex">\(\mathrm{Spec}(\mathbb{R}[x])=\{ (0) \}\cup\{ (f):f\text{ irreducible} \}\)</span> are similar.</p>
+<h3 id="117">1.17</h3>
+<p>For each <span class="arithmatex">\(f \in A\)</span>, let <span class="arithmatex">\(X_f\)</span> denote the complement of <span class="arithmatex">\(V(f)\)</span> in <span class="arithmatex">\(X =\mathrm{Spec}(A)\)</span>. The sets <span class="arithmatex">\(X_f\)</span> are open. Show that they form a basis of open sets for the Zariski topology, and that<br />
+i) <span class="arithmatex">\(X_f \cap X_g = X_{fg}\)</span>;<br />
+ii) <span class="arithmatex">\(X_f = \varnothing \Leftrightarrow f\)</span> is nilpotent;<br />
+iii) <span class="arithmatex">\(X_f = X \Leftrightarrow f\)</span> is a unit;<br />
+iv) <span class="arithmatex">\(X_f = X_g \Leftrightarrow r((f)) = r((g))\)</span>;<br />
+v) <span class="arithmatex">\(X\)</span> is quasi-compact (that is, every open covering of <span class="arithmatex">\(X\)</span> has a finite sub-covering).<br />
+vi) More generally, each <span class="arithmatex">\(X_f\)</span> is quasi-compact.<br />
+vii) An open subset of <span class="arithmatex">\(X\)</span> is quasi-compact if and only if it is a finite union of sets <span class="arithmatex">\(X_f\)</span>.<br />
+The sets <span class="arithmatex">\(X_f\)</span> are called <strong>basic open sets</strong> of <span class="arithmatex">\(X =\mathrm{Spec}(A)\)</span>.<br />
+Proof: <span class="arithmatex">\(X=X_{1_{A}}\)</span> and (i) imply <span class="arithmatex">\(\{ X_{f} \}\)</span> is a basis on <span class="arithmatex">\(X\)</span>. If <span class="arithmatex">\(X\backslash V(I)\)</span> is an open set in <span class="arithmatex">\(X\)</span>, then <br />
+$$<br />
+V(I)=V(\bigcup_{x\in I}(x))=\bigcap_{x\in I}V(x)<br />
+$$<br />
+so <span class="arithmatex">\(X\backslash V(I)=\bigcup_{f\in I}X_{f}\)</span> and <span class="arithmatex">\(\{ X_{f} \}\)</span> generates the Zariski topology.<br />
+(i) <span class="arithmatex">\(X_{f}\cap X_{g}=X\backslash(V(f)\cup V(g))=X\backslash V((f)(g))=X_{fg}\)</span>.<br />
+(ii) <span class="arithmatex">\(X_{f}=\emptyset \iff \forall P\text{ prime}, (f)\subset P\iff f\text{ is nilpotent}\)</span>.<br />
+(iii) <span class="arithmatex">\(X_{f}=X\iff \forall P\text{ prime}, f\not\in P\iff f\text{ is a unit}\)</span>.<br />
+(iv) <span class="arithmatex">\(r((f))=\bigcap_{P\in V(f)}P\)</span> so <span class="arithmatex">\(X_{f}=X_{g}\implies r((f))=r((g))\)</span>. The converse is trivial since <span class="arithmatex">\(V(f)=V(r((f)))\)</span>.<br />
+(v) If <span class="arithmatex">\(X=\bigcup_{I\in \mathscr{A}}X\backslash V(I)\)</span> then <span class="arithmatex">\(\emptyset=\bigcap_{I\in \mathscr{A}}V(I)=V\left( \bigcup_{I\in \mathscr{A}}I \right)\)</span>. Hence <span class="arithmatex">\(1\in \sum_{I\in \mathscr{A}}^{}{I}\)</span> so there is a finite subset <span class="arithmatex">\(\mathscr{B}\subset \mathscr{A}\)</span> such that <span class="arithmatex">\(1\in \sum_{I\in \mathscr{B}}^{}{I}\)</span>, and <span class="arithmatex">\(X=\bigcup_{I\in \mathscr{B}}X\backslash V(I)\)</span>.<br />
+(vi) If <span class="arithmatex">\(X_{f}\subset \bigcup_{I\in \mathscr{A}}X\backslash V(I)\)</span> then <span class="arithmatex">\(V\left( \bigcup_{I\in \mathscr{A}}I \right)=\bigcap_{I\in \mathscr{A}}V(I)\subset V(f)\)</span>. Hence <span class="arithmatex">\(f^{n}\in \sum_{I\in \mathscr{A}}^{}{I}\)</span> for some <span class="arithmatex">\(n\geqslant 1\)</span>, and liekwise there is a finite subset <span class="arithmatex">\(\mathscr{B}\subset \mathscr{A}\)</span> such that <span class="arithmatex">\(f^{n}\in \sum_{I\in \mathscr{B}}^{}{I}\)</span> and <span class="arithmatex">\(X_{f}\subset \bigcup_{I\in \mathscr{B}}X\backslash V(I)\)</span>.<br />
+(vii) If <span class="arithmatex">\(X\backslash V(I)\)</span> is open and quasi-compact, then <span class="arithmatex">\(X_{f}\)</span> is a basis of <span class="arithmatex">\(X\)</span> so <span class="arithmatex">\(X\backslash V(I)\)</span> is.the union of <span class="arithmatex">\(X_{f}\)</span>. Hence it is the finite union of <span class="arithmatex">\(X_{f}\)</span>. The converse is trivial.</p>
+<h3 id="118">1.18</h3>
+<p>For psychological reasons it is sometimes convenient to denote a prime ideal of <span class="arithmatex">\(A\)</span> by a letter such as <span class="arithmatex">\(x\)</span> or <span class="arithmatex">\(y\)</span> when thinking of it as a point of <span class="arithmatex">\(X =\)</span> Spec <span class="arithmatex">\((A)\)</span>. When thinking of <span class="arithmatex">\(x\)</span> as a prime ideal of <span class="arithmatex">\(A\)</span>, we denote it by <span class="arithmatex">\(\mathfrak{p}_x\)</span> (logically, of course, it is the same thing). Show that<br />
+i) the set <span class="arithmatex">\(\{x\}\)</span> is closed (we say that <span class="arithmatex">\(x\)</span> is a "closed point") in Spec <span class="arithmatex">\((A) \Leftrightarrow \mathfrak{p}_x\)</span> is maximal;<br />
+ii) <span class="arithmatex">\(\overline{\{x\}} = V(\mathfrak{p}_x)\)</span>;<br />
+iii) <span class="arithmatex">\(y \in \overline{\{x\}} \Leftrightarrow \mathfrak{p}_x \subseteq \mathfrak{p}_y\)</span>;<br />
+iv) <span class="arithmatex">\(X\)</span> is a <span class="arithmatex">\(T_0\)</span>-space (this means that if <span class="arithmatex">\(x, y\)</span> are distinct points of <span class="arithmatex">\(X\)</span>, then either there is a neighborhood of <span class="arithmatex">\(x\)</span> which does not contain <span class="arithmatex">\(y\)</span>, or else there is a neighborhood of <span class="arithmatex">\(y\)</span> which does not contain <span class="arithmatex">\(x\)</span>).<br />
+Proof: (i) <span class="arithmatex">\(\{ x \}\)</span> is closed iff <span class="arithmatex">\(\{ x \}=V(E)\)</span> for some <span class="arithmatex">\(E\subset A\)</span>. If <span class="arithmatex">\(\mathfrak{p}_{x}\)</span> is maximal, <span class="arithmatex">\(V(\mathfrak{p}_{x})=\{ x \}\)</span>. If <span class="arithmatex">\(V(E)=\{ x \}\)</span>, take a maximal ideal <span class="arithmatex">\(P\)</span> containing <span class="arithmatex">\(x\)</span>, then <span class="arithmatex">\(E\subset \mathfrak{p}_{x}\subset P\)</span> so <span class="arithmatex">\(P\in V(E)\)</span> hence <span class="arithmatex">\(\mathfrak{p}_{x}=P\)</span> is prime.<br />
+(ii) Clearly <span class="arithmatex">\(V(\mathfrak{p}_{x})\)</span> is closed and <span class="arithmatex">\(x\in V(\mathfrak{p}_{x})\)</span>. If <span class="arithmatex">\(\{ x \}\subset V(E)\)</span> then <span class="arithmatex">\(\forall y\in V(\mathfrak{p}_{x})\)</span>, <span class="arithmatex">\(E\subset x=\mathfrak{p}_{x}\subset y\)</span>, so <span class="arithmatex">\(V(\mathfrak{p}_{x})\subset V(E)\)</span>. Hence <span class="arithmatex">\(\overline{\{ x \}}=V(\mathfrak{p}_{x})\)</span>.<br />
+(iii) <span class="arithmatex">\(y\in \overline{\{ x \}}\iff y\in V(\mathfrak{p}_{x})\iff \mathfrak{p}_{x}\subset \mathfrak{p}_{y}\)</span>.<br />
+(iv) if <span class="arithmatex">\(x\neq y\in X\)</span> either <span class="arithmatex">\(\mathfrak{p}_{x}\not⊂ \mathfrak{p}_{y}\)</span> or <span class="arithmatex">\(\mathfrak{p}_{y}\not⊂ \mathfrak{p}_{x}\)</span>. Suppose <span class="arithmatex">\(\mathfrak{p}_{x}\not\subset \mathfrak{p}_{y}\)</span> then <span class="arithmatex">\(y\not\in \overline{\{ x \}}\)</span> so <span class="arithmatex">\(U=X\backslash \overline{\{ x \}}\)</span> is a neighborhood of <span class="arithmatex">\(y\)</span> which does not contains <span class="arithmatex">\(x\)</span>.</p>
+<h3 id="119">1.19</h3>
+<p>A topological space <span class="arithmatex">\(X\)</span> is said to be <strong>irreducible</strong> if <span class="arithmatex">\(X \neq \varnothing\)</span> and if every pair of non-empty open sets in <span class="arithmatex">\(X\)</span> intersect, or equivalently if every non-empty open set is dense in <span class="arithmatex">\(X\)</span>. Show that <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is irreducible if and only if the nilradical of <span class="arithmatex">\(A\)</span> is a prime ideal.<br />
+Proof: If the nilradical <span class="arithmatex">\(\mathfrak{N}\)</span> is prime, then for any non-empty open set <span class="arithmatex">\(X\backslash V(E)\)</span>, there is a prime ideal <span class="arithmatex">\(P\)</span> such that <span class="arithmatex">\(E\not\subset P\)</span>, so <span class="arithmatex">\(E\not\subset \mathfrak{N}\)</span> and <span class="arithmatex">\(\mathfrak{N}\in X\backslash V(E)\)</span>. Hence <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is irreducible.<br />
+Conversely if <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is irreducible, for any <span class="arithmatex">\(xy\in \mathfrak{N}\)</span>, <span class="arithmatex">\(V_{xy}=X\)</span> so <span class="arithmatex">\(X_{x}\cap X_{y}=X_{xy}=\emptyset\)</span>. Hence either <span class="arithmatex">\(X_{x}=\emptyset\)</span> or <span class="arithmatex">\(X_{y}=\emptyset\)</span>, which implies either <span class="arithmatex">\(x\in \mathfrak{N}\)</span> or <span class="arithmatex">\(y\in \mathfrak{N}\)</span>. Therefore <span class="arithmatex">\(\mathfrak{N}\)</span> is a prime ideal.</p>
+<h3 id="120">1.20</h3>
+<p>Let <span class="arithmatex">\(X\)</span> be a topological space.<br />
+i) If <span class="arithmatex">\(Y\)</span> is an irreducible (Exercise 19) subspace of <span class="arithmatex">\(X\)</span>, then the closure <span class="arithmatex">\(\bar{Y}\)</span> of <span class="arithmatex">\(Y\)</span> in <span class="arithmatex">\(X\)</span> is irreducible.<br />
+ii) Every irreducible subspace of <span class="arithmatex">\(X\)</span> is contained in a maximal irreducible subspace.<br />
+iii) The maximal irreducible subspaces of <span class="arithmatex">\(X\)</span> are closed and cover <span class="arithmatex">\(X\)</span>. They are called the <strong>irreducible components</strong> of <span class="arithmatex">\(X\)</span>. What are the irreducible components of a Hausdorff space?<br />
+iv) If <span class="arithmatex">\(A\)</span> is a ring and <span class="arithmatex">\(X =\mathrm{Spec}(A)\)</span> then the irreducible components of <span class="arithmatex">\(X\)</span> are the closed sets <span class="arithmatex">\(V(\mathfrak{p})\)</span>, where <span class="arithmatex">\(\mathfrak{p}\)</span> is a minimal prime ideal of <span class="arithmatex">\(A\)</span> (Exercise 8).<br />
+Proof: (i) If <span class="arithmatex">\(U,V\subset \overline{Y}\)</span> are non-empty, then by definition of closure <span class="arithmatex">\(U\cap Y,V\cap Y\)</span> are non-empty. Since <span class="arithmatex">\(Y\)</span> is irreducible, <span class="arithmatex">\((U\cap Y)\cap(V\cap Y)\neq \emptyset\)</span> so <span class="arithmatex">\(U\cap V\neq \emptyset\)</span> and <span class="arithmatex">\(\bar{Y}\)</span> is irreducible.<br />
+(ii) Trivial by Zorn's lemma.<br />
+(iii) By (i) they are closed and clearly they cover <span class="arithmatex">\(X\)</span>. The irreducible components of a Hausdorff space is singleton sets.<br />
+(iv) If <span class="arithmatex">\(\mathfrak{p}\)</span> is a prime ideal, then <span class="arithmatex">\(V(\mathfrak{p})\)</span> is irreducible since every open set <span class="arithmatex">\(X\backslash V(E)\)</span> that is not disjoint from <span class="arithmatex">\(V(\mathfrak{p})\)</span> must contain <span class="arithmatex">\(\mathfrak{p}\)</span>.<br />
+If <span class="arithmatex">\(V(I)\)</span> is irreducible, we can assume <span class="arithmatex">\(I=r(I)\supset \mathfrak{N}\)</span>. For any <span class="arithmatex">\(ab\in I\)</span>, if <span class="arithmatex">\(a,b\not\in I\)</span>, then <span class="arithmatex">\(a\not\in \mathfrak{N}\)</span> so there is a prime ideal <span class="arithmatex">\(P\)</span> such that <span class="arithmatex">\(I\subset P\)</span> and <span class="arithmatex">\(P\cap S=\emptyset\)</span> where <span class="arithmatex">\(S=\{ a^{n}:n\geqslant 1 \}\)</span> is multiplicative. Hence <span class="arithmatex">\(P\in X_{a}\cap V(I)\)</span>. Likewise we obtain <span class="arithmatex">\(X_{a}\cap V(I),X_{b}\cap V(I)\neq \emptyset\)</span>, but <span class="arithmatex">\((X_{a}\cap V(I))\cap(X_{b}\cap V(I))=X_{ab}\cap V(I)=\emptyset\)</span>, a contradiction. So <span class="arithmatex">\(I\)</span> is prime.<br />
+Therefore there there is a correspondence between prime ideals and irreducible subspaces. Clearly maximal irreducible subspace is equivalent to minimal prime ideal.</p>
+<h3 id="121">1.21</h3>
+<p>Let <span class="arithmatex">\(\phi: A \to B\)</span> be a ring homomorphism. Let <span class="arithmatex">\(X =\mathrm{Spec}(A)\)</span> and <span class="arithmatex">\(Y =\mathrm{Spec}(B)\)</span>. If <span class="arithmatex">\(\mathfrak{q} \in Y\)</span>, then <span class="arithmatex">\(\phi^{-1}(\mathfrak{q})\)</span> is a prime ideal of <span class="arithmatex">\(A\)</span>, i.e., a point of <span class="arithmatex">\(X\)</span>. Hence <span class="arithmatex">\(\phi\)</span> induces a mapping <span class="arithmatex">\(\phi^*: Y \to X\)</span>. Show that<br />
+i) If <span class="arithmatex">\(f \in A\)</span> then <span class="arithmatex">\(\phi^{*-1}(X_f) = Y_{\phi(f)}\)</span>, and hence that <span class="arithmatex">\(\phi^*\)</span> is continuous.<br />
+ii) If <span class="arithmatex">\(\mathfrak{a}\)</span> is an ideal of <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(\phi^{*-1}(V(\mathfrak{a})) = V(\mathfrak{a}^e)\)</span>.<br />
+iii) If <span class="arithmatex">\(\mathfrak{b}\)</span> is an ideal of <span class="arithmatex">\(B\)</span>, then <span class="arithmatex">\(\overline{\phi^*(V(\mathfrak{b}))} = V(\mathfrak{b}^c)\)</span>.<br />
+iv) If <span class="arithmatex">\(\phi\)</span> is surjective, then <span class="arithmatex">\(\phi^*\)</span> is a homeomorphism of <span class="arithmatex">\(Y\)</span> onto the closed subset <span class="arithmatex">\(V(\text{Ker } (\phi))\)</span> of <span class="arithmatex">\(X\)</span>. (In particular, <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> and <span class="arithmatex">\(\mathrm{Spec}(A/\mathfrak{N})\)</span> (where <span class="arithmatex">\(\mathfrak{N}\)</span> is the nilradical of <span class="arithmatex">\(A\)</span>) are naturally homeomorphic.)<br />
+v) If <span class="arithmatex">\(\phi\)</span> is injective, then <span class="arithmatex">\(\phi^*(Y)\)</span> is dense in <span class="arithmatex">\(X\)</span>. More precisely, <span class="arithmatex">\(\phi^*(Y)\)</span> is dense in <span class="arithmatex">\(X \Leftrightarrow \text{Ker } (\phi) \subseteq \mathfrak{N}\)</span>.<br />
+vi) Let <span class="arithmatex">\(\psi: B \to C\)</span> be another ring homomorphism. Then <span class="arithmatex">\((\psi \circ \phi)^* = \phi^* \circ \psi^*\)</span>.<br />
+vii) Let <span class="arithmatex">\(A\)</span> be an integral domain with just one non-zero prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span>, and let <span class="arithmatex">\(K\)</span> be the field of fractions of <span class="arithmatex">\(A\)</span>. Let <span class="arithmatex">\(B = (A/\mathfrak{p}) \times K\)</span>. Define <span class="arithmatex">\(\phi: A \to B\)</span> by <span class="arithmatex">\(\phi(x) = (\bar{x}, x)\)</span>, where <span class="arithmatex">\(\bar{x}\)</span> is the image of <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(A/\mathfrak{p}\)</span>. Show that <span class="arithmatex">\(\phi^*\)</span> is bijective but not a homeomorphism.<br />
+Proof: (i) If <span class="arithmatex">\(\mathfrak{q}\in Y_{\phi(f)}\)</span> then <span class="arithmatex">\(\phi(f)\not\in \mathfrak{q}\)</span> implies <span class="arithmatex">\(f\not\in\phi ^{-1}(\mathfrak{q})\)</span> so <span class="arithmatex">\(\phi ^{*}(\mathfrak{q})=\phi ^{-1}(\mathfrak{q})\in X_{f}\)</span>. If <span class="arithmatex">\(\mathfrak{q}\not\in Y_{\phi(f)}\)</span>, similar arguments imply <span class="arithmatex">\(f\in\phi ^{*}(\mathfrak{q})\)</span>, so <span class="arithmatex">\(\phi ^{*}(\mathfrak{q})\not\in X_{f}\)</span>. Hence <span class="arithmatex">\(\phi ^{*-1}(X_{f})=Y_{\phi(f)}\)</span>.<br />
+(ii) <span class="arithmatex">\(\mathfrak{q}\in V(\mathfrak{a}^{e})\iff \mathfrak{a}^{e}\subset \mathfrak{q}\iff \mathfrak{a}\subset\phi ^{*}(\mathfrak{q})=\phi ^{-1}(\mathfrak{q})\iff\phi ^{*}(\mathfrak{q})\in V_{a}\)</span> so <span class="arithmatex">\(\phi ^{*-1}(V(\mathfrak{a}))=V(\mathfrak{a}^{e})\)</span>.<br />
+(iii) If <span class="arithmatex">\(\mathfrak{p}\in V(\mathfrak{b})\)</span> then <span class="arithmatex">\(\mathfrak{b}\subset \mathfrak{p}\)</span> so <span class="arithmatex">\(\mathfrak{b}^{c}=\phi ^{-1}(\mathfrak{b})\subset\phi ^{-1}(\mathfrak{p})=\phi ^{*}(\mathfrak{p})\)</span>. Hence <span class="arithmatex">\(\phi ^{*}(\mathfrak{p})\in V(\mathfrak{b}^{c})\)</span> and <span class="arithmatex">\(\phi ^{*}(V(\mathfrak{b}))\subset V(\mathfrak{b}^{e})\)</span> where the latter is closed.<br />
+If <span class="arithmatex">\(\phi ^{*}(V(\mathfrak{b}))\subset V(I)\)</span> then <span class="arithmatex">\(V(\mathfrak{b})\subset\phi ^{*-1}(V(I))=V(I^{e})\)</span>, so <span class="arithmatex">\(I^{e}\subset r(\mathfrak{b})\)</span>. Hence <span class="arithmatex">\(I\subset\phi ^{-1}(I^{e})\subset\phi ^{-1}(r(\mathfrak{b}))=r(\phi ^{-1}(\mathfrak{b}))=r(\mathfrak{b}^{c})\)</span>. Therefore <span class="arithmatex">\(V(\mathfrak{b})^{c}\subset V(I)\)</span>, and <span class="arithmatex">\(V(\mathfrak{b}^{c})=\overline{\phi ^{*}(V(\mathfrak{b}))}\)</span>.<br />
+(iv) <span class="arithmatex">\(\phi\)</span> is surjective implies <span class="arithmatex">\(\phi ^{*}\)</span> is a bijection from <span class="arithmatex">\(Y\)</span> to the prime ideals in <span class="arithmatex">\(X\)</span> containing <span class="arithmatex">\(\mathrm{Ker}\phi\)</span>, i.e. <span class="arithmatex">\(V(\mathrm{Ker}\phi)\)</span>.<br />
+Analogous to (i) we can show that <span class="arithmatex">\(\phi ^{*}(Y_{g})=X_{\phi ^{-1}(g)}\in V(\mathrm{Ker}\phi)\forall g\in B\)</span> so <span class="arithmatex">\(\phi ^{*}\)</span> is a homeomorphism from <span class="arithmatex">\(Y\)</span> to <span class="arithmatex">\(V(\mathrm{Ker}\phi)\)</span>.<br />
+(v) <span class="arithmatex">\(\overline{\phi ^{*}(Y)}=\overline{\phi ^{*}(V(0))}=V(0^{c})=V(\mathrm{Ker}\phi)\)</span>. Hence <span class="arithmatex">\(X=\overline{\phi ^{*}(Y)}\iff \mathrm{Ker}\phi \subset \mathfrak{N}\)</span>.<br />
+(vi) <span class="arithmatex">\(\forall I\subset C\)</span>, <span class="arithmatex">\((\psi \circ\phi)^{*}(C)=(\psi\circ\phi)^{-1}(C)=\phi ^{-1}(\psi ^{-1}(C))\)</span> and <span class="arithmatex">\(\phi ^{*}\circ\psi ^{*}(C)=\phi ^{*}(\psi ^{-1}(C))=\phi ^{-1}(\psi ^{-1}(C))\)</span>.<br />
+(vii) <span class="arithmatex">\(A\)</span> has a unique non-zero prime ideal implies <span class="arithmatex">\(\mathrm{Spec}(A)=\{ 0,\mathfrak{p} \}\)</span> and <span class="arithmatex">\(A /\mathfrak{p}\)</span> has no non-zero prime ideals. Hence <span class="arithmatex">\(\mathrm{Spec}(B)=\{ 0\times K,A /\mathfrak{p}\times 0 \}\)</span>. <span class="arithmatex">\(\phi ^{*}(0\times K)=\mathfrak{p}\)</span> and <span class="arithmatex">\(\phi ^{*}(A /\mathfrak{p}\times 0)=0\)</span> so <span class="arithmatex">\(\phi ^{*}\)</span> is bijective, but <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is non-Hausdorff (<span class="arithmatex">\(\{ 0 \}\)</span> is not open) while <span class="arithmatex">\(\mathrm{Spec}(B)\)</span> is Hausdorff (the discrete topology), hence <span class="arithmatex">\(\phi ^{*}\)</span> is not a homeomorphism.</p>
+<h3 id="122">1.22</h3>
+<p>Let <span class="arithmatex">\(A = \prod_{i=1}^n A_i\)</span> be the direct product of rings <span class="arithmatex">\(A_i\)</span>. Show that <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is the disjoint union of open (and closed) subspaces <span class="arithmatex">\(X_i\)</span>, where <span class="arithmatex">\(X_i\)</span> is canonically homeomorphic with <span class="arithmatex">\(\mathrm{Spec}(A_i)\)</span>.<br />
+Conversely, let <span class="arithmatex">\(A\)</span> be any ring. Show that the following statements are equivalent:<br />
+i) <span class="arithmatex">\(X =\mathrm{Spec}(A)\)</span> is disconnected.<br />
+ii) <span class="arithmatex">\(A \cong A_1 \times A_2\)</span> where neither of the rings <span class="arithmatex">\(A_1, A_2\)</span> is the zero ring.<br />
+iii) <span class="arithmatex">\(A\)</span> contains an idempotent <span class="arithmatex">\(\neq 0, 1\)</span>.<br />
+In particular, the spectrum of a local ring is always connected (Exercise 12).<br />
+Proof: Let <span class="arithmatex">\(\pi_{k}:A\to A_{k}\)</span> be the canonical projection, and <span class="arithmatex">\(\mathfrak{b}_{k}=\mathrm{Ker}\pi_{k}\cong \prod_{j\neq k}^{}{A_{j}}\)</span>, then by Exercise1.21 <span class="arithmatex">\(\pi ^{*}\)</span> is a homeomorphism from <span class="arithmatex">\(\mathrm{Spec}(A_{k})\)</span> to <span class="arithmatex">\(V(\mathfrak{b}_{k})\)</span>.<br />
+Clearly <span class="arithmatex">\(0=\bigcap_{k=1}^{n}\mathfrak{b}_{k}\)</span> so <span class="arithmatex">\(X=V(0)=\bigcup_{k=1}^{n}V(\mathfrak{b}_{k})\)</span>, and <span class="arithmatex">\(X\)</span> is the disjoint union of closed (and open, since finite) sets homeomorphic to <span class="arithmatex">\(\mathrm{Spec}(A_{k})\)</span>.<br />
+(ii)=&gt;(i): If <span class="arithmatex">\(A\cong A_{1}\times A_{2}\)</span> and <span class="arithmatex">\(A_{1},A_{2}\neq 0\)</span>, then <span class="arithmatex">\(\mathrm{Spec}(A_{1}),\mathrm{Spec}(A_{2})\neq \emptyset\)</span>, and they are both closed and open. Hence <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is disconnected.<br />
+(iii)=&gt;(ii): If <span class="arithmatex">\(x\neq 0,1\)</span> is idempotent, let <span class="arithmatex">\(A_{1}=(x)\)</span> and <span class="arithmatex">\(A_{2}=(1-x)\)</span>, then <span class="arithmatex">\(1=x+(1-x)\)</span> so <span class="arithmatex">\(A=A_{1}+A_{2}\)</span>. If <span class="arithmatex">\(rx=t(1-x)\in A_{1}\cap A_{2}\)</span>, then <span class="arithmatex">\(rx=rx^{2}=t(1-x)x=0\)</span> so <span class="arithmatex">\(A_{1}\cap A_{2}=0\)</span>. Hence <span class="arithmatex">\(A=A_{1}\oplus A_{2}\)</span>.<br />
+(i)=&gt;(iii): If <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is disconnected, then it is the union of disjoint closed sets <span class="arithmatex">\(V(\mathfrak{a}),V(\mathfrak{b})\)</span>. <span class="arithmatex">\(\emptyset=V(\mathfrak{a})\cap V(\mathfrak{b})=V(\mathfrak{a}+\mathfrak{b})\)</span> implies <span class="arithmatex">\(1\in \mathfrak{a}+\mathfrak{b}\)</span>, and <span class="arithmatex">\(X=V(\mathfrak{a})\cup V(\mathfrak{b})=V(\mathfrak{a}\mathfrak{b})\)</span> implies <span class="arithmatex">\(\mathfrak{a}\mathfrak{b}\subset \mathfrak{N}\)</span>. Take <span class="arithmatex">\(a\in \mathfrak{a},b\in \mathfrak{b}\)</span> such that <span class="arithmatex">\(1=a+b\)</span>, then <span class="arithmatex">\(ab\in \mathfrak{N}\)</span> implies <span class="arithmatex">\((ab)^{n}=0\)</span> for some <span class="arithmatex">\(n\geqslant 1\)</span>. Hence <span class="arithmatex">\(1\in((a)+(b))^{2n}\subset(a^{n})+(b^{n})\)</span> so there exists <span class="arithmatex">\(e\in(a^{n})\)</span> such that <span class="arithmatex">\(1-e\in(b^{n})\)</span>. Then <span class="arithmatex">\(e(1-e)\in(a^{n})(b^{n})=0\)</span> so <span class="arithmatex">\(e^{2}=e\)</span>, and <span class="arithmatex">\(a,b\neq 1\)</span> implies <span class="arithmatex">\(e\neq 0,1\)</span>.</p>
+<h3 id="123">1.23</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a Boolean ring (Exercise 11), and let <span class="arithmatex">\(X =\mathrm{Spec}(A)\)</span>.<br />
+i) For each <span class="arithmatex">\(f \in A\)</span>, the set <span class="arithmatex">\(X_f\)</span> (Exercise 17) is both open and closed in <span class="arithmatex">\(X\)</span>.<br />
+ii) Let <span class="arithmatex">\(f_1, \dots, f_n \in A\)</span>. Show that <span class="arithmatex">\(X_{f_1} \cup \dots \cup X_{f_n} = X_f\)</span> for some <span class="arithmatex">\(f \in A\)</span>.<br />
+iii) The sets <span class="arithmatex">\(X_f\)</span> are the only subsets of <span class="arithmatex">\(X\)</span> which are both open and closed.<br />
+iv) <span class="arithmatex">\(X\)</span> is a compact Hausdorff space.<br />
+Proof: (i) By definition <span class="arithmatex">\(X_{f}\)</span> is open. We show that <span class="arithmatex">\(X_{f}=X_{1-f}^{C}\)</span> then <span class="arithmatex">\(X_{f}\)</span> is closed: If <span class="arithmatex">\(P\)</span> is a prime ideal, then <span class="arithmatex">\(1\not\in P\)</span> so <span class="arithmatex">\(f\in P\implies 1-f\not\in P\)</span>. Since <span class="arithmatex">\(f(1-f)=0\in P\)</span>, <span class="arithmatex">\(f\not\in P\implies 1-f\in P\)</span>. Hence <span class="arithmatex">\(V(f)^{C}=V(1-f)\)</span>, and <span class="arithmatex">\(X_{f}=X_{1-f}^{C}\)</span>.<br />
+(ii) By Exercise1.11 <span class="arithmatex">\((f_{1},\cdots,f_{n})\)</span> is finitely generated hence principal. Suppose <span class="arithmatex">\((f)=(f_{1},\cdots,f_{n})\)</span>, then <span class="arithmatex">\(V(f)=V\left( \sum_{i=1}^{n}{(f_{i})} \right)=\bigcap_{i=1}^{n}V(f_{i})\)</span> so <span class="arithmatex">\(X_{f}=X_{f_{1}}\cup..\cup X_{f_{n}}\)</span>.<br />
+(iii) If <span class="arithmatex">\(Y\subset X\)</span> is both open and closed, <span class="arithmatex">\(Y=\bigcup_{i\in I}X_{f_{i}}\)</span> for some <span class="arithmatex">\(\{ f_{i}:i\in I \}\)</span> since <span class="arithmatex">\(\{ X_{f} \}\)</span> form a basis of <span class="arithmatex">\(X\)</span>. Since <span class="arithmatex">\(Y\)</span> is the closed subset of the quasi-compact space <span class="arithmatex">\(X\)</span> (Exercise1.17), <span class="arithmatex">\(Y\)</span> is quasi-compact, and there is a finite subset <span class="arithmatex">\(J\subset I\)</span> such that <span class="arithmatex">\(Y=\bigcup_{j\in J}X_{f_{j}}\)</span>. By (ii) <span class="arithmatex">\(Y=X_{f}\)</span> for some <span class="arithmatex">\(f\in A\)</span>.<br />
+(iv) If <span class="arithmatex">\(\mathfrak{p}\neq \mathfrak{q}\in X\)</span>, suppose <span class="arithmatex">\(\mathfrak{p}\not\subset \mathfrak{q}\)</span>. Take <span class="arithmatex">\(f\in \mathfrak{p}\backslash \mathfrak{q}\)</span>, then <span class="arithmatex">\(\mathfrak{q}\in X_{f}\)</span> and <span class="arithmatex">\(\mathfrak{p}\in X_{f}^{c}\)</span> are disjoint open sets, so <span class="arithmatex">\(X\)</span> is Hausdorff. Compactness is proved in Exercise1.17.</p>
+<h3 id="124">1.24</h3>
+<p>Let <span class="arithmatex">\(L\)</span> be a lattice, in which the sup and inf of two elements <span class="arithmatex">\(a, b\)</span> are denoted by <span class="arithmatex">\(a \vee b\)</span> and <span class="arithmatex">\(a \wedge b\)</span> respectively. <span class="arithmatex">\(L\)</span> is a <strong>Boolean lattice</strong> (or <strong>Boolean algebra</strong>) if<br />
+i) <span class="arithmatex">\(L\)</span> has a least element and a greatest element (denoted by <span class="arithmatex">\(0, 1\)</span> respectively).<br />
+ii) Each of <span class="arithmatex">\(\vee, \wedge\)</span> is distributive over the other.<br />
+iii) Each <span class="arithmatex">\(a \in L\)</span> has a unique "complement" <span class="arithmatex">\(a' \in L\)</span> such that <span class="arithmatex">\(a \vee a' = 1\)</span> and <span class="arithmatex">\(a \wedge a' = 0\)</span>.<br />
+(For example, the set of all subsets of a set, ordered by inclusion, is a Boolean lattice.)<br />
+Let <span class="arithmatex">\(L\)</span> be a Boolean lattice. Define addition and multiplication in <span class="arithmatex">\(L\)</span> by the rules<br />
+$$ a + b = (a \wedge b') \vee (a' \wedge b), \qquad ab = a \wedge b. $$<br />
+Verify that in this way <span class="arithmatex">\(L\)</span> becomes a Boolean ring, say <span class="arithmatex">\(A(L)\)</span>.<br />
+Conversely, starting from a Boolean ring <span class="arithmatex">\(A\)</span>, define an ordering on <span class="arithmatex">\(A\)</span> as follows: <span class="arithmatex">\(a \leqslant b\)</span> means that <span class="arithmatex">\(a = ab\)</span>. Show that, with respect to this ordering, <span class="arithmatex">\(A\)</span> is a Boolean lattice. In this way we obtain a one-to-one correspondence between (isomorphism classes of) Boolean rings and (isomorphism classes of) Boolean lattices.<br />
+Proof: (i) Suppose <span class="arithmatex">\(L\)</span> is a Boolean lattice. <br />
+It is easy to verify that <span class="arithmatex">\(a+b=(a\wedge b^{\prime})\vee(a^{\prime}\wedge b)\)</span> has complement <span class="arithmatex">\((a^{\prime}\wedge b^{\prime})\vee(a\wedge b)\)</span>, and <span class="arithmatex">\(a\vee b\)</span> has complement <span class="arithmatex">\(a^{\prime}\wedge b^{\prime}\)</span>.<br />
+Since <span class="arithmatex">\(\vee\)</span> and <span class="arithmatex">\(\wedge\)</span> are commutative, so are <span class="arithmatex">\(+\)</span> and <span class="arithmatex">\(\times\)</span>. Note that<br />
+\begin{align}<br />
+(a+b)+c &amp; =((a+b)\wedge c^{\prime})\vee((a+b)^{\prime}\wedge c) \newline<br />
+ &amp; = (((a\wedge b^{\prime})\vee(a^{\prime}\wedge b))\wedge c^{\prime})\vee(((a^{\prime}\wedge b^{\prime})\vee(a\wedge b))\wedge c) \newline<br />
+  &amp; =(a\wedge b^{\prime}\wedge c^{\prime})\vee(a^{\prime}\wedge b\wedge c^{\prime})\vee(a^{\prime}\wedge b^{\prime}\wedge c)\vee(a\wedge b\wedge c).<br />
+\end{align}<br />
+Hence addition is associative. Clearly multiplication is associative.<br />
+Clearly <span class="arithmatex">\(0,1\)</span> are the zero and identity of <span class="arithmatex">\(L\)</span>. The additive inverse of <span class="arithmatex">\(a\)</span> is <span class="arithmatex">\(a^{\prime}\)</span>, so <span class="arithmatex">\((L,+)\)</span> is an Abelian group.<br />
+If <span class="arithmatex">\(a,b,c\in L\)</span>, then<br />
+$$<br />
+\begin{align}<br />
+ac+bc &amp; =((a\wedge c)\wedge(b\wedge c)^{\prime})\vee((a\wedge c)^{\prime}\wedge(b\wedge c)) \newline<br />
+ &amp; =(a\wedge b^{\prime}\wedge c)\vee(a^{\prime}\wedge b\wedge c) =(a+b)\wedge c=(a+b)c.<br />
+\end{align}<br />
+$$<br />
+Hence <span class="arithmatex">\((L,+,\cdot)\)</span> is a ring. Clearly <span class="arithmatex">\(a^{2}=a\)</span> for all <span class="arithmatex">\(a\in L\)</span>, so <span class="arithmatex">\(L\)</span> is a Boolean ring.<br />
+(ii) Conversely, suppose <span class="arithmatex">\(A\)</span> is a Boolean ring, consider the order <span class="arithmatex">\(a\leqslant b\iff a=ab\)</span>. Clearly <span class="arithmatex">\(a^{2}=a\implies a\leqslant a\)</span>, if <span class="arithmatex">\(a\leqslant b\leqslant a\)</span> then <span class="arithmatex">\(a=ab=b\)</span>, and if <span class="arithmatex">\(a\leqslant b\leqslant c\)</span> then <span class="arithmatex">\(a=ab=abc=ac\)</span> so <span class="arithmatex">\(a\leqslant c\)</span>. Hence <span class="arithmatex">\(\leqslant\)</span> is an ordering on <span class="arithmatex">\(A\)</span>.<br />
+Define the binary sup and inf on <span class="arithmatex">\(A\)</span> as <span class="arithmatex">\(a\vee b=a+b+ab\)</span> and <span class="arithmatex">\(a\wedge b=ab\)</span>. Then <span class="arithmatex">\(a\wedge b\leqslant a,b\)</span>, and <span class="arithmatex">\(c\leqslant a,b\)</span> implies <span class="arithmatex">\(c(a\wedge b)=cab=c b=c\)</span>, so <span class="arithmatex">\(c\leqslant a\wedge b\)</span> and <span class="arithmatex">\(a\wedge b\)</span> is indeed the infima of <span class="arithmatex">\(\{ a,b \}\)</span>; <span class="arithmatex">\(a,b\leqslant a+b+ab\)</span> since <span class="arithmatex">\(a(a+b+ab)=a^{2}+ab+ab=a\)</span>, and <span class="arithmatex">\(a,b\leqslant c\)</span> implies <span class="arithmatex">\((a+b+ab)c=ac+bc+abc=3c=c\)</span>, so <span class="arithmatex">\(a\vee b\leqslant c\)</span> and <span class="arithmatex">\(a\vee b\)</span> is indeed the suprema of <span class="arithmatex">\(\{ a,b \}\)</span>.<br />
+The least element is <span class="arithmatex">\(0\)</span>, the greatest is <span class="arithmatex">\(1\)</span>, and if <span class="arithmatex">\(a\in A\)</span>, it has a unique complement <span class="arithmatex">\(a^{\prime}=1-a\)</span>. <br />
+If <span class="arithmatex">\(a,b,c\in A\)</span>, then<br />
+$$<br />
+\begin{align}<br />
+(a\vee c)\wedge(b\vee c) &amp; =(ac+a+c)(bc+b+c)=3abc+ab+2bc+2ac+c\newline<br />
+ &amp; =ab+c+abc =(a\wedge b)\vee c<br />
+\end{align}<br />
+$$<br />
+and<br />
+$$<br />
+(a\wedge c)\vee(b\wedge c)=abc+ac+bc=(a\wedge b)\vee c.<br />
+$$<br />
+So <span class="arithmatex">\(\wedge,\vee\)</span> distribute over each other. Hence <span class="arithmatex">\(A\)</span> is a Boolean ring <span class="arithmatex">\(R(L)\)</span>.<br />
+(iii) Now we show <span class="arithmatex">\(A^{\prime}=R(L(A))\)</span> is equal to <span class="arithmatex">\(A\)</span>: Clearly <span class="arithmatex">\(\cdot_{A^{\prime}}=\wedge_{L(A)}=\cdot_{A}\)</span>, <span class="arithmatex">\(0_{A^{\prime}}=0_{A},1_{A^{\prime}}=1_{A}\)</span>, and<br />
+$$<br />
+\begin{align}<br />
+a+_{A^{\prime}}b &amp; =(a\wedge b^{\prime})\vee(a^{\prime}\wedge b)=a(1-b)+(1-a)b+a(1-a)b(1-b) \newline<br />
+&amp;=a-ab+b-ab+0=a+b.<br />
+\end{align}<br />
+$$<br />
+Hence <span class="arithmatex">\(A=A^{\prime}\)</span>. Analogously we have <span class="arithmatex">\(L^{\prime}=L(R(L))=L\)</span>.</p>
+<h3 id="125">1.25</h3>
+<p>From the last two exercises deduce Stone's theorem, that every Boolean lattice is isomorphic to the lattice of open-and-closed subsets of some compact Hausdorff topological space.<br />
+Proof: Given a Boolean lattice <span class="arithmatex">\(L\)</span>, make it into a ring as in Exercise1.24, then <span class="arithmatex">\(X=\mathrm{Spec}(L)\)</span> is a compact Hausdorff space. The map <span class="arithmatex">\(\Phi:f\mapsto X_{f}\)</span> gives a correspondence from <span class="arithmatex">\(L\)</span> to the open-and-closed subsets of <span class="arithmatex">\(X\)</span>. Clearly <span class="arithmatex">\(\Phi\)</span> is surjective, and by Exercise1.17 <span class="arithmatex">\(X_{f}=X_{g}\iff r((f))=r((g))\iff(f)=(g)\iff f=g\)</span>, since the only unit in <span class="arithmatex">\(L\)</span> is <span class="arithmatex">\(1\)</span>. Hence <span class="arithmatex">\(\Phi\)</span> is bijective.<br />
+If <span class="arithmatex">\(f\leqslant g\)</span> then <span class="arithmatex">\(f=fg\)</span> so <span class="arithmatex">\((f)=(fg)\subset(g)\)</span> and <span class="arithmatex">\(X_{f}\subset X_{g}\)</span>. If <span class="arithmatex">\(X_{f}\subset X_{g}\)</span> then <span class="arithmatex">\(r((f))\subset r((g))\)</span> so <span class="arithmatex">\((f)\subset (g)\)</span> and <span class="arithmatex">\(f=fg\)</span>. Hence the two lattices are isomorphic.</p>
+<h3 id="126">1.26</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring. The subspace of <span class="arithmatex">\(\text{Spec}(A)\)</span> consisting of the <strong>maximal</strong> ideals of <span class="arithmatex">\(A\)</span>, with the induced topology, is called the <strong>maximal spectrum</strong> of <span class="arithmatex">\(A\)</span> and is denoted by <span class="arithmatex">\(\text{Max}(A)\)</span>. For arbitrary commutative rings it does not have the nice functorial properties of <span class="arithmatex">\(\text{Spec}(A)\)</span> (see Exercise 21), because the inverse image of a maximal ideal under a ring homomorphism need not be maximal.<br />
+Let <span class="arithmatex">\(X\)</span> be a compact Hausdorff space and let <span class="arithmatex">\(C(X)\)</span> denote the ring of all real-valued continuous functions on <span class="arithmatex">\(X\)</span> (add and multiply functions by adding and multiplying their values). For each <span class="arithmatex">\(x \in X\)</span>, let <span class="arithmatex">\(\mathfrak{m}_x\)</span> be the set of all <span class="arithmatex">\(f \in C(X)\)</span> such that <span class="arithmatex">\(f(x) = 0\)</span>. The ideal <span class="arithmatex">\(\mathfrak{m}_x\)</span> is maximal, because it is the kernel of the (surjective) homomorphism <span class="arithmatex">\(C(X) \to \mathbb{R}\)</span> which takes <span class="arithmatex">\(f\)</span> to <span class="arithmatex">\(f(x)\)</span>. If <span class="arithmatex">\(\tilde{X}\)</span> denotes <span class="arithmatex">\(\text{Max}(C(X))\)</span>, we have therefore defined a mapping <span class="arithmatex">\(\mu : X \to \tilde{X}\)</span>, namely <span class="arithmatex">\(x \mapsto \mathfrak{m}_x\)</span>.<br />
+We shall show that <span class="arithmatex">\(\mu\)</span> is a homeomorphism of <span class="arithmatex">\(X\)</span> onto <span class="arithmatex">\(\tilde{X}\)</span>.<br />
+i) Let <span class="arithmatex">\(\mathfrak{m}\)</span> be any maximal ideal of <span class="arithmatex">\(C(X)\)</span>, and let <span class="arithmatex">\(V = V(\mathfrak{m})\)</span> be the set of common zeros of the functions in <span class="arithmatex">\(\mathfrak{m}\)</span>: that is,<br />
+$$<br />
+V = { x \in X : f(x) = 0 \text{ for all } f \in \mathfrak{m} }.<br />
+$$<br />
+Suppose that <span class="arithmatex">\(V\)</span> is empty. Then for each <span class="arithmatex">\(x \in X\)</span> there exists <span class="arithmatex">\(f_x \in \mathfrak{m}\)</span> such that <span class="arithmatex">\(f_x(x) \neq 0\)</span>. Since <span class="arithmatex">\(f_x\)</span> is continuous, there is an open neighborhood <span class="arithmatex">\(U_x\)</span> of <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(X\)</span> on which <span class="arithmatex">\(f_x\)</span> does not vanish. By compactness a finite number of the neighborhoods, say <span class="arithmatex">\(U_{x_1}, \dots, U_{x_n}\)</span>, cover <span class="arithmatex">\(X\)</span>. Let<br />
+$$<br />
+f = f_{x_1}^2 + \dots + f_{x_n}^2.<br />
+$$<br />
+Then <span class="arithmatex">\(f\)</span> does not vanish at any point of <span class="arithmatex">\(X\)</span>, hence is a unit in <span class="arithmatex">\(C(X)\)</span>. But this contradicts <span class="arithmatex">\(f \in \mathfrak{m}\)</span>, hence <span class="arithmatex">\(V\)</span> is not empty.<br />
+Let <span class="arithmatex">\(x\)</span> be a point of <span class="arithmatex">\(V\)</span>. Then <span class="arithmatex">\(\mathfrak{m} \subseteq \mathfrak{m}_x\)</span>, hence <span class="arithmatex">\(\mathfrak{m} = \mathfrak{m}_x\)</span> because <span class="arithmatex">\(\mathfrak{m}\)</span> is maximal. Hence <span class="arithmatex">\(\mu\)</span> is surjective.<br />
+ii) By Urysohn's lemma (this is the only non-trivial fact required in the argument) the continuous functions separate the points of <span class="arithmatex">\(X\)</span>. Hence <span class="arithmatex">\(x \neq y \Rightarrow \mathfrak{m}_x \neq \mathfrak{m}_y\)</span>, and therefore <span class="arithmatex">\(\mu\)</span> is injective.<br />
+iii) Let <span class="arithmatex">\(f \in C(X)\)</span>; let<br />
+$$<br />
+U_f = { x \in X : f(x) \neq 0 }<br />
+$$<br />
+and let<br />
+$$<br />
+\tilde{U}_f = { \mathfrak{m} \in \tilde{X} : f \notin \mathfrak{m} }<br />
+$$<br />
+Show that <span class="arithmatex">\(\mu(U_f) = \tilde{U}_f\)</span>. The open sets <span class="arithmatex">\(U_f\)</span> (resp. <span class="arithmatex">\(\tilde{U}_f\)</span>) form a basis of the topology of <span class="arithmatex">\(X\)</span> (resp. <span class="arithmatex">\(\tilde{X}\)</span>) and therefore <span class="arithmatex">\(\mu\)</span> is a homeomorphism.<br />
+Thus <span class="arithmatex">\(X\)</span> can be reconstructed from the ring of functions <span class="arithmatex">\(C(X)\)</span>.<br />
+Proof: (iii) <span class="arithmatex">\(x\in U_{f}\iff f(x)\neq 0\iff f\not\in \mathfrak{m}_{x}\iff \mathfrak{m}_{x}\in \tilde{U}_{f}\)</span> so <span class="arithmatex">\(\mu(U_{f})=\tilde{U}_{f}\)</span>. <span class="arithmatex">\(\tilde{U}_{f}=X_{f}\cap \tilde{X}\)</span> is a basis of <span class="arithmatex">\(\tilde{X}\)</span>. For any open set <span class="arithmatex">\(O\subset X\)</span> and <span class="arithmatex">\(x\in O\)</span>, <span class="arithmatex">\(X\)</span> is compact Hausdorff hence normal, and by Urysohn's lemma there is an <span class="arithmatex">\(f\in C(X)\)</span> such that <span class="arithmatex">\(f(x)=1\)</span> and <span class="arithmatex">\(f(O^{C})=0\)</span>. Then <span class="arithmatex">\(x\in U_{f}\subset O\)</span>, so <span class="arithmatex">\(U_{f}\)</span> form a basis of <span class="arithmatex">\(X\)</span>. Therefore <span class="arithmatex">\(\mu\)</span> is a bijective continuous open map, so <span class="arithmatex">\(\mu\)</span> is a homeomorphism from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(\tilde{X}\)</span>.</p>
+<hr />
+<p><strong>Affine algebraic varieties</strong></p>
+<h3 id="127">1.27</h3>
+<p>Let <span class="arithmatex">\(k\)</span> be an algebraically closed field and let<br />
+$$<br />
+f_\alpha(t_1, \dots, t_n) = 0<br />
+$$<br />
+be a set of polynomial equations in <span class="arithmatex">\(n\)</span> variables with coefficients in <span class="arithmatex">\(k\)</span>. The set <span class="arithmatex">\(X\)</span> of all points <span class="arithmatex">\(x = (x_1, \dots, x_n) \in k^n\)</span> which satisfy these equations is an <strong>affine algebraic variety</strong>.<br />
+Consider the set of all polynomials <span class="arithmatex">\(g \in k[t_1, \dots, t_n]\)</span> with the property that <span class="arithmatex">\(g(x) = 0\)</span> for all <span class="arithmatex">\(x \in X\)</span>. This set is an ideal <span class="arithmatex">\(I(X)\)</span> in the polynomial ring, and is called the <strong>ideal of the variety</strong> <span class="arithmatex">\(X\)</span>. The quotient ring<br />
+$$<br />
+P(X) = k[t_1, \dots, t_n]/I(X)<br />
+$$<br />
+is the ring of polynomial functions on <span class="arithmatex">\(X\)</span>, because two polynomials <span class="arithmatex">\(g, h\)</span> define the same polynomial function on <span class="arithmatex">\(X\)</span> if and only if <span class="arithmatex">\(g - h\)</span> vanishes at every point of <span class="arithmatex">\(X\)</span>, that is, if and only if <span class="arithmatex">\(g - h \in I(X)\)</span>.<br />
+Let <span class="arithmatex">\(\xi_i\)</span> be the image of <span class="arithmatex">\(t_i\)</span> in <span class="arithmatex">\(P(X)\)</span>. The <span class="arithmatex">\(\xi_i\)</span> (<span class="arithmatex">\(1 \leqslant i \leqslant n\)</span>) are the <strong>coordinate functions</strong> on <span class="arithmatex">\(X\)</span>: if <span class="arithmatex">\(x \in X\)</span>, then <span class="arithmatex">\(\xi_i(x)\)</span> is the <span class="arithmatex">\(i^{th}\)</span> coordinate of <span class="arithmatex">\(x\)</span>. <span class="arithmatex">\(P(X)\)</span> is generated as a <span class="arithmatex">\(k\)</span>-algebra by the coordinate functions, and is called the <strong>coordinate ring</strong> (or <strong>affine algebra</strong>) of <span class="arithmatex">\(X\)</span>.<br />
+As in Exercise 26, for each <span class="arithmatex">\(x \in X\)</span> let <span class="arithmatex">\(\mathfrak{m}_x\)</span> be the ideal of all <span class="arithmatex">\(f \in P(X)\)</span> such that <span class="arithmatex">\(f(x) = 0\)</span>; it is a maximal ideal of <span class="arithmatex">\(P(X)\)</span>. Hence, if <span class="arithmatex">\(\tilde{X} = \text{Max}(P(X))\)</span>, we have defined a mapping <span class="arithmatex">\(\mu : X \to \tilde{X}\)</span>, namely <span class="arithmatex">\(x \mapsto \mathfrak{m}_x\)</span>.<br />
+It is easy to show that <span class="arithmatex">\(\mu\)</span> is injective: if <span class="arithmatex">\(x \neq y\)</span>, we must have <span class="arithmatex">\(x_i \neq y_i\)</span> for some <span class="arithmatex">\(i\)</span> (<span class="arithmatex">\(1 \leqslant i \leqslant n\)</span>), and hence <span class="arithmatex">\(\xi_i - x_i\)</span> is in <span class="arithmatex">\(\mathfrak{m}_x\)</span> but not in <span class="arithmatex">\(\mathfrak{m}_y\)</span>, so that <span class="arithmatex">\(\mathfrak{m}_x \neq \mathfrak{m}_y\)</span>. What is less obvious (but still true) is that <span class="arithmatex">\(\mu\)</span> is <strong>surjective</strong>. This is one form of Hilbert's Nullstellensatz (see Chapter 7).</p>
+<h3 id="128">1.28</h3>
+<p>Let <span class="arithmatex">\(f_1, \dots, f_m\)</span> be elements of <span class="arithmatex">\(k[t_1, \dots, t_n]\)</span>. They determine a <strong>polynomial mapping</strong> <span class="arithmatex">\(\phi: k^n \to k^m\)</span>: if <span class="arithmatex">\(x \in k^n\)</span>, the coordinates of <span class="arithmatex">\(\phi(x)\)</span> are <span class="arithmatex">\(f_1(x), \dots, f_m(x)\)</span>.<br />
+Let <span class="arithmatex">\(X, Y\)</span> be affine algebraic varieties in <span class="arithmatex">\(k^n, k^m\)</span> respectively. A mapping <span class="arithmatex">\(\phi: X \to Y\)</span> is said to be <strong>regular</strong> if <span class="arithmatex">\(\phi\)</span> is the restriction to <span class="arithmatex">\(X\)</span> of a polynomial mapping from <span class="arithmatex">\(k^n\)</span> to <span class="arithmatex">\(k^m\)</span>.<br />
+If <span class="arithmatex">\(\eta\)</span> is a polynomial function on <span class="arithmatex">\(Y\)</span>, then <span class="arithmatex">\(\eta \circ \phi\)</span> is a polynomial function on <span class="arithmatex">\(X\)</span>. Hence <span class="arithmatex">\(\phi\)</span> induces a <span class="arithmatex">\(k\)</span>-algebra homomorphism <span class="arithmatex">\(P(Y) \to P(X)\)</span>, namely <span class="arithmatex">\(\eta \mapsto \eta \circ \phi\)</span>. Show that in this way we obtain a one-to-one correspondence between the regular mappings <span class="arithmatex">\(X \to Y\)</span> and the <span class="arithmatex">\(k\)</span>-algebra homomorphisms <span class="arithmatex">\(P(Y) \to P(X)\)</span>.<br />
+[[TODO]]</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

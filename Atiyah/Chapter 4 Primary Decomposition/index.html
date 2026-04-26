@@ -1,0 +1,1571 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Shengxuan-Zhang.github.io/Notes/Atiyah/Chapter%204%20Primary%20Decomposition/">
+      
+      
+        <link rel="prev" href="../Chapter%203%20Rings%20and%20Modules%20of%20Fractions/">
+      
+      
+        <link rel="next" href="../../Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 4 Primary Decomposition - Math Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#41" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math Notes" class="md-header__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 4 Primary Decomposition
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Chapter%201%20Rings%20and%20Ideals/" class="md-tabs__link">
+          
+  
+  
+  Atiyah
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/" class="md-tabs__link">
+          
+  
+  
+  Complex Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../GTM73/Chapter%203%20Rings/" class="md-tabs__link">
+          
+  
+  
+  GTM73
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math Notes" class="md-nav__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atiyah
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atiyah
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%201%20Rings%20and%20Ideals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 Rings and Ideals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%203%20Rings%20and%20Modules%20of%20Fractions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings and Modules of Fractions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Primary Decomposition
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Primary Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#413" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#414" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#415" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.15
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#416" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.16
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#417" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.17
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#418" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.18
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#419" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.19
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#420" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.20
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.21
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.22
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#423" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.23
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complex Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Complex Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Gamma and Zeta Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GTM73
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GTM73
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%203%20Rings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%204%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#413" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#414" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#415" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.15
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#416" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.16
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#417" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.17
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#418" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.18
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#419" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.19
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#420" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.20
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.21
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.22
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#423" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.23
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Chapter 4 Primary Decomposition</h1>
+
+<h3 id="41">4.1</h3>
+<p>If an ideal <span class="arithmatex">\(\mathfrak{a}\)</span> has a primary decomposition, then <span class="arithmatex">\(\operatorname{Spec}(A/\mathfrak{a})\)</span> has only finitely many irreducible components.<br />
+Proof: Every irreducible component of <span class="arithmatex">\(\mathrm{Spec}(A /\mathfrak{a})\)</span> is in the form <span class="arithmatex">\(V(\pi(\mathfrak{p}))\)</span> where <span class="arithmatex">\(\pi(\mathfrak{p})\)</span> is a minimal prime ideal in <span class="arithmatex">\(A /\mathfrak{a}\)</span>, so <span class="arithmatex">\(\mathfrak{p}\)</span> is minimal in the prime ideals containing <span class="arithmatex">\(\mathfrak{a}\)</span>. Since <span class="arithmatex">\(\mathfrak{a}\)</span> has a primary decomposition, there are only finitely many minimal ideals.</p>
+<h3 id="42">4.2</h3>
+<p>If <span class="arithmatex">\(\mathfrak{a} = r(\mathfrak{a})\)</span>, then <span class="arithmatex">\(\mathfrak{a}\)</span> has no embedded prime ideals.<br />
+Proof: If <span class="arithmatex">\(\mathfrak{a}\)</span> has a primary decomposition, since <span class="arithmatex">\(\mathfrak{a}=r(\mathfrak{a})=\bigcap_{\mathfrak{p}\supset \mathfrak{a},\mathfrak{p}\text{ minimal}} \mathfrak{p}\)</span>, where <span class="arithmatex">\(\mathfrak{p}\)</span> are <span class="arithmatex">\(\mathfrak{p}-\)</span>primary, <span class="arithmatex">\(\mathfrak{a}\)</span> has no embedded prime ideals.</p>
+<h3 id="43">4.3</h3>
+<p>If <span class="arithmatex">\(A\)</span> is absolutely flat, every primary ideal is maximal.<br />
+Proof: If <span class="arithmatex">\(\mathfrak{q}\)</span> is <span class="arithmatex">\(\mathfrak{p}-\)</span>primary, by Exercise2.28 <span class="arithmatex">\(k=A /\mathfrak{q}\)</span> is absolutely flat, so every non-unit is a zero divisor, which is nilpotent since <span class="arithmatex">\(\mathfrak{q}\)</span> is primary. Hence <span class="arithmatex">\(k\)</span> is an absolutely flat local ring, so <span class="arithmatex">\(k\)</span> is a field and <span class="arithmatex">\(\mathfrak{q}\)</span> is maximal.</p>
+<h3 id="44">4.4</h3>
+<p>In the polynomial ring <span class="arithmatex">\(\mathbb{Z}[t]\)</span>, the ideal <span class="arithmatex">\(\mathfrak{m} = (2, t)\)</span> is maximal and the ideal <span class="arithmatex">\(\mathfrak{q} = (4, t)\)</span> is <span class="arithmatex">\(\mathfrak{m}\)</span>-primary, but is not a power of <span class="arithmatex">\(\mathfrak{m}\)</span>.<br />
+Proof: <span class="arithmatex">\(\mathbb{Z}[t] /\mathfrak{m}\cong \mathbb{Z}_{2}\)</span> is a field, and <span class="arithmatex">\(\mathbb{Z}[t] /\mathfrak{q}\cong \mathbb{Z}_{4}\)</span> whose zero divisors <span class="arithmatex">\(\bar{0},\bar{2}\)</span> are nilpotent, so <span class="arithmatex">\(\mathfrak{m}\)</span> is maximal and <span class="arithmatex">\(\mathfrak{q}\)</span> is primary. <span class="arithmatex">\(\mathfrak{m}\subset r(\mathfrak{q})\)</span> so <span class="arithmatex">\(\mathfrak{q}\)</span> is <span class="arithmatex">\(\mathfrak{m}-\)</span>primary. However, <span class="arithmatex">\(t\not\in \mathfrak{m}^{2}\)</span> so <span class="arithmatex">\(\mathfrak{m}^{2}\subsetneq \mathfrak{q}\subsetneq\mathfrak{m}\)</span>, and <span class="arithmatex">\(\mathfrak{q}\)</span> is not a power of <span class="arithmatex">\(\mathfrak{m}\)</span>.</p>
+<h3 id="45">4.5</h3>
+<p>In the polynomial ring <span class="arithmatex">\(K[x, y, z]\)</span> where <span class="arithmatex">\(K\)</span> is a field and <span class="arithmatex">\(x, y, z\)</span> are independent indeterminates, let <span class="arithmatex">\(\mathfrak{p}_1 = (x, y)\)</span>, <span class="arithmatex">\(\mathfrak{p}_2 = (x, z)\)</span>, <span class="arithmatex">\(\mathfrak{m} = (x, y, z)\)</span>; <span class="arithmatex">\(\mathfrak{p}_1\)</span> and <span class="arithmatex">\(\mathfrak{p}_2\)</span> are prime, and <span class="arithmatex">\(\mathfrak{m}\)</span> is maximal. Let <span class="arithmatex">\(\mathfrak{a} = \mathfrak{p}_1 \mathfrak{p}_2\)</span>. Show that <span class="arithmatex">\(\mathfrak{a} = \mathfrak{p}_1 \cap \mathfrak{p}_2 \cap \mathfrak{m}^2\)</span> is a reduced primary decomposition of <span class="arithmatex">\(\mathfrak{a}\)</span>. Which components are isolated and which are embedded?<br />
+Solution: Verify that <span class="arithmatex">\(\mathfrak{p}_{1},\mathfrak{p}_{2}\subsetneq \mathfrak{m}\)</span>, while <span class="arithmatex">\(\mathfrak{p}_{1}\not\subset\mathfrak{p}_{2}\not\subset \mathfrak{p}_{1}\)</span>, so <span class="arithmatex">\(\mathfrak{p}_{1},\mathfrak{p}_{2}\)</span> are isolated and <span class="arithmatex">\(\mathfrak{m}\)</span> is embedded.</p>
+<h3 id="46">4.6</h3>
+<p>Let <span class="arithmatex">\(X\)</span> be an infinite compact Hausdorff space, <span class="arithmatex">\(C(X)\)</span> the ring of real-valued continuous functions on <span class="arithmatex">\(X\)</span> (Chapter 1, Exercise 26). Is the zero ideal decomposable in this ring?<br />
+Solution: No. For any <span class="arithmatex">\(x\in X\)</span>, <span class="arithmatex">\(r(a:x)=\{ f:f(x)=0 \}=\mathfrak{m}_{x}\)</span> is maximal hence prime, so they are all associated primes of <span class="arithmatex">\(0\)</span>, and there is no finite decomposition of <span class="arithmatex">\(0\)</span>.</p>
+<h3 id="47">4.7</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring and let <span class="arithmatex">\(A[x]\)</span> denote the ring of polynomials in one indeterminate over <span class="arithmatex">\(A\)</span>. For each ideal <span class="arithmatex">\(\mathfrak{a}\)</span> of <span class="arithmatex">\(A\)</span>, let <span class="arithmatex">\(\mathfrak{a}[x]\)</span> denote the set of all polynomials in <span class="arithmatex">\(A[x]\)</span> with coefficients in <span class="arithmatex">\(\mathfrak{a}\)</span>.<br />
+i) <span class="arithmatex">\(\mathfrak{a}[x]\)</span> is the extension of <span class="arithmatex">\(\mathfrak{a}\)</span> to <span class="arithmatex">\(A[x]\)</span>.<br />
+ii) If <span class="arithmatex">\(\mathfrak{p}\)</span> is a prime ideal in <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(\mathfrak{p}[x]\)</span> is a prime ideal in <span class="arithmatex">\(A[x]\)</span>.<br />
+iii) If <span class="arithmatex">\(\mathfrak{q}\)</span> is a <span class="arithmatex">\(\mathfrak{p}\)</span>-primary ideal in <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(\mathfrak{q}[x]\)</span> is a <span class="arithmatex">\(\mathfrak{p}[x]\)</span>-primary ideal in <span class="arithmatex">\(A[x]\)</span>.<br />
+iv) If <span class="arithmatex">\(\mathfrak{a} = \bigcap_{i=1}^n \mathfrak{q}_i\)</span> is a minimal primary decomposition in <span class="arithmatex">\(A\)</span>, then <span class="arithmatex">\(\mathfrak{a}[x] = \bigcap_{i=1}^n \mathfrak{q}_i[x]\)</span> is a minimal primary decomposition in <span class="arithmatex">\(A[x]\)</span>.<br />
+v) If <span class="arithmatex">\(\mathfrak{p}\)</span> is a minimal prime ideal of <span class="arithmatex">\(\mathfrak{a}\)</span>, then <span class="arithmatex">\(\mathfrak{p}[x]\)</span> is a minimal prime ideal of <span class="arithmatex">\(\mathfrak{a}[x]\)</span>.<br />
+Proof: (i) is trivial. (ii) is Exercise2.7.<br />
+(iii) <span class="arithmatex">\(A[x] /\mathfrak{q}[x]\cong (A /\mathfrak{q})[x]\)</span>. If <span class="arithmatex">\(\sum_{}^{}{\bar{a}_{i}x^{i}}\)</span> is a zero divisor, then <span class="arithmatex">\(\bar{a}_{i}\)</span> are zero divisors by Exercise1.2, hence they are nilpotent, and <span class="arithmatex">\(\sum_{}^{}{a_{i}x^{i}}\)</span> is nilpotent. Therefore <span class="arithmatex">\(\mathfrak{q}[x]\)</span> is primary.<br />
+Note that <span class="arithmatex">\(\mathfrak{p}[x]\subset r(\mathfrak{q}[x])\)</span>, so <span class="arithmatex">\(\mathfrak{q}[x]\)</span> is <span class="arithmatex">\(\mathfrak{p}[x]-\)</span>primary.<br />
+(iv) Clearly <span class="arithmatex">\(\mathfrak{a}[x]=\bigcap_{i=1}^{n}\mathfrak{q}_{i}[x]\)</span> and <span class="arithmatex">\(q_{i}[x]\)</span> are <span class="arithmatex">\(p_{i}[x]-\)</span>primary. Since <span class="arithmatex">\(p_{i}\)</span> are distinct, so are <span class="arithmatex">\(\mathfrak{p}_{i}[x]\)</span>, and <span class="arithmatex">\(\bigcap_{j\neq i}\mathfrak{q}_{j}\not\subset \mathfrak{q}_{i}\)</span> implies <span class="arithmatex">\(\bigcap_{j\neq i}\mathfrak{q}_{j}[x]\not\subset \mathfrak{q}_{i}[x]\)</span>. Hence it is a minimal decomposition.<br />
+(v) <span class="arithmatex">\(\mathfrak{p}\)</span> is minimal in <span class="arithmatex">\(\mathfrak{a}\)</span> implies <span class="arithmatex">\(\mathfrak{p}^{c}\)</span> is a minimal prime in <span class="arithmatex">\(A /\mathfrak{a}\)</span>. Since prime ideals <span class="arithmatex">\(\mathfrak{q}\)</span> in <span class="arithmatex">\(A /\mathfrak{a}\)</span> correspond to prime ideals <span class="arithmatex">\(\mathfrak{q}[x]\)</span> in <span class="arithmatex">\((A /\mathfrak{a})[x]\)</span>, <span class="arithmatex">\(\mathfrak{p}^{c}[x]\)</span> is minimal in <span class="arithmatex">\((A /\mathfrak{a})[x]\cong A[x] /\mathfrak{a}[x]\)</span>, hence <span class="arithmatex">\(\mathfrak{p}[x]\)</span> is a minimal prime ideal of <span class="arithmatex">\(\mathfrak{a}[x]\)</span>.</p>
+<h3 id="48">4.8</h3>
+<p>Let <span class="arithmatex">\(k\)</span> be a field. Show that in the polynomial ring <span class="arithmatex">\(k[x_1, \dots, x_n]\)</span> the ideals <span class="arithmatex">\(\mathfrak{p}_i = (x_1, \dots, x_i)\)</span> (<span class="arithmatex">\(1 \leqslant i \leqslant n\)</span>) are prime and all their powers are primary.<br />
+Proof: <span class="arithmatex">\(k[x_{1},\cdots,x_{n}] /(x_{1},\cdots,x_{i})\cong k[x_{i+1},\cdots,x_{n}]\)</span> is an integral domain so <span class="arithmatex">\(\mathfrak{p}_{i}\)</span> is prime. We show that <span class="arithmatex">\(\mathfrak{q}_{i}=\mathfrak{p}_{i}\cap k[x_{1},\cdots,x_{i}]\)</span> satisfy <span class="arithmatex">\(\mathfrak{q}_{i}^{m}\)</span> is primary, then <span class="arithmatex">\(p_{i}^{m}=q_{i}^{m}[x_{i+1},\cdots,x_{n}]\)</span> is primary. So we can assume <span class="arithmatex">\(i=n\)</span>.<br />
+Note that <span class="arithmatex">\(k[x_{1},\cdots,x_{n}] /(x_{1},\cdots,x_{n})^{m}=k[y_{1},\cdots,y_{n}]\)</span> where <span class="arithmatex">\(y_{i_{1}}\cdots y_{i_{m}}=0 \forall i_{1},\cdots,i_{m}\leqslant n\)</span>. Every zero divisor has zero constant term, and <span class="arithmatex">\(y_{i}\)</span> are all nilpotent, hence every zero divisor is nilpotent, and <span class="arithmatex">\((x_{1},\cdots,x_{n})^{m}\)</span> is primary.</p>
+<h3 id="49">4.9</h3>
+<p>In a ring <span class="arithmatex">\(A\)</span>, let <span class="arithmatex">\(D(A)\)</span> denote the set of prime ideals <span class="arithmatex">\(\mathfrak{p}\)</span> which satisfy the following condition: there exists <span class="arithmatex">\(a \in A\)</span> such that <span class="arithmatex">\(\mathfrak{p}\)</span> is minimal in the set of prime ideals containing <span class="arithmatex">\((0:a)\)</span>. Show that <span class="arithmatex">\(x \in A\)</span> is a zero divisor <span class="arithmatex">\(\iff x \in \mathfrak{p}\)</span> for some <span class="arithmatex">\(\mathfrak{p} \in D(A)\)</span>.<br />
+Let <span class="arithmatex">\(S\)</span> be a multiplicatively closed subset of <span class="arithmatex">\(A\)</span>, and identify <span class="arithmatex">\(\operatorname{Spec}(S^{-1}A)\)</span> with its image in <span class="arithmatex">\(\operatorname{Spec}(A)\)</span> (Chapter 3, Exercise 21). Show that<br />
+$$<br />
+D(S^{-1}A) = D(A) \cap \operatorname{Spec}(S^{-1}A).<br />
+$$<br />
+If the zero ideal has a primary decomposition, show that <span class="arithmatex">\(D(A)\)</span> is the set of associated prime ideals of <span class="arithmatex">\(0\)</span>.<br />
+Proof: (i) If <span class="arithmatex">\(x\in A\)</span> is a zero divisor, suppose <span class="arithmatex">\(xa=0\)</span>, then <span class="arithmatex">\(x\in(0:a)\)</span>. Consider a minimal prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span> containing <span class="arithmatex">\((0:a)\)</span> (such prime ideals always exist since minimal primes corresponds to maximal multiplicative sets, see Exercise1.8), then <span class="arithmatex">\(x\in(0:a)\subset \mathfrak{p}\)</span> where <span class="arithmatex">\(\mathfrak{p}\in D(A)\)</span>.<br />
+If <span class="arithmatex">\(x\in \mathfrak{p}\)</span> for some <span class="arithmatex">\(\mathfrak{p}\in D(A)\)</span> where <span class="arithmatex">\(\mathfrak{p}\)</span> is minimal containing <span class="arithmatex">\((0:a)\)</span>, then <span class="arithmatex">\(a\neq 0\)</span> since <span class="arithmatex">\(1\in(0:0)\)</span>. <span class="arithmatex">\(\bar{\mathfrak{p}}\)</span> is a minimal prime in <span class="arithmatex">\(A /(0:a)\)</span>, so <span class="arithmatex">\(S=A /(0:\mathfrak{a})-\bar{\mathfrak{p}}\)</span> is a maximal multiplicative set without zero. Consider <span class="arithmatex">\(S^{\prime}=\{ s \bar{x}^{n}:s \in S,n\geqslant 0 \}\)</span>, then <span class="arithmatex">\(S\subset S^{\prime}\)</span> and <span class="arithmatex">\(S^{\prime}\)</span> is multiplicative. Hence <span class="arithmatex">\(0\in S^{\prime}\)</span> so <span class="arithmatex">\(s \bar{x}^{n}=0\)</span> for some <span class="arithmatex">\(s \in S\)</span> and <span class="arithmatex">\(n&gt;0\)</span>. Take the minimal such <span class="arithmatex">\(n\)</span>, let <span class="arithmatex">\(\bar{y}=s \bar{x}^{n-1}\)</span>, then <span class="arithmatex">\(\bar{y}\neq 0\)</span> and <span class="arithmatex">\(xy\in(0:\mathfrak{a})\)</span>. Hence <span class="arithmatex">\((ay)x=0\)</span> for some <span class="arithmatex">\(a\in \mathfrak{a}\)</span>. Since <span class="arithmatex">\(\bar{y}\neq 0\)</span>, <span class="arithmatex">\(y\not\in(0:\mathfrak{a})\)</span> so <span class="arithmatex">\(ay\neq 0\)</span>, hence <span class="arithmatex">\(x\)</span> is a zero divisor.<br />
+(ii) Clearly <span class="arithmatex">\(D(S^{-1}A)\subset S^{-1}X=\{ \mathfrak{p}:\mathfrak{p}\cap S=\emptyset \}\)</span>.<br />
+For <span class="arithmatex">\(x\in A\)</span>, we have <span class="arithmatex">\(\mathrm{Ann}(x)^{e}=\left\{  \frac{a}{s}:ax=0  \right\}=\mathrm{Ann}\left( \frac{x}{1} \right)\)</span>. Hence <span class="arithmatex">\(S^{-1}\mathfrak{p}\in D(S^{-1}A)\)</span> iff exists <span class="arithmatex">\(x\)</span> such that <span class="arithmatex">\(S^{-1}\mathfrak{p}\)</span> is minimal containing <span class="arithmatex">\(\mathrm{Ann}(x /1)=\mathrm{Ann}(x)^{e}\)</span>. Taking contractions we obtain <span class="arithmatex">\(\mathfrak{p}\supset \mathrm{Ann}(x)\)</span> and <span class="arithmatex">\(\mathfrak{p}\)</span> is minimal, therefore <span class="arithmatex">\(D(S^{-1}A)\subset D(A)\)</span>. On the other hand, suppose <span class="arithmatex">\(\mathfrak{p}\in D(A)\)</span> and <span class="arithmatex">\(\mathfrak{p}\cap S=\emptyset\)</span>, take <span class="arithmatex">\(x\in A\)</span> such that <span class="arithmatex">\(\mathfrak{p}\)</span> is minimal containing <span class="arithmatex">\(\mathrm{Ann}(x)\)</span>, then <span class="arithmatex">\(S^{-1}\mathfrak{p}\)</span> is minimal containing <span class="arithmatex">\(\mathrm{Ann}(x /1)\)</span> so <span class="arithmatex">\(S^{-1}\mathfrak{p}\in D(S^{-1}A)\)</span>.<br />
+Therefore <span class="arithmatex">\(D(S^{-1}A)=D(A)\cap \mathrm{Spec}(S^{-1}A)\)</span>.<br />
+(iii) Suppose <span class="arithmatex">\(0=\bigcap_{i=1}^{n}\mathfrak{q}_{i}\)</span> has a primary decomposition, where <span class="arithmatex">\(\mathfrak{q}_i\)</span> is <span class="arithmatex">\(\mathfrak{p}_{i}-\)</span>primary. Then <span class="arithmatex">\(\mathfrak{p}_{i}\)</span> are the prime ideals in <span class="arithmatex">\(r(0:x)\)</span>, so if <span class="arithmatex">\(\mathfrak{p}_{i}=r(0:x)\)</span> it is the minimal prime ideal containing <span class="arithmatex">\((0:x)\)</span>. If <span class="arithmatex">\(\mathfrak{p}\)</span> is minimal containing <span class="arithmatex">\((0:x)\)</span>, then <span class="arithmatex">\(\mathfrak{p}\supset r(0:x)=\bigcap_{i=1}^{n}r(\mathfrak{q}_{i}:x)=\bigcap_{i=1}^{m}\mathfrak{p}_{i}\)</span>. Suppose <span class="arithmatex">\(\mathfrak{p}_{i}\subset \mathfrak{p}\)</span>, then note that <span class="arithmatex">\(\mathfrak{p}_{i}=r(\mathfrak{q}_{i}:x)\supset \mathfrak{p}\)</span>, hence <span class="arithmatex">\(\mathfrak{p}=\mathfrak{p}_{i}\)</span> is an associated prime.</p>
+<h3 id="410">4.10</h3>
+<p>For any prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span> in a ring <span class="arithmatex">\(A\)</span>, let <span class="arithmatex">\(S_{\mathfrak{p}}(0)\)</span> denote the kernel of the homomorphism <span class="arithmatex">\(A \to A_{\mathfrak{p}}\)</span>. Prove that<br />
+i) <span class="arithmatex">\(S_{\mathfrak{p}}(0) \subseteq \mathfrak{p}\)</span>.<br />
+ii) <span class="arithmatex">\(r(S_{\mathfrak{p}}(0)) = \mathfrak{p} \Leftrightarrow \mathfrak{p}\)</span> is a minimal prime ideal of <span class="arithmatex">\(A\)</span>.<br />
+iii) If <span class="arithmatex">\(\mathfrak{p} \supseteq \mathfrak{p}'\)</span>, then <span class="arithmatex">\(S_{\mathfrak{p}}(0) \subseteq S_{\mathfrak{p}'}(0)\)</span>.<br />
+iv) <span class="arithmatex">\(\bigcap_{\mathfrak{p} \in D(A)} S_{\mathfrak{p}}(0) = 0\)</span>, where <span class="arithmatex">\(D(A)\)</span> is defined in Exercise 9.<br />
+Proof: (i) If <span class="arithmatex">\(a\in S_{\mathfrak{p}}(0)\)</span> then <span class="arithmatex">\(sa=0\)</span> for some <span class="arithmatex">\(s\not\in \mathfrak{p}\)</span>. Since <span class="arithmatex">\(0=sa\in \mathfrak{p}\)</span>, we have <span class="arithmatex">\(a\in \mathfrak{p}\)</span> and <span class="arithmatex">\(S_{\mathfrak{p}}(0)\subset \mathfrak{p}\)</span>.<br />
+(ii) If <span class="arithmatex">\(\mathfrak{q}\subsetneq \mathfrak{p}\)</span> for some prime ideal <span class="arithmatex">\(\mathfrak{q}\)</span>, then <span class="arithmatex">\(sa=0\in \mathfrak{q}\)</span> and <span class="arithmatex">\(s\not\in \mathfrak{p}\supset \mathfrak{q}\)</span> implies <span class="arithmatex">\(a\in \mathfrak{q}\)</span>. Hence <span class="arithmatex">\(S_{\mathfrak{p}}(0)\subset \mathfrak{q}\)</span> and <span class="arithmatex">\(r(S_{\mathfrak{p}}(0))\subset \mathfrak{q}\)</span>.<br />
+If <span class="arithmatex">\(\mathfrak{p}\)</span> is a minimal prime then <span class="arithmatex">\(S=A-\mathfrak{p}\)</span> is a maximal multiplicative set without zero, so for any <span class="arithmatex">\(x\in \mathfrak{p}\)</span>, <span class="arithmatex">\(sx^{n}=0\)</span> for some <span class="arithmatex">\(s\in S,n&gt;0\)</span>. Hence <span class="arithmatex">\(r(S_{\mathfrak{p}}(0))=\mathfrak{p}\)</span>.<br />
+(iii) Note that <span class="arithmatex">\(S_{\mathfrak{p}}(0)=\bigcup_{s\not\in \mathfrak{p}}\mathrm{Ann}(s)\subset \bigcup_{s\not\in \mathfrak{p}^{\prime}}\mathrm{Ann}(s)=S_{\mathfrak{p}^{\prime}}(0)\)</span>.<br />
+(iv) For any <span class="arithmatex">\(a\neq 0\)</span>, <span class="arithmatex">\((0:a)\neq (1)\)</span> so take <span class="arithmatex">\(\mathfrak{p}\in D(A)\)</span> minimal in containing <span class="arithmatex">\((0:a)\)</span>, then <span class="arithmatex">\((0:a)\subset \mathfrak{p}\)</span> implies <span class="arithmatex">\(a\not\in S_{\mathfrak{p}}(0)\)</span>. Hence <span class="arithmatex">\(\bigcap_{\mathfrak{p}\in D(A)}S_{\mathfrak{p}}(0)=0\)</span>.</p>
+<h3 id="411">4.11</h3>
+<p>If <span class="arithmatex">\(\mathfrak{p}\)</span> is a minimal prime ideal of a ring <span class="arithmatex">\(A\)</span>, show that <span class="arithmatex">\(S_{\mathfrak{p}}(0)\)</span> (Exercise 10) is the smallest <span class="arithmatex">\(\mathfrak{p}\)</span>-primary ideal.<br />
+Let <span class="arithmatex">\(\mathfrak{a}\)</span> be the intersection of the ideals <span class="arithmatex">\(S_{\mathfrak{p}}(0)\)</span> as <span class="arithmatex">\(\mathfrak{p}\)</span> runs through the minimal prime ideals of <span class="arithmatex">\(A\)</span>. Show that <span class="arithmatex">\(\mathfrak{a}\)</span> is contained in the nilradical of <span class="arithmatex">\(A\)</span>.<br />
+Suppose that the zero ideal is decomposable. Prove that <span class="arithmatex">\(\mathfrak{a} = 0\)</span> if and only if every prime ideal of <span class="arithmatex">\(0\)</span> is isolated.<br />
+(i) By Ex4.10(ii) <span class="arithmatex">\(r(S_{\mathfrak{p}}(0))=\mathfrak{p}\)</span>. If <span class="arithmatex">\(xy\in S_{\mathfrak{p}}(0)\)</span> and <span class="arithmatex">\(x\not\in \mathfrak{p}\)</span>, then <span class="arithmatex">\(sxy=0\)</span> for some <span class="arithmatex">\(s \in S\)</span>, so <span class="arithmatex">\(sx\in S\)</span> and <span class="arithmatex">\((sx)y=0\)</span>. Hence <span class="arithmatex">\(y\in S_{\mathfrak{p}}(0)\)</span> and <span class="arithmatex">\(S_{\mathfrak{p}}(0)\)</span> is <span class="arithmatex">\(\mathfrak{p}-\)</span>primary. If <span class="arithmatex">\(\mathfrak{q}\)</span> is a <span class="arithmatex">\(\mathfrak{p}-\)</span>primary ideal, then <span class="arithmatex">\(sa=0\in \mathfrak{q}\)</span> for <span class="arithmatex">\(s\not\in \mathfrak{p}=r(\mathfrak{q})\)</span> implies <span class="arithmatex">\(a\in \mathfrak{q}\)</span> so <span class="arithmatex">\(S_{\mathfrak{p}}(0)\subset \mathfrak{q}\)</span>.<br />
+(ii) Use Ex4.10(iii) and <span class="arithmatex">\(S_{\mathfrak{p}}(0)\subset \mathfrak{p}\)</span>, <br />
+$$<br />
+\mathfrak{a}=\bigcap_{\mathfrak{p}\text{ minimal}}S_{\mathfrak{p}}(0)=\bigcap_{\mathfrak{p}\in \mathrm{Spec}A}S_{\mathfrak{p}}(0)\subset \bigcap_{\mathfrak{p}\in \mathrm{Spec}A}\mathfrak{p}=\mathfrak{N}.<br />
+$$<br />
+(iii) Suppose <span class="arithmatex">\(0=\bigcap_{i=1}^{n}\mathfrak{q}_{i}\)</span> where <span class="arithmatex">\(\mathfrak{q}_{i}\)</span> are <span class="arithmatex">\(\mathfrak{p}_{i}-\)</span>primary.<br />
+If <span class="arithmatex">\(\mathfrak{p}_{i}\)</span> are isolated, then <span class="arithmatex">\(\mathfrak{a}=\bigcap_{\mathfrak{p}\in \mathrm{Spec}A}S_{\mathfrak{p}}(0)\subset \bigcap_{i=1}^{n}S_{\mathfrak{p}_{i}}(0)\subset \bigcap_{i=1}^{n}\mathfrak{q}_{i}=0\)</span> so <span class="arithmatex">\(\mathfrak{a}=0\)</span>.<br />
+If <span class="arithmatex">\(\mathfrak{a}=0\)</span> suppose <span class="arithmatex">\(q_{1},\cdots,q_{m}\)</span> does not meet <span class="arithmatex">\(S_{\mathfrak{p}}=A-\mathfrak{p}\)</span> then by Ex4.12(i) <span class="arithmatex">\(S_{\mathfrak{p}}(0)=\bigcap_{i=1}^{m}\mathfrak{q}_{i}\)</span> where <span class="arithmatex">\(S_{\mathfrak{p}}(0)\)</span>  and <span class="arithmatex">\(\mathfrak{q}_{i}\)</span> are primary. Hence <span class="arithmatex">\(\mathfrak{p}=r(S_{\mathfrak{p}}(0))=\bigcap_{i=1}^{m}\mathfrak{p}_{i}\)</span> so every minimal prime is one of <span class="arithmatex">\(\mathfrak{p}_{i}\)</span>. Therefore <span class="arithmatex">\(0=\bigcap_{\mathfrak{p}\text{ minimal}}S_{\mathfrak{p}}(0)\)</span> is a minimal primary decomposition, and all associated primes are isolated.</p>
+<h3 id="412">4.12</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring, <span class="arithmatex">\(S\)</span> a multiplicatively closed subset of <span class="arithmatex">\(A\)</span>. For any ideal <span class="arithmatex">\(\mathfrak{a}\)</span>, let <span class="arithmatex">\(S(\mathfrak{a})\)</span> denote the contraction of <span class="arithmatex">\(S^{-1}\mathfrak{a}\)</span> in <span class="arithmatex">\(A\)</span>. The ideal <span class="arithmatex">\(S(\mathfrak{a})\)</span> is called the <strong>saturation</strong> of <span class="arithmatex">\(\mathfrak{a}\)</span> with respect to <span class="arithmatex">\(S\)</span>. Prove that<br />
+i) <span class="arithmatex">\(S(\mathfrak{a}) \cap S(\mathfrak{b}) = S(\mathfrak{a} \cap \mathfrak{b})\)</span><br />
+ii) <span class="arithmatex">\(S(r(\mathfrak{a})) = r(S(\mathfrak{a}))\)</span><br />
+iii) <span class="arithmatex">\(S(\mathfrak{a}) = (1) \Leftrightarrow \mathfrak{a}\)</span> meets <span class="arithmatex">\(S\)</span><br />
+iv) <span class="arithmatex">\(S_1(S_2(\mathfrak{a})) = (S_1S_2)(\mathfrak{a})\)</span>.<br />
+If <span class="arithmatex">\(\mathfrak{a}\)</span> has a primary decomposition, prove that the set of ideals <span class="arithmatex">\(S(\mathfrak{a})\)</span> (where <span class="arithmatex">\(S\)</span> runs through all multiplicatively closed subsets of <span class="arithmatex">\(A\)</span>) is finite.<br />
+Proof: (i) Clearly <span class="arithmatex">\(S(\mathfrak{a}\cap \mathfrak{b})\subset S(\mathfrak{a}),S(\mathfrak{b})\)</span>. If <span class="arithmatex">\(c\in S(\mathfrak{a})\cap S(\mathfrak{b})\)</span>, suppose <span class="arithmatex">\(\frac{c}{1}=\frac{a}{s}=\frac{b}{t}\)</span> for <span class="arithmatex">\(a\in \mathfrak{a},b\in \mathfrak{b}\)</span>, take <span class="arithmatex">\(s^{\prime}\in S\)</span> such that <span class="arithmatex">\(s^{\prime}ta=s^{\prime}sb\in \mathfrak{a}\cap \mathfrak{b}\)</span>, then <span class="arithmatex">\(\frac{c}{1}= \frac{s^{\prime}ta}{s^{\prime}st}\in S^{-1}(\mathfrak{a}\cap \mathfrak{b})\)</span> so <span class="arithmatex">\(c\in S(\mathfrak{a}\cap \mathfrak{b})\)</span>.<br />
+(ii) Clearly <span class="arithmatex">\(S(r(\mathfrak{a}))=r(a)^{ec}\subset r(a^{e})^{c}=r(a^{ec})=r(S(\mathfrak{a}))\)</span>.<br />
+If <span class="arithmatex">\(\frac{r^{n}}{1}=\frac{a}{s}\in S^{-1}\mathfrak{a}\)</span> where <span class="arithmatex">\(a\in \mathfrak{a}\)</span>, take <span class="arithmatex">\(s^{\prime}sr^{n}=s^{\prime}a\in \mathfrak{a}\)</span> for <span class="arithmatex">\(s^{\prime}\in S\)</span>, then <span class="arithmatex">\(\frac{r}{1}=\frac{s^{\prime}sr}{s^{\prime}s}\in S^{-1}r(\mathfrak{a})\)</span> so <span class="arithmatex">\(r(S(\mathfrak{a}))\subset S(r(\mathfrak{a}))\)</span>.<br />
+(iii) If <span class="arithmatex">\(s\in \mathfrak{a}\cap S\)</span> then <span class="arithmatex">\(1 /1=s /s\in S^{-1}\mathfrak{a}\)</span> so <span class="arithmatex">\(S(\mathfrak{a})=(1)\)</span>.<br />
+If <span class="arithmatex">\(S(\mathfrak{a})=(1)\)</span> then <span class="arithmatex">\(\frac{1}{1}=\frac{a}{s}\)</span> for some <span class="arithmatex">\(a\in \mathfrak{a}\)</span>, so <span class="arithmatex">\(s^{\prime}a=s^{\prime}s\in \mathfrak{a}\cap S\)</span> for some <span class="arithmatex">\(s^{\prime}\in S\)</span>&gt;<br />
+(iv) If <span class="arithmatex">\(x\in(S_{1}S_{2})(\mathfrak{a})\)</span> then <span class="arithmatex">\(\exists s_{1},s_{2} \in S_{1},S_{2}\)</span> such that <span class="arithmatex">\(s_{1}s_{2}x\in \mathfrak{a}\)</span>, so <span class="arithmatex">\(s_{1}x\in S_{2}(\mathfrak{a})\)</span> and <span class="arithmatex">\(x\in S_{1}(S_{2}(\mathfrak{a}))\)</span>.<br />
+The converse is analogous.<br />
+(v) Use Prop4.9, there are at most <span class="arithmatex">\(2^{n}\)</span> possible choices.</p>
+<h3 id="413">4.13</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring and <span class="arithmatex">\(\mathfrak{p}\)</span> a prime ideal of <span class="arithmatex">\(A\)</span>. The <strong>nth symbolic power</strong> of <span class="arithmatex">\(\mathfrak{p}\)</span> is defined to be the ideal (in the notation of Exercise 12)<br />
+$$<br />
+\mathfrak{p}^{(n)} = S_{\mathfrak{p}}(\mathfrak{p}^n)<br />
+$$<br />
+where <span class="arithmatex">\(S_{\mathfrak{p}} = A - \mathfrak{p}\)</span>. Show that<br />
+i) <span class="arithmatex">\(\mathfrak{p}^{(n)}\)</span> is a <span class="arithmatex">\(\mathfrak{p}\)</span>-primary ideal;<br />
+ii) if <span class="arithmatex">\(\mathfrak{p}^n\)</span> has a primary decomposition, then <span class="arithmatex">\(\mathfrak{p}^{(n)}\)</span> is its <span class="arithmatex">\(\mathfrak{p}\)</span>-primary component;<br />
+iii) if <span class="arithmatex">\(\mathfrak{p}^{(m)}\mathfrak{p}^{(n)}\)</span> has a primary decomposition, then <span class="arithmatex">\(\mathfrak{p}^{(m+n)}\)</span> is its <span class="arithmatex">\(\mathfrak{p}\)</span>-primary component;<br />
+iv) <span class="arithmatex">\(\mathfrak{p}^{(n)} = \mathfrak{p}^n \Leftrightarrow \mathfrak{p}^n\)</span> is <span class="arithmatex">\(\mathfrak{p}\)</span>-primary.<br />
+Proof: (i) Since <span class="arithmatex">\(\mathfrak{p}-\)</span>primary ideals <span class="arithmatex">\(\mathfrak{q}\)</span> containing <span class="arithmatex">\(\mathfrak{a}\)</span> and <span class="arithmatex">\(\mathfrak{p} /\mathfrak{a}-\)</span>primary ideals <span class="arithmatex">\(\mathfrak{q} /\mathfrak{a}\)</span> correspond bijectively, by Ex4.11(i) <span class="arithmatex">\(\mathfrak{p}^{(n)}\)</span> is the minimal <span class="arithmatex">\(\mathfrak{p}-\)</span>primary ideal containing <span class="arithmatex">\(\mathfrak{p}^{n}\)</span>.<br />
+(ii) If <span class="arithmatex">\(\mathfrak{p}^{n}=\bigcap_{i=1}^{m}\mathfrak{q}_{i}\)</span> and <span class="arithmatex">\(S_{\mathfrak{p}}\)</span> does not meet <span class="arithmatex">\(\mathfrak{q}_{1},\cdots,\mathfrak{q}_{m}\)</span>, then <span class="arithmatex">\(\mathfrak{p}^{(n)}=S_{\mathfrak{p}}(\mathfrak{p}^{n})=\bigcap_{i=1}^{m}\mathfrak{q}_{i}\)</span> so <span class="arithmatex">\(\mathfrak{p}^{n}=\mathfrak{p}^{(n)}\cap\left( \bigcap_{i=m+1}^{n}\mathfrak{q}_{i} \right)\)</span> is a primary decomposition and <span class="arithmatex">\(\mathfrak{p}^{(n)}\)</span> is its <span class="arithmatex">\(\mathfrak{p}-\)</span>primary component.<br />
+(iii) Likewise, <span class="arithmatex">\(\mathfrak{p}^{(n+m)}=S_{\mathfrak{p}}(\mathfrak{p}^{n+m})\subset S_{\mathfrak{p}}(\mathfrak{p}^{(n)}\mathfrak{p}^{(m)})\)</span>, and verify that <span class="arithmatex">\(\mathfrak{p}^{(n)}\mathfrak{p}^{(m)}\subset \mathfrak{p}^{(n+m)}\)</span> so <span class="arithmatex">\(S_{\mathfrak{p}}(\mathfrak{p}^{(n)}\mathfrak{p}^{(m)})\subset S_{\mathfrak{p}}(\mathfrak{p}^{(n+m)})=\mathfrak{p}^{(n+m)}\)</span>. Hence <span class="arithmatex">\(\mathfrak{p}^{(n+m)}=S_{\mathfrak{p}}(\mathfrak{p}^{(n)}\mathfrak{p}^{(m)})\)</span>. Analogous to (ii) <span class="arithmatex">\(\mathfrak{p}^{(n+m)}\)</span> is its <span class="arithmatex">\(\mathfrak{p}-\)</span>primary component,<br />
+(iv) Trivial by minimality of <span class="arithmatex">\(\mathfrak{p}^{(n)}\)</span>.</p>
+<h3 id="414">4.14</h3>
+<p>Let <span class="arithmatex">\(\mathfrak{a}\)</span> be a decomposable ideal in a ring <span class="arithmatex">\(A\)</span> and let <span class="arithmatex">\(\mathfrak{p}\)</span> be a maximal element of the set of ideals <span class="arithmatex">\((\mathfrak{a}:x)\)</span>, where <span class="arithmatex">\(x \in A\)</span> and <span class="arithmatex">\(x \notin \mathfrak{a}\)</span>. Show that <span class="arithmatex">\(\mathfrak{p}\)</span> is a prime ideal belonging to <span class="arithmatex">\(\mathfrak{a}\)</span>.<br />
+Proof: Suppose <span class="arithmatex">\(\mathfrak{a}=\bigcap_{i=1}^{n}\mathfrak{q}_{i}\)</span> where <span class="arithmatex">\(\mathfrak{q}_{i}\)</span> are <span class="arithmatex">\(\mathfrak{p}_{i}-\)</span>primary, and <span class="arithmatex">\(\mathfrak{p}=(\mathfrak{a}:x)\)</span> is maximal. Suppose <span class="arithmatex">\(yz\in \mathfrak{p}\)</span> while <span class="arithmatex">\(y\not\in \mathfrak{p}\)</span>, then by <span class="arithmatex">\(y\not\in \mathfrak{p}\)</span> we have <span class="arithmatex">\(xy\not\in \mathfrak{a}\)</span>, so <span class="arithmatex">\((\mathfrak{a}:x)\subset((\mathfrak{a}:x):y)=(\mathfrak{a}:xy)\)</span> implies <span class="arithmatex">\(z\in(\mathfrak{a}:xy)=(\mathfrak{a}:x)\)</span>. Hence <span class="arithmatex">\(\mathfrak{p}\)</span> is prime.<br />
+Note that <span class="arithmatex">\(\mathfrak{p}=(\mathfrak{a}:x)=\bigcap_{i=1}^{n}(\mathfrak{q}_{i}:x)\)</span>, so <span class="arithmatex">\(\mathfrak{p}=r(\mathfrak{a}:x)=\bigcap_{i=1}^{n}r(\mathfrak{q}_{i}:x)=\bigcap_{i=1}^{m}\mathfrak{p}_{i}\)</span>, assuming <span class="arithmatex">\(x\not\in \mathfrak{q}_{1},\cdots,\mathfrak{q}_{m}\)</span>. Hence <span class="arithmatex">\(\mathfrak{p}=\mathfrak{p}_{i}\)</span> for some <span class="arithmatex">\(1\leqslant i\leqslant n\)</span>, and <span class="arithmatex">\(\mathfrak{p}\)</span> is a prime belonging to <span class="arithmatex">\(\mathfrak{a}\)</span>.</p>
+<h3 id="415">4.15</h3>
+<p>Let <span class="arithmatex">\(\mathfrak{a}\)</span> be a decomposable ideal in a ring <span class="arithmatex">\(A\)</span>, let <span class="arithmatex">\(\Sigma\)</span> be an isolated set of prime ideals belonging to <span class="arithmatex">\(\mathfrak{a}\)</span>, and let <span class="arithmatex">\(\mathfrak{q}_{\Sigma}\)</span> be the intersection of the corresponding primary components. Let <span class="arithmatex">\(f\)</span> be an element of <span class="arithmatex">\(A\)</span> such that, for each prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span> belonging to <span class="arithmatex">\(\mathfrak{a}\)</span>, we have <span class="arithmatex">\(f \in \mathfrak{p} \iff \mathfrak{p} \notin \Sigma\)</span>, and let <span class="arithmatex">\(S_f\)</span> be the set of all powers of <span class="arithmatex">\(f\)</span>. Show that <span class="arithmatex">\(\mathfrak{q}_{\Sigma} = S_f(\mathfrak{a}) = (\mathfrak{a}:f^n)\)</span> for all large <span class="arithmatex">\(n\)</span>.<br />
+Proof: <span class="arithmatex">\(\Sigma=\{ \mathfrak{p}\text{ associated}:f\not\in \mathfrak{p} \}\)</span>. Suppose <span class="arithmatex">\(\mathfrak{a}=\bigcap_{i=1}^{n}\mathfrak{q}_{i}\)</span> where <span class="arithmatex">\(\mathfrak{q}_{i}\)</span> are <span class="arithmatex">\(\mathfrak{p}_{i}-\)</span>primary and <span class="arithmatex">\(f\not\in \mathfrak{p_{1}},\cdots,\mathfrak{p}_{n}\)</span>, then <span class="arithmatex">\(S_{f}(\mathfrak{a})=\bigcap_{i=1}^{m}\mathfrak{q}_{i}=\mathfrak{q}_{\Sigma}\)</span> and <span class="arithmatex">\((\mathfrak{a}:f^{n})=\bigcap_{i=1}^{n}(\mathfrak{q}_{i}:f^{n})=\bigcap_{i=1}^{m}\mathfrak{q}_{i}=\mathfrak{q}_{\Sigma}\)</span>.</p>
+<h3 id="416">4.16</h3>
+<p>If <span class="arithmatex">\(A\)</span> is a ring in which every ideal has a primary decomposition, show that every ring of fractions <span class="arithmatex">\(S^{-1}A\)</span> has the same property.<br />
+Proof: For any ideal <span class="arithmatex">\(\mathfrak{b}\subset S^{-1}A\)</span>, let <span class="arithmatex">\(\mathfrak{a}=\mathfrak{b}^{c}\)</span> and take its primary decomposition <span class="arithmatex">\(\mathfrak{a}=\bigcap_{i=1}^{n}\mathfrak{q}_{i}\)</span> where <span class="arithmatex">\(\mathfrak{q}_{i}\)</span> are <span class="arithmatex">\(\mathfrak{p}_{i}-\)</span>primary. Suppose <span class="arithmatex">\(S\)</span> does not meet <span class="arithmatex">\(\mathfrak{p}_{1},\cdots,\mathfrak{p}_{m}\)</span>, then <span class="arithmatex">\(S^{-1}\mathfrak{a}=\bigcap_{i=1}^{m}S^{-1}\mathfrak{q}_{i}\)</span> where <span class="arithmatex">\(S^{-1}\mathfrak{q}_{i}\)</span> are <span class="arithmatex">\(S^{-1}\mathfrak{p}_{i}-\)</span>primary. Since every ideal in <span class="arithmatex">\(S^{-1}A\)</span> is extended, <span class="arithmatex">\(\mathfrak{b}=S^{-1}\mathfrak{a}\)</span> has a primary decomposition.</p>
+<h3 id="417">4.17</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring with the following property.<br />
+(L1) For every ideal <span class="arithmatex">\(\mathfrak{a} \neq (1)\)</span> in <span class="arithmatex">\(A\)</span> and every prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span>, there exists <span class="arithmatex">\(x \notin \mathfrak{p}\)</span> such that <span class="arithmatex">\(S_{\mathfrak{p}}(\mathfrak{a}) = (\mathfrak{a}:x)\)</span>, where <span class="arithmatex">\(S_{\mathfrak{p}} = A - \mathfrak{p}\)</span>.<br />
+Then every ideal in <span class="arithmatex">\(A\)</span> is an intersection of (possibly infinitely many) primary ideals.<br />
+Proof: Verify that L1 holds when passing to <span class="arithmatex">\(A /\mathfrak{a}\)</span>, hence it suffices to prove <span class="arithmatex">\(0=\bigcap_{\mathfrak{q}}\mathfrak{q}\)</span>, <span class="arithmatex">\(\mathfrak{q}\)</span> taking all primary ideals. Recall that <span class="arithmatex">\(0\)</span> is the intersection of all irreducible ideals (by applying Zorn's lemma to all ideals without <span class="arithmatex">\(a\neq 0\)</span>). We show that if L1 holds, then every irreducible ideal is primary. Likewise passing to <span class="arithmatex">\(A /\mathfrak{a}\)</span> we need to prove if <span class="arithmatex">\(0\)</span> is irreducible then <span class="arithmatex">\(0\)</span> is primary.<br />
+Clearly <span class="arithmatex">\(r(0)=\mathfrak{N}\)</span> is the nilradical. If <span class="arithmatex">\(0\)</span> is irreducible, then <span class="arithmatex">\(\mathfrak{a}\cap \mathfrak{b}\neq 0\)</span> for all <span class="arithmatex">\(\mathfrak{a},\mathfrak{b}\neq 0\)</span>. For any prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span>, take <span class="arithmatex">\(x\not\in \mathfrak{p}\)</span> such that <span class="arithmatex">\(S_{\mathfrak{p}}(0)=(0:x)\)</span>, we show that <span class="arithmatex">\((x)\cap S_{\mathfrak{p}}(0)=0\)</span>: If <span class="arithmatex">\(y=ax\in(x)\cap S_{\mathfrak{p}}(0)\)</span>, then <span class="arithmatex">\(x^{2}\in S_{\mathfrak{p}}\)</span> and <span class="arithmatex">\(ax^{2}=0\)</span> implies <span class="arithmatex">\(a\in S_{\mathfrak{p}}(0)=(0:x)\)</span>, so <span class="arithmatex">\(y=ax=0\)</span>.<br />
+Since <span class="arithmatex">\(0\)</span> is irreducible and <span class="arithmatex">\(x\neq 0\implies(x)\neq 0\)</span>, we infer <span class="arithmatex">\(S_{\mathfrak{p}}(0)=0\)</span> for all <span class="arithmatex">\(\mathfrak{p}\)</span> prime. Hence if <span class="arithmatex">\(xy=0\)</span> and <span class="arithmatex">\(x\not\in r(0)=\mathfrak{N}\)</span>, take <span class="arithmatex">\(\mathfrak{p}\)</span> prime such that <span class="arithmatex">\(x\not\in \mathfrak{p}\)</span>, then <span class="arithmatex">\(y\in S_{\mathfrak{p}}(0)=0\)</span> so <span class="arithmatex">\(y=0\)</span>. Therefore <span class="arithmatex">\(0\)</span> is primary.</p>
+<h3 id="418">4.18</h3>
+<p>Consider the following condition on a ring <span class="arithmatex">\(A\)</span>:<br />
+(L2) Given an ideal <span class="arithmatex">\(\mathfrak{a}\)</span> and a descending chain <span class="arithmatex">\(S_1 \supseteq S_2 \supseteq \dots \supseteq S_n \supseteq \dots\)</span> of multiplicatively closed subsets of <span class="arithmatex">\(A\)</span>, there exists an integer <span class="arithmatex">\(n\)</span> such that <span class="arithmatex">\(S_n(\mathfrak{a}) = S_{n+1}(\mathfrak{a}) = \dots\)</span>. Prove that the following are equivalent:<br />
+i) Every ideal in <span class="arithmatex">\(A\)</span> has a primary decomposition;<br />
+ii) <span class="arithmatex">\(A\)</span> satisfies (L1) and (L2).<br />
+Proof: (i)=&gt;(L1): If <span class="arithmatex">\(\mathfrak{a}\neq (1)\)</span> and <span class="arithmatex">\(\mathfrak{p}\)</span> is prime, consider the primary decomposition <span class="arithmatex">\(\mathfrak{a}=\bigcap_{i=1}^{n}\mathfrak{q}_{i}\)</span> where <span class="arithmatex">\(\mathfrak{q}_{i}\)</span> is <span class="arithmatex">\(\mathfrak{p}_{i}-\)</span>primary. Suppose <span class="arithmatex">\(S_{\mathfrak{p}}\)</span> does not meet <span class="arithmatex">\(\mathfrak{p}_{1},\cdots,\mathfrak{p}_{m}\)</span>, then <span class="arithmatex">\(S_{\mathfrak{p}}(\mathfrak{a})=\bigcap_{i=1}^{m}\mathfrak{q}_{i}\)</span>, where <span class="arithmatex">\(\mathfrak{p}_{i}\subset \mathfrak{p}\forall 1\leqslant i\leqslant m\)</span> and <span class="arithmatex">\(\mathfrak{p}_{i}\not\subset \mathfrak{p}\)</span>. Note that <span class="arithmatex">\(\bigcap_{i=m+1}^{n}\mathfrak{q}_{i}\not\subset \mathfrak{p}\)</span>, otherwise <span class="arithmatex">\(\bigcap_{i=m+1}^{n}\mathfrak{p}_{i}\subset r(\mathfrak{p})=\mathfrak{p}\)</span> so <span class="arithmatex">\(\mathfrak{p}_{i}\subset \mathfrak{p}\)</span> for some <span class="arithmatex">\(i&gt;m\)</span>, a contradiction. Take <span class="arithmatex">\(x\in (\bigcap_{i=m+1}^{n}\mathfrak{q}_{i})\backslash \mathfrak{p}\)</span>, then <span class="arithmatex">\(x\not\in \mathfrak{p}_{1},\cdots,\mathfrak{p}_{m}\)</span> so <span class="arithmatex">\((\mathfrak{a}:x)=\bigcap_{i=1}^{n}(\mathfrak{q}_{i}:x)=\bigcap_{i=1}^{m}\mathfrak{q}_{i}=S_{\mathfrak{p}}(\mathfrak{a})\)</span>.<br />
+(i)=&gt;(L2) Suppose <span class="arithmatex">\(\mathfrak{a}=\bigcap_{i=1}^{n}\mathfrak{q}_{i}\)</span> with <span class="arithmatex">\(p_{i}=r(\mathfrak{q}_{i})\)</span>. Then <span class="arithmatex">\(S_{n}(\mathfrak{a})=\bigcap_{i \in J_{n}}\mathfrak{q}_{i}\)</span> where <span class="arithmatex">\(J_{n}=\{ i:\mathfrak{p}_{i}\cap S_{n}=\emptyset \}\)</span>. Since <span class="arithmatex">\(J_{1}\subset J_{2}\subset\cdots\)</span> and <span class="arithmatex">\(J_{1}\)</span> is finite, it will be stationary, and so it the sequence <span class="arithmatex">\(S_{n}\)</span>.<br />
+(L1+L2)=&gt;(i): Given an ideal <span class="arithmatex">\(\mathfrak{a}\neq (1)\)</span>, by Ex4.17 <span class="arithmatex">\(\mathfrak{a}=\bigcap_{\alpha \in J}\mathfrak{q}_{\alpha}\)</span> where <span class="arithmatex">\(\mathfrak{q}_{\alpha}\)</span> are primary. Since for <span class="arithmatex">\(p-\)</span>primary ideals <span class="arithmatex">\(\mathfrak{q}_{1},\mathfrak{q}_{2}\)</span>, <span class="arithmatex">\(\mathfrak{q}_{1}\cap \mathfrak{q}_{2}\)</span> is still <span class="arithmatex">\(\mathfrak{p}-\)</span>primary, we can suppose <span class="arithmatex">\(r(\mathfrak{q}_{\alpha})\)</span> are distinct. Assume otherwise that <span class="arithmatex">\(\mathfrak{a}\)</span> has no finite primary decomposition. Then we can take a sequence <span class="arithmatex">\(\mathfrak{q}_{1},\cdots,\mathfrak{q}_{n},\cdots\)</span> with <span class="arithmatex">\(\mathfrak{p}_{i}=r(\mathfrak{q}_{i})\)</span>, such that <span class="arithmatex">\(\mathfrak{q}_{n+1}\not \subset \bigcap_{i=1}^{n}\mathfrak{q}_{i}\)</span>. Let <span class="arithmatex">\(S_{n}=S_{\mathfrak{p}_{1}}\cap\cdots\cap S_{\mathfrak{p}_{n}}\)</span>, then <span class="arithmatex">\(S_{1}\supset S_{2}\supset\cdots\)</span>  is a descending chain of multiplicative sets. Then <span class="arithmatex">\(S_{n}(a)=\mathfrak{q}_{1}\cap\cdots\cap \mathfrak{q}_{n}\)</span> is a non-stationary chain, a contradiction to (L2).</p>
+<h3 id="419">4.19</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring and <span class="arithmatex">\(\mathfrak{p}\)</span> a prime ideal of <span class="arithmatex">\(A\)</span>. Recall that every <span class="arithmatex">\(\mathfrak{p}\)</span>-primary ideal contains <span class="arithmatex">\(S_{\mathfrak{p}}(0)\)</span>, the kernel of the canonical homomorphism <span class="arithmatex">\(A \to A_{\mathfrak{p}}\)</span>.<br />
+Suppose that <span class="arithmatex">\(A\)</span> satisfies the following condition: for every prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span>, the intersection of all <span class="arithmatex">\(\mathfrak{p}\)</span>-primary ideals of <span class="arithmatex">\(A\)</span> is equal to <span class="arithmatex">\(S_{\mathfrak{p}}(0)\)</span>. (Noetherian rings satisfy this condition: see Chapter 10.) Let <span class="arithmatex">\(\mathfrak{p}_1, \dots, \mathfrak{p}_n\)</span> be distinct prime ideals, none of which is a minimal prime ideal of <span class="arithmatex">\(A\)</span>. Then there exists an ideal <span class="arithmatex">\(\mathfrak{a}\)</span> in <span class="arithmatex">\(A\)</span> whose associated prime ideals are <span class="arithmatex">\(\mathfrak{p}_1, \dots, \mathfrak{p}_n\)</span>.<br />
+Proof: Proof by induction on <span class="arithmatex">\(n\)</span>. The case <span class="arithmatex">\(n = 1\)</span> is trivial by taking <span class="arithmatex">\(\mathfrak{a} = \mathfrak{p}_1\)</span>. Suppose <span class="arithmatex">\(n &gt; 1\)</span> and let <span class="arithmatex">\(\mathfrak{p}_n\)</span> be maximal in the set <span class="arithmatex">\(\{\mathfrak{p}_1, \dots, \mathfrak{p}_n\}\)</span>. By the inductive hypothesis there exists an ideal <span class="arithmatex">\(\mathfrak{b}\)</span> and a minimal primary decomposition <span class="arithmatex">\(\mathfrak{b} = \mathfrak{q}_1 \cap \dots \cap \mathfrak{q}_{n-1}\)</span>, where each <span class="arithmatex">\(\mathfrak{q}_i\)</span> is <span class="arithmatex">\(\mathfrak{p}_i\)</span>-primary. If <span class="arithmatex">\(\mathfrak{b} \subseteq S_{\mathfrak{p}_n}(0)\)</span>, let <span class="arithmatex">\(\mathfrak{p}\)</span> be a minimal prime ideal of <span class="arithmatex">\(A\)</span> contained in <span class="arithmatex">\(\mathfrak{p}_n\)</span>. Then <span class="arithmatex">\(S_{\mathfrak{p}_n}(0) \subseteq S_{\mathfrak{p}}(0)\)</span>, hence <span class="arithmatex">\(\mathfrak{b} \subseteq S_{\mathfrak{p}}(0)\)</span>. Taking radicals and using Exercise 10, we have <span class="arithmatex">\(\mathfrak{p}_1 \cap \dots \cap \mathfrak{p}_{n-1} \subseteq \mathfrak{p}\)</span>, hence some <span class="arithmatex">\(\mathfrak{p}_i \subseteq \mathfrak{p}\)</span>, hence <span class="arithmatex">\(\mathfrak{p}_i = \mathfrak{p}\)</span> since <span class="arithmatex">\(\mathfrak{p}\)</span> is minimal. This is a contradiction since no <span class="arithmatex">\(\mathfrak{p}_i\)</span> is minimal.<br />
+Hence <span class="arithmatex">\(\mathfrak{b} \nsubseteq S_{\mathfrak{p}_n}(0)\)</span> and therefore there exists a <span class="arithmatex">\(\mathfrak{p}_n\)</span>-primary ideal <span class="arithmatex">\(\mathfrak{q}_n\)</span> such that <span class="arithmatex">\(\mathfrak{b} \nsubseteq \mathfrak{q}_n\)</span>. Consider <span class="arithmatex">\(\mathfrak{a} = \mathfrak{q}_1 \cap \dots \cap \mathfrak{q}_n\)</span> which is a primary decomposition of <span class="arithmatex">\(\mathfrak{a}\)</span> since <span class="arithmatex">\(r(\mathfrak{q}_{i})=\mathfrak{p}_{i}\)</span> are distinct and <span class="arithmatex">\(\mathfrak{b}=\bigcap_{i=1}^{n-1}\mathfrak{q}_{i}\not \subset \mathfrak{q}_{n}\)</span>. We show that <span class="arithmatex">\(\mathfrak{b}_{i}\cap \mathfrak{q}_{n}\not \subset \mathfrak{q}_{i}\)</span> where <span class="arithmatex">\(\mathfrak{b}_{i}=\bigcap_{j\neq i,n}\mathfrak{q}_{j}\)</span> by localizing at <span class="arithmatex">\(\mathfrak{p}_{i}\)</span>: Since <span class="arithmatex">\(\mathfrak{p}_{n}\)</span> is maximal, <span class="arithmatex">\(\mathfrak{p}_{n}\not \subset \mathfrak{p}_{i}\)</span> so <span class="arithmatex">\(S_{\mathfrak{p}_{i}}(\mathfrak{q}_{n})=(1)\)</span>, hence by <span class="arithmatex">\(\mathfrak{b}_{i}\not\subset \mathfrak{q}_{i}\)</span> we have <span class="arithmatex">\(\mathfrak{b}_{i}\cap \mathfrak{q}_{n}\not \subset \mathfrak{q}_{n}\)</span>. Therefore the associated primes of <span class="arithmatex">\(\mathfrak{a}\)</span> are <span class="arithmatex">\(\mathfrak{p}_{1},\cdots,\mathfrak{p}_{n}\)</span>.</p>
+<hr />
+<p><strong>Primary decomposition of modules</strong><br />
+Practically the whole of this chapter can be transposed to the context of modules over a ring <span class="arithmatex">\(A\)</span>. The following exercises indicate how this is done.</p>
+<h3 id="420">4.20</h3>
+<p>Let <span class="arithmatex">\(M\)</span> be a fixed <span class="arithmatex">\(A\)</span>-module, <span class="arithmatex">\(N\)</span> a submodule of <span class="arithmatex">\(M\)</span>. The <strong>radical of</strong> <span class="arithmatex">\(N\)</span> <strong>in</strong> <span class="arithmatex">\(M\)</span> is defined to be<br />
+$<span class="arithmatex">\(r_M(N) = \{x \in A : x^q M \subseteq N \text{ for some } q &gt; 0\}.\)</span>$<br />
+Show that <span class="arithmatex">\(r_M(N) = r(N:M) = r(\operatorname{Ann}(M/N))\)</span>. In particular, <span class="arithmatex">\(r_M(N)\)</span> is an ideal.<br />
+State and prove the formulas for <span class="arithmatex">\(r_M\)</span> analogous to (1.13).<br />
+Proof: (i) By definition <span class="arithmatex">\(r_{M}(N)=r(\{ y\in A:yM\subset N \})=r(N:M)=r(\mathrm{Ann}(M /N))\)</span>, since <span class="arithmatex">\(yM\subset N\iff y(M /N)=0\)</span>.<br />
+(ii) <span class="arithmatex">\(r_{M}(N\cap N^{\prime})=\{ x:x^{q}M\subset N\cap N^{\prime} \}=r_{M}(N)\cap r_{M}(N^{\prime})\)</span>. <br />
+<span class="arithmatex">\(r_{M}(N)=(1)\iff N=M\)</span>. <br />
+<span class="arithmatex">\(r_{M}(N+N^{\prime})\supset r(r_{M}(N)+r_{M}(N^{\prime}))\)</span>, but the converse is false: Let <span class="arithmatex">\(M=A\oplus A\)</span> with action <span class="arithmatex">\(a(b,c)=(ab,ac)\)</span>, and <span class="arithmatex">\(N=(0)\oplus A,N^{\prime}=A\oplus(0)\)</span>, then <span class="arithmatex">\(r_{M}(N+N^{\prime})=(1)\)</span> but <span class="arithmatex">\(r_{M}(N)=r_{M}(N^{\prime})=(0)\)</span>.</p>
+<h3 id="421">4.21</h3>
+<p>An element <span class="arithmatex">\(x \in A\)</span> defines an endomorphism <span class="arithmatex">\(\phi_x\)</span> of <span class="arithmatex">\(M\)</span>, namely <span class="arithmatex">\(m \mapsto xm\)</span>. The element <span class="arithmatex">\(x\)</span> is said to be a <strong>zero-divisor</strong> (resp. <strong>nilpotent</strong>) in <span class="arithmatex">\(M\)</span> if <span class="arithmatex">\(\phi_x\)</span> is not injective (resp. is nilpotent). A submodule <span class="arithmatex">\(Q\)</span> of <span class="arithmatex">\(M\)</span> is <strong>primary</strong> in <span class="arithmatex">\(M\)</span> if <span class="arithmatex">\(Q \neq M\)</span> and every zero-divisor in <span class="arithmatex">\(M/Q\)</span> is nilpotent.<br />
+Show that if <span class="arithmatex">\(Q\)</span> is primary in <span class="arithmatex">\(M\)</span>, then <span class="arithmatex">\((Q:M)\)</span> is a primary ideal and hence <span class="arithmatex">\(r_M(Q)\)</span> is a prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span>. We say that <span class="arithmatex">\(Q\)</span> is <span class="arithmatex">\(\mathfrak{p}\)</span>-<strong>primary</strong> (in <span class="arithmatex">\(M\)</span>).<br />
+Prove the analogues of (4.3) and (4.4).<br />
+Proof: (i) Let <span class="arithmatex">\(N=M /Q\)</span> be primary, we show that <span class="arithmatex">\((Q:M)=\mathrm{Ann}(N)\)</span> is primary. For any <span class="arithmatex">\(xy\in \mathrm{Ann}(N)\)</span> with <span class="arithmatex">\(y\not\in \mathrm{Ann}(N)\)</span>, take <span class="arithmatex">\(n\in N\)</span> such that <span class="arithmatex">\(yn\neq 0\)</span>, then <span class="arithmatex">\(xyn=0\)</span> implies <span class="arithmatex">\(x(yn)=0\)</span> so <span class="arithmatex">\(x\)</span> is a zero divisor in <span class="arithmatex">\(N\)</span>. Since <span class="arithmatex">\(N\)</span> is primary, <span class="arithmatex">\(x\)</span> is a zero divisor in <span class="arithmatex">\(N\)</span> hence <span class="arithmatex">\(x^{n}\in \mathrm{Ann}(N)\)</span> for some <span class="arithmatex">\(n\geqslant 1\)</span>.<br />
+(ii) <br />
+Analogue of (4.3): If <span class="arithmatex">\(Q_{i}\)</span> are <span class="arithmatex">\(\mathfrak{p}-\)</span>primary, then <span class="arithmatex">\(Q=\bigcap_{i=1}^{n}Q_{i}\)</span> is <span class="arithmatex">\(\mathfrak{p}-\)</span>primary.<br />
+Proof: <span class="arithmatex">\(r_{M}(Q)=\bigcap_{i=1}^{n}r_{M}(Q_{i})=\mathfrak{p}\)</span>. Let <span class="arithmatex">\(xy\in Q\)</span> where <span class="arithmatex">\(y\not\in Q\)</span>, then <span class="arithmatex">\(xy\in Q_{i}\)</span> for all <span class="arithmatex">\(1\leqslant i\leqslant n\)</span>. For some <span class="arithmatex">\(1\leqslant i\leqslant n\)</span>, <span class="arithmatex">\(y\not\in Q_{i}\)</span> and <span class="arithmatex">\(xy\in Q_{i}\)</span>, hence <span class="arithmatex">\(x\in \mathfrak{p}\)</span>, and <span class="arithmatex">\(Q\)</span> is <span class="arithmatex">\(\mathfrak{p}-\)</span>primary.<br />
+Analogue of (4.4): Let <span class="arithmatex">\(Q\)</span> be a <span class="arithmatex">\(\mathfrak{p}-\)</span>primary ideal, then (a) if <span class="arithmatex">\(x\in Q\)</span> then <span class="arithmatex">\((Q:x)=(1)\)</span>; (b) if <span class="arithmatex">\(x\not\in Q\)</span> then <span class="arithmatex">\((Q:x)\)</span> is <span class="arithmatex">\(\mathfrak{p}-\)</span>primary; (c) if <span class="arithmatex">\(x\in A\)</span> and <span class="arithmatex">\(x\not\in \mathfrak{p}\)</span>, then <span class="arithmatex">\((Q:x)=\{ m\in M:xm\in Q \}=Q\)</span>.<br />
+Proof: (a) By definition <span class="arithmatex">\(1\cdot x\in Q\)</span> so <span class="arithmatex">\((Q:x)=(1)\)</span>.<br />
+(c) If <span class="arithmatex">\(xm\in Q\)</span> with <span class="arithmatex">\(m\not\in Q\)</span>, then <span class="arithmatex">\(x\bar{m}=0\)</span> with <span class="arithmatex">\(\bar{m}\neq 0\)</span> so <span class="arithmatex">\(x\)</span> is a zero divisor. Hence <span class="arithmatex">\(x\in \mathfrak{p}\)</span> a contradiction. Therefore <span class="arithmatex">\((Q:x)=Q\)</span>.<br />
+(b) If <span class="arithmatex">\(ab\in(Q:x)\)</span> and <span class="arithmatex">\(b\not\in (Q:x)\)</span>, then <span class="arithmatex">\(abx\in Q\)</span> with <span class="arithmatex">\(bx\not\in Q\)</span>. Hence <span class="arithmatex">\(a\)</span> is a zero-divisor in <span class="arithmatex">\(M /Q\)</span>, so <span class="arithmatex">\(a^{n}\bar{x}=0\)</span> for some <span class="arithmatex">\(n\geqslant 1\)</span>, which implies <span class="arithmatex">\(a\in r(Q:x)\)</span> and <span class="arithmatex">\((Q:x)\)</span> is primary.<br />
+Since <span class="arithmatex">\((Q:M)\subset(Q:x)\subset \mathfrak{p}\)</span>, we have <span class="arithmatex">\(\mathfrak{p}=r(Q:M)\subset r(Q:x)\subset \mathfrak{p}\)</span>. Therefore <span class="arithmatex">\((Q:x)\)</span> is <span class="arithmatex">\(\mathfrak{p}-\)</span>primary.</p>
+<h3 id="422">4.22</h3>
+<p>A <strong>primary decomposition</strong> of <span class="arithmatex">\(N\)</span> in <span class="arithmatex">\(M\)</span> is a representation of <span class="arithmatex">\(N\)</span> as an intersection<br />
+$<span class="arithmatex">\(N = Q_1 \cap \dots \cap Q_n\)</span>$<br />
+of primary submodules of <span class="arithmatex">\(M\)</span>; it is a <strong>minimal primary decomposition</strong> if the ideals <span class="arithmatex">\(\mathfrak{p}_i = r_M(Q_i)\)</span> are all distinct and if none of the components <span class="arithmatex">\(Q_i\)</span> can be omitted from the intersection, that is if <span class="arithmatex">\(Q_i \nsubseteq \bigcap_{j \neq i} Q_j\)</span> (<span class="arithmatex">\(1 \leqslant i \leqslant n\)</span>).<br />
+Prove the analogue of (4.5), that the prime ideals <span class="arithmatex">\(\mathfrak{p}_i\)</span> depend only on <span class="arithmatex">\(N\)</span> (and <span class="arithmatex">\(M\)</span>). They are called the <strong>prime ideals belonging to</strong> <span class="arithmatex">\(N\)</span> <strong>in</strong> <span class="arithmatex">\(M\)</span>. Show that they are also the prime ideals belonging to <span class="arithmatex">\(0\)</span> in <span class="arithmatex">\(M/N\)</span>.<br />
+Proof: (i) We show that the set of primes <span class="arithmatex">\(\mathfrak{p}_{i}\)</span> are exactly the prime ideals occurring in <span class="arithmatex">\(\{ r(N:m):m\in M \}\)</span>.<br />
+Note that if we assume <span class="arithmatex">\(m\not\in Q_{1},\cdots,Q_{k}\)</span>, then <span class="arithmatex">\(r(N:m)=\bigcap_{i=1}^{n}r(Q_{i}:m)=\bigcap_{i=1}^{k}\mathfrak{p}_{i}\)</span>. Hence if <span class="arithmatex">\(\mathfrak{p}=r(N:m)\)</span> is prime, then <span class="arithmatex">\(\mathfrak{p}=\mathfrak{p}_{i}\)</span> for some <span class="arithmatex">\(1\leqslant i\leqslant n\)</span>. Conversely, for each <span class="arithmatex">\(1\leqslant i\leqslant n\)</span> there exists <span class="arithmatex">\(m\in \bigcap_{j\neq i}Q_{j}\backslash Q_{i}\)</span>, then <span class="arithmatex">\(r(N:m)=\mathfrak{p}_{i}\)</span>.<br />
+(ii) Trivial since <span class="arithmatex">\(r(N:m)=r(0:\bar{m})\)</span>.</p>
+<h3 id="423">4.23</h3>
+<p>State and prove the analogues of (4.6)-(4.11) inclusive. (There is no loss of generality in taking <span class="arithmatex">\(N = 0\)</span>.)<br />
+(4.6'): Let <span class="arithmatex">\(N\)</span> be a decomposable submodule, then any prime ideal <span class="arithmatex">\(\mathfrak{p}\supset r_{M}(N)\)</span> contains a minimal prime ideal belonging to <span class="arithmatex">\(N\)</span>, and thus the minimal prime ideals of <span class="arithmatex">\(N\)</span> are precisely the minimal elements in the set of all prime ideals containing <span class="arithmatex">\(r_{M}(N)\)</span>.<br />
+<strong>Proof</strong>: If <span class="arithmatex">\(\mathfrak{p}\supset r_{M}(N)=\bigcap_{i=1}^{n}\mathfrak{p}_{i}\)</span>, then <span class="arithmatex">\(\mathfrak{p}\supset \mathfrak{p}_{i}\)</span> for some <span class="arithmatex">\(i\)</span>, so <span class="arithmatex">\(\mathfrak{p}\)</span> contains some minimal prime ideal of <span class="arithmatex">\(N\)</span>.<br />
+(4.7'): Let <span class="arithmatex">\(N\)</span> be a decomposable submodule, and <span class="arithmatex">\(N=\bigcap_{i=1}^{n}Q_{i}\)</span> be a minimal primary decomposition, with <span class="arithmatex">\(r_{M}(Q_{i})=\mathfrak{p}_{i}\)</span>. Then<br />
+$$<br />
+\bigcup_{i=1}^{n}\mathfrak{p}_{i}={ x\in A:(N:x)\neq N }.<br />
+$$<br />
+In particular, if <span class="arithmatex">\(0\)</span> is decomposable, the set <span class="arithmatex">\(D\subset A\)</span> of zero-divisors of <span class="arithmatex">\(A\)</span> is the union of prime ideals belonging to <span class="arithmatex">\(0\)</span>.<br />
+<strong>Proof</strong>: It suffices to prove the case <span class="arithmatex">\(N=0\)</span>. Note that <span class="arithmatex">\(D=r(D)\)</span> since <span class="arithmatex">\(x^{n}m=0\)</span> for some <span class="arithmatex">\(m\neq 0\)</span> implies <span class="arithmatex">\(x\cdot(x^{n-1}m)=0\)</span> so taking the least <span class="arithmatex">\(n\)</span> we have <span class="arithmatex">\(x\in D\)</span>. By definition <span class="arithmatex">\(D=\bigcup_{m\neq 0}(0:m)\)</span>, so <span class="arithmatex">\(D=\bigcup_{m\neq 0}r(0:m)\)</span>. Since each <span class="arithmatex">\(r(0:m)\)</span> is the intersection of <span class="arithmatex">\(\mathfrak{p}_{i}\)</span>, and <span class="arithmatex">\(\exists m,r(0:m)=\mathfrak{p}_{i}\)</span> for all <span class="arithmatex">\(i\)</span>. Hence <span class="arithmatex">\(D=\bigcup_{i=1}^{n}\mathfrak{p}_{i}\)</span>.<br />
+(4.8'): Let <span class="arithmatex">\(S\)</span> be a multiplicative subset of <span class="arithmatex">\(A\)</span>, and <span class="arithmatex">\(Q\)</span> be a <span class="arithmatex">\(\mathfrak{p}-\)</span>primary submodule. (a) If <span class="arithmatex">\(S\cap \mathfrak{p}\neq \emptyset\)</span>, then <span class="arithmatex">\(S^{-1}Q=S^{-1}M\)</span>; (b) If <span class="arithmatex">\(S\cap \mathfrak{p}=\emptyset\)</span>, then <span class="arithmatex">\(S^{-1}Q\)</span> is <span class="arithmatex">\(S^{-1}\mathfrak{p}-\)</span>primary and its contraction in <span class="arithmatex">\(M\)</span> is <span class="arithmatex">\(Q\)</span>. Hence the primary submodules in <span class="arithmatex">\(S^{-1}M\)</span> correspond to primary submodules in <span class="arithmatex">\(M\)</span>.<br />
+<strong>Proof</strong>: (a) If <span class="arithmatex">\(s \in S\cap \mathfrak{p}\neq \emptyset\)</span>, then for some <span class="arithmatex">\(n\geqslant 1\)</span>, <span class="arithmatex">\(s^{n}\in S\cap (Q:M)\)</span>. Hence for any <span class="arithmatex">\(\frac{m}{s^{\prime}}\in S^{-1}M\)</span>, <span class="arithmatex">\(\frac{m}{s^{\prime}}=\frac{s^{n}m}{s^{n}s^{\prime}}\in S^{-1}Q\)</span>, so <span class="arithmatex">\(S^{-1}Q=S^{-1}M\)</span>.<br />
+(b) If <span class="arithmatex">\(S\cap \mathfrak{p}= \emptyset\)</span>, and <span class="arithmatex">\(\frac{a}{s}\cdot \frac{b}{t}\in S^{-1}Q\)</span> with <span class="arithmatex">\(\frac{b}{t}\not\in S^{-1}Q\)</span>, then <span class="arithmatex">\(s^{\prime}(rab-stq)=0\)</span> for some <span class="arithmatex">\(s^{\prime},r\in S\)</span> and <span class="arithmatex">\(q\in Q\)</span>. Hence <span class="arithmatex">\(s^{\prime}rab=s^{\prime}stq\in Q\)</span>, with <span class="arithmatex">\(s^{\prime}rb\not\in Q\)</span> since <span class="arithmatex">\(\frac{b}{t}\not\in S^{-1}Q\)</span>. Therefore <span class="arithmatex">\(a\in \mathfrak{p}\)</span>, so <span class="arithmatex">\(\frac{a}{s}\in S^{-1}\mathfrak{p}\)</span> and <span class="arithmatex">\(S^{-1}Q\)</span> is <span class="arithmatex">\(S^{-1}\mathfrak{p}-\)</span>primary. It is easy to verify <span class="arithmatex">\((S^{-1}Q)^{c}=Q\)</span>.<br />
+(Skip the rest).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1730 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Shengxuan-Zhang.github.io/Notes/Atiyah/Chapter%202%20Modules/">
+      
+      
+        <link rel="prev" href="../Chapter%201%20Rings%20and%20Ideals/">
+      
+      
+        <link rel="next" href="../Chapter%203%20Rings%20and%20Modules%20of%20Fractions/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 2 Modules - Math Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#21" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math Notes" class="md-header__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 2 Modules
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Chapter%201%20Rings%20and%20Ideals/" class="md-tabs__link">
+          
+  
+  
+  Atiyah
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/" class="md-tabs__link">
+          
+  
+  
+  Complex Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../GTM73/Chapter%203%20Rings/" class="md-tabs__link">
+          
+  
+  
+  GTM73
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math Notes" class="md-nav__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atiyah
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atiyah
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%201%20Rings%20and%20Ideals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 Rings and Ideals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Modules
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#214" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.14
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#215" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.15
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#216" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.16
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#217" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.17
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#218" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.18
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#219" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.19
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#220" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.20
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.21
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.22
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#223" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.23
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#224" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#225" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.25
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#226" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.26
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#227" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.27
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#228" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.28
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%203%20Rings%20and%20Modules%20of%20Fractions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings and Modules of Fractions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%204%20Primary%20Decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Primary Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complex Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Complex Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Gamma and Zeta Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GTM73
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GTM73
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%203%20Rings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%204%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.13
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#214" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.14
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#215" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.15
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#216" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.16
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#217" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.17
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#218" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.18
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#219" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.19
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#220" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.20
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.21
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.22
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#223" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.23
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#224" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.24
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#225" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.25
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#226" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.26
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#227" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.27
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#228" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.28
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Chapter 2 Modules</h1>
+
+<h3 id="21">2.1</h3>
+<p>Show that <span class="arithmatex">\((\mathbb{Z}/m\mathbb{Z}) \otimes_{\mathbb{Z}} (\mathbb{Z}/n\mathbb{Z}) = 0\)</span> if <span class="arithmatex">\(m, n\)</span> are coprime.<br />
+Proof: We show that <span class="arithmatex">\(\mathbb{Z}_{m}\otimes_{\mathbb{Z}}\mathbb{Z}_{n}\cong \mathbb{Z}_{m} /n\mathbb{Z}_{m}\cong \mathbb{Z}_{(m,n)}\)</span>: <br />
+Consider <span class="arithmatex">\(f:\mathbb{Z}_{m}\times \mathbb{Z}_{n}\to \mathbb{Z}_{m} /n\mathbb{Z}_{m},(\bar{a},\bar{b})\mapsto ab+n\mathbb{Z}_{m}\)</span>, then <span class="arithmatex">\(f\)</span> is well-defined and bilinear. Hence <span class="arithmatex">\(f\)</span> induces a <span class="arithmatex">\(\mathbb{Z}-\)</span>module homomorphism <span class="arithmatex">\(\alpha:\mathbb{Z}_{m}\otimes_{\mathbb{Z}}\mathbb{Z}_{n}\to \mathbb{Z}_{m} /n\mathbb{Z}_{m}\)</span> such that <span class="arithmatex">\(\alpha(\bar{a}⊗ \bar{b})=ab+n\mathbb{Z}_{m}\)</span>. Consider <span class="arithmatex">\(g:\mathbb{Z}_{m}\to \mathbb{Z}_{m}\otimes_{\mathbb{Z}}\mathbb{Z}_{n},\bar{a}\mapsto \bar{a}\otimes 1\)</span>, then <span class="arithmatex">\(n\mathbb{Z}_{m}\subset \mathrm{Ker}g\)</span> so <span class="arithmatex">\(g\)</span> induces a homomorphism <span class="arithmatex">\(\beta:\mathbb{Z}_{m} /n\mathbb{Z}_{m}\to \mathbb{Z}_{m}\otimes_{\mathbb{Z}}\mathbb{Z}_{n}\)</span> such that <span class="arithmatex">\(\beta(\bar{a}+n\mathbb{Z}_{m})=\bar{a}\otimes 1\)</span>. We can verify that <span class="arithmatex">\(\alpha\beta=1_{\mathbb{Z}_{m} /n\mathbb{Z}_{m}}\)</span> and <span class="arithmatex">\(\beta\alpha=1_{\mathbb{Z}_{m}\otimes_{\mathbb{Z}}\mathbb{Z}_{n}}\)</span>, hence <span class="arithmatex">\(\alpha\)</span> is an isomorphism and <span class="arithmatex">\(\mathbb{Z}_{m}\otimes_{\mathbb{Z}}\mathbb{Z}_{n}\cong \mathbb{Z}_{m} /n\mathbb{Z}_{m}\cong \mathbb{Z}_{(m,n)}\)</span>.</p>
+<h3 id="22">2.2</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring, <span class="arithmatex">\(\mathfrak{a}\)</span> an ideal, <span class="arithmatex">\(M\)</span> an <span class="arithmatex">\(A\)</span>-module. Show that <span class="arithmatex">\((A/\mathfrak{a}) \otimes_A M\)</span> is isomorphic to <span class="arithmatex">\(M/\mathfrak{a}M\)</span>.<br />
+Proof: The sequence <span class="arithmatex">\(0\to \mathfrak{a}\to A\to A /\mathfrak{a}\to 0\)</span> is exact. By right exactness of <span class="arithmatex">\(-\otimes_{A}M\)</span>, <span class="arithmatex">\(\mathfrak{a}\otimes_{A}M\stackrel{f}{\to} A\otimes_{A}M\to A /\mathfrak{a}\otimes_{A}M\to 0\)</span> is exact. Hence <span class="arithmatex">\(A /\mathfrak{a}\otimes_{A}M\cong(A\otimes_{A}M) /\mathrm{Im}f\)</span>. Since <span class="arithmatex">\(\varphi:A\otimes_{A}M\cong M,a\otimes m\mapsto am\)</span> is an isomorphism, and <span class="arithmatex">\(\varphi f(\mathfrak{a}\otimes_{A}M)=\mathfrak{a}M\)</span>, we obtain<br />
+$$<br />
+(A /\mathfrak{a})\otimes_{A}M\cong (A \otimes_{A}M) /\mathrm{Im}f\cong M /\mathfrak{a}M.<br />
+$$</p>
+<h3 id="23">2.3</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a local ring, <span class="arithmatex">\(M\)</span> and <span class="arithmatex">\(N\)</span> finitely generated <span class="arithmatex">\(A\)</span>-modules. Prove that if <span class="arithmatex">\(M \otimes N = 0\)</span>, then <span class="arithmatex">\(M = 0\)</span> or <span class="arithmatex">\(N = 0\)</span>.<br />
+Proof: Let <span class="arithmatex">\(\mathfrak{m}\)</span> be the unique maximal ideal, and <span class="arithmatex">\(k=A /\mathfrak{m}\)</span> be a field. Let <span class="arithmatex">\(M_{k}=k\otimes_{A}M\cong M /\mathfrak{m}M\)</span> by Exercise2.2, then<br />
+<span class="arithmatex">\(0=(M\otimes_{A}N)_{k}\cong(k \otimes_{A} k)\otimes_{A}M\otimes_{A}N\cong M_{k}\otimes_{k}N_{k}.\)</span><br />
+(Clearly <span class="arithmatex">\(k\otimes_{A}k\cong k\)</span> by <span class="arithmatex">\(x\otimes y\mapsto xy\)</span> and <span class="arithmatex">\(x\mapsto x\otimes 1\)</span>).<br />
+Since <span class="arithmatex">\(M_{k},N_{k}\)</span> are both vector spaces over <span class="arithmatex">\(k\)</span>, they are both free, and either <span class="arithmatex">\(M_{k}=0\)</span> or <span class="arithmatex">\(N_{k}=0\)</span>.<br />
+Suppose <span class="arithmatex">\(M_{k}=0\)</span> then <span class="arithmatex">\(M=\mathfrak{m}M\)</span> where <span class="arithmatex">\(\mathfrak{m}=\mathfrak{R}\)</span> is the Jacobson radical (since <span class="arithmatex">\(A\)</span> is local). <span class="arithmatex">\(M\)</span> is finitely generated so by Nakayama's lemma <span class="arithmatex">\(M=0\)</span>.</p>
+<h3 id="24">2.4</h3>
+<p>Let <span class="arithmatex">\(M_i\)</span> (<span class="arithmatex">\(i \in I\)</span>) be any family of <span class="arithmatex">\(A\)</span>-modules, and let <span class="arithmatex">\(M\)</span> be their direct sum. Prove that <span class="arithmatex">\(M\)</span> is flat <span class="arithmatex">\(\Leftrightarrow\)</span> each <span class="arithmatex">\(M_i\)</span> is flat.<br />
+Proof: Take any <span class="arithmatex">\(f:N^{\prime}\to N\)</span> injective. Since <span class="arithmatex">\(N^{\prime}\otimes_{A}M\cong \bigoplus_{i\in I}(N^{\prime}\otimes_{A}M_{i})\)</span>, consider the embeddings <span class="arithmatex">\(\iota_{i}:M_{i}\to M\)</span> and <span class="arithmatex">\(\iota^{\prime}_{i}:N^{\prime}\otimes_{A}M_{i}\to N^{\prime}\otimes_{A}M\)</span>, then <span class="arithmatex">\(\mathrm{Ker} (f\otimes 1_{M})=\bigoplus_{i\in I}^{}{\iota_{i}^{\prime}(\mathrm{Ker} (f\otimes 1_{M_{i}}))}\)</span>, so <span class="arithmatex">\(f\otimes 1_{M}\)</span> is injective iff <span class="arithmatex">\(f\otimes 1_{M_{i}}\)</span> are injective. Hence <span class="arithmatex">\(M\)</span> is flat iff <span class="arithmatex">\(M_{i}\)</span> are flat.</p>
+<h3 id="25">2.5</h3>
+<p>Let <span class="arithmatex">\(A[x]\)</span> be the ring of polynomials in one indeterminate over a ring <span class="arithmatex">\(A\)</span>. Prove that <span class="arithmatex">\(A[x]\)</span> is a flat <span class="arithmatex">\(A\)</span>-algebra. <br />
+Proof: <span class="arithmatex">\(A[x]\)</span> is a free <span class="arithmatex">\(A-\)</span>module so it is flat.</p>
+<h3 id="26">2.6</h3>
+<p>For any <span class="arithmatex">\(A\)</span>-module, let <span class="arithmatex">\(M[x]\)</span> denote the set of all polynomials in <span class="arithmatex">\(x\)</span> with coefficients in <span class="arithmatex">\(M\)</span>, that is to say expressions of the form<br />
+$$<br />
+m_0 + m_1x + \cdots + m_rx^r \quad (m_i \in M).<br />
+$$<br />
+Defining the product of an element of <span class="arithmatex">\(A[x]\)</span> and an element of <span class="arithmatex">\(M[x]\)</span> in the obvious way, show that <span class="arithmatex">\(M[x]\)</span> is an <span class="arithmatex">\(A[x]\)</span>-module.<br />
+Show that <span class="arithmatex">\(M[x] \cong A[x] \otimes_A M\)</span>.<br />
+Proof: Define the <span class="arithmatex">\(A[x]-\)</span>module structure as <span class="arithmatex">\(\sum_{i=0}^{n}{a_{i}x^{i}}\cdot \sum_{j=0}^{p}{m_{j}x^{j}}=\sum_{i=0}^{n+p}{m^{\prime}_{i}x^{i}}\)</span> where <span class="arithmatex">\(m_{i}^{\prime}=\sum_{j+k=i}^{}{a_{j}\cdot m_{k}}\)</span>.<br />
+Consider <span class="arithmatex">\(f:A[x]\times M\to M[x],\left( \sum_{i=0}^{n}{a_{i}x^{i}},m \right)\mapsto \sum_{i=0}^{n}{a_{i}mx^{i}}\)</span> then <span class="arithmatex">\(f\)</span> is well-defined and bilinear, so it induces an <span class="arithmatex">\(A-\)</span>module homomorphism <span class="arithmatex">\(\alpha:A[x]\otimes_{A}M\to M[x]\)</span> such that <span class="arithmatex">\(\alpha(\phi \otimes m)=m\phi\)</span>. Let <span class="arithmatex">\(\beta:M[x]\to A[x]\otimes_{A}M\)</span>, <span class="arithmatex">\(\beta(\sum_{i=0}^{n}{m_{i}x^{i}})=\sum_{i=0}^{n}{x^{i}\otimes m_{i}}\)</span> then <span class="arithmatex">\(\beta\)</span> is an <span class="arithmatex">\(A-\)</span>module homomorphism. Verify that <span class="arithmatex">\(\beta\alpha=1_{A[x]\otimes_{A}M}\)</span> for the generators of <span class="arithmatex">\(A[x]\otimes_{A}M\)</span> and <span class="arithmatex">\(\alpha\beta=1_{M[x]}\)</span>. Hence <span class="arithmatex">\(\alpha,\beta\)</span> are isomorphisms and <span class="arithmatex">\(M[x]\cong A[x]\otimes_{A}M\)</span>.</p>
+<h3 id="27">2.7</h3>
+<p>Let <span class="arithmatex">\(\mathfrak{p}\)</span> be a prime ideal in <span class="arithmatex">\(A\)</span>. Show that <span class="arithmatex">\(\mathfrak{p}[x]\)</span> is a prime ideal in <span class="arithmatex">\(A[x]\)</span>. If <span class="arithmatex">\(\mathfrak{m}\)</span> is a maximal ideal in <span class="arithmatex">\(A\)</span>, is <span class="arithmatex">\(\mathfrak{m}[x]\)</span> a maximal ideal in <span class="arithmatex">\(A[x]\)</span>?<br />
+Proof: Note that <span class="arithmatex">\(A[x] /\mathfrak{a}[x]\cong (A\otimes_{A}A[x]) /(\mathfrak{a}\otimes_{A}A[x])\cong A /\mathfrak{a}\otimes_{A}A[x]\cong (A /\mathfrak{a})[x]\)</span> by exactness of <span class="arithmatex">\(-⊗_{A} A[x]\)</span> and Exercise2.6.<br />
+Hence <span class="arithmatex">\(\mathfrak{a}[x]\)</span> is prime iff <span class="arithmatex">\((A /\mathfrak{a})[x]\)</span> is an integral domain, and <span class="arithmatex">\(\mathfrak{a}[x]\)</span> is maximal iff <span class="arithmatex">\((A /\mathfrak{a})[x]\)</span> is a field. If <span class="arithmatex">\(\mathfrak{p}\subset A\)</span> is prime, clearly <span class="arithmatex">\(A /\mathfrak{p}\)</span> is an integral domain, so <span class="arithmatex">\((A /\mathfrak{p})[x]\)</span> is also an integral domain. However, if <span class="arithmatex">\(\mathfrak{m}\subset A\)</span> is maximal, <span class="arithmatex">\(k[x]=(A /\mathfrak{m})[x]\)</span> is generally not a field, e.g. <span class="arithmatex">\(\mathbb{R}[x]\)</span> is not a field.</p>
+<h3 id="28">2.8</h3>
+<p>i) If <span class="arithmatex">\(M\)</span> and <span class="arithmatex">\(N\)</span> are flat <span class="arithmatex">\(A\)</span>-modules, then so is <span class="arithmatex">\(M \otimes_A N\)</span>.<br />
+ii) If <span class="arithmatex">\(B\)</span> is a flat <span class="arithmatex">\(A\)</span>-algebra and <span class="arithmatex">\(N\)</span> is a flat <span class="arithmatex">\(B\)</span>-module, then <span class="arithmatex">\(N\)</span> is flat as an <span class="arithmatex">\(A\)</span>-module.<br />
+Proof: (i) Note that <span class="arithmatex">\(-\otimes_{A}(M\otimes_{A}N)\)</span> is naturally isomorphic to the composition of the two exact functors <span class="arithmatex">\(-\otimes_{A}M\)</span> and <span class="arithmatex">\(-\otimes_{A}N\)</span>, hence it is exact and <span class="arithmatex">\(M\otimes_{A}N\)</span> is flat.<br />
+(ii) Likewise <span class="arithmatex">\(-\otimes_{A}N\)</span> is naturally isomorphic to the composition of the two exact functors <span class="arithmatex">\(-\otimes_{A}B\)</span> and <span class="arithmatex">\(-\otimes_{B}N\)</span>, since <span class="arithmatex">\(N\cong B\otimes_{B}N\)</span> naturally as <span class="arithmatex">\(B-\)</span>modules. Hence <span class="arithmatex">\(N\)</span> is a flat <span class="arithmatex">\(A-\)</span>module.</p>
+<h3 id="29">2.9</h3>
+<p>Let <span class="arithmatex">\(0 \to M' \to M \to M'' \to 0\)</span> be an exact sequence of <span class="arithmatex">\(A\)</span>-modules. If <span class="arithmatex">\(M'\)</span> and <span class="arithmatex">\(M''\)</span> are finitely generated, then so is <span class="arithmatex">\(M\)</span>.<br />
+Proof: By exactness we can view <span class="arithmatex">\(M^{\prime}\subset M\)</span> and <span class="arithmatex">\(M^{\prime\prime}=M /M^{\prime}\)</span>. Suppose <span class="arithmatex">\(M^{\prime\prime}=(m_{1}^{\prime\prime},\cdots,m_{k}^{\prime\prime})\)</span> and <span class="arithmatex">\(M^{\prime}=(m_{1}^{\prime},\cdots,m_{t}^{\prime})\)</span>, and take <span class="arithmatex">\(m_{i}\in M\)</span> such that <span class="arithmatex">\(\pi(m_{i})=m_{i}^{\prime\prime}\)</span>. Then for any <span class="arithmatex">\(a\in M\)</span>, <span class="arithmatex">\(\pi(a)=\sum_{}^{}{c_{i}m_{i}^{\prime\prime}}\in M^{\prime\prime}\)</span> so <span class="arithmatex">\(a-\sum_{}^{}{c_{i}m_{i}}\in M^{\prime}=(m_{1}^{\prime},\cdots,m_{t}^{\prime})\)</span>. Hence <span class="arithmatex">\(M=(m_{1},\cdots,m_{k},m_{1}^{\prime},\cdots,m_{t}^{\prime})\)</span> is finitely generated.</p>
+<h3 id="210">2.10</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring, <span class="arithmatex">\(\mathfrak{a}\)</span> an ideal contained in the Jacobson radical of <span class="arithmatex">\(A\)</span>; let <span class="arithmatex">\(M\)</span> be an <span class="arithmatex">\(A\)</span>-module and <span class="arithmatex">\(N\)</span> a finitely generated <span class="arithmatex">\(A\)</span>-module, and let <span class="arithmatex">\(u: M \to N\)</span> be a homomorphism. If the induced homomorphism <span class="arithmatex">\(M/\mathfrak{a}M \to N/\mathfrak{a}N\)</span> is surjective, then <span class="arithmatex">\(u\)</span> is surjective.<br />
+Proof: Since <span class="arithmatex">\(M /\mathfrak{a}M\to N/\mathfrak{a}N\)</span> is surjective, <span class="arithmatex">\(\mathrm{Im}u+\mathfrak{a}N=N\)</span>, so <span class="arithmatex">\((\mathfrak{a} N+\mathrm{Im}u) /\mathrm{Im}u=N /\mathrm{Im}u\)</span>. <span class="arithmatex">\(N /\mathrm{Im}u\)</span> is finitely generated and <span class="arithmatex">\(\mathfrak{a}\subset \mathfrak{R}\)</span> so by Nakayama's lemma <span class="arithmatex">\(N /\mathrm{Im}u=0\)</span> and <span class="arithmatex">\(u\)</span> is surjective.</p>
+<h3 id="211">2.11</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring <span class="arithmatex">\(\neq 0\)</span>. Show that <span class="arithmatex">\(A^m \cong A^n \Rightarrow m = n\)</span>.<br />
+If <span class="arithmatex">\(\phi: A^m \to A^n\)</span> is surjective, then <span class="arithmatex">\(m \geqslant n\)</span>.<br />
+If <span class="arithmatex">\(\phi: A^m \to A^n\)</span> is injective, is it always the case that <span class="arithmatex">\(m \leqslant n\)</span>?<br />
+Proof: (a)(b) If <span class="arithmatex">\(\phi:A^{m}\to A^{n}\)</span> is surjective, then <span class="arithmatex">\(\mathrm{Ker}\phi\to A^{m}\to A^{n}\to 0\)</span> is an exact sequence. Take a maximal ideal <span class="arithmatex">\(\mathfrak{m}\subset A\)</span>, and consider the field <span class="arithmatex">\(k=A/\mathfrak{m}\)</span>. By right-exactness of tensoring, <span class="arithmatex">\(\phi \otimes 1_{k}:A^{m}\otimes_{A}k\to A^{n}\otimes_{A}k\)</span> is surjective. Since <span class="arithmatex">\(k^{m}\cong(A\otimes_{A}k)^{m}\cong A^{m}\otimes_{A}k\)</span> as <span class="arithmatex">\(A-\)</span>modules, we obtain a surjective homomorphism <span class="arithmatex">\(k^{m}\to k^{n}\)</span>, so by knowledge of linear algebra <span class="arithmatex">\(m\geqslant n\)</span>.<br />
+If <span class="arithmatex">\(\phi\)</span> is bijective, consider the surjective homomorphism <span class="arithmatex">\(\phi ^{-1}:A^{n}\to A^{m}\)</span>, then <span class="arithmatex">\(m\geqslant n\)</span> and <span class="arithmatex">\(m\leqslant n\)</span> so <span class="arithmatex">\(m=n\)</span>.<br />
+(c) (Proof from MSE)<br />
+Suppose <span class="arithmatex">\(\phi:A^{m}\to A^{n}\)</span> is injective and <span class="arithmatex">\(m&gt;n\)</span>, consider the embedding <span class="arithmatex">\(\iota:A^{n}=A^{n}\times 0^{m-n}\to A^{m}\)</span>, and <span class="arithmatex">\(\psi=\iota\phi\)</span> which is also injective. Denote <span class="arithmatex">\(\pi:A^{m}\to A,(a_{i})\mapsto a_{m}\)</span> as the projection. By Hamilton-Cayley theorem, there exists <span class="arithmatex">\(n\geqslant 1\)</span> and <span class="arithmatex">\(a_{1},\cdots,a_{n}\in A\)</span> such that <br />
+$$<br />
+\psi ^{n}+a_{1}\psi ^{n-1}+\cdots+a_{n-1}\psi+a_{n}id=0\in \mathrm{End}(A^{m}).<br />
+$$<br />
+Take the least such <span class="arithmatex">\(n\geqslant 1\)</span>, then <span class="arithmatex">\(\pi\psi=0\)</span> implies <span class="arithmatex">\(0=\pi(\psi ^{n}+a_{1}\psi ^{n-1}+\cdots+a_{n}id)\)</span> so <span class="arithmatex">\(a_{n}=0\)</span>. Since <span class="arithmatex">\(\psi\)</span> is injective, <span class="arithmatex">\(\psi(\psi ^{n-1}+a_{1}\psi ^{n-2}+\cdots+a_{n-1})=0\)</span> implies <span class="arithmatex">\(\psi ^{n-1}+a_{1}\psi ^{n-2}+\cdots+a_{n-1}=0\)</span>, a contradiction to minimality of <span class="arithmatex">\(n\)</span>.<br />
+Another proof: If <span class="arithmatex">\(\phi:A^{m}\to A^{n}\)</span> is injective and <span class="arithmatex">\(m&gt;n\)</span>, then the exterior algebra <span class="arithmatex">\(\bigwedge_{i=1}^{m}A^{n}=0\)</span> since by knowledge of linear algebra it has dimension <span class="arithmatex">\(\binom{n}{m}\)</span>. Take a basis <span class="arithmatex">\(\{ e_{1},\cdots,e_{m} \}\)</span> of <span class="arithmatex">\(A^{m}\)</span>, then <span class="arithmatex">\(\phi(e_{1}),\cdots,\phi(e_{m})\)</span> are linearly independent, so <span class="arithmatex">\(\phi(e_{1})\wedge\cdots\wedge\phi(e_{m})\neq 0\)</span>, a contradiction.</p>
+<h3 id="212">2.12</h3>
+<p>Let <span class="arithmatex">\(M\)</span> be a finitely generated <span class="arithmatex">\(A\)</span>-module and <span class="arithmatex">\(\phi: M \to A^n\)</span> a surjective homomorphism. Show that <span class="arithmatex">\(\text{Ker}(\phi)\)</span> is finitely generated.<br />
+Proof: Let <span class="arithmatex">\(\{ e_{1},\cdots,e_{n} \}\)</span> be a basis of <span class="arithmatex">\(A^{n}\)</span> and take <span class="arithmatex">\(u_{i}\in M\)</span> such that <span class="arithmatex">\(\phi(u_{i})=e_{i}\)</span>. Then <span class="arithmatex">\(\mathrm{Ker}\phi\cap (u_{1},\cdots,u_{n})=0\)</span> since <span class="arithmatex">\(\sum_{}^{}{c_{i}u_{i}}\in \mathrm{Ker}\phi\implies \sum_{}^{}{c_{i}e_{i}}=0\implies c_{i}=0\)</span>. For any <span class="arithmatex">\(a\in M\)</span>, take <span class="arithmatex">\(c_{i}\)</span> such that <span class="arithmatex">\(\phi(a)=\sum_{}^{}{c_{i}e_{i}}\)</span>, then <span class="arithmatex">\(a-\sum_{}^{}{c_{i}u_{i}}\in \mathrm{Ker}\phi\)</span>, so <span class="arithmatex">\(M=(u_{1},\cdots,u_{n})+\mathrm{Ker}\phi\)</span>. Hence <span class="arithmatex">\(M=(u_{1},\cdots,u_{n})\oplus \mathrm{Ker}\phi\)</span>, and <span class="arithmatex">\(\mathrm{Ker}\phi\)</span> is finitely generated since it is the homomorphic image of <span class="arithmatex">\(M\)</span>.</p>
+<h3 id="213">2.13</h3>
+<p>Let <span class="arithmatex">\(f: A \to B\)</span> be a ring homomorphism, and let <span class="arithmatex">\(N\)</span> be a <span class="arithmatex">\(B\)</span>-module. Regarding <span class="arithmatex">\(N\)</span> as an <span class="arithmatex">\(A\)</span>-module by restriction of scalars, form the <span class="arithmatex">\(B\)</span>-module <span class="arithmatex">\(N_B = B \otimes_A N\)</span>. Show that the homomorphism <span class="arithmatex">\(g: N \to N_B\)</span> which maps <span class="arithmatex">\(y\)</span> to <span class="arithmatex">\(1 \otimes y\)</span> is injective and that <span class="arithmatex">\(g(N)\)</span> is a direct summand of <span class="arithmatex">\(N_B\)</span>.<br />
+Proof: Consider <span class="arithmatex">\(h:N_{B}\to N\)</span> be the <span class="arithmatex">\(B-\)</span>module homomorphism induced by the bilinear map <span class="arithmatex">\(B\times N\to N,(b,n)\mapsto bn\)</span>, then <span class="arithmatex">\(h(b\otimes n)=bn\)</span>. Hence <span class="arithmatex">\(hg=1_{N}\)</span> so <span class="arithmatex">\(g\)</span> is injective. If <span class="arithmatex">\(g(n)\in \mathrm{Im}g\cap \mathrm{Ker}h\)</span>, then <span class="arithmatex">\(n=hg(n)=0\)</span> so <span class="arithmatex">\(g(n)=0\)</span> and <span class="arithmatex">\(\mathrm{Im}g\cap \mathrm{Ker}h=0\)</span>. Since <span class="arithmatex">\(b\otimes n=1\otimes bn+(b\otimes n-1\otimes bn)\)</span> where <span class="arithmatex">\(1\otimes bn=gh(b\otimes n)\in \mathrm{Im}g\)</span>, <span class="arithmatex">\(b\otimes n-1\otimes bn\in \mathrm{Ker}h\)</span>, and <span class="arithmatex">\(N_{B}\)</span> is generated by <span class="arithmatex">\(b\otimes n\)</span>, we obtain <span class="arithmatex">\(N_{B}=\mathrm{Im}g+\mathrm{Ker}h\)</span>. Therefore <span class="arithmatex">\(N_{B}=\mathrm{Im}g\oplus \mathrm{Ker}h\)</span> and <span class="arithmatex">\(\mathrm{Im}g\)</span> is a direct summand of <span class="arithmatex">\(N_{B}\)</span>.</p>
+<hr />
+<p><strong>Direct limits</strong></p>
+<h3 id="214">2.14</h3>
+<p>A partially ordered set <span class="arithmatex">\(I\)</span> is said to be a <strong>directed set</strong> if for each pair <span class="arithmatex">\(i, j\)</span> in <span class="arithmatex">\(I\)</span> there exists <span class="arithmatex">\(k \in I\)</span> such that <span class="arithmatex">\(i \leqslant k\)</span> and <span class="arithmatex">\(j \leqslant k\)</span>.<br />
+Let <span class="arithmatex">\(A\)</span> be a ring, let <span class="arithmatex">\(I\)</span> be a directed set and let <span class="arithmatex">\((M_i)_{i \in I}\)</span> be a family of <span class="arithmatex">\(A\)</span>-modules indexed by <span class="arithmatex">\(I\)</span>. For each pair <span class="arithmatex">\(i, j\)</span> in <span class="arithmatex">\(I\)</span> such that <span class="arithmatex">\(i \leqslant j\)</span>, let <span class="arithmatex">\(\mu_{ij}: M_i \to M_j\)</span> be an <span class="arithmatex">\(A\)</span>-homomorphism, and suppose that the following axioms are satisfied:<br />
+(1) <span class="arithmatex">\(\mu_{ii}\)</span> is the identity mapping of <span class="arithmatex">\(M_i\)</span>, for all <span class="arithmatex">\(i \in I\)</span>;<br />
+(2) <span class="arithmatex">\(\mu_{ik} = \mu_{jk} \circ \mu_{ij}\)</span> whenever <span class="arithmatex">\(i \leqslant j \leqslant k\)</span>.<br />
+Then the modules <span class="arithmatex">\(M_i\)</span> and homomorphisms <span class="arithmatex">\(\mu_{ij}\)</span> are said to form a <strong>direct system</strong> <span class="arithmatex">\(\mathbf{M} = (M_i, \mu_{ij})\)</span> over the directed set <span class="arithmatex">\(I\)</span>.<br />
+We shall construct an <span class="arithmatex">\(A\)</span>-module <span class="arithmatex">\(M\)</span> called the <strong>direct limit</strong> of the direct system <span class="arithmatex">\(\mathbf{M}\)</span>. Let <span class="arithmatex">\(C\)</span> be the direct sum of the <span class="arithmatex">\(M_i\)</span>, and identify each module <span class="arithmatex">\(M_i\)</span> with its canonical image in <span class="arithmatex">\(C\)</span>. Let <span class="arithmatex">\(D\)</span> be the submodule of <span class="arithmatex">\(C\)</span> generated by all elements of the form <span class="arithmatex">\(x_i - \mu_{ij}(x_i)\)</span> where <span class="arithmatex">\(i \leqslant j\)</span> and <span class="arithmatex">\(x_i \in M_i\)</span>. Let <span class="arithmatex">\(M = C/D\)</span>, let <span class="arithmatex">\(\mu: C \to M\)</span> be the projection and let <span class="arithmatex">\(\mu_i\)</span> be the restriction of <span class="arithmatex">\(\mu\)</span> to <span class="arithmatex">\(M_i\)</span>.<br />
+The module <span class="arithmatex">\(M\)</span>, or more correctly the pair consisting of <span class="arithmatex">\(M\)</span> and the family of homomorphisms <span class="arithmatex">\(\mu_i: M_i \to M\)</span>, is called the <strong>direct limit</strong> of the direct system <span class="arithmatex">\(\mathbf{M}\)</span>, and is written <span class="arithmatex">\(\lim_{\longrightarrow} M_i\)</span>. From the construction it is clear that <span class="arithmatex">\(\mu_i = \mu_j \circ \mu_{ij}\)</span> whenever <span class="arithmatex">\(i \leqslant j\)</span>.</p>
+<h3 id="215">2.15</h3>
+<p>In the situation of Exercise 14, show that every element of <span class="arithmatex">\(M\)</span> can be written in the form <span class="arithmatex">\(\mu_i(x_i)\)</span> for some <span class="arithmatex">\(i \in I\)</span> and some <span class="arithmatex">\(x_i \in M_i\)</span>.<br />
+Show also that if <span class="arithmatex">\(\mu_i(x_i) = 0\)</span> then there exists <span class="arithmatex">\(j \geqslant i\)</span> such that <span class="arithmatex">\(\mu_{ij}(x_i) = 0\)</span> in <span class="arithmatex">\(M_j\)</span>.<br />
+Proof: Every element <span class="arithmatex">\(a\in C\)</span> is the finite sum <span class="arithmatex">\(a=\sum_{i\in J}^{}{m_{i}}\)</span> where <span class="arithmatex">\(J\)</span> is finite. Take <span class="arithmatex">\(k\in I\)</span> such that <span class="arithmatex">\(i\leqslant k\forall i\in J\)</span>, then <span class="arithmatex">\(a\equiv \sum_{i\in J}^{}{\mu_{ik}(m_{i})}\pmod{D}\)</span>. Therefore every element <span class="arithmatex">\(\mu(a)\in M\)</span> is <span class="arithmatex">\(\mu_{k}(x_{k})\)</span> for <span class="arithmatex">\(x_{k}=\sum_{i\in J}^{}{\mu_{ik}(m_{i})}\in M_{k}\)</span>.<br />
+If <span class="arithmatex">\(\mu_{i}(x_{i})=0\)</span> then <span class="arithmatex">\(x_{i}\in D\)</span> implies <span class="arithmatex">\(x_{i}=\sum_{(u,v)\in J}^{}{x_{u}-\mu_{uv}(x_{u})}\)</span> for some finite <span class="arithmatex">\(J\)</span>, and we can write the sum as <span class="arithmatex">\(x_{i}=\sum_{u\in T}^{}{z_{u}}\)</span> where <span class="arithmatex">\(z_{u}=0\forall u\neq i\)</span>. Take <span class="arithmatex">\(j\in I\)</span> larger than <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\((u,v)\in J\)</span>, then <br />
+$$<br />
+\mu_{ij}(x_{i})=\sum_{u\in T}^{}{\mu_{uj}(z_{u})}=\sum_{(u,v)\in J}^{}{\mu_{uj}(x_{u})-\mu_{vj}\mu_{uv}(x_{u})}=0.<br />
+$$</p>
+<h3 id="216">2.16</h3>
+<p>Show that the direct limit is characterized (up to isomorphism) by the following property. Let <span class="arithmatex">\(N\)</span> be an <span class="arithmatex">\(A\)</span>-module and for each <span class="arithmatex">\(i \in I\)</span> let <span class="arithmatex">\(\alpha_i: M_i \to N\)</span> be an <span class="arithmatex">\(A\)</span>-module homomorphism such that <span class="arithmatex">\(\alpha_i = \alpha_j \circ \mu_{ij}\)</span> whenever <span class="arithmatex">\(i \leqslant j\)</span>. Then there exists a unique homomorphism <span class="arithmatex">\(\alpha: M \to N\)</span> such that <span class="arithmatex">\(\alpha_i = \alpha \circ \mu_i\)</span> for all <span class="arithmatex">\(i \in I\)</span>.<br />
+<img alt="TikZ Diagram" src="../../assets/tikz_images/e4ffd95f1a62803ce12ccf1ce12eca4e.svg" /><br />
+Proof: Given <span class="arithmatex">\(N\)</span> and <span class="arithmatex">\(\alpha_{i}\)</span> such that <span class="arithmatex">\(\alpha_{i}=\alpha_{j}\circ\mu_{ij}\)</span>, there is a unique <span class="arithmatex">\(\tilde{\alpha}:\bigoplus_{i\in I}M_{i}\to N\)</span> such that <span class="arithmatex">\(\tilde{\alpha}\iota_{i}=\tilde{\alpha}|_{M_{i}}=\alpha_{i}\)</span> where <span class="arithmatex">\(\iota_{i}:M_{i}\to \oplus M_{j}\)</span>. Since <span class="arithmatex">\(\alpha(x_{i})=\alpha_{j}\mu_{ij}(x)\)</span>, <span class="arithmatex">\(x_{i}-\mu_{ij}(x_{i})\in \mathrm{Ker} \tilde{\alpha}\)</span> for all <span class="arithmatex">\(i\leqslant j\)</span>. Hence <span class="arithmatex">\(D\subset \mathrm{Ker} \tilde{\alpha }\)</span> and there is a unique <span class="arithmatex">\(\alpha:M=C /D\to N\)</span> such that <span class="arithmatex">\(\tilde{\alpha}=\alpha\pi\)</span>, then <span class="arithmatex">\(\alpha\circ\mu_{i}=\alpha\pi\iota_{i}=\tilde{\alpha}\iota_{i}=\alpha_{i}\)</span>.<br />
+If there exists another <span class="arithmatex">\(\beta:M\to N\)</span> then <span class="arithmatex">\((\beta\pi)\iota_{i}=\beta\mu_{i}=\alpha_{i}\)</span> implies <span class="arithmatex">\(\beta\pi=\tilde{\alpha }\)</span>, so <span class="arithmatex">\(\beta=\alpha\)</span>.<br />
+Consider the category <span class="arithmatex">\(\mathfrak{C}\)</span>, where objects are <span class="arithmatex">\((N,\{ \alpha_{i}:M_{i}\to N|i\in I \})\)</span> such that <span class="arithmatex">\(\alpha_{i}=\alpha_{j}\circ\mu_{ij}\)</span>, and morphisms are <span class="arithmatex">\(\phi:(N,\{ \alpha_{i} \})\to(P,\{ \beta_{i} \})\)</span> where <span class="arithmatex">\(\phi:N\to P\)</span> is a <span class="arithmatex">\(A-\)</span>module homomorphism and <span class="arithmatex">\(\beta_{i}=\phi\alpha_{i}\)</span>. Verify that <span class="arithmatex">\(\phi\)</span> is an equivalence in <span class="arithmatex">\(\mathfrak{C}\)</span> iff it is a <span class="arithmatex">\(A-\)</span>module isomorphism. Since <span class="arithmatex">\((M,\mu_{i})\)</span> is the universal object of <span class="arithmatex">\(\mathfrak{C}\)</span>, it is unique up to isomorphism.</p>
+<h3 id="217">2.17</h3>
+<p>Let <span class="arithmatex">\((M_i)_{i \in I}\)</span> be a family of submodules of an <span class="arithmatex">\(A\)</span>-module, such that for each pair of indices <span class="arithmatex">\(i, j\)</span> in <span class="arithmatex">\(I\)</span> there exists <span class="arithmatex">\(k \in I\)</span> such that <span class="arithmatex">\(M_i + M_j \subseteq M_k\)</span>. Define <span class="arithmatex">\(i \leqslant j\)</span> to mean <span class="arithmatex">\(M_i \subseteq M_j\)</span> and let <span class="arithmatex">\(\mu_{ij}: M_i \to M_j\)</span> be the embedding of <span class="arithmatex">\(M_i\)</span> in <span class="arithmatex">\(M_j\)</span>. Show that<br />
+$$<br />
+\lim_{\longrightarrow} M_i = \sum M_i = \bigcup M_i. <br />
+$$<br />
+In particular, any <span class="arithmatex">\(A\)</span>-module is the direct limit of its finitely generated submodules.<br />
+Proof: For any <span class="arithmatex">\(\alpha_{i}:M_{i}\to N\)</span> such that <span class="arithmatex">\(\alpha_{i}=\alpha_{j}\mu_{ij}\)</span>, define <span class="arithmatex">\(\alpha:\bigcup M_{i}\to N\)</span> as <span class="arithmatex">\(\alpha(m_{i})=\alpha_{i}(m_{i})\)</span> for <span class="arithmatex">\(m_{i}\in M_{i}\)</span> and <span class="arithmatex">\(\mu_{i}\)</span> the embedding. Verify that <span class="arithmatex">\(\alpha\)</span> is a well-defined <span class="arithmatex">\(A-\)</span>module homomorphism, and <span class="arithmatex">\(\alpha_{i}=\alpha\mu_{i}\)</span>. Clearly <span class="arithmatex">\(\alpha\)</span> is unique, so by the universal property <span class="arithmatex">\(\displaystyle\lim_{  \longrightarrow }M_{i}=\bigcup M_{i}\)</span>.</p>
+<h3 id="218">2.18</h3>
+<p>Let <span class="arithmatex">\(\mathbf{M} = (M_i, \mu_{ij}), \mathbf{N} = (N_i, \nu_{ij})\)</span> be direct systems of <span class="arithmatex">\(A\)</span>-modules over the same directed set. Let <span class="arithmatex">\(M, N\)</span> be the direct limits and <span class="arithmatex">\(\mu_i: M_i \to M, \nu_i: N_i \to N\)</span> the associated homomorphisms.<br />
+A <strong>homomorphism</strong> <span class="arithmatex">\(\phi: \mathbf{M} \to \mathbf{N}\)</span> is by definition a family of <span class="arithmatex">\(A\)</span>-module homomorphisms <span class="arithmatex">\(\phi_i: M_i \to N_i\)</span> such that <span class="arithmatex">\(\phi_j \circ \mu_{ij} = \nu_{ij} \circ \phi_i\)</span> whenever <span class="arithmatex">\(i \leqslant j\)</span>. Show that <span class="arithmatex">\(\phi\)</span> defines a unique homomorphism <span class="arithmatex">\(\displaystyle\phi = \lim_{\longrightarrow} \phi_i: M \to N\)</span> such that <span class="arithmatex">\(\phi \circ \mu_i = \nu_i \circ \phi_i\)</span> for all <span class="arithmatex">\(i \in I\)</span>.<br />
+Proof: Let <span class="arithmatex">\(\tilde{\phi}_{i}:M_{i}\to N,\tilde{\phi}_{i}=\nu_{i}\phi_{i}\)</span>, then <span class="arithmatex">\(\tilde{\phi}_{j}\mu_{ij}=\nu_{j}\phi_{j}\mu_{ij}=\nu_{j}\nu_{ij}\phi_{i}=\nu_{i}\phi_{i}=\tilde{\phi}_{i}\)</span> for all <span class="arithmatex">\(i\leqslant j\)</span>. Hence there is a unique homomorphism <span class="arithmatex">\(\phi:M\to N\)</span> such that <span class="arithmatex">\(\phi\mu_{i}=\tilde{\phi}_{i}=\nu_{i}\phi_{i}\)</span> for all <span class="arithmatex">\(i\in I\)</span>.</p>
+<h3 id="219">2.19</h3>
+<p>A sequence of direct systems and homomorphisms <span class="arithmatex">\(\mathbf{M} \to \mathbf{N} \to \mathbf{P}\)</span> is <strong>exact</strong> if the corresponding sequence of modules and module homomorphisms is exact for each <span class="arithmatex">\(i \in I\)</span>. Show that the sequence <span class="arithmatex">\(M \to N \to P\)</span> of direct limits is then exact.<br />
+<img alt="TikZ Diagram" src="../../assets/tikz_images/e03aa2bd2f9f010822930f528057d32b.svg" /><br />
+Proof: If <span class="arithmatex">\(n\in \mathrm{Ker}g\)</span> then take <span class="arithmatex">\(i\in I\)</span> such that <span class="arithmatex">\(n=\nu_{i}(n_{i})\)</span> for some <span class="arithmatex">\(n_{i}\in N_{i}\)</span> (by Exercise2.15). Then <span class="arithmatex">\(0=g(n)=g\nu_{i}(n_{i})=\lambda_{i}g_{i}(n_{i})\)</span>. By Exercise2.15 there exists <span class="arithmatex">\(j\geqslant i\)</span> such that <span class="arithmatex">\(\lambda_{ij}(g_{i}(n_{i}))=0\)</span>, so <span class="arithmatex">\(0=\lambda_{ij}g_{i}(n_{i})=g_{j}\nu_{ij}(n_{i})\)</span>. Hence <span class="arithmatex">\(\nu_{ij}(n_{i})\in \mathrm{Ker}g_{j}=\mathrm{Im}f_{j}\)</span>. Suppose <span class="arithmatex">\(\nu_{ij}(n_{i})=f_{j}(m_{j})\)</span>, then<br />
+$$<br />
+f\mu_{j}(m_{j})=\nu_{j}f_{j}(m_{j})=\nu_{j}\nu_{ij}(n_{i})=\nu_{i}(n_{i})=n.<br />
+$$<br />
+Hence <span class="arithmatex">\(n\in \mathrm{Im}f\)</span> and <span class="arithmatex">\(\mathrm{Ker}g\subset \mathrm{Im}f\)</span>.<br />
+If <span class="arithmatex">\(n=f(m)\in \mathrm{Im}f\)</span>, take <span class="arithmatex">\(i\in I\)</span> such that <span class="arithmatex">\(\mu_{i}(m_{i})=m\)</span> for some <span class="arithmatex">\(m_{i}\in M_{i}\)</span>, then <span class="arithmatex">\(n=f\mu_{i}(m_{i})=\nu_{i}f_{i}(m_{i})\)</span>. Note that <span class="arithmatex">\(g_{i}f_{i}(m_{i})=0\)</span>, so<br />
+$$<br />
+0=\lambda_{i}g_{i}f_{i}(m_{i})=g\nu_{i}f_{i}(m_{i})=g(n).<br />
+$$<br />
+Hence <span class="arithmatex">\(n\in \mathrm{Ker}g\)</span> and <span class="arithmatex">\(\mathrm{Im}f\subset \mathrm{Ker}g\)</span>, so <span class="arithmatex">\(\mathrm{Im}f=\mathrm{Ker}g\)</span> and <span class="arithmatex">\(M\stackrel{f}{\to}N\stackrel{g}{\to}P\)</span> is exact.</p>
+<hr />
+<p><strong>Tensor products commute with direct limits</strong></p>
+<h3 id="220">2.20</h3>
+<p>Keeping the same notation as in Exercise 14, let <span class="arithmatex">\(N\)</span> be any <span class="arithmatex">\(A\)</span>-module. Then <span class="arithmatex">\((M_i \otimes N, \mu_{ij} \otimes 1)\)</span> is a direct system; let <span class="arithmatex">\(\displaystyle P = \lim_{\longrightarrow} (M_i \otimes N)\)</span> be its direct limit.<br />
+For each <span class="arithmatex">\(i \in I\)</span> we have a homomorphism <span class="arithmatex">\(\mu_i \otimes 1: M_i \otimes N \to M \otimes N\)</span>, hence by Exercise 16 a homomorphism <span class="arithmatex">\(\psi: P \to M \otimes N\)</span>. Show that <span class="arithmatex">\(\psi\)</span> is an isomorphism, so that<br />
+$$<br />
+\lim_{\longrightarrow} (M_i \otimes N) \cong (\lim_{\longrightarrow} M_i) \otimes N.<br />
+$$<br />
+<img alt="TikZ Diagram" src="../../assets/tikz_images/5a421cba8b873b8b41258dc938963621.svg" /><br />
+Proof: Consider the map <span class="arithmatex">\(f:M\times N\to P\)</span>: for <span class="arithmatex">\((m,n)\in M\times N\)</span>, suppose <span class="arithmatex">\(m=\mu_{i}(m_{i})\)</span>, then define <span class="arithmatex">\(f(m,n)=\nu_{i}(m_{i}\otimes n)\)</span>. <br />
+If <span class="arithmatex">\(i\leqslant j\)</span> and <span class="arithmatex">\(m=\mu_{i}(m_{i})=\mu_{j}(m_{j})\)</span>, then <span class="arithmatex">\(\mu_{j}(m_{j})=\mu_{j}(\mu_{ij}(m_{i}))\)</span> so <span class="arithmatex">\(\mu_{jk}(m_{j})=\mu_{jk}\mu_{ij}(m_{i})=\mu_{ik}(m_{i})\)</span> for some <span class="arithmatex">\(k\geqslant j\)</span>. Hence  <span class="arithmatex">\(\nu_{i}(m_{i}\otimes n)=\nu_{k}\nu_{ik}(m_{i}\otimes n)=\nu_{k}(\mu_{ik}(m_{i})\otimes n)=\nu_{k}(\mu_{jk}(m_{j})\otimes n)=\nu_{j}(m_{j}\otimes n)\)</span>.<br />
+Therefore <span class="arithmatex">\(f\)</span> is well-defined, and clearly <span class="arithmatex">\(f\)</span> is <span class="arithmatex">\(A-\)</span>module bilinear since <span class="arithmatex">\(\nu_{i}\)</span> is bilinear. <span class="arithmatex">\(f\)</span> induces a <span class="arithmatex">\(A-\)</span>module homomorphism <span class="arithmatex">\(\varphi:M\otimes N\to P\)</span> such that <span class="arithmatex">\(\varphi\iota=f\)</span>.<br />
+For any <span class="arithmatex">\(m\otimes n\in M\otimes N\)</span>, suppose <span class="arithmatex">\((m,n)=(\mu_{i}\times 1)(m_{i},n)\)</span>, then <br />
+$$<br />
+\begin{align}<br />
+\psi\varphi(m\otimes n) &amp; =\psi f(m,n)=\psi f(\mu_{i}\times 1)(m_{i},n) \newline<br />
+ &amp; =\psi\nu_{i}\iota_{i}(m,n)=(\mu_{i}\otimes  1_{N})\iota_{i}(m_{i},n)=m\otimes n,<br />
+\end{align}<br />
+$$<br />
+and for any <span class="arithmatex">\(\nu_{i}(m_{i}\otimes n)\in P\)</span>, <br />
+$$<br />
+\begin{align}<br />
+\varphi\psi(\nu_{i}(m_{i}\otimes n))=\varphi(\mu_{i}\otimes  1_{N})(m_{i}\otimes n)=\varphi\iota(\mu_{i}\times 1_{N})(m_{i},n)=\nu_{i}\iota_{i}(m_i,n)=\nu_{i}(m\otimes n).<br />
+\end{align}<br />
+$$<br />
+Hence we verified the identity on all generators of <span class="arithmatex">\(M\otimes N\)</span> and <span class="arithmatex">\(P\)</span>, so <span class="arithmatex">\(\varphi\psi= 1_{P}\)</span> and <span class="arithmatex">\(\psi\varphi= 1_{M\otimes N}\)</span>, therefore <span class="arithmatex">\(\displaystyle P=\lim_{ \longrightarrow }(M_{i}\otimes N)\cong M\otimes N\)</span>.</p>
+<h3 id="221">2.21</h3>
+<p>Let <span class="arithmatex">\((A_i)_{i \in I}\)</span> be a family of rings indexed by a directed set <span class="arithmatex">\(I\)</span>, and for each pair <span class="arithmatex">\(i \leqslant j\)</span> in <span class="arithmatex">\(I\)</span> let <span class="arithmatex">\(\alpha_{ij}: A_i \to A_j\)</span> be a ring homomorphism, satisfying conditions (1) and (2) of Exercise 14. Regarding each <span class="arithmatex">\(A_i\)</span> as a <span class="arithmatex">\(\mathbb{Z}\)</span>-module we can then form the direct limit <span class="arithmatex">\(A = \displaystyle\lim_{\longrightarrow} A_i\)</span>. Show that <span class="arithmatex">\(A\)</span> inherits a ring structure from the <span class="arithmatex">\(A_i\)</span> so that the mappings <span class="arithmatex">\(A_i \to A\)</span> are ring homomorphisms. The ring <span class="arithmatex">\(A\)</span> is the <strong>direct limit</strong> of the system <span class="arithmatex">\((A_i, \alpha_{ij})\)</span>.<br />
+If <span class="arithmatex">\(A = 0\)</span> prove that <span class="arithmatex">\(A_i = 0\)</span> for some <span class="arithmatex">\(i \in I\)</span>.<br />
+Proof: (a) For <span class="arithmatex">\(r,s\in A\)</span>, let <span class="arithmatex">\(r=\alpha_{i}(a_{i}),s=\alpha_{j}(a_{j})\)</span>. Take <span class="arithmatex">\(k\in I\)</span> such that <span class="arithmatex">\(i,j\leqslant k\)</span>, we define<br />
+$$<br />
+r\cdot s=\alpha_{k}(\alpha_{ik}(a_{i})\cdot \alpha_{jk}(a_{j})).<br />
+$$<br />
+If <span class="arithmatex">\(k\leqslant l\)</span>, then<br />
+$$<br />
+\alpha_{k}(\alpha_{ik}(a_{i})\cdot \alpha_{jk}(a_{j}))=\alpha_{l}\alpha_{kl}(\alpha_{ik}(a_{i})\cdot\alpha_{jk}(a_{j}))=\alpha_{l}(\alpha_{il}(a_{i})\cdot\alpha_{jl}(a_{j})).<br />
+$$<br />
+so <span class="arithmatex">\(r\cdot s\)</span> is independent of the choice of <span class="arithmatex">\(k\)</span> (if <span class="arithmatex">\(i,j\leqslant k,l\)</span>, take <span class="arithmatex">\(k,l\leqslant m\)</span>).<br />
+If <span class="arithmatex">\(r=\alpha_{i}(a_{i})=\alpha_{l}(a_{l})\)</span>, take <span class="arithmatex">\(i,j,l\leqslant k\)</span>, then<br />
+$$<br />
+\alpha_{k}\alpha_{lk}(a_{l})=\alpha_{l}(a_{l})=\alpha_{i}(a_{i})=\alpha_{k}\alpha_{ik}(a_{i})<br />
+$$<br />
+so there exists <span class="arithmatex">\(m\geqslant k\)</span> such that <span class="arithmatex">\(\alpha_{km}(\alpha_{ik}(a_{i})-\alpha_{lk}(a_{l}))=0\)</span>. Hence<br />
+$$<br />
+\alpha_{m}(\alpha_{im}(a_{i})\cdot\alpha_{jm}(a_{j}))=\alpha_{m}(\alpha_{lm}(a_{l})\cdot\alpha_{jm}(a_{j})).<br />
+$$<br />
+Therefore the product is well-defined.<br />
+For <span class="arithmatex">\(r=\alpha_{i}(a),s=\alpha_{i}(b)\)</span> and <span class="arithmatex">\(t=\alpha_{i}(c)\)</span>, <span class="arithmatex">\((r+s)t=\alpha_{i}((a+b)c)=\alpha_{i}(ac+bc)=rt+st\)</span>, and <span class="arithmatex">\(1_{A}=\alpha_{i}(1_{A_{i}})\)</span> is the identity. Hence <span class="arithmatex">\(A\)</span> is a ring and by definition <span class="arithmatex">\(\alpha_{i}\)</span> is a ring homomorphism.<br />
+(b) If <span class="arithmatex">\(A=0\)</span> then <span class="arithmatex">\(1_{A}=0\)</span> so <span class="arithmatex">\(\alpha_{i}(1_{A_{i}})=0\)</span>, and <span class="arithmatex">\(1_{A_{j}}=\alpha_{ij}(1_{A_{j}})=0\)</span> for some <span class="arithmatex">\(j\geqslant i\)</span>. Hence <span class="arithmatex">\(A_{j}=0\)</span>.</p>
+<h3 id="222">2.22</h3>
+<p>Let <span class="arithmatex">\((A_i, \alpha_{ij})\)</span> be a direct system of rings and let <span class="arithmatex">\(\mathfrak{N}_i\)</span> be the nilradical of <span class="arithmatex">\(A_i\)</span>. Show that <span class="arithmatex">\(\displaystyle\lim_{\longrightarrow} \mathfrak{N}_i\)</span> is the nilradical of <span class="arithmatex">\(\displaystyle\lim_{\longrightarrow} A_i\)</span>.<br />
+If each <span class="arithmatex">\(A_i\)</span> is an integral domain, then <span class="arithmatex">\(\displaystyle\lim_{\longrightarrow} A_i\)</span> is an integral domain.<br />
+Proof: (a) If <span class="arithmatex">\(a_{i}\in \mathfrak{N}_{i}\)</span>, suppose <span class="arithmatex">\(a_{i}^{n}=0\)</span> then <span class="arithmatex">\(\alpha_{i}(a_{i})^{n}=\alpha_{i}(a_{i}^{n})=0\)</span>, so <span class="arithmatex">\(\alpha_{i}(a_{i})\in \mathfrak{N}\)</span> and <span class="arithmatex">\(\displaystyle\lim_{ \longrightarrow}\mathfrak{N}_{i}\subset \mathfrak{N}\)</span>.<br />
+If <span class="arithmatex">\(a\in \mathfrak{N}\)</span>, suppose <span class="arithmatex">\(a^{n}=0\)</span> and <span class="arithmatex">\(a=\alpha_{i}(a_{i})\)</span>, then <span class="arithmatex">\(\alpha_{i}(a_{i}^{n})=0\)</span> implies <span class="arithmatex">\(\alpha_{ij}(a_{i}^{n})=0\)</span> for some <span class="arithmatex">\(j\geqslant i\)</span>. Hence <span class="arithmatex">\(\alpha_{ij}(a_{i})\in \mathfrak{N}_{j}\)</span> so <span class="arithmatex">\(\displaystyle a=\alpha_{j}(\alpha_{ij}(a_{i}))\in \lim_{\longrightarrow}\mathfrak{N}_{i}\)</span>.<br />
+Therefore <span class="arithmatex">\(\displaystyle\mathfrak{N}=\lim_{  \longrightarrow }\mathfrak{N}_{i}\)</span>.<br />
+(b) If each <span class="arithmatex">\(A_{i}\)</span> is an integral domain, and <span class="arithmatex">\(ab=0\)</span> for <span class="arithmatex">\(a,b\in A\)</span>, suppose <span class="arithmatex">\(a=\mu_{i}(u),b=\mu_{i}(v)\)</span>, then <span class="arithmatex">\(\mu_{i}(uv)=0\)</span> implies <span class="arithmatex">\(\mu_{ij}(uv)=0\)</span> for some <span class="arithmatex">\(j\geqslant i\)</span>. Hence <span class="arithmatex">\(\mu_{ij}(u)\cdot\mu_{ij}(v)=0\)</span> so either <span class="arithmatex">\(\mu_{ij}(u)=0\)</span> or <span class="arithmatex">\(\mu_{ij}(v)=0\)</span>. Since <span class="arithmatex">\(a=\mu_{j}(\mu_{ij}(u))\)</span> and <span class="arithmatex">\(b=\mu_{j}(\mu_{ij}(v))\)</span>, <span class="arithmatex">\(a=0\)</span> or <span class="arithmatex">\(b=0\)</span>.</p>
+<h3 id="223">2.23</h3>
+<p>Let <span class="arithmatex">\((B_\lambda)_{\lambda \in \Lambda}\)</span> be a family of <span class="arithmatex">\(A\)</span>-algebras. For each finite subset <span class="arithmatex">\(J\)</span> of <span class="arithmatex">\(\Lambda\)</span> let <span class="arithmatex">\(B_J\)</span> denote the tensor product (over <span class="arithmatex">\(A\)</span>) of the <span class="arithmatex">\(B_\lambda\)</span> for <span class="arithmatex">\(\lambda \in J\)</span>. If <span class="arithmatex">\(J'\)</span> is another finite subset of <span class="arithmatex">\(\Lambda\)</span> and <span class="arithmatex">\(J \subseteq J'\)</span>, there is a canonical <span class="arithmatex">\(A\)</span>-algebra homomorphism <span class="arithmatex">\(B_J \to B_{J'}\)</span>. Let <span class="arithmatex">\(B\)</span> denote the direct limit of the rings <span class="arithmatex">\(B_J\)</span> as <span class="arithmatex">\(J\)</span> runs through all finite subsets of <span class="arithmatex">\(\Lambda\)</span>. The ring <span class="arithmatex">\(B\)</span> has a natural <span class="arithmatex">\(A\)</span>-algebra structure for which the homomorphisms <span class="arithmatex">\(B_J \to B\)</span> are <span class="arithmatex">\(A\)</span>-algebra homomorphisms. The <span class="arithmatex">\(A\)</span>-algebra <span class="arithmatex">\(B\)</span> is the <strong>tensor product</strong> of the family <span class="arithmatex">\((B_\lambda)_{\lambda \in \Lambda}\)</span>.<br />
+Proof: Define the algebra structure on <span class="arithmatex">\(B\)</span> as follows: if <span class="arithmatex">\(a,b\in B\)</span>, suppose <span class="arithmatex">\(a=\mu_{i}(u),b=\mu_{i}(v)\)</span>, then <span class="arithmatex">\(a\cdot b\)</span> is defined as <span class="arithmatex">\(a\cdot b=\mu_{i}(uv)\)</span>; if <span class="arithmatex">\(a\in A,b\in B\)</span> suppose <span class="arithmatex">\(b=\mu_{i}(v)\)</span> then define <span class="arithmatex">\(a\cdot b=\mu_{i}(av)\)</span>. Analogous to Exercise2.21, verify that it is well-defined. </p>
+<hr />
+<p><strong>Flatness and Tor</strong><br />
+In these Exercises it will be assumed that the reader is familiar with the definition and basic properties of the Tor functor.</p>
+<h3 id="224">2.24</h3>
+<p>If <span class="arithmatex">\(M\)</span> is an <span class="arithmatex">\(A\)</span>-module, the following are equivalent:<br />
+i) <span class="arithmatex">\(M\)</span> is flat;<br />
+ii) <span class="arithmatex">\(\text{Tor}_n^A(M, N) = 0\)</span> for all <span class="arithmatex">\(n &gt; 0\)</span> and all <span class="arithmatex">\(A\)</span>-modules <span class="arithmatex">\(N\)</span>;<br />
+iii) <span class="arithmatex">\(\text{Tor}_1^A(M, N) = 0\)</span> for all <span class="arithmatex">\(A\)</span>-modules <span class="arithmatex">\(N\)</span>.<br />
+Proof: (i)=&gt;(ii) Take projective modules <span class="arithmatex">\(P_{n}\)</span> such that <br />
+$$<br />
+\cdots \xrightarrow{d_{3}}P_{2}\xrightarrow{d_{2}}P_{1}\xrightarrow{d_{1}}N\to 0<br />
+$$<br />
+is exact. Then <span class="arithmatex">\(M\)</span> is flat implies <span class="arithmatex">\(P_{n+1}\otimes_{A}M\to P_{n}\otimes_{A}M\to P_{n-1}\otimes_{A}M\)</span> is exact, so the homology groups <span class="arithmatex">\(\mathrm{Tor}_{n}^{A}(M,N)\)</span> are zero.<br />
+(ii)=&gt;(iii) trivial.<br />
+(iii)=&gt;(i) For any short exact sequence <span class="arithmatex">\(0\to N^{\prime}\xrightarrow{f}N\xrightarrow{g}N^{\prime\prime}\to 0\)</span>, the Tor sequence<br />
+$$<br />
+0=\mathrm{Tor}<em>{1}^{A}(M,N^{\prime})\to M\otimes</em>{A}N^{\prime}\to M\otimes_{A}N\to M\otimes_{A}N^{\prime\prime}\to 0<br />
+$$<br />
+is exact, so <span class="arithmatex">\(M\)</span> is flat.</p>
+<h3 id="225">2.25</h3>
+<p>Let <span class="arithmatex">\(0 \to N' \to N \to N'' \to 0\)</span> be an exact sequence, with <span class="arithmatex">\(N''\)</span> flat. Then <span class="arithmatex">\(N'\)</span> is flat <span class="arithmatex">\(\iff N\)</span> is flat. <br />
+Proof: For any <span class="arithmatex">\(A-\)</span>module <span class="arithmatex">\(M\)</span>, the sequence <br />
+$$<br />
+\cdots\to \mathrm{Tor}<em>{n+1}^{A}(N^{\prime\prime},M)\to \mathrm{Tor}</em>{n}^{A}(N,M)\to \mathrm{Tor}<em>{n}^{A}(N^{\prime},M)\to \mathrm{Tor}</em>{n}^{A}(N^{\prime\prime},M)\to\cdots<br />
+$$<br />
+is exact. Since <span class="arithmatex">\(N^{\prime\prime}\)</span> is flat, <span class="arithmatex">\(\mathrm{Tor}_{n}^{A}(N^{\prime\prime},M)=0\)</span>, so <span class="arithmatex">\(\mathrm{Tor}_{n}^{A}(N,M)\cong \mathrm{Tor}_{n}^{A}(N^{\prime},M)\)</span>. Hence by Exercise2.24 <span class="arithmatex">\(N^{\prime}\)</span> is flat iff <span class="arithmatex">\(N\)</span> is flat.</p>
+<h3 id="226">2.26</h3>
+<p>Let <span class="arithmatex">\(N\)</span> be an <span class="arithmatex">\(A\)</span>-module. Then <span class="arithmatex">\(N\)</span> is flat <span class="arithmatex">\(\iff \text{Tor}_1(A/\mathfrak{a}, N) = 0\)</span> for all finitely generated ideals <span class="arithmatex">\(\mathfrak{a}\)</span> in <span class="arithmatex">\(A\)</span>.<br />
+Proof: Since <span class="arithmatex">\(\mathrm{Tor}\)</span> is symmetric, the only if part is trivial.<br />
+If <span class="arithmatex">\(\mathrm{Tor}_{1}^{A}(M,N)=0\)</span> for all finitely generated <span class="arithmatex">\(A-\)</span>module <span class="arithmatex">\(M\)</span>, then for any exact sequence <span class="arithmatex">\(0\to M^{\prime}\xrightarrow{f}M\)</span> where <span class="arithmatex">\(M^{\prime},M\)</span> are finitely generated, we have the exact sequence <br />
+$$<br />
+\mathrm{Tor}<em>{1}^{A}(\mathrm{Coker}f,N)\to \mathrm{Tor}</em>{0}^{A}(M^{\prime},N)\to \mathrm{Tor}<em>{0}^{A}(M^{\prime},N)\to \mathrm{Tor}</em>{0}^{A}(\mathrm{Coker}f,N),<br />
+$$<br />
+where <span class="arithmatex">\(\mathrm{Coker}f\)</span> is finitely generated. Hence <span class="arithmatex">\(f\otimes 1_{N}\)</span> is injective so <span class="arithmatex">\(N\)</span> is flat.<br />
+If <span class="arithmatex">\(\mathrm{Tor}_{1}^{A}(M,N)=0\)</span> for all cyclic <span class="arithmatex">\(M\)</span>, for any finitely generated <span class="arithmatex">\(A-\)</span>module <span class="arithmatex">\(M=\langle x_{1},\cdots,x_{n} \rangle\)</span>, let <span class="arithmatex">\(M_{i}=\langle x_{1},\cdots,x_{i} \rangle\)</span> then <span class="arithmatex">\(\mathrm{Tor}_{1}^{A}(M_{i} /M_{i-1},N)=0\)</span> and <span class="arithmatex">\(\mathrm{Tor}_{1}^{A}(M,N)=0\)</span>. Since the sequence <span class="arithmatex">\(0\to M_{i-1}\to M_{i}\to M_{i} /M_{i-1}\to 0\)</span> is exact, the sequence <span class="arithmatex">\(\mathrm{Tor}_{1}^{A}(M_{i-1},N)\to \mathrm{Tor}_{1}^{A}(M_{i},N)\to \mathrm{Tor}_{1}^{A}(M_{i} /M_{i-1},N)\)</span> is exact. By induction we obtain <span class="arithmatex">\(\mathrm{Tor}_{1}^{A}(M_{i},N)=0\)</span>, so <span class="arithmatex">\(\mathrm{Tor}_{1}^{A}(M,N)=0\)</span> and <span class="arithmatex">\(N\)</span> is flat.<br />
+Since every cyclic <span class="arithmatex">\(A-\)</span>module is isomorphic to <span class="arithmatex">\(A /\mathfrak{a}\)</span> for some ideal <span class="arithmatex">\(\mathfrak{a}\subset A\)</span>, <span class="arithmatex">\(N\)</span> is flat if <span class="arithmatex">\(\mathrm{Tor}_{1}^{A}(A /\mathfrak{a},N)=0\)</span> for all ideals <span class="arithmatex">\(\mathfrak{a}\)</span>, which is equivalent to <span class="arithmatex">\(\iota \otimes 1_{N}:\mathfrak{a}\otimes_{A}N\to A\otimes_{A}N\)</span> is injective. Since every element in the kernel belongs to a finitely generated ideal, <span class="arithmatex">\(N\)</span> is flat if <span class="arithmatex">\(\mathrm{Tor}_{1}^{A}(A /\mathfrak{a},N)=0\)</span> for any finitely generated ideal <span class="arithmatex">\(\mathfrak{a}\subset A\)</span>.</p>
+<h3 id="227">2.27</h3>
+<p>A ring <span class="arithmatex">\(A\)</span> is <strong>absolutely flat</strong> if every <span class="arithmatex">\(A\)</span>-module is flat. Prove that the following are equivalent:<br />
+i) <span class="arithmatex">\(A\)</span> is absolutely flat.<br />
+ii) Every principal ideal is idempotent.<br />
+iii) Every finitely generated ideal is a direct summand of <span class="arithmatex">\(A\)</span>.<br />
+Proof: (i)=&gt;(ii) If <span class="arithmatex">\(A\)</span> is absolutely flat, for any principal ideal <span class="arithmatex">\(\mathfrak{a}=(x)\)</span>, <span class="arithmatex">\(A /(x)=\)</span> is flat, so tensoring the exact sequence <span class="arithmatex">\(0\to \mathfrak{a}\to A \to A /\mathfrak{a}\to 0\)</span> we obtain <span class="arithmatex">\(0\to \mathfrak{a}\otimes_{A}A /\mathfrak{a}\to A\otimes_{A}A /\mathfrak{a}\to A /\mathfrak{a}\otimes_{A}A /\mathfrak{a}\to 0\)</span> is exact. Note that <span class="arithmatex">\(A\otimes_{A}A /\mathfrak{a}\cong A /\mathfrak{a}\cong A /\mathfrak{a}\otimes_{A}A /\mathfrak{a}\)</span>, so <span class="arithmatex">\(\mathfrak{a}\otimes_{A}A /\mathfrak{a}=0\)</span>. Recall that <span class="arithmatex">\(M\otimes_{A}A /I\cong M /IM\)</span>, so <span class="arithmatex">\(0=\mathfrak{a}\otimes_{A}A /\mathfrak{a}\cong \mathfrak{a} /\mathfrak{a}^{2}\)</span>, hence <span class="arithmatex">\(\mathfrak{a}\)</span> is idempotent.<br />
+(ii)=&gt;(iii) If <span class="arithmatex">\(x\in A\)</span> then <span class="arithmatex">\((x)=(x^{2})\)</span> implies <span class="arithmatex">\(x=ax^{2}\)</span> for some <span class="arithmatex">\(a\in A\)</span>. Let <span class="arithmatex">\(e=ax\)</span>, then <span class="arithmatex">\(e\)</span> is idempotent and <span class="arithmatex">\((x)=(e)\)</span>. Analogous to Boolean rings, <span class="arithmatex">\((e)+(f)=(e+f-ef)\)</span> for idempotent <span class="arithmatex">\(e,f\)</span>, so every finitely generated ideal is principle, and generated by an idempotent <span class="arithmatex">\(e\)</span>. Note that <span class="arithmatex">\(A=(e)\oplus(1-e)\)</span> so it is a direct summand.<br />
+(iii)=&gt;(i) For any finitely generated ideal <span class="arithmatex">\(\mathfrak{a}\subset A\)</span>, <span class="arithmatex">\(A\cong \mathfrak{a}\oplus A /\mathfrak{a}\)</span> so the exact sequence <span class="arithmatex">\(0\to \mathfrak{a}\to A \to A /\mathfrak{a}\to 0\)</span> splits. Hence <span class="arithmatex">\(0\to \mathfrak{a}\otimes_{A}N\to A\otimes_{A}N\to A /\mathfrak{a}\otimes_{A}N\to 0\)</span> is exact for any <span class="arithmatex">\(A-\)</span>module <span class="arithmatex">\(N\)</span>. Hence <span class="arithmatex">\(\mathrm{Tor}_{1}^{A}(A /\mathfrak{a},N)=0\)</span> for any <span class="arithmatex">\(A-\)</span>module <span class="arithmatex">\(N\)</span>. By Exercise2.26 every <span class="arithmatex">\(A-\)</span>module is flat, so <span class="arithmatex">\(A\)</span> is absolutely flat.</p>
+<h3 id="228">2.28</h3>
+<p>A Boolean ring is absolutely flat. The ring of Chapter 1, Exercise 7 is absolutely flat. Every homomorphic image of an absolutely flat ring is absolutely flat. If a local ring is absolutely flat, then it is a field.<br />
+If <span class="arithmatex">\(A\)</span> is absolutely flat, every non-unit in <span class="arithmatex">\(A\)</span> is a zero-divisor.<br />
+Proof: (i) In a Boolean ring, every principle ideal <span class="arithmatex">\((x)\)</span> is idempotent since <span class="arithmatex">\(x^{2}=x\)</span>.<br />
+(ii) If <span class="arithmatex">\(\forall x\exists n,x^{n}=x\)</span>, then <span class="arithmatex">\((x)=(x^{n-1})\)</span> where <span class="arithmatex">\(x^{2n-2}=x^{n-2}\cdot x\)</span> so every principle ideal is idempotent.<br />
+(iii) If <span class="arithmatex">\(A\)</span> is absolutely flat and <span class="arithmatex">\(f:A\to A /\mathfrak{a}\)</span> is surjective, then for any <span class="arithmatex">\(\bar{x}\in A /\mathfrak{a}\)</span>, take <span class="arithmatex">\(e=ax\)</span> idempotent where <span class="arithmatex">\((x)=(e)\)</span>, we have <span class="arithmatex">\((\bar{x})=(\bar{e})\)</span> where <span class="arithmatex">\(\bar{e}\)</span> is idempotent, so <span class="arithmatex">\(A /\mathfrak{a}\)</span> is absolutely flat.<br />
+(iv) If <span class="arithmatex">\(A\)</span> is local and absolutely flat with maximal ideal <span class="arithmatex">\(\mathfrak{m}\)</span>, for any <span class="arithmatex">\(x\in \mathfrak{m}\)</span>, take <span class="arithmatex">\(x=ax^{2}\)</span> and <span class="arithmatex">\(e=ax\)</span> idempotent. Note that <span class="arithmatex">\(f=1-e\)</span> is also idempotent, and <span class="arithmatex">\(f\)</span> is a unit since <span class="arithmatex">\(x\)</span> is in the Jacobsan radical. Hence <span class="arithmatex">\(1=f^{-1}f=f^{-1}ff=f\)</span> and <span class="arithmatex">\(e=0\)</span>, <span class="arithmatex">\(x=ex=0\)</span>. Therefore <span class="arithmatex">\(\mathfrak{m}=0\)</span> and <span class="arithmatex">\(A\)</span> is a field.<br />
+(v) If <span class="arithmatex">\(x\in A\)</span> is a non-unit, then <span class="arithmatex">\((x)\)</span> is a direct summand of <span class="arithmatex">\(A\)</span>. Suppose <span class="arithmatex">\(A=(x)\oplus \mathfrak{b}\)</span>, then <span class="arithmatex">\(\mathfrak{b}x⊂ \mathfrak{b}\cap(x)=0\)</span> so <span class="arithmatex">\(x\)</span> is a zero divisor.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
