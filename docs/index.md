@@ -1,17 +1,16 @@
-# Welcome to MkDocs
+# Index
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This is a website where I post notes on courses and solutions to textbooks or homework. Most of the meterial have been checked carefully by myself and Gemini.
 
-## Commands
+## Algebra
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- [_GTM52: Algebra_ ](./GTM73/Chapter%203%20Rings/) by 
+- [_Introduction to Commutative Algebra_](./Atiyah/Chapter%201%20Rings%20and%20Ideals/) by Atiyah & McDonald
 
-## Project layout
+## Analysis
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- [_Complex Analysis_](./Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/) by Stein
+- 
+
+## Geometry
+
