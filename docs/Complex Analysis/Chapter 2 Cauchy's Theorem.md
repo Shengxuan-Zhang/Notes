@@ -5,7 +5,7 @@ $$
 \int_{0}^{\infty} \sin(x^{2}) \, \mathrm{d}x =\int_{0}^{\infty} \cos(x^{2}) \, \mathrm{d}x =\frac{\sqrt{ 2\pi }}{4}.
 $$
 Proof: 
-<center> <img src="../assets/tikz_images/c5faab4574863cddb2a0a7c9ef3bb779.svg" alt="TikZ Diagram" style="zoom:100%;" /></center> 
+![Tikz Diagram](../assets/tikz_images/c5faab4574863cddb2a0a7c9ef3bb779.svg){ align=center }
 Consider $f(z)=e^{-z^{2}}$ and the contour in the picture above, then
 $$
 0=\int_{0}^{R} e^{-x^{2}} \, \mathrm{d}x +\int_{0}^{\pi/4} e^{-R^{2}e^{2i\theta}}iRe^{i\theta} \, \mathrm{d}\theta+\int_{R}^{0} e^{-x^{2}e^{i\pi/2}}e^{i\pi/4} \, \mathrm{d}x .
@@ -34,7 +34,7 @@ $$
 \int_{0}^{\infty} \frac{\sin x}{x} \, \mathrm{d}x =\frac{\pi}{2}.
 $$
 Proof: Consider $f(z)=\frac{e^{iz}-1}{z}$ and the contour
-<center><img src="../assets/tikz_images/2d38d47ff7e8b887d9694df96aaa183c.svg" alt="TikZ Diagram" /></center>
+![Tikz Diagram](../assets/tikz_images/2d38d47ff7e8b887d9694df96aaa183c.svg)
 Then
 $$
 0=\int_{\lvert x \rvert \in[\varepsilon,R]}^{} \frac{e^{ix}-1}{x} \, \mathrm{d}x + i\int_{0}^{\pi} (e^{iRe^{i\theta}} -1)\, \mathrm{d}\theta-i\int_{0}^{\pi} (e^{i \varepsilon e^{i\theta}}-1) \, \mathrm{d}\theta.
@@ -61,7 +61,7 @@ $$
 \int_{0}^{\infty} e^{-ax}\cos bx \, \mathrm{d}x ,\int_{0}^{\infty} e^{-ax}\sin bx \, \mathrm{d}x .
 $$
 Solution: Let $a+ib=Ae^{i\omega}$, where $A>0$, and consider $f(z)=e^{-Az}$ and the contour
-<center><img src="../assets/tikz_images/a49859f87de42cc588340cf6150bfd9f.svg" alt="TikZ Diagram" style="zoom:100%;" /></center> 
+![Tikz Diagram](../assets/tikz_images/a49859f87de42cc588340cf6150bfd9f.svg)
 Then
 $$
 0=\int_{0}^{R} e^{-Ax} \, \mathrm{d}x +\int_{0}^{\omega} e^{-AR e^{i\theta}} \, iRe^{i\theta}\mathrm{d}\theta +\int_{0}^{R} e^{-Axe^{i\theta}}e^{i\theta} \, \mathrm{d}x 

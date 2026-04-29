@@ -4,13 +4,12 @@ This is a website where I post notes on courses and solutions to textbooks or ho
 
 ## Algebra
 
-- [_GTM52: Algebra_ ](./GTM73/Chapter%203%20Rings/) by 
-- [_Introduction to Commutative Algebra_](./Atiyah/Chapter%201%20Rings%20and%20Ideals/) by Atiyah & McDonald
+- [_GTM52: Algebra_ ](./GTM73/Index.md) by 
+- [_Introduction to Commutative Algebra_](./Atiyah/Index.md) by Atiyah & McDonald
 
 ## Analysis
 
-- [_Complex Analysis_](./Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/) by Stein
-- 
+- [_Complex Analysis_](./Complex Analysis/Index.md) by Stein
 
 ## Geometry
 
