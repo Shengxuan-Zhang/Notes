@@ -1,0 +1,1932 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Shengxuan-Zhang.github.io/Notes/Complex%20Analysis/Chapter%202%20Cauchy%27s%20Theorem/">
+      
+      
+        <link rel="prev" href="../../Atiyah/Index/">
+      
+      
+        <link rel="next" href="../Chapter%206%20Gamma%20and%20Zeta%20Functions/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 2 Cauchy's Theorem - Math Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercise" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math Notes" class="md-header__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 2 Cauchy's Theorem
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Atiyah/Chapter%201%20Rings%20and%20Ideals/" class="md-tabs__link">
+          
+  
+  
+  Atiyah
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Complex Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../GTM73/Chapter%203%20Rings/" class="md-tabs__link">
+          
+  
+  
+  GTM73
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math Notes" class="md-nav__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atiyah
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atiyah
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atiyah/Chapter%201%20Rings%20and%20Ideals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 Rings and Ideals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atiyah/Chapter%202%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atiyah/Chapter%203%20Rings%20and%20Modules%20of%20Fractions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings and Modules of Fractions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atiyah/Chapter%204%20Primary%20Decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Primary Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atiyah/Chapter%206%20Chain%20Conditions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Chain Conditions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Atiyah/Index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complex Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Complex Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Cauchy's Theorem
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Cauchy's Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-213" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-214" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-215" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.15
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.5\(^{*}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%206%20Gamma%20and%20Zeta%20Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Gamma and Zeta Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GTM73
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GTM73
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%203%20Rings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%204%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.7
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.9
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-210" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.10
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.11
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-213" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.13
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-214" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.14
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-215" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise 2.15
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problem-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem 2.5\(^{*}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Chapter 2 Cauchy's Theorem</h1>
+
+<h2 id="exercise">Exercise</h2>
+<h3 id="exercise-21">Exercise 2.1</h3>
+<p>Prove that <br />
+$$<br />
+\int_{0}^{\infty} \sin(x^{2}) \, \mathrm{d}x =\int_{0}^{\infty} \cos(x^{2}) \, \mathrm{d}x =\frac{\sqrt{ 2\pi }}{4}.<br />
+$$<br />
+Proof: <br />
+<img alt="Tikz Diagram" src="../../assets/tikz_images/c5faab4574863cddb2a0a7c9ef3bb779.svg" />{ align=center }<br />
+Consider <span class="arithmatex">\(f(z)=e^{-z^{2}}\)</span> and the contour in the picture above, then<br />
+$$<br />
+0=\int_{0}^{R} e^{-x^{2}} \, \mathrm{d}x +\int_{0}^{\pi/4} e^{-R^{2}e^{2i\theta}}iRe^{i\theta} \, \mathrm{d}\theta+\int_{R}^{0} e^{-x^{2}e^{i\pi/2}}e^{i\pi/4} \, \mathrm{d}x .<br />
+$$<br />
+Note that<br />
+$$<br />
+\begin{align}<br />
+\lim_{ R \to \infty } \int_{0}^{R} e^{-x^{2}} \, \mathrm{d}x  &amp; =\int_{0}^{\infty} e^{-x^{2}} \, \mathrm{d}x =\frac{\sqrt{ \pi }}{2},  \<br />
+\lim_{ R \to \infty } \int_{0}^{R} e^{-x^{2}i} \, \mathrm{d}x  &amp; =\int_{0}^{\infty} \cos(x^{2})-i\sin(x^{2}) \, \mathrm{d}x .<br />
+\end{align}<br />
+$$<br />
+Also<br />
+$$<br />
+\begin{align}<br />
+\left\lvert  \int_{0}^{\pi/4} e^{-R^{2}e^{2i\theta}}iR e^{i\theta} \, \mathrm{d}\theta   \right\rvert  &amp; \leqslant \int_{0}^{\pi/4} e^{-R^{2}\cos 2\theta} \, \mathrm{d}\theta=\frac{1}{2}\int_{0}^{\pi/2} e^{-R^{2}\sin\theta} \, \mathrm{d}\theta\<br />
+ &amp; \leqslant \frac{1}{2}\int_{0}^{\pi/2}e^{-R^{2}2\theta/\pi}  \, \mathrm{d}\theta\leqslant \frac{\pi}{2R^{2}}\to 0.<br />
+\end{align}<br />
+$$<br />
+Hence<br />
+$$<br />
+\int_{0}^{\infty} \cos(x^{2})-i\sin (x^{2}) \, \mathrm{d}x =e^{-i\pi/4} \frac{\sqrt{ \pi }}{2}.<br />
+$$</p>
+<h3 id="exercise-22">Exercise 2.2</h3>
+<p>Show that<br />
+$$<br />
+\int_{0}^{\infty} \frac{\sin x}{x} \, \mathrm{d}x =\frac{\pi}{2}.<br />
+$$<br />
+Proof: Consider <span class="arithmatex">\(f(z)=\frac{e^{iz}-1}{z}\)</span> and the contour<br />
+<img alt="Tikz Diagram" src="../../assets/tikz_images/2d38d47ff7e8b887d9694df96aaa183c.svg" /><br />
+Then<br />
+$$<br />
+0=\int_{\lvert x \rvert \in[\varepsilon,R]}^{} \frac{e^{ix}-1}{x} \, \mathrm{d}x + i\int_{0}^{\pi} (e^{iRe^{i\theta}} -1)\, \mathrm{d}\theta-i\int_{0}^{\pi} (e^{i \varepsilon e^{i\theta}}-1) \, \mathrm{d}\theta.<br />
+$$<br />
+Note that<br />
+$$<br />
+\int_{\lvert x \rvert \in[\varepsilon,R]}^{} \frac{e^{ix}-1}{x} \, \mathrm{d}x =\int_{\varepsilon}^{R} \frac{\sin x}{x} \, \mathrm{d}x \to \int_{0}^{\infty} \frac{\sin x}{x} \, \mathrm{d}x .<br />
+$$<br />
+Similar to Exercise 2.1,<br />
+$$<br />
+\left\lvert  \int_{0}^{\pi} e^{i R e^{i\theta}} \, \mathrm{d}\theta   \right\rvert \leqslant O\left( \frac{1}{R} \right)\to 0.<br />
+$$<br />
+Also, by Lebesgue controlled convergence,<br />
+$$<br />
+\lim_{ \varepsilon \to 0 } \int_{0}^{\pi} (e^{i\varepsilon e^{i\theta}}-1) \, \mathrm{d}\theta=0. <br />
+$$<br />
+Hence<br />
+$$<br />
+\int_{0}^{\infty} \frac{\sin x}{x} \, \mathrm{d}x =\frac{\pi}{2}.<br />
+$$</p>
+<h3 id="exercise-23">Exercise 2.3</h3>
+<p>For <span class="arithmatex">\(a,b&gt;0\)</span>, calculate<br />
+$$<br />
+\int_{0}^{\infty} e^{-ax}\cos bx \, \mathrm{d}x ,\int_{0}^{\infty} e^{-ax}\sin bx \, \mathrm{d}x .<br />
+$$<br />
+Solution: Let <span class="arithmatex">\(a+ib=Ae^{i\omega}\)</span>, where <span class="arithmatex">\(A&gt;0\)</span>, and consider <span class="arithmatex">\(f(z)=e^{-Az}\)</span> and the contour<br />
+<img alt="Tikz Diagram" src="../../assets/tikz_images/a49859f87de42cc588340cf6150bfd9f.svg" /><br />
+Then<br />
+$$<br />
+0=\int_{0}^{R} e^{-Ax} \, \mathrm{d}x +\int_{0}^{\omega} e^{-AR e^{i\theta}} \, iRe^{i\theta}\mathrm{d}\theta +\int_{0}^{R} e^{-Axe^{i\theta}}e^{i\theta} \, \mathrm{d}x <br />
+$$<br />
+Note that<br />
+$$<br />
+\begin{align}<br />
+\lim_{ R \to \infty } \int_{0}^{R} e^{-Ax} \, \mathrm{d}x  &amp; = -\frac{1}{A}e^{-Ax}\Big\vert_{0}^{\infty}=\frac{1}{A}. \<br />
+\lim_{ R \to \infty } \int_{0}^{R} e^{-Axe^{i\theta}}e^{i\theta} \, \mathrm{d}x  &amp; =e^{i\theta}\int_{0}^{\infty} e^{-(a+ib)x} \, \mathrm{d}x .<br />
+\end{align}<br />
+$$<br />
+Also<br />
+$$<br />
+\left\lvert  \int_{0}^{\omega} e^{-AR e^{i\theta}}iR e^{i\theta} \, \mathrm{d}\theta  \right\rvert \leqslant R \int_{0}^{\omega} e^{-AR\cos\theta} \, \mathrm{d}\theta\leqslant R\omega e^{-AR\cos\omega} \to 0.<br />
+$$<br />
+Hence<br />
+$$<br />
+\int_{0}^{\infty} e^{-(a+ib)x} \, \mathrm{d}x =\frac{1}{a+ib},<br />
+$$<br />
+so<br />
+$$<br />
+\int_{0}^{\infty} e^{-ax}\cos bx \, \mathrm{d}x =\frac{a}{a^{2}+b^{2}},\int_{0}^{\infty} e^{-ax}\sin bx \, \mathrm{d}x =\frac{b}{a^{2}+b^{2}}.<br />
+$$</p>
+<h3 id="exercise-24">Exercise 2.4</h3>
+<p>Prove that for any <span class="arithmatex">\(\xi \in \mathbb{C}\)</span>,<br />
+$$<br />
+e^{-\pi\xi^{2}}=\int_{-\infty}^{\infty} e^{-\pi x^{2}}e^{2\pi i x \xi} \, \mathrm{d}x.<br />
+$$<br />
+Proof: Let <span class="arithmatex">\(\xi=u+iv\)</span>, then<br />
+$$<br />
+\int_{\mathbb{R}}^{} e^{-\pi(x+i\xi)^{2}} \, \mathrm{d}x =0\iff \int_{\mathbb{R}}^{} e^{-\pi(x+iu)^{2}} \, \mathrm{d}x =0,<br />
+$$<br />
+which is already proved in Example 2.3.1.</p>
+<h3 id="exercise-25">Exercise 2.5</h3>
+<p>If <span class="arithmatex">\(f\)</span> is continuously complex differentiable in an open set <span class="arithmatex">\(U\)</span> containing the triangle <span class="arithmatex">\(T\)</span>, prove<br />
+$$<br />
+\int_{\partial T}^{} f(z) \, \mathrm{d}z=0 <br />
+$$<br />
+using Green theorem<br />
+$$<br />
+\int_{\partial T} Fdx+Gdy =\int_{T}^{} \left( \frac{\partial G}{\partial x}-\frac{\partial F}{\partial y} \right) \, \mathrm{d}x\mathrm{d}y .<br />
+$$<br />
+Proof: Let <span class="arithmatex">\(f=u+iv\)</span>, then<br />
+$$<br />
+\begin{align}<br />
+\int_{\partial F}^{} f(z) \, \mathrm{d}z &amp; =\int_{\partial T}^{} (u+iv) \, (\mathrm{d}x+i\mathrm{d}y)  \<br />
+ &amp; =\int_{\partial T}^{} u \, \mathrm{d}x -v\,\mathrm{d}y+i\int_{\partial T}^{} u \, \mathrm{d}y+v\,\mathrm{d}x  \<br />
+ &amp; =\int_{T}^{} \left( \frac{\partial u}{\partial y}+\frac{\partial v}{\partial x} \right) \, \mathrm{d}x \mathrm{d}y+i\int_{T}^{} \left( \frac{\partial v}{\partial y}-\frac{\partial u}{\partial x} \right) \, \mathrm{d}x \mathrm{d}y=0.<br />
+\end{align}<br />
+$$</p>
+<h3 id="exercise-26">Exercise 2.6</h3>
+<p>Let <span class="arithmatex">\(\Omega\)</span> be an open subset of <span class="arithmatex">\(\mathbb{C}\)</span> and <span class="arithmatex">\(T\subset\Omega\)</span> be a triangle whose interior is also contained in <span class="arithmatex">\(\Omega\)</span>. Suppose that <span class="arithmatex">\(f\)</span> is a function holomorphic in <span class="arithmatex">\(\Omega\)</span> except possibly at a point <span class="arithmatex">\(\omega\)</span> inside <span class="arithmatex">\(T\)</span>. Prove that if <span class="arithmatex">\(f\)</span> is bounded near <span class="arithmatex">\(\omega\)</span>, then<br />
+$$<br />
+\int_{T}f(z)\,\mathrm{d}z=0.<br />
+$$<br />
+Proof: Let <span class="arithmatex">\(T_{0}=T\)</span>, and define <span class="arithmatex">\(T_{n}\)</span> as follows: divide <span class="arithmatex">\(T_{n-1}\)</span> into four triangles, and denote the one containing <span class="arithmatex">\(w\)</span> as <span class="arithmatex">\(T_{n}\)</span>. Then <span class="arithmatex">\(\mathrm{diam}T_{n}\to 0\)</span> so for <span class="arithmatex">\(n\)</span> large enough, <span class="arithmatex">\(T_{n}\subset O_{w}\)</span> where <span class="arithmatex">\(O_{w}\)</span> is the neighborhood of <span class="arithmatex">\(w\)</span> where <span class="arithmatex">\(f\)</span> is bounded by <span class="arithmatex">\(M\)</span>. By Goursat’s theorem,<br />
+$$<br />
+\left\lvert  \int_{T}f(z)\,\mathrm{d}z  \right\rvert = \left\lvert  \int_{T_{n}}^{} f(z) \, \mathrm{d}z  \right\rvert \leqslant M\mathrm{length}(T_{n})\to 0.<br />
+$$<br />
+Hence<br />
+$$<br />
+\int_{T}^{} f(z) \, \mathrm{d}z=0. <br />
+$$</p>
+<h3 id="exercise-27">Exercise 2.7</h3>
+<p>Suppose <span class="arithmatex">\(f:\mathbb{D}\to \mathbb{C}\)</span> is holomorphic. Show that the diameter <span class="arithmatex">\(d=\sup_{z,w\in \mathbb{D}}{\lvert f(z)-f(w) \rvert}\)</span> of <span class="arithmatex">\(f(\mathbb{D})\)</span> satisfies<br />
+$$<br />
+2\lvert f^{\prime}(0) \rvert \leqslant d.<br />
+$$<br />
+Moreover, it can be shown that equality holds precisely when <span class="arithmatex">\(f(z)=a_{0}+a_{1}z\)</span>.<br />
+Proof: By the Cauchy integral formula, for any <span class="arithmatex">\(r\in(0,1)\)</span>,<br />
+$$<br />
+2f^{\prime}(0)=\frac{1}{\pi i}\int_{\lvert \zeta \rvert =r}^{} \frac{f(\zeta)}{\zeta^{2}} \, \mathrm{d}\zeta =\frac{1}{2\pi i}\int_{\lvert \zeta \rvert =r}^{} \frac{f(\zeta)-f(-\zeta)}{\zeta^{2}} \, \mathrm{d}\zeta. <br />
+$$<br />
+Hence<br />
+$$<br />
+2\lvert f^{\prime}(0) \rvert \leqslant \frac{1}{2\pi} \int_{0}^{2\pi} \frac{d}{r} \, \mathrm{d}x =\frac{d}{r}.<br />
+$$<br />
+Let <span class="arithmatex">\(r\to 1\)</span> then <span class="arithmatex">\(2\lvert f^{\prime}(0) \rvert\leqslant d\)</span>.<br />
+The equality condition can be proved by the Schwarz lemma.</p>
+<h3 id="exercise-28">Exercise 2.8</h3>
+<p>If <span class="arithmatex">\(f\)</span> is a holomorphic function on the strip <span class="arithmatex">\(-1&lt;y&lt;1,x\in \mathbb{R}\)</span> with<br />
+$$<br />
+\lvert f(z) \rvert \leqslant A(1+\lvert z \rvert )^{\eta},\,\eta\text{ a fixed real number}<br />
+$$<br />
+for all <span class="arithmatex">\(z\)</span>. Show that for each integer <span class="arithmatex">\(n\geqslant 0\)</span>, there exists <span class="arithmatex">\(A_{n}\geqslant 0\)</span> so that<br />
+$$<br />
+\lvert f^{(n)}(x) \rvert \leqslant A_{n}(1+\lvert x \rvert )^{\eta},\,\forall x\in \mathbb{R}.<br />
+$$<br />
+Proof: By Cauchy’s inequality:<br />
+$$<br />
+\lvert f^{(n)}(x) \rvert \leqslant 2^{n}n!\sup_{\lvert \zeta-x \rvert =1 /2}{\lvert f(\zeta) \rvert }\leqslant 2^{n}n!A\sup_{\lvert \zeta-x \rvert =1 /2}{(1+\lvert \zeta \rvert )^{\eta}}\leqslant 2^{n}n! \left( \frac{3}{2} \right)^{\eta}A(1+\lvert x \rvert )^{\eta}.<br />
+$$<br />
+(Since <span class="arithmatex">\(1+\lvert \zeta \rvert\leqslant \lvert x \rvert+3 /2\leqslant \frac{3}{2}(1+\lvert x \rvert)\)</span>.)</p>
+<h3 id="exercise-29">Exercise 2.9</h3>
+<p>Let <span class="arithmatex">\(\Omega\)</span> be a bounded open subset of <span class="arithmatex">\(\mathbb{C}\)</span>, and <span class="arithmatex">\(\varphi:\Omega\to \Omega\)</span> a holomorphic function. Prove that if there exists a point <span class="arithmatex">\(z_{0}\in\Omega\)</span> such that<br />
+$$<br />
+\varphi(z_{0})=z_{0},\,\text{and } \varphi^{\prime}(z_{0})=1<br />
+$$<br />
+then <span class="arithmatex">\(\varphi\)</span> is linear.<br />
+Proof: We can assume <span class="arithmatex">\(z_{0}=0\)</span>, otherwise consider <span class="arithmatex">\(\psi(z)=\varphi(z+z_{0})-z_{0}\)</span> and <span class="arithmatex">\(\Omega^{\prime}=\Omega-z_{0}\)</span>. Let <span class="arithmatex">\(\varphi(z)=z+a_{n}z^{n}+O(z^{n+1})\)</span>, and <span class="arithmatex">\(\varphi_{k}=\varphi \circ\cdots\circ\varphi\)</span>, then by Cauchy’s inequality,<br />
+$$<br />
+k\lvert a_{n} \rvert =\lvert \varphi_{k}^{(n)}(0) \rvert \leqslant \frac{n!M}{r^{n}}.<br />
+$$<br />
+where <span class="arithmatex">\(M=\sup_{z\in\Omega}{\lvert z \rvert}\)</span>. Hence <span class="arithmatex">\(\lvert a_{n} \rvert \leqslant n!M /r^{n}k\)</span>, and let <span class="arithmatex">\(k\to \infty\)</span> we obtain <span class="arithmatex">\(a_{n}=0\)</span>. Hence <span class="arithmatex">\(\varphi\)</span> is linear.</p>
+<h3 id="exercise-210">Exercise 2.10</h3>
+<p>Weierstrass’s theorem states that a continuous function on <span class="arithmatex">\([0,1]\)</span> can be uniformly approximated by polynomials. Can every continuous function on the closed unit disc be approximated uniformly by polynomials in the variable <span class="arithmatex">\(z\)</span>?<br />
+Solution: No. The uniform limit of polynomials is holomorphic, but some continuous functions are not holomorphic (like <span class="arithmatex">\(\mathrm{Re}(z)\)</span>).</p>
+<h3 id="exercise-211">Exercise 2.11</h3>
+<p>Let <span class="arithmatex">\(f\)</span> be a holomorphic function on the disc <span class="arithmatex">\(D_{R_{0}}\)</span> centered at the origin and of radius <span class="arithmatex">\(R_{0}\)</span>.<br />
+(a) Prove that whenever <span class="arithmatex">\(0&lt;R&lt;R_{0}\)</span> and <span class="arithmatex">\(\lvert z \rvert&lt;R\)</span>, then<br />
+$$<br />
+f(z)=\frac{1}{2\pi}\int_{0}^{2\pi} f(Re^{i\varphi})\mathrm{Re}\left( \frac{R e^{i\varphi}+z}{R e^{i\varphi}-z} \right) \, \mathrm{d}\varphi.<br />
+$$<br />
+Proof: Let <span class="arithmatex">\(\zeta=R e^{i\varphi}\)</span>, then<br />
+$$<br />
+\mathrm{Re}\left( \frac{\zeta-z}{\zeta-z} \right)=\frac{\lvert \zeta \rvert ^{2}-\lvert z \rvert^{2} }{\lvert \zeta-z \rvert ^{2}}= \frac{\zeta}{\zeta-z}+\frac{\bar{z}}{\bar{\zeta}-\bar{z}}.<br />
+$$<br />
+Note that <br />
+$$<br />
+f(z)=\frac{1}{2\pi} \int_{0}^{2\pi} f(\zeta) \frac{\zeta}{\zeta-z} \, \mathrm{d}\varphi <br />
+$$<br />
+and since <span class="arithmatex">\(R^{2} /\bar{z}\)</span> is outside <span class="arithmatex">\(D_{R_{0}}\)</span>, <br />
+$$<br />
+0=\frac{1}{2\pi}\int_{0}^{2\pi} f(\zeta) \frac{\zeta}{\zeta-R^{2} /\bar{z}} \, \mathrm{d}\varphi=\frac{1}{2\pi} \int_{0}^{2\pi} f(\zeta) \frac{\bar{z}}{\bar{\zeta}-\bar{z}} \, \mathrm{d}\varphi <br />
+$$<br />
+Hence<br />
+$$<br />
+f(z)=\frac{1}{2\pi}\int_{0}^{2\pi} f(\zeta) \mathrm{Re}\left( \frac{\zeta+z}{\zeta-z} \right) \, \mathrm{d}\varphi .<br />
+$$<br />
+(b) Show that<br />
+$$<br />
+\mathrm{Re}\left( \frac{R e^{i\gamma}+r}{R e^{i \gamma}-r} \right)=\frac{R^{2}-r^{2}}{R^{2}-2Rr\cos\gamma+r^{2}}.<br />
+$$<br />
+Proof: <br />
+$$<br />
+\mathrm{Re}\left( \frac{Re^{i\gamma}+r}{R e^{i\gamma}-r} \right)=\frac{R^{2}-r^{2}}{\lvert Re^{i\gamma}-r \rvert ^{2}}= \frac{R^{2}-r^{2}}{R^{2}-2Rr\cos\gamma+r^{2}}.<br />
+$$</p>
+<h3 id="exercise-212">Exercise 2.12</h3>
+<p>Let <span class="arithmatex">\(u\)</span> be a real-valued function defined on the unit disc <span class="arithmatex">\(\mathbb{D}\)</span>. Suppose that <span class="arithmatex">\(u\)</span> is twice continuously differentiable and harmonic, i.e. <span class="arithmatex">\(\triangle u(x,y)=0\)</span> for all <span class="arithmatex">\((x,y)\in \mathbb{D}\)</span>.<br />
+(a) Prove that there exists a holomorphic function <span class="arithmatex">\(f\)</span> on the unit disc such that <span class="arithmatex">\(\mathrm{Re}(f)=u\)</span>. Also show that the imaginary part of <span class="arithmatex">\(f\)</span> is uniquely defined up to an additive (real) constant.<br />
+Proof: Let <span class="arithmatex">\(g=2\frac{\partial u}{\partial z}\)</span>, then <span class="arithmatex">\(\frac{\partial g}{\partial \bar{z}}=2 \frac{\partial}{\partial \bar{z}}\frac{\partial}{\partial z}u=0\)</span> so <span class="arithmatex">\(g\)</span> is holomorphic. By Theorem2.1 <span class="arithmatex">\(g\)</span> has a primitive <span class="arithmatex">\(F\)</span> on <span class="arithmatex">\(\mathbb{D}\)</span>. Note that<br />
+$$<br />
+F(z)=\int_{0}^{z} \frac{\partial u}{\partial x}-i \frac{\partial u}{\partial y} \, \mathrm{d}z =u(z)+iv(z)+C,<br />
+$$<br />
+so <span class="arithmatex">\(\mathrm{Re}(F)-u\)</span> is a (real) constant, and <span class="arithmatex">\(\mathrm{Im}(F)-v\)</span> is also a real constant.<br />
+(b) Deduce from this result, and from Exercise 2.11, the Poisson integral representation formula from the Cauchy integral formula: If <span class="arithmatex">\(u\)</span> is harmonic in <span class="arithmatex">\(\mathbb{D}\)</span> and continuous on its closure, then if <span class="arithmatex">\(z=r e^{i\theta}\)</span> one has<br />
+$$<br />
+u(z)=\frac{1}{2\pi}\int_{0}^{2\pi} P_{r}(\theta-\varphi)u(e^{i\varphi}) \, \mathrm{d}\varphi<br />
+$$<br />
+where <span class="arithmatex">\(P_{r}(\gamma)\)</span> is the Poisson kernel for the unit disc given by<br />
+$$<br />
+P_{r}(\gamma)=\frac{1-r^{2}}{1-2r\cos\gamma+r^{2}}.<br />
+$$<br />
+Proof: Let <span class="arithmatex">\(f\)</span> be the holomorphic function such that <span class="arithmatex">\(\mathrm{Re}(f)=u\)</span>, then by Exercise2.11, for <span class="arithmatex">\(z=r e^{i\theta}\)</span>,<br />
+$$<br />
+f(z)=\frac{1}{2\pi}\int_{0}^{2\pi} f(Re^{i\varphi}) \mathrm{Re}\left( \frac{Re^{i\varphi}+z}{Re^{i\varphi}-z} \right) \, \mathrm{d}\varphi=\frac{1}{2\pi} \int_{0}^{2\pi} f(Re^{i\varphi})P_{r /R}(\theta-\varphi) \, \mathrm{d}\varphi.<br />
+$$<br />
+Take the real part of both sides and let <span class="arithmatex">\(R\to 1\)</span> (since <span class="arithmatex">\(P_{r}\)</span> and <span class="arithmatex">\(u\)</span> are both uniformly continuous on <span class="arithmatex">\(\overline{\mathbb{D}}\)</span>), we obtain<br />
+$$<br />
+u(z)=\frac{1}{2\pi}\int_{0}^{2\pi} P_{r}(\theta-\varphi)u(e ^{i\varphi}) \, \mathrm{d}\varphi. <br />
+$$</p>
+<h3 id="exercise-213">Exercise 2.13</h3>
+<p>Suppose <span class="arithmatex">\(f\)</span> is an analytic function defined everywhere in <span class="arithmatex">\(\mathbb{C}\)</span> and such that for each <span class="arithmatex">\(z_{0}\in \mathbb{C}\)</span> at least one coefficient in the expansion<br />
+$$<br />
+f(z)=\sum_{n=0}^{\infty}{c_{n}(z-z_{0})^{n}}<br />
+$$<br />
+is equal to <span class="arithmatex">\(0\)</span>. Prove that <span class="arithmatex">\(f\)</span> is a polynomial.<br />
+Proof: Let <span class="arithmatex">\(A_{n}=\{ z\in \mathbb{C}: f^{(n)}(z)=0 \}\)</span>, then <span class="arithmatex">\(\mathbb{C}=\bigcup_{n\geqslant 0}A_{n}\)</span> so there exists <span class="arithmatex">\(n\)</span> such that <span class="arithmatex">\(A_{n}\)</span> is uncountable. Hence <span class="arithmatex">\(A_{n}\)</span> has a limit point so <span class="arithmatex">\(f^{(n)}\equiv 0\)</span> i.e. <span class="arithmatex">\(f\)</span> is a polynomial.</p>
+<h3 id="exercise-214">Exercise 2.14</h3>
+<p>Suppose <span class="arithmatex">\(f\)</span> is holomorphic in an open set containing the closed unit disc, except for a pole at <span class="arithmatex">\(z_{0}\)</span> on the unit circle. Show that if <span class="arithmatex">\(\sum_{n=0}^{\infty}{a_{n}z^{n}}\)</span> denotes the power series expansion of <span class="arithmatex">\(f\)</span> in the open unit disc, then<br />
+$$<br />
+\lim_{ n \to \infty } \frac{a_{n}}{a_{n+1}}=z_{0}.<br />
+$$<br />
+Proof: Consider the Laurent series of <span class="arithmatex">\(f\)</span> at <span class="arithmatex">\(z_{0}\)</span>:<br />
+$$<br />
+f(z)=\sum_{k=1}^{N}{\frac{d_{-k}}{(z-z_{0})^{k}}}+\sum_{k=0}^{\infty}{d_{k}(z-z_{0})^{k}}.<br />
+$$<br />
+Let <span class="arithmatex">\(g(z)=\sum_{k=1}^{N}{\frac{d_{-k}}{(z-z_{0})^{k}}}\)</span> and <span class="arithmatex">\(h(z)=f(z)-g(z)\)</span>, then <span class="arithmatex">\(h\)</span> is holomorphic in a disc <span class="arithmatex">\(B(0,R)\)</span> where <span class="arithmatex">\(R&gt;1\)</span>. Write <span class="arithmatex">\(g(z)=\sum_{k=0}^{\infty}{b_{k}z^{k}}\)</span> and <span class="arithmatex">\(h(z)=\sum_{k=0}^{\infty}{c_{k}z^{k}}\)</span>, then by Cauchy’s inequality, <span class="arithmatex">\(\lvert c_{k} \rvert\leqslant M /r^{k}\)</span> where <span class="arithmatex">\(r\in(1,R)\)</span> and <span class="arithmatex">\(M=\sup_{\lvert z \rvert\leqslant r}{\lvert h(z) \rvert}\)</span>. Note that <span class="arithmatex">\(a_{n}=b_{n}+c_{n}\)</span>, and<br />
+$$<br />
+\begin{align}<br />
+g(z) &amp; =\sum_{k=1}^{N}{\frac{d_{-k}(-1)^{k}}{z_{0}^{k} (1-z /z_{0})^{k}}}=\sum_{k=1}^{N}{\frac{d_{-k}(-1)^{k}}{z_{0}^{k}}\sum_{j=0}^{\infty}{\binom{k+j-1}{j}\left( \frac{z}{z_{0}} \right)^{j}}}\<br />
+  &amp; =\sum_{j=0}^{\infty}{z^{j} \sum_{k=1}^{N}{\frac{d_{-k}(-1)^{k}}{z_{0}^{k+j}}\cdot \binom{k+j-1}{k-1}}}.<br />
+\end{align}<br />
+$$<br />
+Hence <span class="arithmatex">\(b_{n}=P(n) z_{0}^{-n}\)</span> where <span class="arithmatex">\(P\)</span> is a polynomial.<br />
+$$<br />
+\lim_{ n \to \infty } \frac{a_{n}}{a_{n+1}}=\lim_{ n \to \infty } \frac{b_{n}+c_{n}}{b_{n+1}+c_{n+1}}=\lim_{ n \to \infty } \frac{1+c_{n} /b_{n}}{b_{n+1} /b_{n}+c_{n+1} /b_{n}}.<br />
+$$<br />
+Clearly <span class="arithmatex">\(\lim_{ n \to \infty }c_{n} /b_{n}=\lim_{ n \to \infty }c_{n+1} /b_{n}=0\)</span> (since <span class="arithmatex">\(\lvert b_{n} \rvert=\lvert P(n) \rvert\to \infty\)</span>) and <span class="arithmatex">\(\lim_{ n \to \infty }b_{n} /b_{n+1}=z_{0}\)</span>, therefore <span class="arithmatex">\(\lim_{ n \to \infty }a_{n} /a_{n+1}=z_{0}\)</span>.</p>
+<h3 id="exercise-215">Exercise 2.15</h3>
+<p>Suppose <span class="arithmatex">\(f\)</span> is a non-vanishing continuous function on <span class="arithmatex">\(\overline{\mathbb{D}}\)</span> that is holomorphic in <span class="arithmatex">\(\mathbb{D}\)</span>. Prove that if <br />
+$$<br />
+\lvert f(z) \rvert =1\text{ whenever } \lvert z \rvert =1,<br />
+$$<br />
+then <span class="arithmatex">\(f\)</span> is constant.<br />
+Proof: Extend <span class="arithmatex">\(f\)</span> to <span class="arithmatex">\(\mathbb{C}\)</span> by defining <span class="arithmatex">\(f(z)=\overline{f(1 /\bar{z})}\)</span> as in Schwarz reflection principle, then <span class="arithmatex">\(f\)</span> is holomorphic and entire, hence constant. </p>
+<h2 id="problems">Problems</h2>
+<h3 id="problem-21">Problem 2.1</h3>
+<p>Here are some examples of analytic functions on the unit disc that cannot be extended analytically past the unit circle. The following definition is needed. Let <span class="arithmatex">\(f\)</span> be a function defined in the unit disc <span class="arithmatex">\(\mathbb{D}\)</span>, with boundary circle <span class="arithmatex">\(C\)</span>. A point <span class="arithmatex">\(w\)</span> on <span class="arithmatex">\(C\)</span> is said to be regular for <span class="arithmatex">\(f\)</span> if there is an open neighborhood <span class="arithmatex">\(U\)</span> of <span class="arithmatex">\(w\)</span> and an analytic function <span class="arithmatex">\(g\)</span> on <span class="arithmatex">\(U\)</span>, so that <span class="arithmatex">\(f=g\)</span> on <span class="arithmatex">\(\mathbb{D}\cap U\)</span>. A function <span class="arithmatex">\(f\)</span> defined on <span class="arithmatex">\(\mathbb{D}\)</span> cannot be continued analytically past the unit circle if no point of <span class="arithmatex">\(C\)</span> is regular for <span class="arithmatex">\(f\)</span>.<br />
+(a) Let <br />
+$$<br />
+f(z)=\sum_{n=0}^{\infty}{z^{2^{n}}}\,\text{ for } \lvert z \rvert &lt;1.<br />
+$$<br />
+Notice that the radius of convergence of the above series is <span class="arithmatex">\(1\)</span>. Show that <span class="arithmatex">\(f\)</span> cannot be continued analytically past the unit disc.<br />
+Proof: For <span class="arithmatex">\(\theta=2\pi p 2^{-k}\)</span> where <span class="arithmatex">\(p,k\in \mathbb{N}\)</span>, <br />
+$$<br />
+\lim_{ r \to 1 } f(r e^{i\theta})=\sum_{n=0}^{k}{(re^{i\theta})^{2^{n}}}+\sum_{n=k+1}^{\infty}{r^{2^{n}}}\to \infty.<br />
+$$<br />
+Since <span class="arithmatex">\(2\pi p 2^{-k}\)</span> is dense on <span class="arithmatex">\(\mathbb{S}^{1}\)</span>, <span class="arithmatex">\(f\)</span> can’t be continuously continued past the unit circle.<br />
+(b)<span class="arithmatex">\(^{*}\)</span> Fix <span class="arithmatex">\(0&lt;\alpha&lt;\infty\)</span>. Show that the analytic function <span class="arithmatex">\(f\)</span> defined by<br />
+$$<br />
+f(z)=\sum_{n=0}^{\infty}{2^{-n\alpha}z^{2^{n}}}\,\text{ for }\lvert z \rvert &lt;1<br />
+$$<br />
+extends continuously to the unit circle, but cannot be analytically continued past the unit circle.<br />
+Proof: Likewise, if <span class="arithmatex">\(f\)</span> can be analytically continued past the unit circle, let <span class="arithmatex">\(m=\lfloor \alpha \rfloor+1\)</span> and <span class="arithmatex">\(g_{0}=f,g_{n}=(zg_{n-1})^{\prime}\)</span>, then <span class="arithmatex">\(g_{m}\)</span> is continuous on <span class="arithmatex">\(\overline{\mathbb{D}}\)</span>. However, any <span class="arithmatex">\(\theta=2\pi p 2^{-k}\)</span>, <br />
+$$<br />
+\lim_{ r \to 1 } g_{m}(r e^{i\theta})=\lim_{ r \to 1 } 2^{-m\alpha}\sum_{n=0}^{\infty}{2^{n(m-\alpha)}z^{2^{n}}}\to \infty,<br />
+$$<br />
+Therefore <span class="arithmatex">\(f\)</span> can’t be analytically continued past the unit circle.</p>
+<h3 id="problem-22">Problem 2.2</h3>
+<p>Let<br />
+$$<br />
+F(z)=\sum_{n=1}^{\infty}{d(n)z^{n}}\,\text{ for }\lvert z \rvert &lt;1<br />
+$$<br />
+where <span class="arithmatex">\(d(n)\)</span> denotes the number of divisors of <span class="arithmatex">\(n\)</span>. Observe that the radius of convergence of this series is <span class="arithmatex">\(1\)</span>. Verify the identity<br />
+$$<br />
+\sum_{n=1}^{\infty}{d(n)z^{n}}=\sum_{n=1}^{\infty}{\frac{z^{n}}{1-z^{n}}}.<br />
+$$<br />
+Using this identity, show that if <span class="arithmatex">\(z=r\)</span> with <span class="arithmatex">\(0&lt;r&lt;1\)</span>, then<br />
+$$<br />
+\lvert F(r) \rvert \geqslant c \frac{1}{1-r} \log(1 /(1-r))<br />
+$$<br />
+as <span class="arithmatex">\(r\to 1\)</span>. Similarly, if <span class="arithmatex">\(\theta=2\pi p /q\)</span> where <span class="arithmatex">\(p,q\in \mathbb{Z}_{+}\)</span> and <span class="arithmatex">\(z=re^{i\theta}\)</span> then<br />
+$$<br />
+\lvert F(r e^{i\theta}) \rvert \geqslant c_{p /q} \frac{1}{1-r} \log(1 /(1-r))<br />
+$$<br />
+as <span class="arithmatex">\(r\to 1\)</span>. Conclude that <span class="arithmatex">\(F\)</span> cannot be continued analytically past the unit disc.<br />
+Proof: Note that <span class="arithmatex">\(d(n)\in[0,n]\)</span>, so <span class="arithmatex">\(\limsup_{ n \to \infty }(d(n))^{1/n}=1\)</span> and the radius of convergence is <span class="arithmatex">\(1\)</span>. <br />
+$$<br />
+\sum_{n=1}^{\infty}{d(n)z^{n}}=\sum_{n=1}^{\infty}{\sum_{m\mid n}^{}{z^{n}}}=\sum_{m=1}^{\infty}{\sum_{k=1}^{\infty}{z^{km}}}=\sum_{m=1}^{\infty}{\frac{z^{m}}{1-z^{m}}}.<br />
+$$<br />
+For <span class="arithmatex">\(z=r\in(0,1)\)</span>, <br />
+$$<br />
+\lvert F(r) \rvert =\left\lvert  \sum_{m=1}^{\infty}{\frac{r^{m}}{1-r^{m}}}  \right\rvert \geqslant \frac{1}{1-r}\sum_{m=1}^{\infty}{\frac{r^{m}}{m}}=\frac{1}{1-r}\log\left( \frac{1}{1-r} \right).<br />
+$$<br />
+For <span class="arithmatex">\(z=re^{i\theta}\)</span> where <span class="arithmatex">\(\theta=2\pi p /q\)</span> and <span class="arithmatex">\(p,q\in \mathbb{Z}_{+}\)</span>,<br />
+$$<br />
+\lvert F(re^{i\theta}) \rvert = \left\lvert  \sum_{t=1}^{q}{\sum_{m=0}^{\infty}{r^{mq+t} \frac{e^{it\theta}}{1-r^{mq+t}e^{it\theta}}}}  \right\rvert .<br />
+$$<br />
+Note that when <span class="arithmatex">\(t=q\)</span>,<br />
+$$<br />
+\sum_{m=0}^{\infty}{\frac{r^{mq+t}e^{it\theta}}{1-r^{mq+t}e^{it\theta}}}=\sum_{m=1}^{\infty}{\frac{r^{mq}}{1-r^{mq}}}\geqslant\frac{1}{1-r^{q}} \log\left( \frac{1}{1-r^{q}} \right)\geqslant \frac{1 /q}{1-r}\log\left( \frac{1 /q}{1-r} \right),<br />
+$$<br />
+and when <span class="arithmatex">\(t\in \{ 1,\cdots,q-1 \}\)</span>,<br />
+$$<br />
+\left\lvert \sum_{m=0}^{\infty}{\frac{r^{mq+t}e^{it\theta}}{1-r^{mq+t}e^{it\theta}}} \right\rvert\leqslant r^{t}\left\lvert  \sum_{m=0}^{\infty}{\frac{r^{mq}}{1-\cos t\theta}}  \right\rvert =Cr^{t} \frac{1}{1-r^{q}}\leqslant \frac{Cr^{t}}{1-r}.<br />
+$$<br />
+Hence<br />
+$$<br />
+\lvert F(re^{i\theta}) \rvert \geqslant c_{q} \frac{1}{1-r}\log\left( \frac{1}{1-r} \right).<br />
+$$<br />
+Since <span class="arithmatex">\(e^{i 2\pi p /q}\)</span> is dense on <span class="arithmatex">\(\mathbb{S}^{1}\)</span>, <span class="arithmatex">\(F\)</span> cannot be analytically continued past the unit disc.</p>
+<h3 id="problem-23">Problem 2.3</h3>
+<p>Morera’s theorem states that if <span class="arithmatex">\(f\)</span> is continuous in <span class="arithmatex">\(\mathbb{C}\)</span> and <span class="arithmatex">\(\int_{T}f(z)\,\mathrm{d}z=0\)</span> for all triangles <span class="arithmatex">\(T\)</span>, then <span class="arithmatex">\(f\)</span> is holomorphic in <span class="arithmatex">\(\mathbb{C}\)</span>. Naturally, we may ask if the conclusion still holds if we replace triangles by other sets.<br />
+(a) Suppose that <span class="arithmatex">\(f\)</span> is continuous on <span class="arithmatex">\(\mathbb{C}\)</span>, and<br />
+$$<br />
+\int_{C}^{} f(z) \, \mathrm{d}z=0<br />
+$$<br />
+fir every circle <span class="arithmatex">\(C\)</span>. Prove that <span class="arithmatex">\(f\)</span> is holomorphic.<br />
+(b) More generally, let <span class="arithmatex">\(\Gamma\)</span> be any toy contour, and <span class="arithmatex">\(\mathcal{F}\)</span> the collection of all translates and dilates of <span class="arithmatex">\(\Gamma\)</span>. Show that if <span class="arithmatex">\(f\)</span> is continuous on <span class="arithmatex">\(\mathbb{C}\)</span>, and<br />
+$$<br />
+\int_{\gamma}^{} f(z) \, \mathrm{d}z=0\,\text{ for all }\gamma \in \mathcal{F} .<br />
+$$<br />
+then <span class="arithmatex">\(f\)</span> is holomorphic. In particular, Morris’s theorem holds under the weaker assumption that <span class="arithmatex">\(\int_{T}^{} f(z) \, \mathrm{d}z=0\)</span> for all equilateral triangles.<br />
+Proof: If <span class="arithmatex">\(f\)</span> is continuously differentiable, then by Green’s theorem, for any <span class="arithmatex">\(\Omega \subset \mathbb{C}\)</span> and <span class="arithmatex">\(\gamma=\partial\Omega \in \mathcal{F}\)</span>,<br />
+$$<br />
+0=\int_{\gamma}^{} f(z) \, \mathrm{d}z =\int_{\Omega}^{} \left( \frac{\partial u}{\partial y}+\frac{\partial v}{\partial x} \right) \, \mathrm{d}x\mathrm{d}y +i \int_{\Omega}^{} \left( \frac{\partial u}{\partial x}-\frac{\partial v}{\partial y} \right) \, \mathrm{d}x\mathrm{d}y. <br />
+$$<br />
+Note that <span class="arithmatex">\(\frac{\partial u}{\partial y}+\frac{\partial v}{\partial x}\)</span> is continuous and real-valued, hence <span class="arithmatex">\(f\)</span> satisfy the Cauchy-Riemann equations.<br />
+Any continuous function <span class="arithmatex">\(f\)</span>, can be uniformly approximated by smooth functions <span class="arithmatex">\(f_{\varepsilon}\)</span> such that <span class="arithmatex">\(f_{\varepsilon}=f*\varphi_{\varepsilon}\)</span> where <span class="arithmatex">\(\varphi_{\varepsilon}(\mathbf{x})=\varepsilon ^{-2}\varphi(\varepsilon ^{-1}\mathbf{x})\)</span> are the mollifiers, <span class="arithmatex">\(\varphi(\mathbf{x})=c\phi(1-\lvert \mathbf{x} \rvert^{2})\)</span> and <span class="arithmatex">\(\phi(x)=\begin{cases}e^{-1/x^{2}}, &amp; x&gt;0\\0, &amp; x\leqslant 0\end{cases}\)</span>.</p>
+<h3 id="problem-24">Problem 2.4</h3>
+<p>Prove the converse to Runge’s theorem: if <span class="arithmatex">\(K\)</span> is a compact set whose complement is not connected, then there exists a function <span class="arithmatex">\(f\)</span> holomorphic in a neighborhood of <span class="arithmatex">\(K\)</span> which cannot be approximated uniformly by polynomials on <span class="arithmatex">\(K\)</span>.<br />
+Proof: If <span class="arithmatex">\(K^{C}\)</span> is not connected, take one bounded component <span class="arithmatex">\(G\)</span>, and any element <span class="arithmatex">\(z_{0}\in G\)</span>. If <span class="arithmatex">\(f(z)=1 /(z-z_{0})\)</span> can be uniformly approximated by polynomials <span class="arithmatex">\(\{ P_{n} \}\)</span> on <span class="arithmatex">\(K\)</span>, then there exists a polynomial <span class="arithmatex">\(p\)</span> such that <br />
+$$<br />
+\left\lvert  p(z)-\frac{1}{z-z_{0}}  \right\rvert &lt; d(K,z_{0})\leqslant \left\lvert  \frac{1}{z-z_{0}}  \right\rvert .<br />
+$$<br />
+Hence <span class="arithmatex">\(\lvert (z-z_{0})p(z)-1 \rvert&lt;1\)</span>. By the maximum modulus principle in Chapter3, this inequality also hold for all <span class="arithmatex">\(z\in G\)</span>, leading to contradiction.</p>
+<h3 id="problem-25">Problem 2.5<span class="arithmatex">\(^{*}\)</span></h3>
+<p>There exists an entire function <span class="arithmatex">\(F\)</span> with the following “universal” property: given any entire function <span class="arithmatex">\(h\)</span>, there is an increasing sequence <span class="arithmatex">\(\{ N_{k} \}_{k=1}^{\infty}\)</span> of positive integers, so that<br />
+$$<br />
+\lim_{ n \to \infty } F(z+N_{n})=h(z)<br />
+$$<br />
+uniformly on every compact subset of <span class="arithmatex">\(\mathbb{C}\)</span>.<br />
+(a) Let <span class="arithmatex">\(p_{1},p_{2},\cdots\)</span> denote an enumeration of the collection of polynomials whose coefficients have rational real and imaginary parts. Show that it suffices to find an entire function <span class="arithmatex">\(F\)</span> and an increasing sequence <span class="arithmatex">\(\{ M_{n} \}\)</span> of positive integers, such that<br />
+$$<br />
+\lvert F(z)-p_{n}(z-M_{n}) \rvert &lt;\frac{1}{n} \text{  whenever } z\in D_{n}, \tag{<span class="arithmatex">\(\star\)</span>}<br />
+$$<br />
+where <span class="arithmatex">\(D_{n}\)</span> denotes the disc centered at <span class="arithmatex">\(M_{n}\)</span> and or radius <span class="arithmatex">\(n\)</span>.<br />
+Proof: For any such <span class="arithmatex">\(F\)</span>, and any entire function <span class="arithmatex">\(h\)</span>, take a sequence of polynomials <span class="arithmatex">\(\{ p_{n_{k}} \}_{k\geqslant 1}\)</span> such that <span class="arithmatex">\(\lim_{ k \to \infty }p_{n_{k}}(z)=h(z)\)</span> on any compact subset of <span class="arithmatex">\(\mathbb{C}\)</span> (let <span class="arithmatex">\(p_{n_{k}}(z)=\sum_{j=0}^{k}{\frac{h^{(j)}(0)}{j!}z^{j}}\)</span>). Then for any <span class="arithmatex">\(N&gt;0\)</span>, <span class="arithmatex">\(z\in B(0,N)\)</span>, and <span class="arithmatex">\(k\)</span> sufficiently large,<br />
+$$<br />
+\lvert F(z+M_{n_{k}}) -h(z)\rvert \leqslant \lvert F(z+M_{n_{k}})-p_{n_{k}}(z) \rvert +\lvert p_{n_{k}}(z)-h(z) \rvert &lt; \frac{1}{n_{k}}+\varepsilon(n_{k}).<br />
+$$<br />
+Hence <span class="arithmatex">\(\lim_{ k \to \infty }F(z+M_{n_{K}})=h(z)\)</span> converges uniformly on <span class="arithmatex">\(B(0,N)\)</span>.<br />
+(b) Construct <span class="arithmatex">\(F\)</span> satisfying <span class="arithmatex">\((\star)\)</span> as an infinite series<br />
+$$<br />
+F(z)=\sum_{n=1}^{\infty}{u_{n}(z)}<br />
+$$<br />
+where <span class="arithmatex">\(u_{n}(z)=p_{n}(z-M_{n})e^{-c_{n}(z-M_{n})^{2}}\)</span>, and the quantities <span class="arithmatex">\(c_{n}&gt;0\)</span> and <span class="arithmatex">\(M_{n}&gt;0\)</span> are chosen appropriately with <span class="arithmatex">\(c_{n}\to 0\)</span> and <span class="arithmatex">\(M_{n}\to \infty\)</span>.<br />
+Proof: Note that<br />
+$$<br />
+\lvert F(z)-p_{n}(z-M_{n}) \rvert \leqslant \sum_{k=1}^{n-1}+\sum_{k=n+1}^{\infty}{}{\lvert p_{k}(z-M_{k})e^{-c_{k}(z-M_{K})^{2}} \rvert }+\lvert p_{n}(z-M_{n}) \rvert \cdot \lvert 1-e^{-c_{n}(z-M_{n})^{2}} \rvert .<br />
+$$<br />
+Take <span class="arithmatex">\(c_{n}\leqslant c_{n-1}\)</span> and <span class="arithmatex">\(c_{n}\leqslant(2^{n+1}n^{2}\max\{ 1,M \})^{-1}\)</span> where <span class="arithmatex">\(M=\sup_{\lvert z \rvert\leqslant n}{\lvert p_{n}(z) \rvert}\)</span>, then for any <span class="arithmatex">\(\lvert z-M_{n} \rvert&lt;n\)</span>,<br />
+$$<br />
+\lvert 1-e^{-c_{k}(z-M_{n})^{2}} \rvert \leqslant 2\lvert c_{k}(z-M_{n})^{2} \rvert \leqslant \frac{1}{2^{n}M}\implies \lvert p_{n}(z-M_{n}) \rvert \cdot \lvert 1-e^{-c_{n}(z-M_{n})^{2}} \rvert &lt;2^{-n}.<br />
+$$<br />
+For <span class="arithmatex">\(n\geqslant 1\)</span>, let <span class="arithmatex">\(d=\max\{ \deg p_{k}:1\leqslant k\leqslant n \}\)</span>, and <span class="arithmatex">\(A\)</span> be the largest coefficient of <span class="arithmatex">\(z^{d}\)</span>, then there exists <span class="arithmatex">\(N&gt;0\)</span> such that <span class="arithmatex">\(\lvert z \rvert&gt;N\)</span> implies <span class="arithmatex">\(\lvert p_{k}(z) \rvert\leqslant 2A \lvert z \rvert^{d}\)</span>. For <span class="arithmatex">\(M_{n}\)</span> sufficiently large, and <span class="arithmatex">\(\lvert z \rvert\leqslant n\)</span>, <span class="arithmatex">\(\lvert e^{(z+M_{n}-M_{k})^{2}} \rvert\geqslant e^{(M_{n}-M_{k}-n)^{2}}\geqslant e^{M_{n}^{2} /2}\)</span>. Let <span class="arithmatex">\(c=\min\{ c_{1},\cdots,c_{n} \}\)</span>, then for any <span class="arithmatex">\(1\leqslant k\leqslant n\)</span>, and <span class="arithmatex">\(\lvert z \rvert\leqslant n\)</span>,<br />
+$$<br />
+\lvert p_{k}(z+M_{n}-M_{k})e^{-c_{k}(z+M_{n}-M_{k})^{2}} \rvert,\lvert p_{n}(z+M_{k}-M_{n})e^{-c_{n}(z+M_{k}-M_{n})^{2}} \rvert  \leqslant 2A(2M_{n})^{d}e^{-cM_{n}^{2} /2}<br />
+$$<br />
+which tends to <span class="arithmatex">\(0\)</span>. Hence we can take <span class="arithmatex">\(M_{n}\)</span> sufficiently large such that <span class="arithmatex">\(2A(2M_{n})^{d}e^{-cM_{n}^{2}/2}&lt;2^{-n}\)</span>. Then for any <span class="arithmatex">\(z\in B(M_{n},n)\)</span>,<br />
+$$<br />
+\lvert F(z)-p_{n}(z-M_{n}) \rvert \leqslant \sum_{k=1}^{n-1}{2^{-n}}+2^{-n}+\sum_{k=n+1}^{\infty}{2^{-k}}=(n+1)2^{-n}.<br />
+$$<br />
+Hence we obtain the desired universal function <span class="arithmatex">\(F\)</span>.</p>
+<hr />
+<p>In the same spirit, there exists an alternate “universal” entire function <span class="arithmatex">\(G\)</span> with the following property: given any entire function <span class="arithmatex">\(h\)</span>, there is an increasing sequence <span class="arithmatex">\(\{ N_{k} \}_{k=1}^{\infty}\)</span> of positive integers, so that<br />
+$$<br />
+\lim_{ k \to \infty } D^{N_{k}}G(z)=h(z)<br />
+$$<br />
+uniformly on every compact subset of <span class="arithmatex">\(\mathbb{C}\)</span>. Here <span class="arithmatex">\(D^{j}G\)</span> denotes the <span class="arithmatex">\(j^{th}\)</span> complex derivative of <span class="arithmatex">\(G\)</span>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
