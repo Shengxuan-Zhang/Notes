@@ -5,7 +5,7 @@ $$
 \int_{0}^{\infty} \sin(x^{2}) \, \mathrm{d}x =\int_{0}^{\infty} \cos(x^{2}) \, \mathrm{d}x =\frac{\sqrt{ 2\pi }}{4}.
 $$
 Proof: 
-![Tikz Diagram](../assets/tikz_images/c5faab4574863cddb2a0a7c9ef3bb779.svg){ align=center }
+![Tikz Diagram](../assets/tikz_images/c5faab4574863cddb2a0a7c9ef3bb779.svg)
 Consider $f(z)=e^{-z^{2}}$ and the contour in the picture above, then
 $$
 0=\int_{0}^{R} e^{-x^{2}} \, \mathrm{d}x +\int_{0}^{\pi/4} e^{-R^{2}e^{2i\theta}}iRe^{i\theta} \, \mathrm{d}\theta+\int_{R}^{0} e^{-x^{2}e^{i\pi/2}}e^{i\pi/4} \, \mathrm{d}x .
