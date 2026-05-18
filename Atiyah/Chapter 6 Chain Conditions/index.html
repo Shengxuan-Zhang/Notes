@@ -1,0 +1,1351 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://Shengxuan-Zhang.github.io/Notes/Atiyah/Chapter%206%20Chain%20Conditions/">
+      
+      
+        <link rel="prev" href="../Chapter%204%20Primary%20Decomposition/">
+      
+      
+        <link rel="next" href="../Index/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chapter 6 Chain Conditions - Math Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#61" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math Notes" class="md-header__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 6 Chain Conditions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Chapter%201%20Rings%20and%20Ideals/" class="md-tabs__link">
+          
+  
+  
+  Atiyah
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Complex%20Analysis/Chapter%202%20Cauchy%27s%20Theorem/" class="md-tabs__link">
+          
+  
+  
+  Complex Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../GTM73/Chapter%203%20Rings/" class="md-tabs__link">
+          
+  
+  
+  GTM73
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math Notes" class="md-nav__button md-logo" aria-label="Math Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Atiyah
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Atiyah
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%201%20Rings%20and%20Ideals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 Rings and Ideals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%203%20Rings%20and%20Modules%20of%20Fractions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings and Modules of Fractions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%204%20Primary%20Decomposition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Primary Decomposition
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Chain Conditions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Chain Conditions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#611" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#612" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complex Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Complex Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complex%20Analysis/Chapter%202%20Cauchy%27s%20Theorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 Cauchy's Theorem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complex%20Analysis/Chapter%206%20Gamma%20and%20Zeta%20Functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 Gamma and Zeta Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Complex%20Analysis/Index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GTM73
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GTM73
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%203%20Rings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 Rings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Chapter%204%20Modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GTM73/Index/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.9
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.10
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#611" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#612" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.12
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Chapter 6 Chain Conditions</h1>
+
+<h3 id="61">6.1</h3>
+<p>i) Let <span class="arithmatex">\(M\)</span> be a Noetherian <span class="arithmatex">\(A\)</span>-module and <span class="arithmatex">\(u: M \to M\)</span> a module homomorphism. <br />
+If <span class="arithmatex">\(u\)</span> is surjective, then <span class="arithmatex">\(u\)</span> is an isomorphism.<br />
+ii) If <span class="arithmatex">\(M\)</span> is Artinian and <span class="arithmatex">\(u\)</span> is injective, then again <span class="arithmatex">\(u\)</span> is an isomorphism.<br />
+Proof: (i) <span class="arithmatex">\(0\subset \mathrm{Ker}u\subset \mathrm{Ker}u^{2}\subset\cdots\)</span> is an ascending chain, since <span class="arithmatex">\(M\)</span> is Noetherian, <span class="arithmatex">\(\mathrm{Ker}u ^{n}=\mathrm{Ker} u ^{n+1}\)</span> for some <span class="arithmatex">\(n\geqslant 1\)</span>. For any <span class="arithmatex">\(x\in M\)</span>, take <span class="arithmatex">\(y\)</span> such that <span class="arithmatex">\(u ^{n}(y)=x\)</span>, then <span class="arithmatex">\(u(x)=0\implies u ^{n+1}(y)=0\implies x=u ^{n}(y)=0\)</span> so <span class="arithmatex">\(u\)</span> is injective.<br />
+(ii) <span class="arithmatex">\(M\supset \mathrm{Im}u\supset \mathrm{Im} u^{2}\supset\cdots\)</span> is a descending chain, since <span class="arithmatex">\(M\)</span> is Artinian, <span class="arithmatex">\(\mathrm{Im}u ^{n}=\mathrm{Im}u ^{n+1}\)</span> for some <span class="arithmatex">\(n\geqslant 1\)</span>. For any <span class="arithmatex">\(x\in M\)</span>, <span class="arithmatex">\(u ^{n}(x)\in \mathrm{Im} u ^{n}=\mathrm{Im} u ^{n+1}\)</span> so take <span class="arithmatex">\(y\)</span> such that <span class="arithmatex">\(u ^{n}(x)=u ^{n+1}(y)\)</span>. Since <span class="arithmatex">\(u\)</span> is injective, <span class="arithmatex">\(x=u(y)\in \mathrm{Im} u\)</span> so <span class="arithmatex">\(u\)</span> is surjective.</p>
+<h3 id="62">6.2</h3>
+<p>Let <span class="arithmatex">\(M\)</span> be an <span class="arithmatex">\(A\)</span>-module. If every non-empty set of finitely generated submodules of <span class="arithmatex">\(M\)</span> has a maximal element, then <span class="arithmatex">\(M\)</span> is Noetherian.<br />
+Proof: By definition and Proposition6.1.</p>
+<h3 id="63">6.3</h3>
+<p>Let <span class="arithmatex">\(M\)</span> be an <span class="arithmatex">\(A\)</span>-module and let <span class="arithmatex">\(N_1, N_2\)</span> be submodules of <span class="arithmatex">\(M\)</span>. If <span class="arithmatex">\(M/N_1\)</span> and <span class="arithmatex">\(M/N_2\)</span> are Noetherian, so is <span class="arithmatex">\(M/(N_1 \cap N_2)\)</span>. Similarly with Artinian in place of Noetherian.<br />
+Proof: Since <span class="arithmatex">\((M /N_{1}) /(M /(N_{1}+N_{2}))\)</span> is the holomorphic image of the Noetherian module <span class="arithmatex">\(M /N_{1}\)</span>, it is also Noetherian. By the exact sequence<br />
+$$<br />
+0\to (M /N_{1}) /(M /(N_{1}+N_{2}))\to M /(N_{1}\cap N_{2})\to M/N_{2}\to 0,<br />
+$$<br />
+we infer <span class="arithmatex">\(M /(N_{1}\cap N_{2})\)</span> is Noetherian. The same with Artinian.</p>
+<h3 id="64">6.4</h3>
+<p>Let <span class="arithmatex">\(M\)</span> be a Noetherian <span class="arithmatex">\(A\)</span>-module and let <span class="arithmatex">\(\mathfrak{a}\)</span> be the annihilator of <span class="arithmatex">\(M\)</span> in <span class="arithmatex">\(A\)</span>. Prove that <span class="arithmatex">\(A/\mathfrak{a}\)</span> is a Noetherian ring.<br />
+If we replace "<strong>Noetherian</strong>" by "<strong>Artinian</strong>" in this result, is it still true?<br />
+Proof: Every Noetherian module is finitely generated, so suppose <span class="arithmatex">\(M=\langle x_{1},\cdots,x_{n} \rangle\)</span>. Then <span class="arithmatex">\(\mathfrak{a}=\bigcap_{i=1}^{n}\mathrm{Ann}(x_{i})\)</span>, where <span class="arithmatex">\(A /\mathrm{Ann}(x_{i})\cong Ax_{i}\)</span> is a submodule of the Noetherian module <span class="arithmatex">\(A\)</span>. Hence <span class="arithmatex">\(A /\mathrm{Ann}(x_{i})\)</span> is Noetherian. By Ex6.3 and induction we infer <span class="arithmatex">\(A /\mathfrak{a}\)</span> is a Noetherian ring.<br />
+If Noetherian is replaced by Artinian, the result may not hold: Consider the <span class="arithmatex">\(\mathbb{Z}-\)</span>module <span class="arithmatex">\(\mathbb{Z}(p^{\infty})\)</span> which is Artinian but not Noetherian. Then <span class="arithmatex">\(\mathrm{Ann}(\mathbb{Z}(p)^{\infty})=\{ a\in \mathbb{Z}:a /p^{n}\in \mathbb{Z}\forall n\geqslant 1 \}=(0)\)</span>. However, <span class="arithmatex">\(\mathbb{Z} /(0)=\mathbb{Z}\)</span> is not Artinian.</p>
+<h3 id="65">6.5</h3>
+<p>A topological space <span class="arithmatex">\(X\)</span> is said to be Noetherian if the open subsets of <span class="arithmatex">\(X\)</span> satisfy the ascending chain condition (or, equivalently, the maximal condition). Since closed subsets are complements of open subsets, it comes to the same thing to say that the closed subsets of <span class="arithmatex">\(X\)</span> satisfy the descending chain condition (or, equivalently, the minimal condition). Show that, if <span class="arithmatex">\(X\)</span> is Noetherian, then every subspace of <span class="arithmatex">\(X\)</span> is Noetherian, and that <span class="arithmatex">\(X\)</span> is quasi-compact.<br />
+Proof: (i) If <span class="arithmatex">\(Y\subset X\)</span> is a subspace, then for any ascending chain <span class="arithmatex">\(O_{1}\cap Y\subset O_{2}\cap Y\subset\cdots\)</span>, <span class="arithmatex">\(O_{1}\subset O_{2}\subset\cdots\)</span> is an ascending chain in <span class="arithmatex">\(X\)</span>, so <span class="arithmatex">\(O_{n}=O_{n+1}=\cdots\)</span> for some <span class="arithmatex">\(n\geqslant 1\)</span>. Then <span class="arithmatex">\(O_{n}\cap Y=O_{n+1}\cap Y=\cdots\)</span> so <span class="arithmatex">\(Y\)</span> is Noetherian.<br />
+(ii) For any open covering <span class="arithmatex">\(X=\bigcup_{\alpha \in I}O_{\alpha}\)</span>, suppose there is no finite sub-covering. Then take an arbitrary <span class="arithmatex">\(U_{1}=O_{\alpha}\)</span> for <span class="arithmatex">\(\alpha \in I\)</span>, and for <span class="arithmatex">\(n\geqslant 2\)</span>, take <span class="arithmatex">\(\alpha \in I\)</span> such that <span class="arithmatex">\(O_{\alpha}\not\subset U_{n-1}\)</span> and let <span class="arithmatex">\(U_{n}=U_{n-1}\cup O_{\alpha}\)</span>. Then <span class="arithmatex">\(U_{n}\neq X\)</span> for all <span class="arithmatex">\(n\)</span> so the operation is well defined, and <span class="arithmatex">\(U_{1}\subsetneq U_{2}\subsetneq\cdots\)</span> is a non-stationary ascending chain, a contradiction. Hence there is a finite sub-covering and <span class="arithmatex">\(X\)</span> is quasi-compact.</p>
+<h3 id="66">6.6</h3>
+<p>Prove that the following are equivalent:<br />
+i) <span class="arithmatex">\(X\)</span> is Noetherian.<br />
+ii) Every open subspace of <span class="arithmatex">\(X\)</span> is quasi-compact.<br />
+iii) Every subspace of <span class="arithmatex">\(X\)</span> is quasi-compact.<br />
+Proof: (i)=&gt;(iii)=&gt;(ii) is proved in Ex6.5.<br />
+(ii)=&gt;(i): Suppose every open subspace of <span class="arithmatex">\(X\)</span> is quasi-compact, and we have an ascending chain <span class="arithmatex">\(O_{1}\subset O_{2}\subset\cdots\)</span>. Then <span class="arithmatex">\(O=\bigcup_{n\geqslant 1}O_{n}\)</span> is open, hence quasi-compact, and there exists <span class="arithmatex">\(N\geqslant 1\)</span> such that <span class="arithmatex">\(O=\bigcup_{n\leqslant N}O_{n}\)</span>. Therefore <span class="arithmatex">\(O_{N}=O_{N+1}=\cdots\)</span> so <span class="arithmatex">\(X\)</span> is Noetherian.</p>
+<h3 id="67">6.7</h3>
+<p>A Noetherian space is a finite union of irreducible closed subspaces. <br />
+Hence the set of irreducible components of a Noetherian space is finite.<br />
+Proof: (i) Otherwise consider the set <span class="arithmatex">\(\Sigma\)</span> of closed subsets of <span class="arithmatex">\(X\)</span> which are not finite unions of irreducible closed subspaces, then since <span class="arithmatex">\(X\)</span> is Noetherian and <span class="arithmatex">\(X\in\Sigma\neq \emptyset\)</span>, <span class="arithmatex">\(\Sigma\)</span> has a minimal element <span class="arithmatex">\(F\)</span>. Clearly <span class="arithmatex">\(F\neq \emptyset\)</span> and <span class="arithmatex">\(F\)</span> itself is reducible. Suppose <span class="arithmatex">\(F=F_{1}\cup F_{2}\)</span> where <span class="arithmatex">\(F_{1},F_{2}\)</span> are disjoint proper closed subsets, then <span class="arithmatex">\(F_{1},F_{2}\not\in\Sigma\)</span> implies they are the finite union of irreducible closed subsets, hence so is <span class="arithmatex">\(F\)</span>, a contradiction.<br />
+(ii) Recall that the irreducible components (maximal irreducible closed subsets) cover <span class="arithmatex">\(X\)</span>. By (i) <span class="arithmatex">\(X=\bigcup_{i=1}^{n}F_{i}\)</span> for irreducible closed components <span class="arithmatex">\(F_{i}\)</span>. If <span class="arithmatex">\(F\)</span> is an irreducible component of <span class="arithmatex">\(X\)</span>, then <span class="arithmatex">\(F=\bigcup_{i=1}^{n}(F\cap F_{i})\)</span> where <span class="arithmatex">\(F\cap F_{i}\)</span> are irreducible closed subsets. Since <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(F_{i}\)</span> are maximal, <span class="arithmatex">\(F=F_{i}\)</span> for some <span class="arithmatex">\(i\)</span>.</p>
+<h3 id="68">6.8</h3>
+<p>If <span class="arithmatex">\(A\)</span> is a Noetherian ring then <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is a Noetherian topological space. Is the converse true?<br />
+Proof: If <span class="arithmatex">\(A\)</span> is Noetherian, and <span class="arithmatex">\(V(\mathfrak{a}_{1})\supset V(\mathfrak{a}_{2})\supset\cdots\)</span> is a descending closed chain in <span class="arithmatex">\(\mathrm{Spec}(A)\)</span>, then <span class="arithmatex">\(V(\mathfrak{a}_{1})\supset V(\mathfrak{a}_{2})\)</span> implies <span class="arithmatex">\(V(\mathfrak{a}_{2})=V(\mathfrak{a}_{2}+ \mathfrak{a}_{1})\)</span>. Likewise define <span class="arithmatex">\(\mathfrak{b}_{n}=\sum_{i=1}^{n}\mathfrak{a}_{i}\)</span>, then <span class="arithmatex">\(V(\mathfrak{a}_{n})=V(\mathfrak{b}_{n})\)</span> and <span class="arithmatex">\(\mathfrak{b}_{1}\subset \mathfrak{b}_{2}\subset\cdots\)</span> is an ascending chain of ideals in <span class="arithmatex">\(A\)</span>. Since <span class="arithmatex">\(A\)</span> is Noetherian, the chain is stationary, and suppose <span class="arithmatex">\(\mathfrak{b}_{n}=\mathfrak{b}_{n+1}=\cdots\)</span> for some <span class="arithmatex">\(n\geqslant 1\)</span>. Hence <span class="arithmatex">\(V(\mathfrak{a}_{n})=V(\mathfrak{a}_{n+1})=\cdots\)</span> and the descending closed chain is stationary. Therefore <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is a Noetherian topological space.<br />
+Conversely, suppose <span class="arithmatex">\(A=k[x_{1},x_{2},\cdots] /(x_{1},x_{2}^{2},x_{3}^{3},\cdots)\)</span>, then <span class="arithmatex">\(A\)</span> is not Noetherian since <span class="arithmatex">\((x_{1})\subset(x_{1},x_{2})\subset\cdots\)</span> is strictly increasing. However, <span class="arithmatex">\(\mathrm{Spec}(A)=\{ \mathfrak{p} \}\)</span> with <span class="arithmatex">\(\mathfrak{p}=(x_{1},x_{2},\cdots)\)</span> has only one point, hence is clearly Noetherian. So the converse is false.</p>
+<h3 id="69">6.9</h3>
+<p>Deduce from Exercise 8 that the set of minimal prime ideals in a Noetherian ring is finite.<br />
+Proof: By Ex6.8 if <span class="arithmatex">\(A\)</span> is Noetherian then <span class="arithmatex">\(\mathrm{Spec}A\)</span> is Noetherian, so by Ex6.7 it has finitely many irreducible components. Since every minimal prime ideal <span class="arithmatex">\(\mathfrak{p}\)</span> corresponds to an irreducible component <span class="arithmatex">\(V(\mathfrak{p})\)</span>, the set of minimal prime ideals is finite.</p>
+<h3 id="610">6.10</h3>
+<p>If <span class="arithmatex">\(M\)</span> is a Noetherian module (over an arbitrary ring <span class="arithmatex">\(A\)</span>) then <span class="arithmatex">\(\mathrm{Supp}(M)\)</span> is a closed Noetherian subspace of <span class="arithmatex">\(\mathrm{Spec}(A)\)</span>.<br />
+Proof: Recall <span class="arithmatex">\(\mathrm{Supp}(M)=\{ \mathfrak{p}\in \mathrm{Spec}A:M_{\mathfrak{p}}\neq 0 \}\)</span>. Since <span class="arithmatex">\(M\)</span> is Noetherian, it is finitely generated, so by Ex3.19 <span class="arithmatex">\(\mathrm{Supp}(M)=V(\mathrm{Ann}(M))\)</span> is a closed subset of <span class="arithmatex">\(\mathrm{Spec}(A)\)</span>. Suppose <span class="arithmatex">\(\mathfrak{a}=\mathrm{Ann}(M)\)</span> then <span class="arithmatex">\(\mathrm{Supp}(M)=V(\mathfrak{a})\cong \mathrm{Spec}(A /\mathfrak{a})\)</span> by Ex1.21, and by Ex6.4 <span class="arithmatex">\(A /\mathfrak{a}\)</span> is Noetherian, so by Ex6.5 <span class="arithmatex">\(\mathrm{Supp}(M)=\mathrm{Spec}(A /\mathfrak{a})\)</span> is Noetherian.</p>
+<h3 id="611">6.11</h3>
+<p>Let <span class="arithmatex">\(f: A \to B\)</span> be a ring homomorphism and suppose that <span class="arithmatex">\(\mathrm{Spec}(B)\)</span> is a Noetherian space (Exercise 5). Prove that <span class="arithmatex">\(f^*: \mathrm{Spec}(B) \to \mathrm{Spec}(A)\)</span> is a closed mapping if and only if <span class="arithmatex">\(f\)</span> has the going-up property (Chapter 5, Exercise 10).<br />
+Proof: Closed mapping =&gt; going-up is proved in Ex5.10.<br />
+Now suppose <span class="arithmatex">\(f\)</span> has the going-up property, and we show <span class="arithmatex">\(f^{*}\)</span> is closed.<br />
+For any closed set <span class="arithmatex">\(V(\mathfrak{b})\subset \mathrm{Spec}(B)\)</span> with <span class="arithmatex">\(\mathfrak{b}=r(\mathfrak{b})\)</span>, by Ex6.5 <span class="arithmatex">\(\mathrm{Spec}(B /\mathfrak{b})=V(\mathfrak{b})\)</span> is Noetherian. By Ex6.7 <span class="arithmatex">\(\mathrm{Spec}(B /\mathfrak{b})\)</span> has finitely many irreducible components, which correspond to minimal primes in <span class="arithmatex">\(B /\mathfrak{b}\)</span>, i.e. minimal elements <span class="arithmatex">\(\mathfrak{q}_{i}\)</span> in <span class="arithmatex">\(V(B /\mathfrak{b})\)</span>. Suppose <span class="arithmatex">\(\mathfrak{p}_{i}=\mathfrak{q}_{i}^{c}\)</span>, then <span class="arithmatex">\(\mathfrak{a}=\mathfrak{b}^{c}=\bigcap_{i=1}^{n}\mathfrak{p}_{i}\)</span>, so <span class="arithmatex">\(V(\mathfrak{a})=\bigcup_{i=1}^{n}V(\mathfrak{p}_{i})\)</span>. By Ex5.10 <span class="arithmatex">\(f^{*}(V(\mathfrak{q}_{i}))=V(\mathfrak{p}_{i})\)</span>, hence <span class="arithmatex">\(f^{*}(V(\mathfrak{b}))=V(\mathfrak{a})\)</span> is closed.</p>
+<h3 id="612">6.12</h3>
+<p>Let <span class="arithmatex">\(A\)</span> be a ring such that <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is a Noetherian space. Show that the set of prime ideals of <span class="arithmatex">\(A\)</span> satisfies the ascending chain condition. Is the converse true?<br />
+Proof: (i) Suppose <span class="arithmatex">\(\mathfrak{p}_{1}\subset \mathfrak{p}_{2}\subset\cdots\)</span> is an ascending chain, then <span class="arithmatex">\(V(\mathfrak{p}_{1})\supset V(\mathfrak{p}_{2})\supset \cdots\)</span> is a descending chain. Since <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is Noetherian, the chain terminates and suppose <span class="arithmatex">\(V(\mathfrak{p}_{n})=V(\mathfrak{p}_{n+1})=\cdots\)</span>. Then <span class="arithmatex">\(\mathfrak{p}_{n}\in V(\mathfrak{p}_{n})=V(\mathfrak{p}_{n+1})\)</span> implies <span class="arithmatex">\(\mathfrak{p}_{n}=\mathfrak{p}_{n+1}=\cdots\)</span>, so the set of prime ideals satisfy ACC.<br />
+(ii) The converse is false.<br />
+Consider the Boolean ring <span class="arithmatex">\(A=\prod_{n=1}^{\infty}{\mathbb{F}_{2}}\)</span>, then a Boolean ring clearly satisfy ACC on prime ideals, since every prime ideal is maximal.<br />
+However, let <span class="arithmatex">\(\mathfrak{a}_{n}=\langle e_{1},\cdots,e_{n} \rangle\)</span> then <span class="arithmatex">\(\mathfrak{a}_{1}\subsetneq\mathfrak{a}_{2}\subsetneq\cdots\)</span> is an ascending chain, and <span class="arithmatex">\(r(\mathfrak{a}_{n})\neq r(\mathfrak{a}_{n+1})\)</span>, so <span class="arithmatex">\(V(\mathfrak{a}_{1})\supsetneq V(\mathfrak{a}_{2})\supsetneq\cdots\)</span> is a descending chain of closed sets. Therefore <span class="arithmatex">\(\mathrm{Spec}(A)\)</span> is not Noetherian.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
