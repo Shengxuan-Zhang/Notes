@@ -163,17 +163,43 @@ Is the converse of ii) true?
 Proof: (i) Since $\mathrm{Im}f^{*}$ consists of all contracted prime ideals.
 (ii) If every prime of $B$ is extended, suppose $\mathfrak{q},\mathfrak{q}^{\prime}\in \mathrm{Spec}(B)$ satisfy $\mathfrak{q}^{c}=\mathfrak{q}^{\prime c}$, Take $\mathfrak{p}^{e}=\mathfrak{q}$ and $\mathfrak{p}^{\prime e}=\mathfrak{q}^{\prime}$, then $\mathfrak{q}=\mathfrak{p}^{e}=\mathfrak{p}^{ece}=(\mathfrak{q}^{c})^{e}=(\mathfrak{q}^{\prime c})^{e}=\mathfrak{q}^{\prime}$. Hence $f^{*}$ is injective.
 The converse is not true: (from MSE) Consider $A[y]=A[x] /(x^{2})$, and $\pi:A[y]\to A$ with kernel $(y)$. Then $y^{2}=0$ implies every prime ideal of $A[y]$ contains $y$, so if we consider the embedding $\iota:A\to A[y]$, $\iota ^{*}$ is bijective. However, for any prime $\mathfrak{p}\subset A$, $\mathfrak{p}^{e}=\mathfrak{p}A+\mathfrak{p}y$ is not prime, so no prime of $B$ is extended.
+
 ### 3.21
+
 i) Let $A$ be a ring, $S$ a multiplicatively closed subset of $A$, and $\phi : A \to S^{-1}A$ the canonical homomorphism. Show that $\phi^* : \operatorname{Spec}(S^{-1}A) \to \operatorname{Spec}(A)$ is a homeomorphism of $\operatorname{Spec}(S^{-1}A)$ onto its image in $X = \operatorname{Spec}(A)$. Let this image be denoted by $S^{-1}X$.
 In particular, if $f \in A$, the image of $\operatorname{Spec}(A_f)$ in $X$ is the basic open set $X_f$ (Chapter 1, Exercise 17).
 ii) Let $f : A \to B$ be a ring homomorphism. Let $X = \operatorname{Spec}(A)$ and $Y = \operatorname{Spec}(B)$, and let $f^* : Y \to X$ be the mapping associated with $f$. Identifying $\operatorname{Spec}(S^{-1}A)$ with its canonical image $S^{-1}X$ in $X$, and $\operatorname{Spec}(S^{-1}B)$ ($= \operatorname{Spec}(f(S)^{-1}B)$) with its canonical image $S^{-1}Y$ in $Y$, show that $S^{-1}f^* : \operatorname{Spec}(S^{-1}B) \to \operatorname{Spec}(S^{-1}A)$ is the restriction of $f^*$ to $S^{-1}Y$, and that $S^{-1}Y = {f^*}^{-1}(S^{-1}X)$.
 iii) Let $\mathfrak{a}$ be an ideal of $A$ and let $\mathfrak{b} = \mathfrak{a}^e$ be its extension in $B$. Let $\bar{f} : A/\mathfrak{a} \to B/\mathfrak{b}$ be the homomorphism induced by $f$. If $\operatorname{Spec}(A/\mathfrak{a})$ is identified with its canonical image $V(\mathfrak{a})$ in $X$, and $\operatorname{Spec}(B/\mathfrak{b})$ with its image $V(\mathfrak{b})$ in $Y$, show that $\bar{f}^*$ is the restriction of $f^*$ to $V(\mathfrak{b})$.
 iv) Let $\mathfrak{p}$ be a prime ideal of $A$. Take $S = A - \mathfrak{p}$ in ii) and then reduce mod $S^{-1}\mathfrak{p}$ as in iii). Deduce that the subspace ${f^*}^{-1}(\mathfrak{p})$ of $Y$ is naturally homeomorphic to $\operatorname{Spec}(B_{\mathfrak{p}}/\mathfrak{p} B_{\mathfrak{p}}) = \operatorname{Spec}(k(\mathfrak{p}) \otimes_A B)$, where $k(\mathfrak{p})$ is the residue field of the local ring $A_{\mathfrak{p}}$.
 $\operatorname{Spec}(k(\mathfrak{p}) \otimes_A B)$ is called the **fiber** of $f^*$ over $\mathfrak{p}$.
-Proof: (i) Clearly $\phi ^{*}$ is bijective from $\mathrm{Spec}(S^{-1}A)$ to $S^{-1}X=\{ \mathfrak{p}\in X:\mathfrak{p}\cap S=\emptyset \}$. If $\mathfrak{p}\cap S=\emptyset$, then by Theorem3.11 $\mathfrak{p}^{ec}=\bigcup_{s \in S}(\mathfrak{p}:s)=\mathfrak{p}$, so $\phi ^{*}(V(\mathfrak{a}))=V(\mathfrak{a}^{c})$, and $\phi ^{*-1}(V(\mathfrak{b}))=V(\mathfrak{b}^{e})$.
+Proof: (i) Recall $\phi$ is continuous. We show that $\phi ^{*}(V(\mathfrak{b}))=V(\mathfrak{b}^{c})$ for any $\mathfrak{b}\subset S^{-1}A$, then $\phi ^{*}$ is a closed map so it is a homeomorphism from $\mathrm{Spec}(S^{-1}A)$ to $S^{-1}X=\{ \mathfrak{p}\in X:\mathfrak{p}\cap S =\emptyset\}$: by Prop3.11(i) we suppose $\mathfrak{b}=\mathfrak{a}^{e}$, then $\mathfrak{q}=\mathfrak{p}^{e}\in V(\mathfrak{b})\iff \mathfrak{a}^{e}=\mathfrak{b}\subset \mathfrak{q}=\mathfrak{p}^{e}\iff \mathfrak{b}^{c}\subset \mathfrak{p}\iff \mathfrak{p}\in V(\mathfrak{b}^{c})$, since $\mathfrak{p}^{ec}=\bigcup_{s \in S}(\mathfrak{p}:s)=\bigcup \mathfrak{p}=\mathfrak{p}$ and $\mathfrak{b}^{ce}=\mathfrak{b}$.
+(ii) For $\mathfrak{q}\in Y$, $\mathfrak{q}\cap f(S)\neq\emptyset \iff \exists s \in S,s \in f^{-1}(\mathfrak{q})\iff f^{-1}(\mathfrak{q})\cap S\neq \emptyset$, so $\mathfrak{q}\in S^{-1}Y\iff \mathfrak{q}\cap f(S)=\emptyset \iff f^{-1}(\mathfrak{q})\cap S=\emptyset \iff f^{*}(\mathfrak{q})\in S^{-1}X$.
+Now show that $(S^{-1}f^{*})(S^{-1}\mathfrak{q})=S^{-1}(f^{-1}(\mathfrak{q}))$: Note that $\frac{a}{s}\in (S^{-1}f^{*})(S^{-1}\mathfrak{q})$ iff exists $t,s^{\prime} \in S,b\in \mathfrak{q}$ such that $f(s^{\prime})(f(a)f(t)-f(s)b)=0$, and $\frac{a}{s}\in S^{-1}(f^{-}(\mathfrak{q}))$ iff exists $s^{\prime},t\in S,f(c)\in \mathfrak{q}$ such that $s^{\prime}(at-sc)=0$. The part $S^{-1}(f^{-1}(\mathfrak{q}))\subset(S^{-1}f^{*})(S^{-1}\mathfrak{q})$ is trivial. If $\frac{a}{s}\in (S^{-1}f^{*})(S^{-1}f)$, then $f(s^{\prime})f(t)f(a)=f(s^{\prime}s)b\in \mathfrak{q}$ so $f(a)\in \mathfrak{q}$ ($\mathfrak{q}\cap f(S)=\emptyset$), hence let $c=a$ and $t=s$ we obtain $\frac{a}{s}\in S^{-1}(f^{-1}(\mathfrak{q}))$.
+(iii) If $\mathfrak{q}\in V(\mathfrak{b})$, then $\mathfrak{a}\subset \mathfrak{a}^{ec}=\mathfrak{b}^{c}\subset \mathfrak{q}^{c}$ so $\mathfrak{q}^{c}\in V(\mathfrak{a})$ and $f^{*}(V(\mathfrak{b}))\subset V(\mathfrak{a})$. Consider the projections $\pi:A\to A /\mathfrak{a}$ and $\varpi:B\to B /\mathfrak{b}$, then $\pi f=\bar{f}\varpi$ so $f^{*}\pi ^{*}=\varpi^{*}\bar{f}^{*}$ hence $\bar{f}^{*}$ is the restriction of $f^{*}$ to $V(\mathfrak{b})$.
+(iv) By (iii) we have the commutative diagram 
+$$
+\begin{equation*}
+\begin{CD}
+\operatorname{Spec}(B_{\mathfrak{p}}/\mathfrak{p}B_{\mathfrak{p}}) @>>> \operatorname{Spec}(B_{\mathfrak{p}}) @>>> \operatorname{Spec}(B) \newline
+@VV \bar{f}_{\mathfrak{p}}^{*} V @VV f_{\mathfrak{p}}^{*} V @VV f^* V \newline
+\operatorname{Spec}(A_{\mathfrak{p}}/\mathfrak{p}A_{\mathfrak{p}}) @>>> \operatorname{Spec}(A_{\mathfrak{p}}) @>>> \operatorname{Spec}(A)
+\end{CD}
+\end{equation*}
+$$
+where $A_{\mathfrak{p}} /\mathfrak{p}A_{\mathfrak{p}}=k(\mathfrak{p})$ is a field. Hence $f^{*-1}(\mathfrak{p})=\mathrm{Spec}(B_{\mathfrak{p}} /\mathfrak{p}B_{\mathfrak{p}})$. Note that
+$$
+\begin{align}
+k(\mathfrak{p})\otimes_{A}B & =(A_{\mathfrak{p}} /\mathfrak{p}A_{\mathfrak{p}})\otimes _{A}B\cong(A /\mathfrak{p})_{\mathfrak{p}}\otimes _{A}B\cong(A /\mathfrak{p})_{\mathfrak{p}}\otimes_{A /\mathfrak{p}}  (A /\mathfrak{p})\otimes _{A}B \\
+ & \cong(A /\mathfrak{p})_{\mathfrak{p}}\otimes _{A /\mathfrak{p}}(B /\mathfrak{p}B)\cong(B /\mathfrak{p}B)_{\mathfrak{p}}\cong B_{\mathfrak{p}} /\mathfrak{p}B_{\mathfrak{p}}.
+\end{align}
+$$
 ### 3.22
 Let $A$ be a ring and $\mathfrak{p}$ a prime ideal of $A$. Then the canonical image of $\operatorname{Spec}(A_{\mathfrak{p}})$ in $\operatorname{Spec}(A)$ is equal to the intersection of all the open neighborhoods of $\mathfrak{p}$ in $\operatorname{Spec}(A)$.
-
+Proof: The intersection of open neighborhoods of $\mathfrak{p}$ is equal to the intersection of all $X_{f}$ such that $\mathfrak{p}\in X_{f}$. So it suffices to show
+$$
+\mathrm{Spec}(A_{\mathfrak{p}})=\{ \mathfrak{q}\in \mathrm{Spec}(A):\mathfrak{q}\subset \mathfrak{p} \}=\bigcap_{f\not\in\mathfrak{p}}X_{f}=\{ \mathfrak{q}:f\not\in \mathfrak{p}\implies f\not\in \mathfrak{q} \}.
+$$
+Clearly the two sides are the same.
 ### 3.23
 Let $A$ be a ring, let $X = \operatorname{Spec}(A)$ and let $U$ be a basic open set in $X$ (i.e., $U = X_f$ for some $f \in A$: Chapter 1, Exercise 17).
 i) If $U = X_f$, show that the ring $A(U) = A_f$ depends only on $U$ and not on $f$.
@@ -182,8 +208,8 @@ iii) If $U = U'$, then $\rho$ is the identity map.
 iv) If $U \supseteq U' \supseteq U''$ are basic open sets in $X$, show that the diagram
 $$
 \begin{array}{ccc}
-A(U) & \longrightarrow & A(U'') \\
-& \searrow \quad \nearrow & \\
+A(U) & \longrightarrow & A(U'') \newline
+& \searrow \quad \nearrow & \newline
 & A(U') &
 \end{array}
 $$
@@ -193,42 +219,66 @@ $$
 \varinjlim_{U \ni x} A(U) \cong A_{\mathfrak{p}}.
 $$
 The assignment of the ring $A(U)$ to each basic open set $U$ of $X$, and the restriction homomorphisms $\rho$, satisfying the conditions iii) and iv) above, constitutes a **presheaf of rings** on the basis of open sets $(X_f)_{f \in A}$. v) says that the **stalk** of this presheaf at $x \in X$ is the corresponding local ring $A_{\mathfrak{p}}$.
-
+**Proof**: (i) If $X_{f}=X_{g}$ then $f\in \mathfrak{p}\iff g\in \mathfrak{p}$, so $r(f)=\bigcap_{f\in \mathfrak{p}}\mathfrak{p}=\bigcap_{g\in \mathfrak{p}}\mathfrak{p}=r(g)$. Hence $uf=g^{n}$ and $vg=f^{m}$ for some $n,m,u,v$. Then consider $\iota_{1}:A\to A_{f}$ and $\iota_{2}:A\to A_{g}$, note that $\iota_{2}(f)$ has an inverse $u /g^{n}$ so there is a unique homomorphism $\phi_{1}:A_{f}\to A_{g}$ such that $\phi_{1}\iota_{1}=\iota_{2}$, and likewise a unique homomorphism $\phi_{2}:A_{g}\to A_{f}$ such that $\phi_{2}\iota_{2}=\iota_{1}$. Hence $\phi_{1}\phi_{2}\iota_{2}=\phi_{1}\iota_{1}=\iota_{2}$ so by uniqueness $\phi_{1}\phi_{2}=1_{A_{g}}$ and $\phi_{2}\phi_{1}=1_{A_{f}}$. Therefore $A(U)$ is unique (up to unique isomorphism).
+(ii) Likewise $X_{g}\subset X_{f}\implies r((g))\subset r((f))$ so $g^{n}=uf$ for some $n,u$, and $\iota_{2}(f)$ is a unit so it induces a unique homomorphism $\rho:A(U)\to A(U^{\prime})$. Since $A(U)$ is unique up to unique isomorphism, any $X_{f}=X_{f^{\prime}}$ and $X_{g}=X_{g^{\prime}}$ induces a natural commutative diagram.
+(iii) and (iv) are trivial by the universal property.
+![TikZ Diagram](../assets/tikz_images/3de8106889ad1b729d617d4a991b8e4d.svg)
+(v) First, the set $\mathcal{B}=\{ U:x\subset U \}$ is a directed set, with partial order $U\leqslant U^{\prime}$ if $U^{\prime}\subset U$: Clearly $\leqslant$ is a partial order, and if $X_{f},X_{g}\in \mathcal{B}$ then since $\mathcal{B}$ is a topological basis there exists $X_{h}\in \mathcal{B}$ such that $X_{h}\subset X_{f}\cap X_{g}$ ($h=fg$). Index the set $\mathcal{B}$ as $\{ U_{i} \}_{i\in I}$.
+By (iv) the rings form a direct system, so the direct limit exists. Denote $M=\varinjlim A(U)$, $\rho_{ij}:A(U_{i})\to A(U_{j})$ for $i\leqslant j$ and $\rho_{i}:A(U_{i})\to M$. For each $i\in I$ there exists canonical $\iota_{i}:A\to A(U_{i})$ and $\iota:A\to M$, and note that $\rho_{ij}\iota_{i}=\iota_{j}$ for all $i\leqslant j$, since $A=A(X_{1})$ is the minimal element in $\mathcal{B}$.
+Now consider any ring homomorphism $\phi:A\to B$ such that the elements of $A\backslash \mathfrak{p}$ are mapped to units in $B$. For any $U=X_{f}\in \mathcal{B}$, $f\not\in \mathfrak{p}$ so $f$ is mapped to a unit in $B$, hence there is a unique homomorphism $\phi_{i}^{*}:A(U)\to B$ such that $\phi_{i}^{*}\iota_{i}=\phi$. By uniqueness, for any $i\leqslant j$, $\phi_{j}^{*}\rho_{ij}\iota_{i}=\phi_{j}^{*}\iota_{j}=\phi$ implies $\phi_{i}^{*}=\phi_{j}^{*}\rho_{ij}$. Hence $\{ \phi_{i}^{*} \}_{i\in I}$ is compatible with the direct system, so there is a unique homomorphism $\phi ^{*}:M\to B$ such that $\phi ^{*}\rho_{i}=\phi_{i}^{*}$. Therefore there exists a unique homomorphism $\phi ^{*}$ such that $\phi ^{*}\iota=\phi ^{*}\rho_{i}\iota_{i}=\phi_{i}^{*}\iota_{i}=\phi$, so $M\cong A_{\mathfrak{p}}$.
 ### 3.24
 Show that the presheaf of Exercise 23 has the following property. Let $(U_i)_{i \in I}$ be a covering of $X$ by basic open sets. For each $i \in I$ let $s_i \in A(U_i)$ be such that, for each pair of indices $i, j$, the images of $s_i$ and $s_j$ in $A(U_i \cap U_j)$ are equal. Then there exists a unique $s \in A$ $(= A(X))$ whose image in $A(U_i)$ is $s_i$, for all $i \in I$. (This essentially implies that the presheaf is a sheaf.)
-
+**Lemma**: If $(f_{1},\cdots,f_{n})=A$ and $s$ maps to $0$ in every localization $X_{f_{k}}$, then $s=0$.
+Proof: For each $k$, $s /1=0$ implies $f_{k}^{r_{k}}s=0$ for some $r_{k}\geqslant 1$. Let $N=\sum_{}^{}{r_{k}}+1$ then $s=1\cdot s=\left( \sum_{}^{}{a_{k}f_{k}} \right)^{N}s=0$.
+**Proof** of main theorem: Since $X$ is quasi-compact, suppose $X=\bigcup_{i=1}^{n}U_{i}$ and $U_{i}=X_{f_{i}}$. Then $(f_{1},\cdots,f_{n})=A$ so uniqueness is trivial by the lemma.
+Suppose $s_{k}=b_{k} /f_{k}^{r_{k}}$ and let $g_{k}=f_{k}^{r_{k}}$, then $1=1^{N}=\left( \sum_{}^{}{a_{k}f_{k}} \right)^{N}=\sum_{}^{}{c_{k}g_{k}}$ so $(g_{1},\cdots,g_{n})=A$. Since $s_{i}$ and $s_{j}$ are compatible on $A(U_{i}\cap U_{j})$, $(g_{i}g_{j})^{M}(b_{i}g_{j}-b_{j}g_{i})=0\forall 1\leqslant i<j\leqslant n$ for some (universal constant) $M$. Let $u_{k}=b_{k}g_{k}^{M}$ and $h_{k}=g_{k}^{M+1}$, then $s_{k}=u_{k} /h_{k}$ and $1=\sum_{}^{}{d_{k}h_{k}}$ for some $\{ d_{k} \}$.
+Let $s=\sum_{}^{}{d_{k}u_{k}}$, then in each $A(U_{i})$, 
+$$
+\frac{s}{1}=\frac{s\cdot h_{i}}{h_{i}}=\frac{\sum_{}^{}{d_{k}u_{k}h_{i}}}{h_{i}}=\frac{\sum_{}^{}{d_{k}u_{i}h_{k}}}{h_{i}}=\frac{u_{i}}{h_{i}}=s_{i}.
+$$
+We found such an $s$ for a finite subset of $(U_{i})_{i\in I}$. By Lemma such an $s$ is unique, so by adding each remaining $U_{i}$, we infer $s$ is also compatible with it, so $s$ agree with $s_{i}$ in every $A(U_{i})$.
 ### 3.25
-Let $f : A \to B$, $g : A \to C$ be ring homomorphisms and let $h : A \to B \otimes_A C$ be defined by $h(x) = f(x) \otimes g(x)$. Let $X, Y, Z, T$ be the prime spectra of $A, B, C, B \otimes_A C$ respectively. Then $h^*(T) = f^* Y \cap g^*(Z)$.[Let $\mathfrak{p} \in X$, and let $k = k(\mathfrak{p})$ be the residue field at $\mathfrak{p}$. By Exercise 21, the fiber $h^{*-1}(\mathfrak{p})$ is the spectrum of $(B \otimes_A C) \otimes_A k \cong (B \otimes_A k) \otimes_k (C \otimes_A k)$. Hence $\mathfrak{p} \in h^*(T) \Leftrightarrow (B \otimes_A k) \otimes_k (C \otimes_A k) \ne 0 \Leftrightarrow B \otimes_A k \ne 0$ and $C \otimes_A k \ne 0 \Leftrightarrow \mathfrak{p} \in f^*(Y) \cap g^*(Z)$.]
-
+Let $f : A \to B$, $g : A \to C$ be ring homomorphisms and let $h : A \to B \otimes_A C$ be defined by $h(x) = f(x) \otimes 1=1\otimes g(x)$. Let $X, Y, Z, T$ be the prime spectra of $A, B, C, B \otimes_A C$ respectively. Then $h^*(T) = f^* (Y) \cap g^*(Z)$.
+Proof: Recall for any $\mathfrak{p}\in \mathrm{Spec}(A)$, the fiber
+$$
+(h^{*})^{-1}(\mathfrak{p}) =\mathrm{Spec}(k(\mathfrak{p})\otimes _{A}(B⊗ _{A}C)) \cong \mathrm{Spec}((B⊗ _{A}k)\otimes _{k}(k\otimes _{A}C)).
+$$
+Since $B\otimes_{A}k$ and $k\otimes_{A}C$ are $k-$vector spaces, the spectrum is zero iff one of $B\otimes_{A}k$ and $C\otimes_{A}k$ is zero, which is equivalent to $\emptyset=\mathrm{Spec}(B\otimes_{A}k)=(f^{*})^{-1}(\mathfrak{p})$ or $(g^{*})^{-1}(\mathfrak{p})=\emptyset$. Hence $\mathfrak{p}\in h^{*}(T)\iff(h^{*})^{-1}(\mathfrak{p})\neq \emptyset \iff \mathfrak{p}\in f^{*}(Y)\cap g^{*}(Z)$.
 ### 3.26
 Let $(B_{\alpha}, g_{\alpha\beta})$ be a direct system of rings and $B$ the direct limit. For each $\alpha$, let $f_{\alpha} : A \to B_{\alpha}$ be a ring homomorphism such that $g_{\alpha\beta} \circ f_{\alpha} = f_{\beta}$ whenever $\alpha \le \beta$ (i.e. the $B_{\alpha}$ form a direct system of $A$-algebras). The $f_{\alpha}$ induce $f : A \to B$. Show that
 $$
 f^*(\operatorname{Spec}(B)) = \bigcap_{\alpha} f_{\alpha}^*(\operatorname{Spec}(B_{\alpha})).
-$$[Let $\mathfrak{p} \in \operatorname{Spec}(A)$. Then $f^{*-1}(\mathfrak{p})$ is the spectrum of
 $$
-B \otimes_A k(\mathfrak{p}) \cong \varinjlim (B_{\alpha} \otimes_A k(\mathfrak{p}))
-$$
-(since tensor products commute with direct limits: Chapter 2, Exercise 20). By Exercise 21 of Chapter 2 it follows that $f^{*-1}(\mathfrak{p}) = \varnothing$ if and only if $B_{\alpha} \otimes_A k(\mathfrak{p}) = 0$ for some $\alpha$, i.e., if and only if $f_{\alpha}^{*-1}(\mathfrak{p}) = \varnothing$.]
-
+Proof: Suppose $\mathfrak{p}\in \mathrm{Spec}(A)$ then $\mathfrak{p}\in f^{*}(\mathrm{Spec}(B))$ iff $(f^{*})^{-1}(\mathfrak{p})\neq \emptyset$. Recall $(f^{*})^{-1}(\mathfrak{p})=\mathrm{Spec}(k(\mathfrak{p})\otimes _{A}B)$ where $B\otimes_{A}k(\mathfrak{p})\cong \varinjlim(B_{\alpha}\otimes_{A}k(\mathfrak{p}))$ since tensor products commute with direct limits. Hence by Ex2.21 $\mathfrak{p}\in f^{*}(\mathrm{Spec}(B))$ iff $B_{\alpha}\otimes_{A}k(\mathfrak{p})\neq0$ for some $\alpha$, i.e. $\mathfrak{p}\in f_{\alpha}^{*}(\mathrm{Spec}(B_{\alpha}))$.
 ### 3.27
 i) Let $f_{\alpha} : A \to B_{\alpha}$ be any family of $A$-algebras and let $f : A \to B$ be their tensor product over $A$ (Chapter 2, Exercise 23). Then
 $$
 f^*(\operatorname{Spec}(B)) = \bigcap_{\alpha} f_{\alpha}^*(\operatorname{Spec}(B_{\alpha})).
 $$
-[Use Exercises 25 and 26.]
 ii) Let $f_{\alpha} : A \to B_{\alpha}$ be any finite family of $A$-algebras and let $B = \prod_{\alpha} B_{\alpha}$. Define $f : A \to B$ by $f(x) = (f_{\alpha}(x))$. Then $f^*(\operatorname{Spec}(B)) = \bigcup_{\alpha} f_{\alpha}^*(\operatorname{Spec}(B_{\alpha}))$.
-iii) Hence the subsets of $X = \operatorname{Spec}(A)$ of the form $f^*(\operatorname{Spec}(B))$, where $f : A \to B$ is a ring homomorphism, satisfy the axioms for closed sets in a topological space. The associated topology is the *constructible topology* on $X$. It is finer than the Zariski topology (i.e., there are more open sets, or equivalently more closed sets).
+iii) Hence the subsets of $X = \operatorname{Spec}(A)$ of the form $f^*(\operatorname{Spec}(B))$, where $f : A \to B$ is a ring homomorphism, satisfy the axioms for closed sets in a topological space. The associated topology is the **constructible topology** on $X$. It is finer than the Zariski topology.
 iv) Let $X_C$ denote the set $X$ endowed with the constructible topology. Show that $X_C$ is quasi-compact.
-
+Proof: (i) Recall that $B=\varinjlim B_{J}$ where $J$ is a finite subset of $I$ and $B_{J}=\otimes_{j\in J}B_{j}$. By Ex3.26, $f^{*}(\mathrm{Spec}(B))=\bigcap_{J}f^{*}_{J}(\mathrm{Spec}(B_{J}))$, and by Ex3.25, $f^{*}_{J}(\mathrm{Spec}(B_{J}))=\bigcap_{\alpha \in J}f_{\alpha}^{*}(\mathrm{Spec}(B_{\alpha}))$. Therefore $f^{*}(\mathrm{Spec}(B))=\bigcap_{\alpha}f_{\alpha}^{*}(\mathrm{Spec}(B_{\alpha}))$.
+(ii) Analogously, $(f^{*})^{-1}(\mathfrak{p})=\mathrm{Spec}(k(\mathfrak{p})\otimes_{A}B)$ where $k(\mathfrak{p})\otimes_{A}B\cong \bigoplus_{\alpha}^{}{(k(\mathfrak{p})\otimes_{A}B_{\alpha})}$ so $\mathrm{Spec}(k(\mathfrak{p})\otimes_{A}B)=\emptyset \iff \forall\alpha,\mathrm{Spec}(k(\mathfrak{p})\otimes_{A}B_{\alpha})=\emptyset$ so $f^{*}(\mathrm{Spec}(B))=\bigcup_{\alpha}f_{\alpha}^{*}(\mathrm{Spec}(B_{\alpha}))$.
+(iii) By (i) and (ii) such sets are closed under arbitrary intersection and finite union. $1:A\to A$ gives $X=f^{*}(\mathrm{Spec}(A))$, and $0:A\to 0$ gives $\emptyset=f^{*}(\mathrm{Spec}(0))$. Hence they form a topology as closed sets.
+For any closed set $V(\mathfrak{a})$ in the Zariski topology, recall $\pi:A\to A /\mathfrak{a}$ gives $V(\mathfrak{a})=f^{*}(\mathrm{Spec}(A /\mathfrak{a}))$ by Ex3.21. Hence the constructible topology is finer than the Zariski topology.
+(iv) It suffices to show that if $\bigcap_{\alpha \in I}f_{\alpha}^{*}(\mathrm{Spec}(B_{\alpha}))=\emptyset$ then there is a finite subset $\bigcap_{\alpha \in J}f_{\alpha}^{*}(\mathrm{Spec}(B_{\alpha}))=\emptyset$. By (i) let $B$ be the tensor product of $B_{\alpha}$ then $f^{*}(\mathrm{Spec}(B))=\emptyset$ so $B=0$. Hence there exists a finite subset $J$ such that $B_{J}=0$ so $\otimes_{\alpha \in J}B_{\alpha}=0$ and $\bigcap_{\alpha \in J}f_{\alpha}^{*}(\mathrm{Spec}(B_{\alpha}))=\emptyset$.
 ### 3.28
 (Continuation of Exercise 27.)
 i) For each $g \in A$, the set $X_g$ (Chapter 1, Exercise 17) is both open and closed in the constructible topology.
 ii) Let $C'$ denote the smallest topology on $X$ for which the sets $X_g$ are both open and closed, and let $X_{C'}$ denote the set $X$ endowed with this topology. Show that $X_{C'}$ is Hausdorff.
 iii) Deduce that the identity mapping $X_C \to X_{C'}$ is a homeomorphism. Hence a subset $E$ of $X$ is of the form $f^*(\operatorname{Spec}(B))$ for some $f : A \to B$ if and only if it is closed in the topology $C'$.
 iv) The topological space $X_C$ is compact, Hausdorff and totally disconnected.
-
+Proof: (i) Since $X_{g}$ is open in the Zariski topology which is weaker than the constructible topology, it is open. Consider $\iota:A\to A_{g}$ then it gives $X_{g}=\iota ^{*}(\mathrm{Spec}(A_{g}))$, so $X_{g}$ is closed.
+(ii) If $\mathfrak{p}\neq \mathfrak{q}\in \mathrm{Spec}(A)$, suppose $f\in \mathfrak{q}\backslash \mathfrak{p}$, then $p\in X_{f}$ and $q\in X_{f}^{C}$ are disjoint open sets in $X_{C^{\prime}}$, so $X_{C^{\prime}}$ is Hausdorff.
+(iii) Since $X_{g}$ is both closed and open in $X_{C}$, it is finer then $X_{C^{\prime}}$, so $1:X_{C}\to X_{C^{\prime}}$ is continuous, hence a homeomorphism since it is a bijection from a quasi-compact space to a Hausdorff space.
+(iv) By Ex3.27 $X_{C}$ is quasi-compact, and by (iii) $X_{C}$ is Hausdorff (hence $X_{C}$ is compact). If a connected component contains points $x,y$, then take $X_{f}$ such that $x\in X_{f},y\in X_{f}^{C}$, we know $X_{f}$ is both closed and open in this component, a contradiction. Hence $X_{C}$ is totally disconnected.
 ### 3.29
-Let $f : A \to B$ be a ring homomorphism. Show that $f^* : \operatorname{Spec}(B) \to \operatorname{Spec}(A)$ is a continuous *closed* mapping (i.e., maps closed sets to closed sets) for the constructible topology.
-
+Let $f : A \to B$ be a ring homomorphism. Show that $f^* : \operatorname{Spec}(B) \to \operatorname{Spec}(A)$ is a continuous **closed** mapping (i.e., maps closed sets to closed sets) for the constructible topology.
+Proof: For any closed set $g^{*}(\mathrm{Spec}(C))$ in $\mathrm{Spec}(B)$ where $g:B\to C$, its image $f^{*}(g^{*}(\mathrm{Spec}(C)))=(gf)^{*}(\mathrm{Spec}(C))$ is closed in $\mathrm{Spec}(A)$. 
+Next we show $f^{*}$ is still continuous: For $g:A\to C$, we show that the preimage $(f^{*})^{-1}(g^{*}(\mathrm{Spec}(C)))$ is $\iota ^{*}(\mathrm{Spec}(B\otimes_{A}C))$ where $\iota:B\to B\otimes_{A}C,b\mapsto b\otimes 1$ and $\eta:C\to B\otimes_{A}C,c\mapsto 1\otimes c$. Note that $\eta g=\iota f$ so $g^{*}\eta ^{*}=f^{*}\iota ^{*}$, and hence $\iota ^{*}(\mathrm{Spec}(B\otimes_{A}C))\subset(f^{*})^{-1}(g^{*}(\mathrm{Spec}(C)))$. 
+Now take $\mathfrak{q}\in(f^{*})^{-1}(g^{*}(\mathrm{Spec}(C)))$, suppose $\mathfrak{r}=f^{-1}(\mathfrak{q})=g^{-1}(\mathfrak{p})\in \mathrm{Spec}(A)$ and $\mathfrak{p}\in \mathrm{Spec}(C)$. Then passing into quotients we obtain $\bar{f}:A /\mathfrak{r}\hookrightarrow B /\mathfrak{q}$ and $\bar{g}:A /\mathfrak{r}\hookrightarrow C /\mathfrak{p}$, and taking field of fractions gives field extensions $k(\mathfrak{r})\hookrightarrow k(\mathfrak{q})$ and $k(\mathfrak{r})\hookrightarrow k(\mathfrak{p})$. As the tensor product of vector spaces, $k(\mathfrak{q})\otimes_{k(\mathfrak{r})}k(\mathfrak{p})$ is non-zero so has a maximal ideal $M$ and its quotient field $L$. Consider the homomorphism $\Phi:B\otimes_{A}C\to k(\mathfrak{q})\otimes_{k(\mathfrak{r})}k(\mathfrak{p})\to L$, then since $L$ is a field, $\mathfrak{s}=\mathrm{Ker}\Phi$ is a prime ideal. Furthermore, $\iota ^{*}(\mathfrak{s})=\mathfrak{q}$ since $\Phi$ induces a homomorphism $B\to k(\mathfrak{q})\to L$ whose kernel is exactly $\mathfrak{q}$. Therefore $\iota ^{*}(\mathrm{Spec}(B\otimes_{A}C))=(f^{*})^{-1}(g^{*}(\mathrm{Spec}(C))$. 
 ### 3.30
-Show that the Zariski topology and the constructible topology on $\operatorname{Spec}(A)$ are the same if and only if $A/\mathfrak{N}$ is absolutely flat (where $\mathfrak{N}$ is the nilradical of $A$). [Use Exercise 11.]
+Show that the Zariski topology and the constructible topology on $\operatorname{Spec}(A)$ are the same if and only if $A/\mathfrak{N}$ is absolutely flat (where $\mathfrak{N}$ is the nilradical of $A$). 
+Proof: Recall Ex3.21, if the Zariski topology is the constructible topology, then $\mathrm{Spec}(A)$ is Hausdorff so $A /\mathfrak{N}$ is absolutely flat.
+Conversely, if $A /\mathfrak{N}$ is absolutely flat, then $\mathrm{Spec}(A)$ is Hausdorff, so the identity $X_{C}\to X$ is bijective, hence a homeomorphism.
