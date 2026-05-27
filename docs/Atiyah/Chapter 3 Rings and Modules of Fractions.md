@@ -2,6 +2,7 @@
 Let $S$ be a multiplicatively closed subset of a ring $A$, and let $M$ be a finitely generated $A$-module. Prove that $S^{-1}M = 0$ if and only if there exists $s \in S$ such that $sM = 0$.
 Proof: Suppose $M=(m_{1},\cdots,m_{n})$ is finitely generated, then $S^{-1}M=0$ implies $\forall1\leqslant i\leqslant n, \frac{m_{i}}{1}=0\in S^{-1}M$ so there exists $s_{i}\in S$ such that $s_{i}m_{i}=0$. Let $s=s_{1}\cdots s_{n}$, then $s\in S$ and $sm_{i}=0\forall 1\leqslant i\leqslant  n$, hence $sM=0$.
 The converse is trivial.
+
 ### 3.2
 Let $\mathfrak{a}$ be an ideal of a ring $A$, and let $S = 1 + \mathfrak{a}$. Show that $S^{-1}\mathfrak{a}$ is contained in the Jacobson radical of $S^{-1}A$.
 Use this result and Nakayama's lemma to give a proof of (2.5) which does not depend on determinants.
@@ -178,18 +179,16 @@ Now show that $(S^{-1}f^{*})(S^{-1}\mathfrak{q})=S^{-1}(f^{-1}(\mathfrak{q}))$: 
 (iii) If $\mathfrak{q}\in V(\mathfrak{b})$, then $\mathfrak{a}\subset \mathfrak{a}^{ec}=\mathfrak{b}^{c}\subset \mathfrak{q}^{c}$ so $\mathfrak{q}^{c}\in V(\mathfrak{a})$ and $f^{*}(V(\mathfrak{b}))\subset V(\mathfrak{a})$. Consider the projections $\pi:A\to A /\mathfrak{a}$ and $\varpi:B\to B /\mathfrak{b}$, then $\pi f=\bar{f}\varpi$ so $f^{*}\pi ^{*}=\varpi^{*}\bar{f}^{*}$ hence $\bar{f}^{*}$ is the restriction of $f^{*}$ to $V(\mathfrak{b})$.
 (iv) By (iii) we have the commutative diagram 
 $$
-\begin{equation*}
 \begin{CD}
 \operatorname{Spec}(B_{\mathfrak{p}}/\mathfrak{p}B_{\mathfrak{p}}) @>>> \operatorname{Spec}(B_{\mathfrak{p}}) @>>> \operatorname{Spec}(B) \newline
 @VV \bar{f}_{\mathfrak{p}}^{*} V @VV f_{\mathfrak{p}}^{*} V @VV f^* V \newline
 \operatorname{Spec}(A_{\mathfrak{p}}/\mathfrak{p}A_{\mathfrak{p}}) @>>> \operatorname{Spec}(A_{\mathfrak{p}}) @>>> \operatorname{Spec}(A)
 \end{CD}
-\end{equation*}
 $$
 where $A_{\mathfrak{p}} /\mathfrak{p}A_{\mathfrak{p}}=k(\mathfrak{p})$ is a field. Hence $f^{*-1}(\mathfrak{p})=\mathrm{Spec}(B_{\mathfrak{p}} /\mathfrak{p}B_{\mathfrak{p}})$. Note that
 $$
 \begin{align}
-k(\mathfrak{p})\otimes_{A}B & =(A_{\mathfrak{p}} /\mathfrak{p}A_{\mathfrak{p}})\otimes _{A}B\cong(A /\mathfrak{p})_{\mathfrak{p}}\otimes _{A}B\cong(A /\mathfrak{p})_{\mathfrak{p}}\otimes_{A /\mathfrak{p}}  (A /\mathfrak{p})\otimes _{A}B \\
+k(\mathfrak{p})\otimes_{A}B & =(A_{\mathfrak{p}} /\mathfrak{p}A_{\mathfrak{p}})\otimes _{A}B\cong(A /\mathfrak{p})_{\mathfrak{p}}\otimes _{A}B\cong(A /\mathfrak{p})_{\mathfrak{p}}\otimes_{A /\mathfrak{p}}  (A /\mathfrak{p})\otimes _{A}B \newline
  & \cong(A /\mathfrak{p})_{\mathfrak{p}}\otimes _{A /\mathfrak{p}}(B /\mathfrak{p}B)\cong(B /\mathfrak{p}B)_{\mathfrak{p}}\cong B_{\mathfrak{p}} /\mathfrak{p}B_{\mathfrak{p}}.
 \end{align}
 $$
@@ -241,13 +240,13 @@ We found such an $s$ for a finite subset of $(U_{i})_{i\in I}$. By Lemma such an
 Let $f : A \to B$, $g : A \to C$ be ring homomorphisms and let $h : A \to B \otimes_A C$ be defined by $h(x) = f(x) \otimes 1=1\otimes g(x)$. Let $X, Y, Z, T$ be the prime spectra of $A, B, C, B \otimes_A C$ respectively. Then $h^*(T) = f^* (Y) \cap g^*(Z)$.
 Proof: Recall for any $\mathfrak{p}\in \mathrm{Spec}(A)$, the fiber
 $$
-(h^{*})^{-1}(\mathfrak{p}) =\mathrm{Spec}(k(\mathfrak{p})\otimes _{A}(B⊗ _{A}C)) \cong \mathrm{Spec}((B⊗ _{A}k)\otimes _{k}(k\otimes _{A}C)).
+(h^{*})^{-1}(\mathfrak{p})=\mathrm{Spec}(k(\mathfrak{p})\otimes _{A}(B\otimes_{A}C)) \cong \mathrm{Spec}((B\otimes_{A}k)\otimes_{k}(k\otimes_{A}C)).
 $$
 Since $B\otimes_{A}k$ and $k\otimes_{A}C$ are $k-$vector spaces, the spectrum is zero iff one of $B\otimes_{A}k$ and $C\otimes_{A}k$ is zero, which is equivalent to $\emptyset=\mathrm{Spec}(B\otimes_{A}k)=(f^{*})^{-1}(\mathfrak{p})$ or $(g^{*})^{-1}(\mathfrak{p})=\emptyset$. Hence $\mathfrak{p}\in h^{*}(T)\iff(h^{*})^{-1}(\mathfrak{p})\neq \emptyset \iff \mathfrak{p}\in f^{*}(Y)\cap g^{*}(Z)$.
 ### 3.26
 Let $(B_{\alpha}, g_{\alpha\beta})$ be a direct system of rings and $B$ the direct limit. For each $\alpha$, let $f_{\alpha} : A \to B_{\alpha}$ be a ring homomorphism such that $g_{\alpha\beta} \circ f_{\alpha} = f_{\beta}$ whenever $\alpha \le \beta$ (i.e. the $B_{\alpha}$ form a direct system of $A$-algebras). The $f_{\alpha}$ induce $f : A \to B$. Show that
 $$
-f^*(\operatorname{Spec}(B)) = \bigcap_{\alpha} f_{\alpha}^*(\operatorname{Spec}(B_{\alpha})).
+f^*(\mathrm{Spec}(B)) = \bigcap_{\alpha} f_{\alpha}^*(\mathrm{Spec}(B_{\alpha})).
 $$
 Proof: Suppose $\mathfrak{p}\in \mathrm{Spec}(A)$ then $\mathfrak{p}\in f^{*}(\mathrm{Spec}(B))$ iff $(f^{*})^{-1}(\mathfrak{p})\neq \emptyset$. Recall $(f^{*})^{-1}(\mathfrak{p})=\mathrm{Spec}(k(\mathfrak{p})\otimes _{A}B)$ where $B\otimes_{A}k(\mathfrak{p})\cong \varinjlim(B_{\alpha}\otimes_{A}k(\mathfrak{p}))$ since tensor products commute with direct limits. Hence by Ex2.21 $\mathfrak{p}\in f^{*}(\mathrm{Spec}(B))$ iff $B_{\alpha}\otimes_{A}k(\mathfrak{p})\neq0$ for some $\alpha$, i.e. $\mathfrak{p}\in f_{\alpha}^{*}(\mathrm{Spec}(B_{\alpha}))$.
 ### 3.27

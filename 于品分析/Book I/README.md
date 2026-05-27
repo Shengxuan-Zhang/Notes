@@ -3,3 +3,5 @@
 暑假里抱着提前完成作业的心态写完了所有习题,可惜数分换了教授和教材,导致后续没有修改检查,难免有许多错误,欢迎指正并提交Pull Request.寒假作业和剩下两册也要等以后再完成了.
 
 中文混合latex的输入体验不佳,只好用英文写作.建议用Obsidian/Typora查看markdown源码
+
+Update: the PDF file was transcripted and checked by gpt.

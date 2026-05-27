@@ -4,7 +4,7 @@ This is a website where I post notes on courses and solutions to textbooks or ho
 
 ## Algebra
 
-- [_GTM52: Algebra_ ](./GTM73/Index.md) by 
+- [_GTM52: Algebra_ ](./GTM73/Index.md) by Hungerford
 - [_Introduction to Commutative Algebra_](./Atiyah/Index.md) by Atiyah & McDonald
 
 ## Analysis
